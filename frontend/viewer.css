@@ -1,0 +1,105 @@
+/* ====== リセット & 全体設定 ====== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif JP', serif;
+    background-color: #fdfcf8; /* 読書しやすい背景色 */
+    color: #2c2c2c;
+    overflow: hidden; /* 画面全体の縦横スクロールを隠す */
+}
+
+/* ====== リーダーのフレーム（ヘッダー + 読書領域） ====== */
+#reader-view {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.reader-header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom: 1px solid #e0dcd3;
+}
+
+#back-button {
+    margin-right: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #e0dcd3;
+    border-radius: 4px;
+}
+
+/* ====== スクロール用コンテナ ====== */
+.reader-container {
+    flex: 1 1 auto;
+    /* 横スクロールのみを許可 */
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* JS側で container.scrollLeft = 0 をセットして右端に合わせます */
+}
+
+/* ====== 縦書き・本文設定 ====== */
+.vertical-text {
+    /* これが縦書きにするための魔法のプロパティ */
+    writing-mode: vertical-rl;
+    
+    /* 読書領域の高さいっぱいに広げる */
+    height: 100%;
+    
+    /* 余白とフォント設定 */
+    padding: 40px 5vw; /* 上下と左右の余白 */
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 1.8; /* 行間 */
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* ====== E-book DOM (parsed.html) の専用クラス ====== */
+/* 縦書き(vertical-rl)における要素と要素の間隔は「物理的な左側（margin-left）」になります */
+
+.ebook-title-main {
+    font-size: 2.4em;
+    margin-top: 1em;    /* 物理的な上への余白 */
+    margin-left: 1.5em; /* 次の要素（左側）との間隔 */
+}
+
+.ebook-author-main {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 1em;
+    margin-left: 3em;   /* 本文との間隔を大きくとる */
+}
+
+/* pタグ標準マージン（本文の段落間隔） */
+.ebook-body p {
+    margin: 0 0 0 1em; /* 物理的な左のみ空けて段落区切りを表現 */
+}
+
+/* 見出しのマージン */
+.ebook-body h1, .ebook-body h2, .ebook-body h3 {
+    margin-top: 2em;     /* 行頭から少し下げる */
+    margin-left: 1.5em;  /* 左側の間隔 */
+    margin-right: 1.5em; /* 右側（前の行）との間隔 */
+}
+
+/* 字下げユーティリティ（行方向＝物理的な下方向へのパディング） */
+.indent-1 { padding-top: 1em; }
+.indent-2 { padding-top: 2em; }
+.indent-3 { padding-top: 3em; }
+.indent-4 { padding-top: 4em; }
+.indent-5 { padding-top: 5em; }
+
+/* 下揃え（地付き）など */
+.align-end { text-align: end; }
+
+/* 外字（画像）のサイズ合わせ */
+.gaiji {
+    width: 1em;
+    height: 1em;
+    vertical-align: text-top;
+    border: none;
+}
