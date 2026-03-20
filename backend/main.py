@@ -1,9 +1,11 @@
+import sqlite3
+import os
+import re
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-import sqlite3
-import os
+from backend.parser import parse_aozora_html
 
 app = FastAPI(title="Aozora Bunko API")
 
@@ -19,11 +21,14 @@ app.add_middleware(
 DB_FILE = "backend/aozora.db"
 DATA_DIR = "backend/data"
 
+os.makedirs("backend/data/gaiji", exist_ok=True)
+
 def get_db_connection():
     # Rowオブジェクトとして取得することで辞書のようにアクセス可能にする
     conn = sqlite3.connect(DB_FILE)
     conn.row_factory = sqlite3.Row
     return conn
+
 
 @app.get("/api/books")
 def get_books(
@@ -86,10 +91,6 @@ def get_books(
 
 @app.get("/api/books/{book_id}/text")
 def get_book_text(book_id: int):
-    """
-    指定したbook_idのテキスト内容を取得して返すAPI。
-    あらかじめ backend/data/{book_id}/ 配下にダウンロード・解凍されている必要がある。
-    """
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT id, title, author FROM books WHERE id = ?", (book_id,))
@@ -103,22 +104,38 @@ def get_book_text(book_id: int):
     if not os.path.exists(book_dir) or not os.listdir(book_dir):
         raise HTTPException(status_code=404, detail="Text data not downloaded yet. Please download first.")
         
-    # ディレクトリ内のテキストファイルを探す
+    # ディレクトリ内のHTMLファイルを探す
     files = os.listdir(book_dir)
-    text_files = [f for f in files if f.endswith('.txt') or f.endswith('.html')]
+    html_files = [f for f in files if f.endswith('.html') or f.endswith('.htm')]
     
-    if not text_files:
-        raise HTTPException(status_code=404, detail="No readable text file found in the downloaded data")
+    if not html_files:
+        raise HTTPException(status_code=404, detail="No readable HTML file found in the downloaded data")
         
-    # 通常1つのはずなので最初のものを開く
-    target_file = text_files[0]
-    file_path = os.path.join(book_dir, target_file)
+    # 変換済みの parsed.html を探す
+    parsed_files = [f for f in html_files if f.endswith('parsed.html')]
     
+    if parsed_files:
+        target_file = parsed_files[0]
+        file_path = os.path.join(book_dir, target_file)
+    else:
+        # parsed.htmlがない場合はオンデマンドでパースする
+        original_file = html_files[0]
+        original_path = os.path.join(book_dir, original_file)
+        target_file = "parsed.html"
+        file_path = os.path.join(book_dir, target_file)
+        try:
+            parse_aozora_html(original_path, file_path)
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Failed to parse file: {str(e)}")
+            
     try:
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to read file: {str(e)}")
+        
+    # E-book DOM形式になっているため、動的な正規表現置換は全て不要になりました
+    # 全角スペースの詰まりなどは parser 側で処理済、あるいはCSSの字下げで処理されます
         
     return {
         "id": row["id"],
@@ -128,8 +145,9 @@ def get_book_text(book_id: int):
         "content": content
     }
 
-# -------- フロントエンドの静的ファイル配信 --------
-# ※ APIルート( /api/* ) 以外のアクセスはすべて frontend/ 以下のファイルを返す
+# -------- 静的ファイルと画像の配信 --------
+app.mount("/api/assets/gaiji", StaticFiles(directory="backend/data/gaiji"), name="gaiji")
+
 @app.get("/")
 def read_root():
     return FileResponse("frontend/index.html")

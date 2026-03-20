@@ -5,7 +5,6 @@ let currentSearch = '';
 let currentDownloadedOnly = false;
 
 const searchView = document.getElementById('search-view');
-const readerView = document.getElementById('reader-view');
 const bookList = document.getElementById('book-list');
 const searchInput = document.getElementById('search-input');
 const dlOnlyCheckbox = document.getElementById('downloaded-only');
@@ -13,9 +12,6 @@ const searchButton = document.getElementById('search-button');
 const prevPageBtn = document.getElementById('prev-page');
 const nextPageBtn = document.getElementById('next-page');
 const pageInfo = document.getElementById('page-info');
-const backButton = document.getElementById('back-button');
-const readerTitle = document.getElementById('reader-title');
-const readerContent = document.getElementById('reader-content');
 
 searchButton.addEventListener('click', () => {
     currentPage = 0;
@@ -40,11 +36,7 @@ nextPageBtn.addEventListener('click', () => {
     fetchBooks();
 });
 
-backButton.addEventListener('click', () => {
-    readerView.classList.remove('active');
-    searchView.classList.add('active');
-    readerContent.innerHTML = '';
-});
+
 
 async function fetchBooks() {
     bookList.innerHTML = '<div style="text-align:center;grid-column:1/-1;">読み込み中...</div>';
@@ -108,38 +100,9 @@ function renderBooks(books, total) {
     nextPageBtn.disabled = end >= total;
 }
 
-async function openReader(bookId, title) {
-    searchView.classList.remove('active');
-    readerView.classList.add('active');
-    readerTitle.textContent = title || '読み込み中...';
-    readerContent.innerHTML = 'テキストを準備しています...';
-    
-    try {
-        const res = await fetch(`${API_BASE}/books/${bookId}/text`);
-        if (!res.ok) throw new Error('Failed to load text');
-        const data = await res.json();
-        
-        readerTitle.textContent = data.title;
-        let htmlContent = data.content;
-        
-        // 青空文庫のHTMLからbodyの中身だけ抽出
-        const bodyMatch = htmlContent.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-        if (bodyMatch) {
-            htmlContent = bodyMatch[1];
-        }
-        
-        readerContent.innerHTML = htmlContent;
-        
-        // 縦書きスクロールの初期位置を右端にする
-        setTimeout(() => {
-            const container = document.querySelector('.reader-container');
-            container.scrollLeft = container.scrollWidth;
-        }, 100);
-        
-    } catch (err) {
-        console.error(err);
-        readerContent.innerHTML = 'テキストの読み込みに失敗しました。';
-    }
+function openReader(bookId, title) {
+    // 読書画面へのページ遷移 (MPAアーキテクチャ)
+    window.location.href = `viewer.html?id=${bookId}`;
 }
 
 function escapeHTML(str) {
