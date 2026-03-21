@@ -1,91 +1,199 @@
 :root {
-    --font-size: 20px;
-    --line-height: 2.0; /* 確実に行間を保持（ルビがあっても崩れない） */
-    --lines-per-page: 15; /* 1ページにきっちり15行収める */
-    
-    /* 計算プロパティ（CSSに計算させる） */
-    --line-width: calc(var(--font-size) * var(--line-height));
-    --page-width: calc(var(--line-width) * var(--lines-per-page));
-    --page-gap: 40px; 
+    --font-size: 18px;
+    --line-height-ratio: 2;
+    --base-line-height: calc(var(--font-size) * var(--line-height-ratio));
 }
 
 body {
-    margin: 40px;
-    font-family: serif;
-    background-color: #f7f7f7;
-    text-align: center; /* コントロールボタンを中央揃え */
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif JP", "Yu Mincho", "MS PMincho", serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* 操作パネルのスタイル */
-.controls {
-    margin-bottom: 20px;
+/* コントロールバー */
+.controls-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    gap: 20px;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.controls button {
+
+.controls-bar button {
     padding: 8px 16px;
-    font-size: 16px;
     cursor: pointer;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555;
+    color: #fff;
+    transition: background-color 0.2s;
 }
-#page-info {
-    margin: 0 16px;
-    font-size: 18px;
+
+.controls-bar button:hover {
+    background-color: #777;
+}
+
+/* 画面全体 */
+.screen-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 本の枠組み */
+.book-frame {
+    width: 90vw;
+    max-width: 1400px;
+    height: 85vh;
+    max-height: 900px;
+    background-color: #fff;
+    box-shadow: 0 50px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 本の紙部分（見開き） */
+.page-paper {
+    flex: 1;
+    display: flex;
+    /* 右のDOMを右側に配置するため row-reverse を使用 */
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    padding: 40px 30px;
+    background: linear-gradient(to right, #fdfdfd 0%, #f9f9f9 50%, #fdfdfd 100%);
+}
+
+/* 単一ページ用 */
+.page-paper.single-mode {
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px 60px;
+}
+
+.page-paper.single-mode .page-left {
+    display: none;
+}
+
+.page-paper.single-mode .page-right {
+    border-right: none;
+    padding: 0;
+    max-width: 800px;
+    /* 単一ページの場合の最大幅 */
+}
+
+/* 各ページ */
+.page-right,
+.page-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 綴じ目（本の中心部分）のスタイル */
+.page-right {
+    border-right: 1px solid #ddd;
+    box-shadow: inset -5px 0 10px -10px rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.page-left {
+    box-shadow: inset 5px 0 10px -10px rgba(0, 0, 0, 0.2);
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+/* テキスト表示ウィンドウ */
+.text-window {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /* 子要素のabsoluteを基準にするため */
+}
+
+/* テキストコンテナ本体 */
+.text-container {
+    writing-mode: vertical-rl;
+    /* 縦書き（右から左） */
+    position: absolute;
+    right: 0;
+    /* 右端を原点として固定 */
+    top: 0;
+    height: 100%;
+    font-size: var(--font-size);
+    line-height: var(--base-line-height);
+    /* カラム設定は縦書きの自然な右から左への流し込みを阻害するため使用しない */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ズレを防ぐため、すべての要素にベースラインのラインハイトを強制適用 */
+.text-container * {
+    line-height: var(--base-line-height);
+}
+
+/* ふりがな（ルビ）による行間の拡張を禁止（グリッド崩れ対策） */
+.text-container ruby {
+    line-height: var(--base-line-height);
+    ruby-position: over;
+}
+
+.text-container rt {
+    line-height: 0;
+    font-size: 0.4em;
+    /* ルビの文字サイズを本文の半分に設定 */
+}
+
+/* 段落間の余白 */
+.text-container p {
+    margin: 0;
+    text-indent: 0em;
+    /* 段落の字下げ */
+}
+
+.text-container p+p {
+    margin-block-start: 0;
+}
+
+/* 改ページ用クラス */
+.page-break {
+    break-before: column;
+}
+
+/* タイトル・ルビなどの微調整 */
+.ebook-header {
+    margin-block-end: calc(var(--base-line-height) * 2);
+    /* 本文の前にスペースを空ける */
+}
+
+.ebook-title-main {
+    font-size: 2em;
+    /* フォントが大きい場合でも、行の幅は元のベースラインの整数倍に固定 */
+    line-height: calc(var(--base-line-height) * 2) !important;
+    margin-block-start: var(--base-line-height);
+    margin-block-end: 0;
     font-weight: bold;
 }
 
-/* 自由に余白を作るための外包み（紙面全体） */
-.page-frame {
-    /* 窓枠の幅に、左右の好きな余白（ここでは30pxずつ）を足す */
-    width: calc(var(--page-width) + 60px);
-    /* 基準となる高さ 400px に、上下の好きな余白（ここでは40pxずつ）を足す */
-    height: calc(400px + 80px);
-    
-    margin: 0 auto;             /* 全体を画面中央に配置 */
-    background-color: #fff;     /* 紙の背景色 */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 本体の影 */
-    
-    /* padding で上下左右の余白を確保。これにより内側の div が押し込まれる */
-    padding: 40px 30px;
-    box-sizing: border-box;     /* padding を width/height のサイズに含める */
-}
-
-/* 1ページ分のテキストだけを切り抜いて見せる窓枠 */
-.page-window {
-    width: var(--page-width);  /* 幅を行の倍数に完全固定 */
-    height: 100%;              /* 高さは親(page-frame)の余白の内側にピッタリ合わせる */
-    
-    overflow: hidden;          /* 窓枠からはみ出たテキスト（次のページ）を不可視にする */
-    position: relative;
-    /* 背景色や影は外側の page-frame の役目になったため削除 */
-}
-
-/* 自動でマルチカラムになる本文要素（巻物） */
-.vertical-box {
-    writing-mode: vertical-rl;
-    height: 100%;
-    
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    text-align: justify;       /* 両端揃えで綺麗に */
-    
-    /* これがページネーションの魔法。自動で改ページ（カラム分割）される */
-    column-width: var(--page-width);
-    column-gap: var(--page-gap);
-    
-    /* 遷移アニメーション */
-    transition: transform 0.3s ease-out;
-    
-    /* JSで座標計算するため、デフォルトのマージン等は消す */
-    margin: 0;
-    padding: 0;
-}
-
-/* 段落のマージン除去 */
-p {
-    margin: 0;
-}
-
-/* ルビの制御 */
-rt {
-    font-size: 0.5em;
-    line-height: 0;  /* 行間を広げないための必須設定 */
-    font-family: inherit;
+.ebook-author-main {
+    font-size: 1.2em;
+    /* フォントサイズ1.2em等半端な場合も、ベースライングリッドを維持する */
+    line-height: var(--base-line-height) !important;
+    margin-block-start: var(--base-line-height);
+    margin-block-end: calc(var(--base-line-height) * 2);
 }

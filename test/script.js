@@ -1,66 +1,173 @@
-const box = document.getElementById('vertical-box');
-const btnNext = document.getElementById('btn-next');
-const btnPrev = document.getElementById('btn-prev');
-const pageInfo = document.getElementById('page-info');
+document.addEventListener('DOMContentLoaded', () => {
+    const textContainers = document.querySelectorAll('.text-container');
+    const textWindow = document.querySelector('.page-right .text-window') || document.querySelector('.text-window');
+    const pagePaper = document.querySelector('.page-paper');
 
-let currentPage = 0;
-let totalPages = 1;
-let pageAdvance = 0;
+    const btnNext = document.getElementById('btn-next');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnToggleMode = document.getElementById('btn-toggle-mode');
+    const pageInfo = document.getElementById('page-info');
 
-function updateLayout() {
-    // CSS変数からページ幅と隙間のサイズを取得
-    const style = getComputedStyle(document.documentElement);
-    const pageWidth = parseFloat(style.getPropertyValue('--page-width')) || 0;
-    const pageGap = parseFloat(style.getPropertyValue('--page-gap')) || 0;
-    
-    // 1回スライドする距離
-    pageAdvance = pageWidth + pageGap;
+    let currentPage = 0; // 右ページのインデックス (見開きなら左は+1)
+    let totalPages = 0;
+    let isSingleMode = false;
+    let pageWidth = 0;
 
-    // コンテンツの総幅（何ページ分生成されたか）
-    const scrollWidth = box.scrollWidth;
-    
-    // 総ページ数の計算（最後のページには隙間がつかない場合があるため丸める）
-    totalPages = Math.round((scrollWidth + pageGap) / pageAdvance);
-    if (totalPages < 1) totalPages = 1;
+    // text.htmlからコンテンツを取得して挿入
+    fetch('text.html')
+        .then(response => response.text())
+        .then(html => {
+            textContainers.forEach(container => {
+                container.innerHTML = html;
+            });
+            // 少し待ってからレイアウト計算を開始
+            setTimeout(updateLayout, 100);
+        })
+        .catch(err => {
+            console.error("コンテンツの読み込みに失敗しました:", err);
+            pageInfo.textContent = "読み込みエラー";
+        });
 
-    // 万が一ページ上限を超えていたら補正
-    if (currentPage >= totalPages) currentPage = totalPages - 1;
+    function updateLayout() {
+        const allWindows = document.querySelectorAll('.page-right .text-window, .page-left .text-window, .single-mode .text-window');
+        if (!textWindow) return;
 
-    renderPage();
-}
+        // 直前のページ幅と現在のオフセット位置（ピクセル）を保持
+        const oldPageWidth = pageWidth;
+        const currentPixelOffset = currentPage * (oldPageWidth || 1);
 
-function renderPage() {
-    // 右->左 の縦書きで、左側に何個分のカラムがあるか＝ (totalPages - 1 - currentPage)
-    const columnIndexFromLeft = totalPages - 1 - currentPage;
-    const xOffset = columnIndexFromLeft * pageAdvance;
+        // 1. まず利用可能な最大幅を計算するために一旦100%に戻す
+        allWindows.forEach(win => {
+            if (win) win.style.width = '100%';
+        });
 
-    // X座標をマイナスにして、対象のカラムを「窓枠」の左端（0px）に持ってくる
-    const translateX = -xOffset;
-    
-    box.style.transform = `translateX(${translateX}px)`;
-    pageInfo.textContent = `${currentPage + 1} / ${totalPages}`;
-    
-    btnPrev.disabled = (currentPage === 0);
-    btnNext.disabled = (currentPage >= totalPages - 1);
-}
+        // 2. この時のウィンドウ幅を取得
+        const availableWidth = textWindow.clientWidth;
 
-btnNext.addEventListener('click', () => {
-    if (currentPage < totalPages - 1) {
-        currentPage++;
-        renderPage();
+        // 3. 行の高さ（line-height）を取得（文字サイズ × line-height-ratio がピクセルで返る）
+        const computedStyle = window.getComputedStyle(textContainers[0]);
+        let lineHeight = parseFloat(computedStyle.lineHeight);
+
+        if (isNaN(lineHeight)) {
+            // fallback
+            const fontSize = parseFloat(computedStyle.fontSize);
+            lineHeight = fontSize * 1.5;
+        }
+
+        // 4. ウィンドウ幅をline-heightの倍数に丸めて(余りを省く)、文字が半端に切れるのを防ぐ
+        const optimalWidth = Math.floor(availableWidth / lineHeight) * lineHeight;
+
+        // 5. 計算した最適な幅を適用する
+        allWindows.forEach(win => {
+            if (win) win.style.width = `${optimalWidth}px`;
+        });
+
+        pageWidth = optimalWidth;
+        console.log("pageWidth", pageWidth, "lineHeight", lineHeight);
+
+        textContainers.forEach(container => {
+            // カラム設定は縦書きレイアウトを破壊する可能性があるため削除
+            container.style.columnWidth = '';
+            container.style.columnGap = '';
+        });
+
+        // 6. ウィンドウ幅が変わった場合、今まで見ていた場所（オフセットピクセル）に一番近い新ページを計算
+        if (oldPageWidth > 0 && oldPageWidth !== pageWidth) {
+            currentPage = Math.floor(currentPixelOffset / pageWidth);
+        }
+
+        // setTimeoutを使用して、DOMの計算が完了するのを待つ
+        setTimeout(() => {
+            // 全体の幅(scrollWidth)を1ページの幅(pageWidth)で割ることで総ページ数を算出
+            const scrollWidth = textContainers[0].scrollWidth;
+            totalPages = Math.ceil(scrollWidth / pageWidth);
+
+            // リサイズ時に現在のページが最大ページ数を超えないように補正
+            if (currentPage >= totalPages) {
+                currentPage = Math.max(0, totalPages - (isSingleMode ? 1 : 2));
+            }
+            // 見開きモードの際は偶数ページから始まるように補正（右が偶数・左が奇数）
+            if (!isSingleMode && currentPage % 2 !== 0) {
+                currentPage = Math.max(0, currentPage - 1);
+            }
+
+            renderPages();
+        }, 100); // 描画待ち時間
+    }
+
+    function renderPages() {
+        if (totalPages === 0) return;
+
+        // Container[0]: page-right 用, Container[1]: page-left 用
+        const containerRight = textContainers[0];
+        const containerLeft = textContainers.length > 1 ? textContainers[1] : null;
+
+        // *重要*
+        // writing-mode: vertical-rl では、コンテナは position: absolute; right: 0; で右端を基準に固定されているため、
+        // translateXの値を「プラス」にするほど、左にはみ出していたコンテンツが右へスライドし、視界に入ってきます。
+        // オフセット = ページ数 * 1ページの幅
+        containerRight.style.transform = `translateX(${currentPage * pageWidth}px)`;
+        console.log("transform", currentPage * pageWidth);
+
+        if (containerLeft && !isSingleMode) {
+            containerLeft.style.transform = `translateX(${(currentPage + 1) * pageWidth}px)`;
+        }
+
+        // ページ番号の更新
+        if (isSingleMode) {
+            pageInfo.textContent = `${currentPage + 1} / ${totalPages}`;
+        } else {
+            const rightNum = currentPage + 1;
+            const leftNum = Math.min(currentPage + 2, totalPages);
+            pageInfo.textContent = `${rightNum}-${leftNum} / ${totalPages}`;
+        }
+    }
+
+    // 前のページへ戻る (右に進む: 読書順の逆方向)
+    btnPrev.addEventListener('click', () => {
+        const step = isSingleMode ? 1 : 2;
+        if (currentPage - step >= 0) {
+            currentPage -= step;
+            renderPages();
+        } else if (currentPage > 0) {
+            currentPage = 0;
+            renderPages();
+        }
+    });
+
+    // 次のページへ進む (左に進む: 読書順)
+    btnNext.addEventListener('click', () => {
+        const step = isSingleMode ? 1 : 2;
+        if (currentPage + step < totalPages) {
+            currentPage += step;
+            renderPages();
+        }
+    });
+
+    // 見開き / 単一モードの切り替え
+    btnToggleMode.addEventListener('click', () => {
+        isSingleMode = !isSingleMode;
+        if (isSingleMode) {
+            pagePaper.classList.add('single-mode');
+            btnToggleMode.textContent = '見開き表示';
+        } else {
+            pagePaper.classList.remove('single-mode');
+            btnToggleMode.textContent = '単一ページ表示';
+            if (currentPage % 2 !== 0) {
+                currentPage = Math.max(0, currentPage - 1);
+            }
+        }
+        updateLayout();
+    });
+
+    // リサイズ監視（ウィンドウサイズ変更時に自動再計算）
+    let resizeTimer;
+    const resizeObserver = new ResizeObserver(() => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateLayout, 150);
+    });
+
+    if (pagePaper) {
+        resizeObserver.observe(pagePaper);
     }
 });
-
-btnPrev.addEventListener('click', () => {
-    if (currentPage > 0) {
-        currentPage--;
-        renderPage();
-    }
-});
-
-// 読み込み時とウィンドウリサイズ時にレイアウトを再計算
-window.addEventListener('load', () => {
-    // 念のためフォントレンダリング待ちで少し遅らせる
-    setTimeout(updateLayout, 100);
-});
-window.addEventListener('resize', updateLayout);

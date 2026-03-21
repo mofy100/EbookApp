@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>青空文庫 物理分離型・完全ページビューア</title>
+    <style>
+        :root {
+            /* 1ページあたりの物理的なサイズ設計 */
+            --p-width: 44vw;
+            /* 右・左それぞれの紙面の幅 */
+            --p-gap: 5vw;
+            /* 見開きの中心（のど）の物理的な「溝」 */
+            --p-height: 80vh;
+            /* 縦幅 */
+            /* 見開き1回のリピート単位 */
+            --step: calc((var(--p-width) * 2) + var(--p-gap));
+        }
+
+        body {
+            margin: 0;
+            background-color: #e0e0e0;
+            overflow: hidden;
+            font-family: serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* 1. 窓（Viewport） */
+        .viewport {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            /* 重要：コンテンツ全体を右に寄せ、扉ページを右端に持ってくる */
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 2. キャンバス：長い帯（ここが重要） */
+        .canvas {
+            display: flex;
+            writing-mode: vertical-rl;
+            height: var(--p-height);
+            transition: transform 0.6s ease;
+            transform: translateX(0);
+        }
+
+        /* 3. 本の紙面（見開きの装飾） */
+        .book-spread {
+            display: flex;
+            /* 見開きごとの隙間 */
+            margin-right: calc(var(--p-gap) / 2);
+            margin-left: calc(var(--p-gap) / 2);
+        }
+
+        /* 【解決策】右ページと左ページを物理的に別々のコンテナにする */
+        .page-right,
+        .page-left {
+            width: var(--p-width);
+            height: 100%;
+            background-color: #fff;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+            overflow: hidden;
+            /* ハミ出た文字を隠す */
+            box-sizing: border-box;
+            padding: 0 2vw;
+            /* 紙の端ギリギリにならないよう余白 */
+            position: relative;
+        }
+
+        /* 右ページと左ページの物理的な隙間 */
+        .page-left {
+            margin-right: var(--p-gap);
+        }
+
+        /* テキストのスタイル */
+        .content {
+            font-size: 3vh;
+            line-height: 2;
+            text-align: justify;
+            /* 1ページ単位でオフセット（ずらす）用 */
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc(var(--p-width) - 4vw);
+            /* padding分を引く */
+        }
+
+        /* 操作UI */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            border: none;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="viewport">
+        <div class="canvas" id="canvas">
+            <div class="book-spread" id="spread-0">
+                <div class="page-right">
+                    <div class="content" style="transform: translateX(0vw);">
+                        <h2>走れメロス（物理分離テスト）</h2>
+                        <p>メロスは激怒した。必ず、かの邪智暴虐じゃちぼうぎゃくの王を除かなければならぬと決意した。メロスには政治がわからぬ。メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。きょう未明メロスは村を出発し、野を越え山越え、十里はなれた此このシラクスの市にやって来た。メロスには父も母も無い。女房も無い。十六の、内気な妹と二人暮しだ。
+                        </p>
+                        <p>この妹は、村の或る律儀な一牧人を、近々、花婿はなむことして迎える事になっていた。結婚式も間近かなのである。メロスは、それゆゆえ、花嫁の衣裳やら祝宴の御馳走やらを買いに、市にやって来たのである。先ず、その品々を買い集め、それから都の大路をぶらぶら歩いた。
+                        </p>
+                    </div>
+                </div>
+                <div class="page-left">
+                    <div class="content">
+                        <p>（空白ページ：1ページ目の左ページは空白にするのが本らしいレイアウトです。JSで制御できます）</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-spread" id="spread-1">
+                <div class="page-right">
+                    <div class="content" style="transform: translateX(-40vw); /* 1ページ分ずらす */">
+                        <h2>走れメロス（物理分離テスト）</h2>
+                        <p>メロスは激怒した。必ず、かの邪智暴虐じゃちぼうぎゃくの王を除かなければならぬと決意した。メロスには政治がわからぬ。メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。きょう未明メロスは村を出発し、野を越え山越え、十里はなれた此このシラクスの市にやって来た。メロスには父も母も無い。女房も無い。十六の、内気な妹と二人暮しだ。
+                        </p>
+                        <p>この妹は、村の或る律儀な一牧人を、近々、花婿はなむことして迎える事になっていた。結婚式も間近かなのである。メロスは、それゆえ、花嫁の衣裳やら祝宴の御馳走やらを買いに、市にやって来たのである。先ず、その品々を買い集め、それから都の大路をぶらぶら歩いた。
+                        </p>
+                    </div>
+                </div>
+                <div class="page-left">
+                    <div class="content" style="transform: translateX(-80vw); /* 2ページ分ずらす */">
+                        <h2>走れメロス（物理分離テスト）</h2>
+                        <p>メロスは激怒した。必ず、かの邪智暴虐じゃちぼうぎゃくの王を除かなければならぬと決意した。メロスには政治がわからぬ。メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。きょう未明メロスは村を出発し、野を越え山越え、十里はなれた此このシラクスの市にやって来た。メロスには父も母も無い。女房も無い。十六の、内気な妹と二人暮しだ。
+                        </p>
+                        <p>この妹は、村の或る律儀な一牧人を、近々、花婿はなむことして迎える事になっていた。結婚式も間近かなのである。メロスは、それゆえ、花嫁の衣裳やら祝宴の御馳走やらを買いに、市にやって来たのである。先ず、その品々を買い集め、それから都の大路をぶらぶら歩いた。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="moveSpread(1)">次へ (見開き送り)</button>
+        <button onclick="moveSpread(-1)">前へ (見開き戻し)</button>
+    </div>
+
+    <script>
+        let currentSpread = 0;
+        const canvas = document.getElementById('canvas');
+
+        function moveSpread(direction) {
+            currentSpread += direction;
+            if (currentSpread < 0) currentSpread = 0;
+
+            // 計算式：1回のリピート単位
+            // (1ページ幅40vw * 2) + 見開き間隙間5vw * 2 = 90vw
+            const step = window.innerWidth * 0.90;
+
+            const offset = currentSpread * step;
+            canvas.style.transform = `translateX(${offset}px)`;
+        }
+    </script>
+
+</body>
+
+</html>
