@@ -7,8 +7,11 @@
 body {
     margin: 0;
     padding: 0;
+    /* 本文の文字色は完全な黒ではなく、インクのような濃い暗灰色に */
+    color: #312e2b;
     font-family: "Noto Serif JP", "Yu Mincho", "MS PMincho", serif;
-    background-color: #f5f5f5;
+    /* 背景は少し暗くして本を浮かび上がらせる */
+    background-color: #e2dfd8;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -53,28 +56,33 @@ body {
     box-sizing: border-box;
 }
 
-/* 本の枠組み */
+/* 本の枠組み（表紙等の厚みをシミュレート） */
 .book-frame {
     width: 90vw;
     max-width: 1400px;
     height: 85vh;
     max-height: 900px;
-    background-color: #fff;
-    box-shadow: 0 50px 40px rgba(0, 0, 0, 0.15);
+    background-color: #461a13;
+    /* 表紙・小口の色 */
+    /* 全体の大きな影と、重ねられたページの厚み（紙の重なり）の影 */
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.25),
+        2px 4px 6px rgba(0, 0, 0, 0.05) inset;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
 }
 
-/* 本の紙部分（見開き） */
+/* 本の紙部分（見開き全体） */
 .page-paper {
     flex: 1;
     display: flex;
     /* 右のDOMを右側に配置するため row-reverse を使用 */
     flex-direction: row-reverse;
     box-sizing: border-box;
-    padding: 40px 30px;
-    background: linear-gradient(to right, #fdfdfd 0%, #f9f9f9 50%, #fdfdfd 100%);
+    padding: 10px 10px;
+    /* ベースとなる紙の色 */
+    background-color: #431515;
 }
 
 /* 単一ページ用 */
@@ -82,6 +90,9 @@ body {
     flex-direction: row;
     justify-content: center;
     padding: 40px 60px;
+    /* 綴じ目がないのでシンプルな紙の色と影 */
+    background: #fcf9f2;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.02);
 }
 
 .page-paper.single-mode .page-left {
@@ -92,7 +103,8 @@ body {
     border-right: none;
     padding: 0;
     max-width: 800px;
-    /* 単一ページの場合の最大幅 */
+    background: none;
+    box-shadow: none;
 }
 
 /* 各ページ */
@@ -102,26 +114,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* はみ出しを防ぐ */
+    overflow: hidden;
 }
 
-/* 綴じ目（本の中心部分）のスタイル */
+/* 綴じ目（本の中心部分）のリアルな影・グラデーション設定 */
+/* 右ページは左端が綴じ目なので、左端を暗くする */
 .page-right {
-    border-right: 1px solid #ddd;
-    box-shadow: inset -5px 0 10px -10px rgba(0, 0, 0, 0.2);
-    padding-left: 20px;
-    padding-right: 10px;
+    /* ほんの少し境界線 */
+    border-right: 1px solid rgba(0, 0, 0, 0.02);
+    /* 綴じ目の深い影（左端）から明るい紙の色（右端）へ */
+    background: linear-gradient(to right, #e8dfcc 0%, #f6f1e6 4%, #fcf9f2 10%, #fcf9f2 98%, #f8f4eb 100%);
+    /* 内側のシャドウで立体感を強調 */
+    box-shadow: inset 2px 0 6px -2px rgba(0, 0, 0, 0.15), inset 15px 0 25px -10px rgba(0, 0, 0, 0.05);
+    padding-left: 30px;
+    padding-right: 15px;
 }
 
+/* 左ページは右端が綴じ目なので、右端を暗くする */
 .page-left {
-    box-shadow: inset 5px 0 10px -10px rgba(0, 0, 0, 0.2);
-    padding-right: 20px;
-    padding-left: 10px;
+    /* 綴じ目の深い影（右端）から明るい紙の色（左端）へ */
+    background: linear-gradient(to left, #e8dfcc 0%, #f6f1e6 4%, #fcf9f2 10%, #fcf9f2 98%, #f8f4eb 100%);
+    box-shadow: inset -2px 0 6px -2px rgba(0, 0, 0, 0.15), inset -15px 0 25px -10px rgba(0, 0, 0, 0.05);
+    padding-right: 30px;
+    padding-left: 15px;
 }
 
 /* テキスト表示ウィンドウ */
 .text-window {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     overflow: hidden;
     position: relative;
     /* 子要素のabsoluteを基準にするため */
