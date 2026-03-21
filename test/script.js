@@ -123,15 +123,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // ページを切り替える共通関数（フェードの効果をつける）
+    function changePage(newPage) {
+        if (currentPage === newPage) return;
+
+        // 1. フェードアウトを開始
+        textContainers.forEach(container => container.classList.add('fade-out'));
+
+        // 2. フェードアウトしきったタイミング（0.2秒後）で中身をすり替え、フェードイン
+        setTimeout(() => {
+            currentPage = newPage;
+            renderPages(); // transform: translateX が一瞬で切り替わる
+            
+            // 少しだけ待ってから透明度を元に戻す（フェードイン）
+            requestAnimationFrame(() => {
+                textContainers.forEach(container => container.classList.remove('fade-out'));
+            });
+        }, 200);
+    }
+
     // 前のページへ戻る (右に進む: 読書順の逆方向)
     btnPrev.addEventListener('click', () => {
         const step = isSingleMode ? 1 : 2;
         if (currentPage - step >= 0) {
-            currentPage -= step;
-            renderPages();
+            changePage(currentPage - step);
         } else if (currentPage > 0) {
-            currentPage = 0;
-            renderPages();
+            changePage(0);
         }
     });
 
@@ -139,8 +156,27 @@ document.addEventListener('DOMContentLoaded', () => {
     btnNext.addEventListener('click', () => {
         const step = isSingleMode ? 1 : 2;
         if (currentPage + step < totalPages) {
-            currentPage += step;
-            renderPages();
+            changePage(currentPage + step);
+        }
+    });
+
+    // キーボード操作によるページめくり
+    document.addEventListener('keydown', (e) => {
+        // 次のページへ進む (←キー、Enterキー)
+        if (e.key === 'ArrowLeft' || e.key === 'Enter') {
+            const step = isSingleMode ? 1 : 2;
+            if (currentPage + step < totalPages) {
+                changePage(currentPage + step);
+            }
+        }
+        // 前のページへ戻る (→キー)
+        else if (e.key === 'ArrowRight') {
+            const step = isSingleMode ? 1 : 2;
+            if (currentPage - step >= 0) {
+                changePage(currentPage - step);
+            } else if (currentPage > 0) {
+                changePage(0);
+            }
         }
     });
 

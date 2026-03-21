@@ -160,8 +160,13 @@ body {
     height: 100%;
     font-size: var(--font-size);
     line-height: var(--base-line-height);
-    /* カラム設定は縦書きの自然な右から左への流し込みを阻害するため使用しない */
-    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* スライド移動をなくし、フェードによる透明度変化だけをアニメーションさせる */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* ページめくりのフェード用クラス */
+.text-container.fade-out {
+    opacity: 0;
 }
 
 /* ズレを防ぐため、すべての要素にベースラインのラインハイトを強制適用 */
