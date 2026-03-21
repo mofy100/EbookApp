@@ -8,12 +8,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const btnNext = document.getElementById('btn-next');
     const btnPrev = document.getElementById('btn-prev');
     const btnToggleMode = document.getElementById('btn-toggle-mode');
-    const pageInfo = document.getElementById('page-info');
+    
+    const pageInput = document.getElementById('page-input');
+    const pageTotal = document.getElementById('page-total');
 
     let currentPage = 0;
     let totalPages = 0;
     let isSingleMode = false;
     let pageWidth = 0;
+    let textAlignmentOffset = 0; // 行内での左揃え（ルビを右に詰める）のための補正値
 
     const params = new URLSearchParams(window.location.search);
     const bookId = params.get('id');
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const htmlContent = data.content;
         const bookTitle = data.title || '電子書籍';
-        
+
         document.title = `${bookTitle} - 青空文庫リーダー`;
 
         const titleRight = document.getElementById('page-title-right');
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         textContainers.forEach(container => {
             container.innerHTML = htmlContent;
         });
-        
+
         setTimeout(updateLayout, 100);
 
     } catch (err) {
@@ -57,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         textContainers.forEach(container => {
             container.innerHTML = `<p>読込みに失敗しました (${err.message})<br><br>ファイルがダウンロードされていないか、存在しない可能性があります。一覧に戻り、「ダウンロード」を実行してください。</p>`;
         });
-        if (pageInfo) pageInfo.textContent = "読み込みエラー";
+        if (pageTotal) pageTotal.textContent = "読み込みエラー";
     }
 
     function updateLayout() {
@@ -68,18 +71,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         const currentPixelOffset = currentPage * (oldPageWidth || 1);
 
         allWindows.forEach(win => {
-            if (win) win.style.width = ''; 
+            if (win) win.style.width = '';
         });
 
         const availableWidth = textWindow.clientWidth;
 
         const computedStyle = window.getComputedStyle(textContainers[0]);
         let lineHeight = parseFloat(computedStyle.lineHeight);
+        let fontSize = parseFloat(computedStyle.fontSize);
 
         if (isNaN(lineHeight)) {
-            const fontSize = parseFloat(computedStyle.fontSize);
             lineHeight = fontSize * 1.5;
         }
+
+        // 行ボックスの中で、本文は中央寄せになるため、左右に (lineHeight - fontSize)/2 の隙間ができる。
+        // 本文を左寄せ（縦書きでは左端）にし、右にできたスペースにルビをすっぽり収めるため、
+        // ページ全体をこの隙間分だけ左方向（マイナス）へずらす計算。
+        textAlignmentOffset = - (lineHeight - fontSize) / 2;
 
         const optimalWidth = Math.floor(availableWidth / lineHeight) * lineHeight;
 
@@ -88,6 +96,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         pageWidth = optimalWidth;
+
+        console.log("lineHeight", lineHeight, "pageWidth", pageWidth);
 
         textContainers.forEach(container => {
             container.style.columnWidth = '';
@@ -119,22 +129,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         const containerRight = textContainers[0];
         const containerLeft = textContainers.length > 1 ? textContainers[1] : null;
 
-        containerRight.style.transform = `translateX(${currentPage * pageWidth}px)`;
+        // ページ移動に加え、左寄せ補正オフセットを足すことでルビの空白問題と端の切り取りを防ぐ
+        containerRight.style.transform = `translateX(${currentPage * pageWidth + textAlignmentOffset}px)`;
+
+        console.log("currentPage", currentPage, "pageWidth", pageWidth, "textAlignmentOffset", textAlignmentOffset, "transform", currentPage * pageWidth + textAlignmentOffset);
 
         if (containerLeft && !isSingleMode) {
-            containerLeft.style.transform = `translateX(${(currentPage + 1) * pageWidth}px)`;
+            containerLeft.style.transform = `translateX(${(currentPage + 1) * pageWidth + textAlignmentOffset}px)`;
         }
 
         const pageNumRight = document.getElementById('page-number-right');
         const pageNumLeft = document.getElementById('page-number-left');
 
         if (isSingleMode) {
-            if (pageInfo) pageInfo.textContent = `${currentPage + 1} / ${totalPages}`;
+            if (pageInput) pageInput.value = currentPage + 1;
+            if (pageTotal) pageTotal.textContent = ` / ${totalPages}`;
             if (pageNumRight) pageNumRight.textContent = currentPage + 1;
         } else {
             const rightNum = currentPage + 1;
             const leftNum = Math.min(currentPage + 2, totalPages);
-            if (pageInfo) pageInfo.textContent = `${rightNum}-${leftNum} / ${totalPages}`;
+            if (pageInput) pageInput.value = rightNum;
+            if (pageTotal) pageTotal.textContent = `〜${leftNum} / ${totalPages}`;
             
             if (pageNumRight) pageNumRight.textContent = rightNum;
             if (pageNumLeft) {
@@ -154,8 +169,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         setTimeout(() => {
             currentPage = newPage;
-            renderPages(); 
-            
+            renderPages();
+
             requestAnimationFrame(() => {
                 textContainers.forEach(container => container.classList.remove('fade-out'));
             });
@@ -177,6 +192,31 @@ document.addEventListener('DOMContentLoaded', async () => {
             changePage(currentPage + step);
         }
     });
+
+    // ページ番号入力によるジャンプ
+    if (pageInput) {
+        pageInput.addEventListener('change', (e) => {
+            let val = parseInt(e.target.value, 10);
+            if (isNaN(val)) {
+                val = currentPage + 1; // 無効な値なら元に戻す
+            }
+            // 範囲外の補正
+            if (val < 1) val = 1;
+            if (val > totalPages) val = totalPages;
+            
+            // currentPageは0オリジンなので-1する
+            let targetPage = val - 1;
+            
+            // 見開きモード時の奇数ページ補正（右寄せ）
+            if (!isSingleMode && targetPage % 2 !== 0) {
+                targetPage = Math.max(0, targetPage - 1);
+            }
+            
+            changePage(targetPage);
+            // 表示の即時反映（renderPageはフェードの合間に呼ばれるため、入力欄の数字だけ直しておく）
+            e.target.value = targetPage + 1;
+        });
+    }
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft' || e.key === 'Enter') {

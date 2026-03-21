@@ -1,6 +1,6 @@
 :root {
     --font-size: 18px;
-    --line-height-ratio: 2;
+    --line-height-ratio: 3.0;
     --base-line-height: calc(var(--font-size) * var(--line-height-ratio));
 
     /* テキストウィンドウ（文章枠）の上下左右の余白（％指定） */

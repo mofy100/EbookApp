@@ -1,6 +1,6 @@
 :root {
     --font-size: 18px;
-    --line-height-ratio: 2;
+    --line-height-ratio: 1.5;
     --base-line-height: calc(var(--font-size) * var(--line-height-ratio));
 
     /* テキストウィンドウ（文章枠）の上下左右の余白（％指定） */
@@ -44,12 +44,37 @@ body {
     border: none;
     border-radius: 4px;
     background-color: #555;
-    color: #fff;
-    transition: background-color 0.2s;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .controls-bar button:hover {
-    background-color: #777;
+    background-color: #f0f0f0;
+}
+
+/* ページジャンプ用コンテナ */
+.page-jump-container {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+}
+
+#page-input {
+    width: 60px;
+    padding: 4px 8px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#page-input:focus {
+    outline: none;
+    border-color: #888;
 }
 
 /* 画面全体 */
@@ -242,8 +267,16 @@ body {
 
 .text-container rt {
     line-height: 0;
-    font-size: 0.4em;
-    /* ルビの文字サイズを本文の半分に設定 */
+    font-size: 0.5em;
+    /* ルビによる行間拡張（ruby clearance）をマイナスマージンで完全に打ち消す */
+    margin-block-start: -1.0em;
+    margin-block-end: -1.0em;
+
+    /* ルビの表示位置を少し右（行間側）に離すための調整値 */
+    /* transformはルビ要素（inline等）では無視されるため、position: relativeを使って物理的にずらします */
+    position: relative;
+    left: 5px;
+    /* 数値を増やすと右にずれます */
 }
 
 /* 段落間の余白 */
