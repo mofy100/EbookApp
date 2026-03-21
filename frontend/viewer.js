@@ -1,23 +1,31 @@
 const API_BASE = "http://127.0.0.1:8000/api";
 
-let currentPage = 0;
-let totalPages = 1;
-
 document.addEventListener('DOMContentLoaded', async () => {
-    const params = new URLSearchParams(window.location.search);
-    const bookId = params.get('id');
-
-    const readerTitle = document.getElementById('reader-title');
-    const readerContent = document.getElementById('reader-content');
-    const readerContainer = document.getElementById('reader-container');
+    const textContainers = document.querySelectorAll('.text-container');
+    const textWindow = document.querySelector('.page-right .text-window') || document.querySelector('.text-window');
+    const pagePaper = document.querySelector('.page-paper');
 
     const btnNext = document.getElementById('btn-next');
     const btnPrev = document.getElementById('btn-prev');
-    const pageIndicator = document.getElementById('page-indicator');
+    const btnToggleMode = document.getElementById('btn-toggle-mode');
+    const pageInfo = document.getElementById('page-info');
+
+    let currentPage = 0;
+    let totalPages = 0;
+    let isSingleMode = false;
+    let pageWidth = 0;
+
+    const params = new URLSearchParams(window.location.search);
+    const bookId = params.get('id');
 
     if (!bookId) {
-        readerContent.innerHTML = '作品IDが指定されていません。検索画面から作品を選択してください。';
-        readerTitle.textContent = 'エラー';
+        textContainers.forEach(container => {
+            container.innerHTML = '<p>作品IDが指定されていません。検索画面から作品を選択してください。</p>';
+        });
+        const titleRight = document.getElementById('page-title-right');
+        const titleLeft = document.getElementById('page-title-left');
+        if (titleRight) titleRight.textContent = 'エラー';
+        if (titleLeft) titleLeft.textContent = 'エラー';
         return;
     }
 
@@ -29,73 +37,186 @@ document.addEventListener('DOMContentLoaded', async () => {
         const data = await res.json();
 
         const htmlContent = data.content;
-        document.title = `${data.title} - 青空文庫リーダー`;
-        readerTitle.textContent = data.title;
-        readerContent.innerHTML = htmlContent;
+        const bookTitle = data.title || '電子書籍';
+        
+        document.title = `${bookTitle} - 青空文庫リーダー`;
 
-        // フォントや画像の読み込み待機後に総ページ数を計算する
-        setTimeout(calculatePages, 300);
+        const titleRight = document.getElementById('page-title-right');
+        const titleLeft = document.getElementById('page-title-left');
+        if (titleRight) titleRight.textContent = bookTitle;
+        if (titleLeft) titleLeft.textContent = bookTitle;
 
-        // 画面リサイズ時にも再計算
-        window.addEventListener('resize', () => {
-            calculatePages();
+        textContainers.forEach(container => {
+            container.innerHTML = htmlContent;
         });
+        
+        setTimeout(updateLayout, 100);
 
     } catch (err) {
-        console.error(err);
-        readerContent.innerHTML = `読込みに失敗しました (${err.message})<br><br>ファイルがダウンロードされていないか、存在しない可能性があります。一覧に戻り、「ダウンロード」を実行してください。`;
+        console.error("コンテンツの読み込みに失敗しました:", err);
+        textContainers.forEach(container => {
+            container.innerHTML = `<p>読込みに失敗しました (${err.message})<br><br>ファイルがダウンロードされていないか、存在しない可能性があります。一覧に戻り、「ダウンロード」を実行してください。</p>`;
+        });
+        if (pageInfo) pageInfo.textContent = "読み込みエラー";
     }
 
-    function calculatePages() {
-        // vertical-rlでは幅が広がる。scrollWidthは全ページのピクセル長。
-        // column-width: 90vw, column-gap: 10vw (計100vw = window.innerWidth)
-        const totalWidth = readerContent.scrollWidth;
-        const pageAdvance = window.innerWidth;
+    function updateLayout() {
+        const allWindows = document.querySelectorAll('.page-right .text-window, .page-left .text-window, .single-mode .text-window');
+        if (!textWindow) return;
 
-        // 総ページ数 (Math.roundで微細な誤差を吸収)
-        totalPages = Math.round(totalWidth / pageAdvance);
-        if (totalPages < 1) totalPages = 1;
+        const oldPageWidth = pageWidth;
+        const currentPixelOffset = currentPage * (oldPageWidth || 1);
 
-        // 現在ページが総ページを超えないように補正
-        if (currentPage >= totalPages) currentPage = totalPages - 1;
+        allWindows.forEach(win => {
+            if (win) win.style.width = ''; 
+        });
 
-        updatePage();
-    }
+        const availableWidth = textWindow.clientWidth;
 
-    function updatePage() {
-        // コンテナが LTR（左から右）ベースのため、要素の左端（0px）が作品の「最後のページ」になっています。
-        // 右端（最初のページ）を表示するには、全体の幅分マイナスへ移動させる必要があります。
-        const pageAdvance = window.innerWidth;
+        const computedStyle = window.getComputedStyle(textContainers[0]);
+        let lineHeight = parseFloat(computedStyle.lineHeight);
 
-        // 最初のページ (currentPage=0) で最もマイナスになり、
-        // 最後のページ (currentPage=totalPages-1) で0になるように計算を反転
-        const translateX = - (totalPages - 1 - currentPage) * pageAdvance;
-
-        readerContent.style.transform = `translateX(${translateX}px)`;
-
-        pageIndicator.textContent = `${currentPage + 1} / ${totalPages}`;
-
-        btnPrev.disabled = (currentPage === 0);
-        btnNext.disabled = (currentPage >= totalPages - 1);
-    }
-
-    btnNext.addEventListener('click', () => {
-        if (currentPage < totalPages - 1) {
-            currentPage++;
-            updatePage();
+        if (isNaN(lineHeight)) {
+            const fontSize = parseFloat(computedStyle.fontSize);
+            lineHeight = fontSize * 1.5;
         }
-    });
+
+        const optimalWidth = Math.floor(availableWidth / lineHeight) * lineHeight;
+
+        allWindows.forEach(win => {
+            if (win) win.style.width = `${optimalWidth}px`;
+        });
+
+        pageWidth = optimalWidth;
+
+        textContainers.forEach(container => {
+            container.style.columnWidth = '';
+            container.style.columnGap = '';
+        });
+
+        if (oldPageWidth > 0 && oldPageWidth !== pageWidth) {
+            currentPage = Math.floor(currentPixelOffset / pageWidth);
+        }
+
+        setTimeout(() => {
+            const scrollWidth = textContainers[0].scrollWidth;
+            totalPages = Math.ceil(scrollWidth / pageWidth);
+
+            if (currentPage >= totalPages) {
+                currentPage = Math.max(0, totalPages - (isSingleMode ? 1 : 2));
+            }
+            if (!isSingleMode && currentPage % 2 !== 0) {
+                currentPage = Math.max(0, currentPage - 1);
+            }
+
+            renderPages();
+        }, 100);
+    }
+
+    function renderPages() {
+        if (totalPages === 0) return;
+
+        const containerRight = textContainers[0];
+        const containerLeft = textContainers.length > 1 ? textContainers[1] : null;
+
+        containerRight.style.transform = `translateX(${currentPage * pageWidth}px)`;
+
+        if (containerLeft && !isSingleMode) {
+            containerLeft.style.transform = `translateX(${(currentPage + 1) * pageWidth}px)`;
+        }
+
+        const pageNumRight = document.getElementById('page-number-right');
+        const pageNumLeft = document.getElementById('page-number-left');
+
+        if (isSingleMode) {
+            if (pageInfo) pageInfo.textContent = `${currentPage + 1} / ${totalPages}`;
+            if (pageNumRight) pageNumRight.textContent = currentPage + 1;
+        } else {
+            const rightNum = currentPage + 1;
+            const leftNum = Math.min(currentPage + 2, totalPages);
+            if (pageInfo) pageInfo.textContent = `${rightNum}-${leftNum} / ${totalPages}`;
+            
+            if (pageNumRight) pageNumRight.textContent = rightNum;
+            if (pageNumLeft) {
+                if (rightNum === totalPages) {
+                    pageNumLeft.textContent = '';
+                } else {
+                    pageNumLeft.textContent = leftNum;
+                }
+            }
+        }
+    }
+
+    function changePage(newPage) {
+        if (currentPage === newPage) return;
+
+        textContainers.forEach(container => container.classList.add('fade-out'));
+
+        setTimeout(() => {
+            currentPage = newPage;
+            renderPages(); 
+            
+            requestAnimationFrame(() => {
+                textContainers.forEach(container => container.classList.remove('fade-out'));
+            });
+        }, 200);
+    }
 
     btnPrev.addEventListener('click', () => {
-        if (currentPage > 0) {
-            currentPage--;
-            updatePage();
+        const step = isSingleMode ? 1 : 2;
+        if (currentPage - step >= 0) {
+            changePage(currentPage - step);
+        } else if (currentPage > 0) {
+            changePage(0);
         }
     });
 
-    // キーボード操作対応
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') btnNext.click(); // 青空文庫は右から左に進むので、左矢印キー＝次ページ
-        if (e.key === 'ArrowRight') btnPrev.click(); // 右矢印キー＝前ページ
+    btnNext.addEventListener('click', () => {
+        const step = isSingleMode ? 1 : 2;
+        if (currentPage + step < totalPages) {
+            changePage(currentPage + step);
+        }
     });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' || e.key === 'Enter') {
+            const step = isSingleMode ? 1 : 2;
+            if (currentPage + step < totalPages) {
+                changePage(currentPage + step);
+            }
+        }
+        else if (e.key === 'ArrowRight') {
+            const step = isSingleMode ? 1 : 2;
+            if (currentPage - step >= 0) {
+                changePage(currentPage - step);
+            } else if (currentPage > 0) {
+                changePage(0);
+            }
+        }
+    });
+
+    btnToggleMode.addEventListener('click', () => {
+        isSingleMode = !isSingleMode;
+        if (isSingleMode) {
+            pagePaper.classList.add('single-mode');
+            btnToggleMode.textContent = '見開き表示';
+        } else {
+            pagePaper.classList.remove('single-mode');
+            btnToggleMode.textContent = '単一ページ表示';
+            if (currentPage % 2 !== 0) {
+                currentPage = Math.max(0, currentPage - 1);
+            }
+        }
+        updateLayout();
+    });
+
+    let resizeTimer;
+    const resizeObserver = new ResizeObserver(() => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateLayout, 150);
+    });
+
+    if (pagePaper) {
+        resizeObserver.observe(pagePaper);
+    }
 });

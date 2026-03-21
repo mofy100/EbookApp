@@ -1,180 +1,286 @@
-/* ====== リセット & 全体設定 ====== */
+:root {
+    --font-size: 18px;
+    --line-height-ratio: 2;
+    --base-line-height: calc(var(--font-size) * var(--line-height-ratio));
+
+    /* テキストウィンドウ（文章枠）の上下左右の余白（％指定） */
+    --window-margin-top: 12%;
+    --window-margin-bottom: 6%;
+    --window-margin-left: 5%;
+    --window-margin-right: 5%;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Serif JP', serif;
-    background-color: #fdfcf8;
-    /* 読書しやすい背景色 */
-    color: #2c2c2c;
-    overflow: hidden;
-    /* 画面全体の縦横スクロールを隠す */
-}
-
-/* ====== リーダーのフレーム（ヘッダー + 読書領域） ====== */
-#reader-view {
+    /* 本文の文字色は完全な黒ではなく、インクのような濃い暗灰色に */
+    color: #312e2b;
+    font-family: "Noto Serif JP", "Yu Mincho", "MS PMincho", serif;
+    /* 背景は少し暗くして本を浮かび上がらせる */
+    background-color: #e2dfd8;
     display: flex;
     flex-direction: column;
     height: 100vh;
-}
-
-.reader-header {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background: #fff;
-    border-bottom: 1px solid #e0dcd3;
-}
-
-#back-button {
-    margin-right: 15px;
-    padding: 5px 15px;
-    cursor: pointer;
-    background: #fff;
-    border: 1px solid #e0dcd3;
-    border-radius: 4px;
-}
-
-/* ====== スクロール用コンテナ ====== */
-.reader-container {
-    flex: 1 1 auto;
-    width: 90vw;
-    /* 画面左右に5vwの余白 */
-    margin: 2vh auto 0;
-    /* 上に少し余白 */
     overflow: hidden;
-    /* JSで完全に座標コントロールするためスクロールバーは隠す */
-    position: relative;
 }
 
-/* ====== 縦書き・本文設定 ====== */
-.vertical-text {
-    /* これが縦書きにするための魔法のプロパティ */
-    writing-mode: vertical-rl;
-
-    /* 高さをコンテナに固定 */
-    height: 100%;
-
-    /* 余白とフォント設定 */
-    /* padding は左右には入れず、全て column-gap とコンテナ幅に任せます */
-    padding: 2vh 0;
-    box-sizing: border-box;
-    font-size: 20px;
-    line-height: 1.8;
-    /* 行間 */
-    font-family: 'Noto Serif JP', serif;
-
-    /* CSSマルチカラムによるページ化の魔法 */
-    column-width: 90vw;
-    /* 1ページの幅はコンテナと同じ */
-    column-gap: 10vw;
-    /* ページ間の隙間。90vw + 10vw = 100vw(画面幅) となりページめくりの計算が完璧になる */
-
-    /* アニメーション */
-    transition: transform 0.3s ease-out;
-
-}
-
-/* ====== ページナビゲーション ====== */
-.page-nav {
-    flex: 0 0 auto;
-    height: 8vh;
+/* コントロールバー */
+.controls-bar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    border-top: 1px solid #e0dcd3;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    gap: 20px;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.page-nav button {
-    padding: 0.5rem 1.5rem;
+.controls-bar button {
+    padding: 8px 16px;
     cursor: pointer;
-    background: #fff;
-    border: 1px solid #e0dcd3;
+    font-size: 14px;
+    border: none;
     border-radius: 4px;
-    font-size: 1rem;
-    margin: 0 1rem;
+    background-color: #555;
+    color: #fff;
+    transition: background-color 0.2s;
 }
 
-.page-nav button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+.controls-bar button:hover {
+    background-color: #777;
 }
 
-#page-indicator {
-    font-size: 1rem;
-    color: #555;
-    min-width: 80px;
-    text-align: center;
+/* 画面全体 */
+.screen-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* ====== E-book DOM (parsed.html) の専用クラス ====== */
-/* 縦書き(vertical-rl)における要素と要素の間隔は「物理的な左側（margin-left）」になります */
+/* 本の枠組み（表紙等の厚みをシミュレート） */
+.book-frame {
+    width: 90vw;
+    max-width: 1400px;
+    height: 85vh;
+    max-height: 900px;
+    background-color: #461a13;
+    /* 表紙・小口の色 */
+    /* 全体の大きな影と、重ねられたページの厚み（紙の重なり）の影 */
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.25),
+        2px 4px 6px rgba(0, 0, 0, 0.05) inset;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 本の紙部分（見開き全体） */
+.page-paper {
+    flex: 1;
+    display: flex;
+    /* 右のDOMを右側に配置するため row-reverse を使用 */
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    /* ベースとなる紙の色 */
+    background-color: #431515;
+}
+
+/* 単一ページ用 */
+.page-paper.single-mode {
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px 60px;
+    /* 綴じ目がないのでシンプルな紙の色と影 */
+    background: #fcf9f2;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.02);
+}
+
+.page-paper.single-mode .page-left {
+    display: none;
+}
+
+.page-paper.single-mode .page-right {
+    border-right: none;
+    padding: 0;
+    max-width: 800px;
+    background: none;
+    box-shadow: none;
+}
+
+/* 単一ページモードの時は右ページにタイトルを表示する */
+.page-paper.single-mode #page-title-right {
+    display: block;
+}
+
+/* 各ページ */
+.page-right,
+.page-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* はみ出しを防ぐ */
+    overflow: hidden;
+    position: relative;
+}
+
+/* 綴じ目（本の中心部分）のリアルな影・グラデーション設定 */
+/* 右ページは左端が綴じ目なので、左端を暗くする */
+.page-right {
+    /* ほんの少し境界線 */
+    border-right: 1px solid rgba(0, 0, 0, 0.02);
+    /* 綴じ目の深い影（左端）から明るい紙の色（右端）へ */
+    background: linear-gradient(to right, #e8dfcc 0%, #f6f1e6 4%, #fcf9f2 10%, #fcf9f2 98%, #f8f4eb 100%);
+    /* 内側のシャドウで立体感を強調 */
+    box-shadow: inset 2px 0 6px -2px rgba(0, 0, 0, 0.15), inset 15px 0 25px -10px rgba(0, 0, 0, 0.05);
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+/* 左ページは右端が綴じ目なので、右端を暗くする */
+.page-left {
+    /* 綴じ目の深い影（右端）から明るい紙の色（左端）へ */
+    background: linear-gradient(to left, #e8dfcc 0%, #f6f1e6 4%, #fcf9f2 10%, #fcf9f2 98%, #f8f4eb 100%);
+    box-shadow: inset -2px 0 6px -2px rgba(0, 0, 0, 0.15), inset -15px 0 25px -10px rgba(0, 0, 0, 0.05);
+    padding-right: 30px;
+    padding-left: 15px;
+}
+
+/* テキスト表示ウィンドウ */
+.text-window {
+    position: absolute;
+    top: var(--window-margin-top);
+    bottom: var(--window-margin-bottom);
+    left: var(--window-margin-left);
+    right: var(--window-margin-right);
+    margin: 0 auto;
+    /* JSで幅が縮小された場合に左右の中央に配置するため */
+    overflow: hidden;
+    /* 子要素のabsoluteを基準にするため */
+}
+
+/* 柱（ページ左上のタイトル表示） */
+.page-title {
+    position: absolute;
+    top: 20px;
+    font-size: 12px;
+    font-family: inherit;
+    color: #888;
+    writing-mode: horizontal-tb;
+    /* 確実に横書きにする */
+    letter-spacing: 0.05em;
+}
+
+#page-title-right {
+    left: 20px;
+    /* 単一ページ時の左上 */
+    display: none;
+    /* 見開き時は非表示 */
+}
+
+#page-title-left {
+    left: 60px;
+    /* 左ページの左上。ページ番号（left: 20px配置）の少し右隣に配置 */
+}
+
+/* ページ番号（ノンブル） */
+.page-number {
+    position: absolute;
+    top: 20px;
+    /* 下部から上部へ移動 */
+    font-size: 14px;
+    font-family: inherit;
+    color: #888;
+}
+
+#page-number-right {
+    right: 20px;
+    /* 右ページの外側（右下） */
+}
+
+#page-number-left {
+    left: 20px;
+    /* 左ページの外側（左下） */
+}
+
+/* テキストコンテナ本体 */
+.text-container {
+    writing-mode: vertical-rl;
+    /* 縦書き（右から左） */
+    position: absolute;
+    right: 0;
+    /* 右端を原点として固定 */
+    top: 0;
+    height: 100%;
+    font-size: var(--font-size);
+    line-height: var(--base-line-height);
+    /* スライド移動をなくし、フェードによる透明度変化だけをアニメーションさせる */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* ページめくりのフェード用クラス */
+.text-container.fade-out {
+    opacity: 0;
+}
+
+/* ズレを防ぐため、すべての要素にベースラインのラインハイトを強制適用 */
+.text-container * {
+    line-height: var(--base-line-height);
+}
+
+/* ふりがな（ルビ）による行間の拡張を禁止（グリッド崩れ対策） */
+.text-container ruby {
+    line-height: var(--base-line-height);
+    ruby-position: over;
+}
+
+.text-container rt {
+    line-height: 0;
+    font-size: 0.4em;
+    /* ルビの文字サイズを本文の半分に設定 */
+}
+
+/* 段落間の余白 */
+.text-container p {
+    margin: 0;
+    text-indent: 0em;
+    /* 段落の字下げ */
+}
+
+.text-container p+p {
+    margin-block-start: 0;
+}
+
+/* 改ページ用クラス */
+.page-break {
+    break-before: column;
+}
+
+/* タイトル・ルビなどの微調整 */
+.ebook-header {
+    margin-block-end: calc(var(--base-line-height) * 2);
+    /* 本文の前にスペースを空ける */
+}
 
 .ebook-title-main {
-    font-size: 2.4em;
-    margin-top: 1em;
-    /* 物理的な上への余白 */
-    margin-left: 1.5em;
-    /* 次の要素（左側）との間隔 */
+    font-size: 2em;
+    /* フォントが大きい場合でも、行の幅は元のベースラインの整数倍に固定 */
+    line-height: calc(var(--base-line-height) * 2) !important;
+    margin-block-start: var(--base-line-height);
+    margin-block-end: 0;
+    font-weight: bold;
 }
 
 .ebook-author-main {
     font-size: 1.2em;
-    color: #555;
-    margin-top: 1em;
-    margin-left: 3em;
-    /* 本文との間隔を大きくとる */
-}
-
-/* pタグ標準マージン（本文の段落間隔） */
-/* 単なる改行として扱うため、段落間の余白（margin）を削除 */
-.ebook-body p {
-    margin: 0;
-}
-
-/* 見出しのマージン */
-.ebook-body h1,
-.ebook-body h2,
-.ebook-body h3 {
-    margin-top: 2em;
-    /* 行頭から少し下げる */
-    margin-left: 1.5em;
-    /* 左側の間隔 */
-    margin-right: 1.5em;
-    /* 右側（前の行）との間隔 */
-}
-
-/* 字下げユーティリティ（行方向＝物理的な下方向へのパディング） */
-.indent-1 {
-    padding-top: 1em;
-}
-
-.indent-2 {
-    padding-top: 2em;
-}
-
-.indent-3 {
-    padding-top: 3em;
-}
-
-.indent-4 {
-    padding-top: 4em;
-}
-
-.indent-5 {
-    padding-top: 5em;
-}
-
-/* 下揃え（地付き）など */
-.align-end {
-    text-align: end;
-}
-
-/* 外字（画像）のサイズ合わせ */
-.gaiji {
-    width: 1em;
-    height: 1em;
-    vertical-align: text-top;
-    border: none;
+    /* フォントサイズ1.2em等半端な場合も、ベースライングリッドを維持する */
+    line-height: var(--base-line-height) !important;
+    margin-block-start: var(--base-line-height);
+    margin-block-end: calc(var(--base-line-height) * 2);
 }
