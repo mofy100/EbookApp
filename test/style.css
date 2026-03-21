@@ -1,0 +1,91 @@
+:root {
+    --font-size: 20px;
+    --line-height: 2.0; /* 確実に行間を保持（ルビがあっても崩れない） */
+    --lines-per-page: 15; /* 1ページにきっちり15行収める */
+    
+    /* 計算プロパティ（CSSに計算させる） */
+    --line-width: calc(var(--font-size) * var(--line-height));
+    --page-width: calc(var(--line-width) * var(--lines-per-page));
+    --page-gap: 40px; 
+}
+
+body {
+    margin: 40px;
+    font-family: serif;
+    background-color: #f7f7f7;
+    text-align: center; /* コントロールボタンを中央揃え */
+}
+
+/* 操作パネルのスタイル */
+.controls {
+    margin-bottom: 20px;
+}
+.controls button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#page-info {
+    margin: 0 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 自由に余白を作るための外包み（紙面全体） */
+.page-frame {
+    /* 窓枠の幅に、左右の好きな余白（ここでは30pxずつ）を足す */
+    width: calc(var(--page-width) + 60px);
+    /* 基準となる高さ 400px に、上下の好きな余白（ここでは40pxずつ）を足す */
+    height: calc(400px + 80px);
+    
+    margin: 0 auto;             /* 全体を画面中央に配置 */
+    background-color: #fff;     /* 紙の背景色 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 本体の影 */
+    
+    /* padding で上下左右の余白を確保。これにより内側の div が押し込まれる */
+    padding: 40px 30px;
+    box-sizing: border-box;     /* padding を width/height のサイズに含める */
+}
+
+/* 1ページ分のテキストだけを切り抜いて見せる窓枠 */
+.page-window {
+    width: var(--page-width);  /* 幅を行の倍数に完全固定 */
+    height: 100%;              /* 高さは親(page-frame)の余白の内側にピッタリ合わせる */
+    
+    overflow: hidden;          /* 窓枠からはみ出たテキスト（次のページ）を不可視にする */
+    position: relative;
+    /* 背景色や影は外側の page-frame の役目になったため削除 */
+}
+
+/* 自動でマルチカラムになる本文要素（巻物） */
+.vertical-box {
+    writing-mode: vertical-rl;
+    height: 100%;
+    
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    text-align: justify;       /* 両端揃えで綺麗に */
+    
+    /* これがページネーションの魔法。自動で改ページ（カラム分割）される */
+    column-width: var(--page-width);
+    column-gap: var(--page-gap);
+    
+    /* 遷移アニメーション */
+    transition: transform 0.3s ease-out;
+    
+    /* JSで座標計算するため、デフォルトのマージン等は消す */
+    margin: 0;
+    padding: 0;
+}
+
+/* 段落のマージン除去 */
+p {
+    margin: 0;
+}
+
+/* ルビの制御 */
+rt {
+    font-size: 0.5em;
+    line-height: 0;  /* 行間を広げないための必須設定 */
+    font-family: inherit;
+}
