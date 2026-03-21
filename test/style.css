@@ -2,6 +2,12 @@
     --font-size: 18px;
     --line-height-ratio: 2;
     --base-line-height: calc(var(--font-size) * var(--line-height-ratio));
+
+    /* テキストウィンドウ（文章枠）の上下左右の余白（％指定） */
+    --window-margin-top: 12%;
+    --window-margin-bottom: 6%;
+    --window-margin-left: 5%;
+    --window-margin-right: 5%;
 }
 
 body {
@@ -107,6 +113,11 @@ body {
     box-shadow: none;
 }
 
+/* 単一ページモードの時は右ページにタイトルを表示する */
+.page-paper.single-mode #page-title-right {
+    display: block;
+}
+
 /* 各ページ */
 .page-right,
 .page-left {
@@ -116,6 +127,7 @@ body {
     align-items: center;
     /* はみ出しを防ぐ */
     overflow: hidden;
+    position: relative;
 }
 
 /* 綴じ目（本の中心部分）のリアルな影・グラデーション設定 */
@@ -142,11 +154,59 @@ body {
 
 /* テキスト表示ウィンドウ */
 .text-window {
-    width: 90%;
-    height: 90%;
+    position: absolute;
+    top: var(--window-margin-top);
+    bottom: var(--window-margin-bottom);
+    left: var(--window-margin-left);
+    right: var(--window-margin-right);
+    margin: 0 auto;
+    /* JSで幅が縮小された場合に左右の中央に配置するため */
     overflow: hidden;
-    position: relative;
     /* 子要素のabsoluteを基準にするため */
+}
+
+/* 柱（ページ左上のタイトル表示） */
+.page-title {
+    position: absolute;
+    top: 20px;
+    font-size: 12px;
+    font-family: inherit;
+    color: #888;
+    writing-mode: horizontal-tb;
+    /* 確実に横書きにする */
+    letter-spacing: 0.05em;
+}
+
+#page-title-right {
+    left: 20px;
+    /* 単一ページ時の左上 */
+    display: none;
+    /* 見開き時は非表示 */
+}
+
+#page-title-left {
+    left: 60px;
+    /* 左ページの左上。ページ番号（left: 20px配置）の少し右隣に配置 */
+}
+
+/* ページ番号（ノンブル） */
+.page-number {
+    position: absolute;
+    top: 20px;
+    /* 下部から上部へ移動 */
+    font-size: 14px;
+    font-family: inherit;
+    color: #888;
+}
+
+#page-number-right {
+    right: 20px;
+    /* 右ページの外側（右下） */
+}
+
+#page-number-left {
+    left: 20px;
+    /* 左ページの外側（左下） */
 }
 
 /* テキストコンテナ本体 */

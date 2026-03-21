@@ -17,6 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('text.html')
         .then(response => response.text())
         .then(html => {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+
+            // titleタグではなく、本文中のメインタイトルクラスから取得
+            const titleElement = tempDiv.querySelector('.ebook-title-main');
+            const bookTitle = titleElement ? titleElement.textContent : '電子書籍';
+            
+            const titleRight = document.getElementById('page-title-right');
+            const titleLeft = document.getElementById('page-title-left');
+            if (titleRight) titleRight.textContent = bookTitle;
+            if (titleLeft) titleLeft.textContent = bookTitle;
+
+            // コンテンツの挿入
             textContainers.forEach(container => {
                 container.innerHTML = html;
             });
@@ -36,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const oldPageWidth = pageWidth;
         const currentPixelOffset = currentPage * (oldPageWidth || 1);
 
-        // 1. まず利用可能な最大幅を計算するために一旦100%に戻す
+        // 1. まず利用可能な最大幅を計算するために一旦100%（CSSのleft/right指定）に戻す
         allWindows.forEach(win => {
-            if (win) win.style.width = '100%';
+            if (win) win.style.width = ''; // 空文字にすることでCSS側の--window-margin-*の制約に戻す
         });
 
         // 2. この時のウィンドウ幅を取得
@@ -114,12 +127,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // ページ番号の更新
+        const pageNumRight = document.getElementById('page-number-right');
+        const pageNumLeft = document.getElementById('page-number-left');
+
         if (isSingleMode) {
             pageInfo.textContent = `${currentPage + 1} / ${totalPages}`;
+            if (pageNumRight) pageNumRight.textContent = currentPage + 1;
         } else {
             const rightNum = currentPage + 1;
             const leftNum = Math.min(currentPage + 2, totalPages);
             pageInfo.textContent = `${rightNum}-${leftNum} / ${totalPages}`;
+            
+            if (pageNumRight) pageNumRight.textContent = rightNum;
+            if (pageNumLeft) {
+                // 最後のページが見開きの右側にきた場合、左側には番号を表示しない
+                if (rightNum === totalPages) {
+                    pageNumLeft.textContent = '';
+                } else {
+                    pageNumLeft.textContent = leftNum;
+                }
+            }
         }
     }
 
