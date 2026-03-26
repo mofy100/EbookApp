@@ -7,11 +7,20 @@ def parse_aozora_html(input_filepath, output_filepath):
     青空文庫のオリジナルHTMLを読み込み、アプリ専用のクリーンなE-book DOM (HTML)に変換して保存する。
     画像(外字)のダウンロードが必要な場合は、そのパスのリストを返す。
     """
-    if not os.path.exists(input_filepath):
-        return []
-
-    with open(input_filepath, 'r', encoding='utf-8') as f:
-        html_content = f.read()
+    # エンコーディングの試行
+    html_content = None
+    for enc in ['utf-8', 'cp932', 'euc_jp']:
+        try:
+            with open(input_filepath, 'r', encoding=enc) as f:
+                html_content = f.read()
+            break
+        except UnicodeDecodeError:
+            continue
+    
+    if html_content is None:
+        # 最終手段としてエラーを無視して読み込む
+        with open(input_filepath, 'r', encoding='utf-8', errors='ignore') as f:
+            html_content = f.read()
 
     # BeautifulSoupでパース（lxmlが利用可能ならlxmlを使用）
     soup = BeautifulSoup(html_content, 'html.parser')
@@ -152,9 +161,13 @@ def parse_aozora_html(input_filepath, output_filepath):
     if len(current_p.contents) > 0:
         body.append(current_p)
 
-    # 整形したHTMLを出力
+    # 整形したHTMLを出力（エディタで見やすいようにブロック要素の後に改行を加える）
+    html_str = str(new_soup)
+    for tag in ['</p>', '</header>', '</div>', '</article>']:
+        html_str = html_str.replace(tag, tag + '\n')
+
     with open(output_filepath, 'w', encoding='utf-8') as f:
-        f.write(str(new_soup))
+        f.write(html_str)
 
     return images_to_download
 

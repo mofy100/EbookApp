@@ -13,6 +13,19 @@ DB_FILE = 'backend/aozora.db'
 DATA_DIR = 'backend/data/'
 GAIJI_DIR = 'backend/data/gaiji/'
 
+def decode_content(content_bytes):
+    """
+    バイト列を適切なエンコーディングで文字列に変換する。
+    UTF-8, CP932 (Shift-JIS拡張), EUC-JPを順に試行する。
+    """
+    for enc in ['utf-8', 'cp932', 'euc_jp']:
+        try:
+            return content_bytes.decode(enc), enc
+        except UnicodeDecodeError:
+            continue
+    # 全て失敗した場合は、エラーを無視してデコードを試みる
+    return content_bytes.decode('utf-8', errors='ignore'), 'utf-8'
+
 def download_and_extract_zip(url, extract_to):
     """
     指定されたURLからZIPファイルをダウンロードし、指定ディレクトリに展開する。
@@ -31,20 +44,19 @@ def download_and_extract_zip(url, extract_to):
                 # テキスト・HTMLファイルの場合はShift-JISからUTF-8へ変換
                 is_text = extracted_path.lower().endswith('.txt') or extracted_path.lower().endswith('.html') or extracted_path.lower().endswith('.htm')
                 if is_text:
-                    try:
-                        with open(extracted_path, 'r', encoding='shift_jis') as f:
-                            content = f.read()
+                    with open(extracted_path, 'rb') as f:
+                        raw_content = f.read()
+                    
+                    content, detected_enc = decode_content(raw_content)
+                    
+                    # HTMLファイルの文字コード指定タグも書き換えておく
+                    if extracted_path.lower().endswith('.html') or extracted_path.lower().endswith('.htm'):
+                        content = content.replace('Shift_JIS', 'UTF-8').replace('shift_jis', 'utf-8')
+                        content = content.replace('EUC-JP', 'UTF-8').replace('euc-jp', 'utf-8')
                         
-                        # HTMLファイルの文字コード指定タグも書き換えておく
-                        if extracted_path.lower().endswith('.html') or extracted_path.lower().endswith('.htm'):
-                            content = content.replace('Shift_JIS', 'UTF-8').replace('shift_jis', 'utf-8')
-                            
-                        # 上書き保存
-                        with open(extracted_path, 'w', encoding='utf-8') as f:
-                            f.write(content)
-                    except UnicodeDecodeError:
-                        # 万が一Shift-JISでデコードできない場合はそのままにする
-                        pass
+                    # 上書き保存
+                    with open(extracted_path, 'w', encoding='utf-8') as f:
+                        f.write(content)
                         
         return True
     except Exception as e:
@@ -59,9 +71,14 @@ def download_text_file(url, extract_to):
         response = requests.get(url, timeout=10)
         response.raise_for_status()
         
-        # 青空文庫はShift-JISが多いため、エンコーディングを推定してUTF-8として保存
-        response.encoding = response.apparent_encoding
+        # エンコーディングを判定してデコード
+        content, detected_enc = decode_content(response.content)
         
+        # HTMLの場合はメタタグを置換
+        if url.lower().endswith('.html') or url.lower().endswith('.htm'):
+            content = content.replace('Shift_JIS', 'UTF-8').replace('shift_jis', 'utf-8')
+            content = content.replace('EUC-JP', 'UTF-8').replace('euc-jp', 'utf-8')
+
         filename = url.split('/')[-1]
         if not filename:
             filename = "downloaded.txt"
@@ -69,7 +86,7 @@ def download_text_file(url, extract_to):
         filepath = os.path.join(extract_to, filename)
         
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(response.text)
+            f.write(content)
             
         return True
     except Exception as e:
@@ -97,7 +114,7 @@ def main():
     total = len(targets)
     print(f"ダウンロード対象作品候補: {total} 件 (著作権フリーのみ)")
     
-    max_download = 10
+    max_download = 100
     downloaded_count = 0
     
     for i, (work_id, xhtml_url) in enumerate(targets, 1):
