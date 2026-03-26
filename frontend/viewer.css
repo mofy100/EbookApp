@@ -8,6 +8,11 @@
     --window-margin-bottom: 6%;
     --window-margin-left: 5%;
     --window-margin-right: 5%;
+    --fore-edge-max-width: 40px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -90,7 +95,7 @@ body {
 /* 本の枠組み（表紙等の厚みをシミュレート） */
 .book-frame {
     width: 90vw;
-    max-width: 1400px;
+    max-width: 1480px;
     height: 85vh;
     max-height: 900px;
     background-color: #461a13;
@@ -102,18 +107,21 @@ body {
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /* 本の紙部分（見開き全体） */
 .page-paper {
-    flex: 1;
-    display: flex;
-    /* 右のDOMを右側に配置するため row-reverse を使用 */
-    flex-direction: row-reverse;
-    box-sizing: border-box;
-    padding: 10px 10px;
+    width: 98%;
+    padding: 10px 0px;
     /* ベースとなる紙の色 */
     background-color: #431515;
+    /* フレックス配置（右小口・右ページ・左ページ・左小口） */
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1;
+    justify-content: center;
+    align-items: stretch;
 }
 
 /* 単一ページ用 */
@@ -190,6 +198,8 @@ body {
     /* 子要素のabsoluteを基準にするため */
 }
 
+/* 以前の小口重なり防止用マージンは削除 */
+
 /* 柱（ページ左上のタイトル表示） */
 .page-title {
     position: absolute;
@@ -232,6 +242,45 @@ body {
 #page-number-left {
     left: 20px;
     /* 左ページの外側（左下） */
+}
+
+/* 小口（本の厚み） */
+.fore-edge {
+    flex: 0 0 auto;
+    /* 横幅はJSで動的に制御 */
+    /* height: calc(100% - 10px); */
+    height: 100%;
+    margin-top: 0px;
+    cursor: pointer;
+    z-index: 5;
+    transition: width 0.3s ease, filter 0.2s ease;
+    /* 紙の重なりをシミュレートするグラデーション */
+    background-color: #f0eada;
+    background-image: repeating-linear-gradient(to bottom,
+            transparent,
+            transparent 1px,
+            rgba(0, 0, 0, 0.05) 1px,
+            rgba(0, 0, 0, 0.05) 2px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.fore-edge:hover {
+    filter: brightness(0.95);
+}
+
+.fore-edge-right {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    /* border-radius: 4px 0 0 4px; */
+}
+
+.fore-edge-left {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    /* border-radius: 0 4px 4px 0; */
+}
+
+/* 単一ページモードでは隠す */
+.page-paper.single-mode .fore-edge {
+    display: none;
 }
 
 /* テキストコンテナ本体 */

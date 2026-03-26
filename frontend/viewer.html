@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>青空文庫リーダー</title>
-    <link rel="stylesheet" href="viewer.css">
+    <link rel="stylesheet" href="viewer.css?v=2">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -29,6 +29,7 @@
         <div class="book-frame">
             <!-- 紙（白背景と余白） -->
             <div class="page-paper">
+                <div id="fore-edge-right" class="fore-edge fore-edge-right"></div>
                 <div class="page-right">
                     <div id="page-title-right" class="page-title"></div>
                     <div class="text-window">
@@ -43,11 +44,12 @@
                     </div>
                     <div id="page-number-left" class="page-number"></div>
                 </div>
+                <div id="fore-edge-left" class="fore-edge fore-edge-left"></div>
             </div>
         </div>
     </div>
 
-    <script src="viewer.js"></script>
+    <script src="viewer.js?v=2"></script>
 </body>
 
 </html>

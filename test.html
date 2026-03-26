@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PaddingとMarginの違い</title>
+    <style>
+        /* 1. 全体の設定（箱のサイズ計算を分かりやすくする） */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+
+        /* 2. 外側の枠（コンテナ） */
+        .container {
+            background-color: white;
+            border: 2px dashed #ccc;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            /* コンテナの内側に余白を作る */
+        }
+
+        /* 3. 共通の箱スタイル */
+        .box {
+            width: 300px;
+            border: 5px solid #333;
+            /* 境界線（Border） */
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* 4. Paddingを確認する箱（内側の余白） */
+        .padding-box {
+            background-color: #99ff99;
+            /* 緑色：Paddingがわかりやすい色 */
+
+            /* ここがポイント！ */
+            padding: 40px;
+            /* 文字（コンテンツ）と枠線（Border）の距離が広がる */
+        }
+
+        /* 5. Marginを確認する箱（外側の余白） */
+        .margin-box {
+            background-color: #ff9999;
+            /* 赤色：Marginがわかりやすい色 */
+
+            /* ここがポイント！ */
+            margin: 40px;
+            /* 枠線（Border）の外側に隙間ができ、周囲の要素を押し出す */
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>余白の仕組みビジュアル解説</h2>
+    <p>点線の枠が「親要素（コンテナ）」です。</p>
+    <br>
+
+    <div class="container">
+
+        <!-- Paddingの例 -->
+        <div>
+            <span class="label">中の文字と枠線の間に隙間がある（緑の部分）</span>
+            <div class="box padding-box">
+                内側に40pxの<br>Padding
+            </div>
+        </div>
+
+        <!-- Marginの例 -->
+        <div>
+            <span class="label">枠線の外側に隙間がある（白地の部分）</span>
+            <div class="box margin-box">
+                外側に40pxの<br>Margin
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

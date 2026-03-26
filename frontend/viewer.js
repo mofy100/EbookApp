@@ -8,15 +8,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     const btnNext = document.getElementById('btn-next');
     const btnPrev = document.getElementById('btn-prev');
     const btnToggleMode = document.getElementById('btn-toggle-mode');
-    
+
     const pageInput = document.getElementById('page-input');
     const pageTotal = document.getElementById('page-total');
+
+    const foreEdgeRight = document.getElementById('fore-edge-right');
+    const foreEdgeLeft = document.getElementById('fore-edge-left');
 
     let currentPage = 0;
     let totalPages = 0;
     let isSingleMode = false;
     let pageWidth = 0;
     let textAlignmentOffset = 0; // 行内での左揃え（ルビを右に詰める）のための補正値
+    const widthPerPage = 0.1; // ページ1枚あたりの厚み(px)
 
     const params = new URLSearchParams(window.location.search);
     const bookId = params.get('id');
@@ -74,7 +78,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (win) win.style.width = '';
         });
 
-        const availableWidth = textWindow.clientWidth;
+        let availableWidth = textWindow.clientWidth;
+        console.log("availableWidth", availableWidth);
 
         const computedStyle = window.getComputedStyle(textContainers[0]);
         let lineHeight = parseFloat(computedStyle.lineHeight);
@@ -89,7 +94,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         // ページ全体をこの隙間分だけ左方向（マイナス）へずらす計算。
         textAlignmentOffset = - (lineHeight - fontSize) / 2;
 
-        const optimalWidth = Math.floor(availableWidth / lineHeight) * lineHeight;
+        // ページ1枚あたりの厚みを考慮して紙のサイズを割り振る
+        const paper = document.querySelector('.page-paper');
+        const paperWidth = paper ? paper.clientWidth : window.innerWidth * 0.9;
+
+        // paper内部の有効幅（padding等の遊びを設けない）
+        availableWidth = paperWidth;
+
+        const totalThickness = totalPages * widthPerPage;
+
+        // 1ページあたりのコンテナの最大幅（小口分を引いて2等分）
+        const maxPageContainerWidth = (availableWidth - totalThickness) / 2;
+
+        // テキストウィンドウ自体の幅（コンテナ幅からページのpadding合計45pxを差し引く）
+        const calculatedTextWindowWidth = maxPageContainerWidth - 45;
+
+        // 文字数に合わせた最適な幅（ラインハイトの倍数）
+        const optimalWidth = Math.floor(calculatedTextWindowWidth / lineHeight) * lineHeight;
+
+        // 最適化された幅に合わせてページコンテナの幅も再定義
+        // optimalWidth+45 ではなく maxPageContainerWidth を使うことで、
+        // 余ったスペースをページの余白として吸収し、端の隙間をなくす
+        const finalPageWidth = maxPageContainerWidth;
+
+        const pages = document.querySelectorAll('.page-right, .page-left');
+        pages.forEach(p => {
+            if (p) p.style.flex = `0 0 ${finalPageWidth}px`;
+        });
 
         allWindows.forEach(win => {
             if (win) win.style.width = `${optimalWidth}px`;
@@ -150,7 +181,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const leftNum = Math.min(currentPage + 2, totalPages);
             if (pageInput) pageInput.value = rightNum;
             if (pageTotal) pageTotal.textContent = `〜${leftNum} / ${totalPages}`;
-            
+
             if (pageNumRight) pageNumRight.textContent = rightNum;
             if (pageNumLeft) {
                 if (rightNum === totalPages) {
@@ -159,6 +190,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                     pageNumLeft.textContent = leftNum;
                 }
             }
+        }
+
+        // 小口（本の厚み）の更新
+        if (foreEdgeRight && foreEdgeLeft && !isSingleMode) {
+            const pagesRemaining = Math.max(0, totalPages - (currentPage + 2));
+            const rightWidth = currentPage * widthPerPage;
+            foreEdgeRight.style.width = `${rightWidth}px`;
+            const leftWidth = pagesRemaining * widthPerPage;
+            foreEdgeLeft.style.width = `${leftWidth}px`;
+        } else if (foreEdgeRight && foreEdgeLeft) {
+            foreEdgeRight.style.width = '0';
+            foreEdgeLeft.style.width = '0';
         }
     }
 
@@ -175,6 +218,44 @@ document.addEventListener('DOMContentLoaded', async () => {
                 textContainers.forEach(container => container.classList.remove('fade-out'));
             });
         }, 200);
+    }
+
+    // 小口クリックでのジャンプ
+    if (foreEdgeRight) {
+        foreEdgeRight.addEventListener('click', (e) => {
+            if (currentPage <= 0) return;
+            const rect = foreEdgeRight.getBoundingClientRect();
+            const y = e.clientY - rect.top;
+            const ratio = y / rect.height;
+            let targetPage = Math.floor(ratio * currentPage);
+
+            // 見開きモード時の偶数ページ補正
+            if (!isSingleMode && targetPage % 2 !== 0) {
+                targetPage = Math.max(0, targetPage - 1);
+            }
+            changePage(targetPage);
+        });
+    }
+
+    if (foreEdgeLeft) {
+        foreEdgeLeft.addEventListener('click', (e) => {
+            const pagesRemaining = totalPages - (currentPage + 2);
+            if (pagesRemaining <= 0) return;
+
+            const rect = foreEdgeLeft.getBoundingClientRect();
+            const y = e.clientY - rect.top;
+            const ratio = y / rect.height;
+            let targetPage = (currentPage + 2) + Math.floor(ratio * pagesRemaining);
+
+            // 最後のページを超えないように
+            if (targetPage >= totalPages) targetPage = totalPages - 1;
+
+            // 見開きモード時の奇数ページ補正
+            if (!isSingleMode && targetPage % 2 !== 0) {
+                targetPage = Math.min(totalPages - 1, targetPage - 1);
+            }
+            changePage(targetPage);
+        });
     }
 
     btnPrev.addEventListener('click', () => {
@@ -203,15 +284,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             // 範囲外の補正
             if (val < 1) val = 1;
             if (val > totalPages) val = totalPages;
-            
+
             // currentPageは0オリジンなので-1する
             let targetPage = val - 1;
-            
+
             // 見開きモード時の奇数ページ補正（右寄せ）
             if (!isSingleMode && targetPage % 2 !== 0) {
                 targetPage = Math.max(0, targetPage - 1);
             }
-            
+
             changePage(targetPage);
             // 表示の即時反映（renderPageはフェードの合間に呼ばれるため、入力欄の数字だけ直しておく）
             e.target.value = targetPage + 1;
