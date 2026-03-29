@@ -111,20 +111,37 @@ def get_book_text(book_id: int):
     if not html_files:
         raise HTTPException(status_code=404, detail="No readable HTML file found in the downloaded data")
         
-    # 変換済みの parsed.html を探す
-    parsed_files = [f for f in html_files if f.endswith('parsed.html')]
+    # 1. 開発モード（常に最新のパーサールールを適用）の判定
+    AUTO_REPARSE = os.environ.get("AUTO_REPARSE", "").lower() == "true"
     
-    if parsed_files:
-        target_file = parsed_files[0]
-        file_path = os.path.join(book_dir, target_file)
+    # 2. 変換済みの content.html を探す (AUTO_REPARSEが無効な場合のみ再利用)
+    content_path = os.path.join(book_dir, "content.html")
+    
+    # 互換性：まだ古い名前 (parsed.html) がある場合
+    old_parsed_path = os.path.join(book_dir, "parsed.html")
+    if not os.path.exists(content_path) and os.path.exists(old_parsed_path):
+        os.rename(old_parsed_path, content_path)
+
+    if os.path.exists(content_path) and not AUTO_REPARSE:
+        target_file = "content.html"
+        file_path = content_path
     else:
-        # parsed.htmlがない場合はオンデマンドでパースする
-        original_file = html_files[0]
-        original_path = os.path.join(book_dir, original_file)
-        target_file = "parsed.html"
+        # 3. ない場合（または開発モード）は origin.html からオンデマンドでパースする
+        origin_path = os.path.join(book_dir, "origin.html")
+        
+        # 移行措置：どちらもない場合は既存のHTMLを探す
+        if not os.path.exists(origin_path):
+            html_files = [f for f in os.listdir(book_dir) if f.endswith('.html') or f.endswith('.htm')]
+            html_files = [f for f in html_files if "content" not in f and "parsed" not in f]
+            if html_files:
+                os.rename(os.path.join(book_dir, html_files[0]), origin_path)
+            else:
+                raise HTTPException(status_code=404, detail="Original HTML (origin.html) not found")
+
+        target_file = "content.html"
         file_path = os.path.join(book_dir, target_file)
         try:
-            parse_aozora_html(original_path, file_path)
+            parse_aozora_html(origin_path, file_path)
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Failed to parse file: {str(e)}")
             

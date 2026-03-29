@@ -83,83 +83,146 @@ def parse_aozora_html(input_filepath, output_filepath):
     # 4. 本文の <p> タグ化と階層化
     current_p = new_soup.new_tag('p')
     
-    def process_node(node, container, current_indent=None, current_align=None):
+    def get_standard_classes(aozora_classes):
+        """
+        青空文庫のクラス名を標準レイアウトクラスに変換する
+        """
+        standard = []
+        for cls in aozora_classes:
+            # 1. 字下げ (jisage_X -> indent-X)
+            if cls.startswith('jisage_'):
+                num = cls.split('_')[1]
+                standard.append(f"indent-{num}")
+            
+            # 2. 地付き (chitsuki_X -> text-bottom)
+            elif cls.startswith('chitsuki_'):
+                standard.append("text-bottom")
+                
+            # 3. 字詰め (jizume_X -> jizume-X)
+            elif cls.startswith('jizume_'):
+                num = cls.split('_')[1]
+                standard.append(f"jizume-{num}")
+
+            # 4. 改ページ (page-break)
+            elif 'page-break' in cls or 'pagebreak' in cls or 'ext-pagebreak' in cls:
+                standard.append("page-break")
+            
+            # 5. ホワイトリスト（そのまま通すもの）
+            elif cls in ['tatechuyoko', 'space-line', 'space-line-2', 'size-2x', 'size-3x', 'text-center', 'text-bottom', 'text-notes']:
+                standard.append(cls)
+                
+            # 6. 見出しなどの構造
+            elif cls in ['title', 'author', 'dai-midashi', 'naka-midashi', 'sho-midashi']:
+                standard.append(f"az-{cls}")
+        
+        return list(set(standard))
+
+    def flush_paragraph(container, indent=None, align=None, extra_classes=None):
+        """
+        現在の段落(current_p)を確定してコンテナに追加し、新しい段落を開始する
+        """
         nonlocal current_p
+        if len(current_p.contents) > 0:
+            classes = get_standard_classes(current_p.get('class', []))
+            if indent: classes.append(indent)
+            if align: classes.append(align)
+            if extra_classes: classes.extend(extra_classes)
+            
+            if classes:
+                current_p['class'] = list(set(classes))
+            container.append(current_p)
+            current_p = new_soup.new_tag('p')
+
+    def process_node(node, container, current_indent=None, current_align=None):
+        nonlocal current_p # Test Edit
         
         if isinstance(node, NavigableString):
             text = str(node)
-            # 生HTML内の改行コードを除去（ブラウザの半角スペース化を防ぐ）
-            text = re.sub(r'[\r\n]+', '', text)
+            text = re.sub(r'[\r\n\t]+', '', text)
             if text:
                 current_p.append(text)
                 
         elif isinstance(node, Tag):
+            # 特殊なクラスを持つ要素（改ページなど）の処理
+            node_classes = node.get('class', [])
+            std_classes = get_standard_classes(node_classes)
+
+            if "page-break" in std_classes:
+                flush_paragraph(container, current_indent, current_align)
+                pb = new_soup.new_tag('div', attrs={'class': 'page-break'})
+                container.append(pb)
+                return
+
             if node.name == 'br':
-                # 青空文庫における br は段落の切れ目
-                if len(current_p.contents) > 0:
-                    if current_indent:
-                        current_p['class'] = current_p.get('class', []) + [current_indent]
-                    if current_align:
-                        current_p['class'] = current_p.get('class', []) + [current_align]
-                    container.append(current_p)
-                current_p = new_soup.new_tag('p')
+                # 単一の br は改行（段落の終了）として扱う
+                flush_paragraph(container, current_indent, current_align)
                 
-            elif node.name == 'div':
-                # divはブロック要素（字下げなどのコンテナ）
-                indent_class = None
-                align_class = None
-                classes = node.get('class', [])
-                for cls in classes:
-                    if cls.startswith('jisage_'):
-                        num = cls.split('_')[1]
-                        indent_class = f"indent-{num}"
-                    elif cls == 'chitsuki_1' or cls == 'chitsuki_2':
-                        align_class = "align-end"
+            elif node.name in ['div', 'blockquote', 'section']:
+                # ブロック要素の開始前に現在の段落をフラッシュ
+                flush_paragraph(container, current_indent, current_align)
+
+                # 新しいコンテキスト（インデント等）の抽出
+                new_indent = current_indent
+                new_align = current_align
+                extra_classes = []
                 
-                # インラインスタイルの字下げ検知 (margin-left: Xem)
+                for cls in std_classes:
+                    if cls.startswith('indent-'): new_indent = cls
+                    elif cls == 'text-bottom': new_align = cls
+                    elif cls.startswith('jizume-'): extra_classes.append(cls)
+
+                # インラインスタイルの字下げ検知
                 style = node.get('style', '')
                 margin_match = re.search(r'margin-left:\s*([0-9]+)em', style)
                 if margin_match:
-                    indent_class = f"indent-{margin_match.group(1)}"
-                
-                # divに入る前に現在の段落を確定させる
-                if len(current_p.contents) > 0:
-                    container.append(current_p)
-                    current_p = new_soup.new_tag('p')
+                    new_indent = f"indent-{margin_match.group(1)}"
                 
                 # 子ノードを再帰的に処理
                 for child in list(node.children):
-                    process_node(child, container, current_indent=indent_class, current_align=align_class)
+                    process_node(child, container, current_indent=new_indent, current_align=new_align)
                 
-                # divが終わった後も段落を確定させる
+                # ブロック終了後のフラッシュ（検出した追加クラスも付与）
+                flush_paragraph(container, new_indent, new_align, extra_classes=extra_classes)
+                
+            elif re.match(r'^h[1-6]$', node.name) or 'az-dai-midashi' in std_classes or 'az-naka-midashi' in std_classes:
+                # 見出し処理
+                flush_paragraph(container, current_indent, current_align)
+                
+                heading_p = new_soup.new_tag('p')
+                h_classes = ['text-heading'] + std_classes
+                if current_indent: h_classes.append(current_indent)
+                if current_align: h_classes.append(current_align)
+                heading_p['class'] = list(set(h_classes))
+                
+                for child in node.children:
+                    heading_p.append(child.extract())
+                container.append(heading_p)
+                
+            elif node.name == 'p':
                 if len(current_p.contents) > 0:
-                    if indent_class:
-                        current_p['class'] = current_p.get('class', []) + [indent_class]
-                    if align_class:
-                        current_p['class'] = current_p.get('class', []) + [align_class]
-                    container.append(current_p)
-                    current_p = new_soup.new_tag('p')
-                    
-            elif re.match(r'^h[1-6]$', node.name):
-                if len(current_p.contents) > 0:
-                    container.append(current_p)
-                    current_p = new_soup.new_tag('p')
-                node.name = 'p'
-                node['class'] = node.get('class', []) + ['text-heading']
-                container.append(node)
+                    flush_paragraph(container, current_indent, current_align)
+                
+                # ホワイトリストに基づきクラスを引き継ぐ
+                if std_classes:
+                    current_p['class'] = std_classes
+                
+                for child in list(node.children):
+                    process_node(child, container, current_indent=current_indent, current_align=current_align)
+                
+                flush_paragraph(container, current_indent, current_align)
                 
             else:
-                # 縦中横などのインライン要素
-                if node.get('class') and 'tatechuyoko' in node.get('class'):
-                    node['class'] = ['tatechuyoko']
+                # 縦中横や外字、その他のインライン要素
+                if std_classes:
+                    # インライン要素が標準クラスを持つ場合は付与
+                    node['class'] = std_classes
                 current_p.append(node)
 
     # original の main_text の子要素を順に処理
     for child in list(main_text.children):
         process_node(child, body)
         
-    if len(current_p.contents) > 0:
-        body.append(current_p)
+    flush_paragraph(body)
 
     # 整形したHTMLを出力（エディタで見やすいようにブロック要素の後に改行を加える）
     html_str = str(new_soup)
@@ -172,11 +235,61 @@ def parse_aozora_html(input_filepath, output_filepath):
     return images_to_download
 
 if __name__ == "__main__":
-    # 単体テスト用
-    target = "backend/data/2/2_20959.html"
-    parsed_target = "backend/data/2/2_20959_parsed.html"
-    print(f"Parsing {target} ...")
-    images = parse_aozora_html(target, parsed_target)
-    print(f"Parse complete. Generated {parsed_target}")
-    if images:
-        print(f"Gaiji images to download: {len(images)}")
+    import argparse
+    import glob
+    
+    parser = argparse.ArgumentParser(description='origin.html を読み込み、標準化された content.html に変換する')
+    parser.add_argument('--n', type=int, default=0, help='処理する最大件数 (0は無制限)')
+    parser.add_argument('--replace', action='store_true', help='すでに content.html がある場合でも上書きする')
+    parser.add_argument('--id', type=int, help='特定の作品IDのみを処理する')
+    args = parser.parse_args()
+
+    # 個別の入出力指定がある場合はそれを使用（以前の互換性のため）
+    # ただし、現在の argparse と競合しないように調整が必要
+    
+    data_dir = "backend/data"
+    parsed_count = 0
+    
+    # 処理対象のディレクトリを特定
+    if args.id:
+        target_dirs = [os.path.join(data_dir, str(args.id))]
+    else:
+        # data/1, data/2... などの数字のディレクトリをすべて取得
+        target_dirs = [d for d in glob.glob(os.path.join(data_dir, "*")) if os.path.isdir(d) and os.path.basename(d).isdigit()]
+        # 数値順にソート（一応）
+        target_dirs.sort(key=lambda x: int(os.path.basename(x)))
+
+    for d in target_dirs:
+        if args.n > 0 and parsed_count >= args.n:
+            break
+            
+        work_id = os.path.basename(d)
+        origin_path = os.path.join(d, "origin.html")
+        content_path = os.path.join(d, "content.html")
+        
+        # 特殊対応：以前の parsed.html がある場合のリネーム（移行措置）
+        old_parsed_path = os.path.join(d, "parsed.html")
+        if os.path.exists(old_parsed_path) and not os.path.exists(content_path):
+            os.rename(old_parsed_path, content_path)
+
+        if not os.path.exists(origin_path):
+            # もし origin.html がないが、元のHTMLっぽファイルがある場合はリネームを試みる
+            html_files = [f for f in glob.glob(os.path.join(d, "*.html")) if "content" not in f and "parsed" not in f and "test" not in f]
+            if html_files:
+                os.rename(html_files[0], origin_path)
+            else:
+                continue
+                
+        # すでに content.html があり、かつ replace フラグがない場合はスキップ
+        if os.path.exists(content_path) and not args.replace:
+            continue
+            
+        print(f"[{parsed_count+1}] Parsing 作品ID: {work_id} ...")
+        try:
+            parse_aozora_html(origin_path, content_path)
+            print(f"  => content.html を生成しました")
+            parsed_count += 1
+        except Exception as e:
+            print(f"  => [エラー] パース失敗: {e}")
+            
+    print(f"\n完了。処理した作品数: {parsed_count} 件")

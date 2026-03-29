@@ -9,6 +9,9 @@
     --window-margin-left: 5%;
     --window-margin-right: 5%;
     --fore-edge-max-width: 40px;
+
+    /* viewer.jsで設定される値 */
+    --text-window-width: 100px;
 }
 
 * {
@@ -292,10 +295,15 @@ body {
     /* 右端を原点として固定 */
     top: 0;
     height: 100%;
+    width: auto;
     font-size: var(--font-size);
     line-height: var(--base-line-height);
     /* スライド移動をなくし、フェードによる透明度変化だけをアニメーションさせる */
     transition: opacity 0.2s ease-in-out;
+
+    column-width: var(--text-window-width);
+    column-gap: 0;
+
 }
 
 /* ページめくりのフェード用クラス */
@@ -332,16 +340,144 @@ body {
 .text-container p {
     margin: 0;
     text-indent: 0em;
-    /* 段落の字下げ */
 }
 
 .text-container p+p {
     margin-block-start: 0;
 }
 
-/* 改ページ用クラス */
+/* --- レイアウト再現スタイル (サンプル・青空文庫互換) --- */
+
+/* 字下げ (indent-X) - 縦書きでは上方向のパディング */
+.indent-1 {
+    padding-top: 1em;
+}
+
+.indent-2 {
+    padding-top: 2em;
+}
+
+.indent-3 {
+    padding-top: 3em;
+}
+
+.indent-4 {
+    padding-top: 4em;
+}
+
+.indent-5 {
+    padding-top: 5em;
+}
+
+.indent-6 {
+    padding-top: 6em;
+}
+
+.indent-7 {
+    padding-top: 7em;
+}
+
+.indent-8 {
+    padding-top: 8em;
+}
+
+.indent-9 {
+    padding-top: 9em;
+}
+
+.indent-10 {
+    padding-top: 10em;
+}
+
+.text-container p.space-line {
+    padding-top: 1em;
+    /* ユーザー様が追加された字下げ分を保持 */
+    margin-right: var(--base-line-height) !important;
+    visibility: hidden;
+    width: 0;
+    /* 幅を 0 にして横方向の干渉を最小限に */
+}
+
+/* 地付き (align-end) - 縦書きでは下方向（末尾）への寄せ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-bottom {
+    text-align: end;
+}
+
+/* 字詰め (jizume-X) - 1行の文字数制限。Webでは幅（高さ）として表現 */
+[class^="jizume-"] {
+    max-height: 80%; /* 例：全体の80%に抑えるなど（要調整） */
+    display: block;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+/* 注記 (notes) */
+.text-notes {
+    font-size: 0.85em;
+    color: #555;
+    border-right: 1px dashed #ccc;
+    padding-right: 0.2em;
+}
+
+/* 縦中横 (tatechuyoko) */
+.tatechuyoko {
+    text-combine-upright: all;
+    -webkit-text-combine: horizontal;
+    display: inline-block;
+}
+
+/* 見出しのスタイル等 */
+.text-heading {
+    font-weight: bold;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.az-h1 {
+    font-size: 1.8em;
+    line-height: calc(var(--base-line-height) * 2);
+}
+
+.az-h2 {
+    font-size: 1.6em;
+    line-height: calc(var(--base-line-height) * 2);
+}
+
+.az-h3 {
+    font-size: 1.4em;
+    line-height: calc(var(--base-line-height) * 2);
+}
+
+.az-h4 {
+    font-size: 1.2em;
+    line-height: calc(var(--base-line-height) * 2);
+}
+
+.az-naka-midashi {
+    border-right: 1px solid #ccc;
+    padding-right: 0.2em;
+    margin-right: 0.5em;
+}
+
+/* ページの中央に配置 */
+.page-center {
+    margin: 0 auto;
+    line-height: var(--text-window-width);
+}
+
+/* ページ送り（改ページ）用クラス */
 .page-break {
-    break-before: column;
+    display: block;
+    height: 100%;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
 }
 
 /* タイトル・ルビなどの微調整 */
@@ -352,7 +488,6 @@ body {
 
 .ebook-title-main {
     font-size: 2em;
-    /* フォントが大きい場合でも、行の幅は元のベースラインの整数倍に固定 */
     line-height: calc(var(--base-line-height) * 2) !important;
     margin-block-start: var(--base-line-height);
     margin-block-end: 0;
@@ -361,7 +496,6 @@ body {
 
 .ebook-author-main {
     font-size: 1.2em;
-    /* フォントサイズ1.2em等半端な場合も、ベースライングリッドを維持する */
     line-height: var(--base-line-height) !important;
     margin-block-start: var(--base-line-height);
     margin-block-end: calc(var(--base-line-height) * 2);

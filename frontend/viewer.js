@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         let availableWidth = textWindow.clientWidth;
-        console.log("availableWidth", availableWidth);
 
         const computedStyle = window.getComputedStyle(textContainers[0]);
         let lineHeight = parseFloat(computedStyle.lineHeight);
@@ -112,6 +111,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         // 文字数に合わせた最適な幅（ラインハイトの倍数）
         const optimalWidth = Math.floor(calculatedTextWindowWidth / lineHeight) * lineHeight;
 
+        // CSS変数に設定
+        document.documentElement.style.setProperty('--text-window-width', `${optimalWidth}px`);
+
         // 最適化された幅に合わせてページコンテナの幅も再定義
         // optimalWidth+45 ではなく maxPageContainerWidth を使うことで、
         // 余ったスペースをページの余白として吸収し、端の隙間をなくす
@@ -128,12 +130,41 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         pageWidth = optimalWidth;
 
-        console.log("lineHeight", lineHeight, "pageWidth", pageWidth);
-
+        /* 改ページ（.page-break）の動的補正 */
         textContainers.forEach(container => {
-            container.style.columnWidth = '';
-            container.style.columnGap = '';
+            const breaks = container.querySelectorAll('.page-break');
+            breaks.forEach(pb => {
+                pb.style.marginRight = '0'; // 一旦リセット
+            });
+
+            // レイアウト確定を待つため少し遅延させて計算
+            setTimeout(() => {
+                const containerRect = container.getBoundingClientRect();
+                breaks.forEach(pb => {
+                    const rect = pb.getBoundingClientRect();
+                    // コンテナの右端からの距離（xオフセット）を計算
+                    // vertical-rl では右端が 0
+                    const currentX = containerRect.right - rect.right;
+                    
+                    // 次のページの開始位置までの不足分を計算
+                    const remainder = currentX % pageWidth;
+                    if (remainder > 0) {
+                        const neededGap = pageWidth - remainder;
+                        pb.style.marginRight = `${neededGap}px`;
+                    }
+                });
+
+                // マージン付与後に再度ページ数を計算
+                const scrollWidth = container.scrollWidth;
+                totalPages = Math.ceil(scrollWidth / pageWidth);
+                if (currentPage >= totalPages) {
+                    currentPage = Math.max(0, totalPages - (isSingleMode ? 1 : 2));
+                }
+                renderPages();
+            }, 0);
         });
+
+        /* column-widthをCSSの変数に任せ、JS側でのクリアを停止します */
 
         if (oldPageWidth > 0 && oldPageWidth !== pageWidth) {
             currentPage = Math.floor(currentPixelOffset / pageWidth);
@@ -162,8 +193,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // ページ移動に加え、左寄せ補正オフセットを足すことでルビの空白問題と端の切り取りを防ぐ
         containerRight.style.transform = `translateX(${currentPage * pageWidth + textAlignmentOffset}px)`;
-
-        console.log("currentPage", currentPage, "pageWidth", pageWidth, "textAlignmentOffset", textAlignmentOffset, "transform", currentPage * pageWidth + textAlignmentOffset);
 
         if (containerLeft && !isSingleMode) {
             containerLeft.style.transform = `translateX(${(currentPage + 1) * pageWidth + textAlignmentOffset}px)`;
