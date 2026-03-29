@@ -127,33 +127,6 @@ body {
     align-items: stretch;
 }
 
-/* 単一ページ用 */
-.page-paper.single-mode {
-    flex-direction: row;
-    justify-content: center;
-    padding: 40px 60px;
-    /* 綴じ目がないのでシンプルな紙の色と影 */
-    background: #fcf9f2;
-    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.02);
-}
-
-.page-paper.single-mode .page-left {
-    display: none;
-}
-
-.page-paper.single-mode .page-right {
-    border-right: none;
-    padding: 0;
-    max-width: 800px;
-    background: none;
-    box-shadow: none;
-}
-
-/* 単一ページモードの時は右ページにタイトルを表示する */
-.page-paper.single-mode #page-title-right {
-    display: block;
-}
-
 /* 各ページ */
 .page-right,
 .page-left {
@@ -279,11 +252,6 @@ body {
 .fore-edge-left {
     border-left: 1px solid rgba(0, 0, 0, 0.2);
     /* border-radius: 0 4px 4px 0; */
-}
-
-/* 単一ページモードでは隠す */
-.page-paper.single-mode .fore-edge {
-    display: none;
 }
 
 /* テキストコンテナ本体 */
@@ -434,7 +402,6 @@ body {
 
 /* 見出しのスタイル等 */
 .text-heading {
-    font-weight: bold;
     margin-block-start: 1em;
     margin-block-end: 1em;
 }
@@ -455,7 +422,7 @@ body {
 }
 
 .az-h4 {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: calc(var(--base-line-height) * 2);
 }
 

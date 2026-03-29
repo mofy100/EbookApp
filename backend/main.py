@@ -162,6 +162,57 @@ def get_book_text(book_id: int):
         "content": content
     }
 
+@app.get("/api/books/{book_id}/manifest")
+def get_book_manifest(book_id: int):
+    book_dir = os.path.join(DATA_DIR, str(book_id))
+    manifest_path = os.path.join(book_dir, "manifest.json")
+    
+    if os.path.exists(manifest_path):
+        import json
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    
+    # マニフェストがない場合のフォールバック（単一ファイル構成として返す）
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT title, author FROM books WHERE id = ?", (book_id,))
+    row = cursor.fetchone()
+    conn.close()
+    
+    title = row["title"] if row else "Unknown"
+    author = row["author"] if row else "Unknown"
+    
+    return {
+        "title": title,
+        "author": author,
+        "chapter_count": 1,
+        "chapters": [
+            {
+                "index": 0,
+                "file": "content.html"
+            }
+        ]
+    }
+
+@app.get("/api/books/{book_id}/chunk/{filename}")
+def get_book_chunk(book_id: int, filename: str):
+    # セキュリティチェック：ファイル名が不正なパスを含まないか
+    if ".." in filename or "/" in filename:
+        raise HTTPException(status_code=400, detail="Invalid filename")
+        
+    book_dir = os.path.join(DATA_DIR, str(book_id))
+    file_path = os.path.join(book_dir, filename)
+    
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="Chunk file not found")
+        
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        return {"content": content}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to read chunk: {str(e)}")
+
 # -------- 静的ファイルと画像の配信 --------
 app.mount("/api/assets/gaiji", StaticFiles(directory="backend/data/gaiji"), name="gaiji")
 

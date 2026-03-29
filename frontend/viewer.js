@@ -7,20 +7,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const btnNext = document.getElementById('btn-next');
     const btnPrev = document.getElementById('btn-prev');
-    const btnToggleMode = document.getElementById('btn-toggle-mode');
 
     const pageInput = document.getElementById('page-input');
     const pageTotal = document.getElementById('page-total');
+
+    const titleRight = document.getElementById('page-title-right');
+    const titleLeft = document.getElementById('page-title-left');
+    const pageNumRight = document.getElementById('page-number-right');
+    const pageNumLeft = document.getElementById('page-number-left');
 
     const foreEdgeRight = document.getElementById('fore-edge-right');
     const foreEdgeLeft = document.getElementById('fore-edge-left');
 
     let currentPage = 0;
-    let totalPages = 0;
-    let isSingleMode = false;
+    let globalTotalPages = 0;
     let pageWidth = 0;
     let textAlignmentOffset = 0; // 行内での左揃え（ルビを右に詰める）のための補正値
-    let bookData = {}; // ここで定義して他関数からも参照可能にする
+    let bookData = {}; // manifest情報の格納用
+    let chunks = []; // 各各チャンクのHTML文字列の配列
+    let chunkPageCounts = []; // 各チャンクのページ数の配列
+    let chunkTitles = []; // 各チャンクから抽出した見出し（柱として使用）
     const widthPerPage = 0.1; // ページ1枚あたりの厚み(px)
 
     const params = new URLSearchParams(window.location.search);
@@ -40,13 +46,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.title = `読書中 (ID: ${bookId})`;
 
     try {
-        const res = await fetch(`${API_BASE}/books/${bookId}/text`);
-        if (!res.ok) throw new Error('Failed to load text');
-        bookData = await res.json();
+        // 1. マニフェストの取得
+        const manifestRes = await fetch(`${API_BASE}/books/${bookId}/manifest`);
+        if (!manifestRes.ok) throw new Error('Failed to load manifest');
+        bookData = await manifestRes.json();
 
-        const htmlContent = bookData.content;
         const bookTitle = bookData.title || '電子書籍';
-
         document.title = `${bookTitle} - 青空文庫リーダー`;
 
         const titleRight = document.getElementById('page-title-right');
@@ -54,9 +59,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (titleRight) titleRight.textContent = bookTitle;
         if (titleLeft) titleLeft.textContent = bookTitle;
 
-        textContainers.forEach(container => {
-            container.innerHTML = htmlContent;
-        });
+        // 2. 各チャンクの取得
+        const chunkPromises = bookData.chapters.map(chapter => 
+            fetch(`${API_BASE}/books/${bookId}/chunk/${chapter.file}`).then(res => res.json())
+        );
+        
+        const chunkResults = await Promise.all(chunkPromises);
+        chunks = chunkResults.map(res => res.content);
+
+        // 3. 計測用コンテナの作成
+        createMeasurer();
 
         setTimeout(updateLayout, 100);
 
@@ -68,8 +80,55 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (pageTotal) pageTotal.textContent = "読み込みエラー";
     }
 
+    function createMeasurer() {
+        if (document.getElementById('offscreen-measurer')) return;
+        const measurer = document.createElement('div');
+        measurer.id = 'offscreen-measurer';
+        measurer.style.cssText = `
+            position: absolute;
+            visibility: hidden;
+            z-index: -1000;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        `;
+        // text-window と text-container を模倣する構造を作成
+        measurer.innerHTML = `
+            <div class="text-window" style="position: relative;">
+                <div class="text-container" style="position: absolute;"></div>
+            </div>
+        `;
+        document.body.appendChild(measurer);
+    }
+
+    function getGlobalPageLocation(globalPage) {
+        let accumulated = 0;
+        for (let i = 0; i < chunkPageCounts.length; i++) {
+            const count = chunkPageCounts[i];
+            if (globalPage < accumulated + count) {
+                return {
+                    chunkIndex: i,
+                    localPage: globalPage - accumulated
+                };
+            }
+            accumulated += count;
+        }
+        // 範囲外の場合は最後のチャンクの最後
+        if (chunkPageCounts.length > 0) {
+            const lastIdx = chunkPageCounts.length - 1;
+            return {
+                chunkIndex: lastIdx,
+                localPage: Math.max(0, chunkPageCounts[lastIdx] - 1)
+            };
+        }
+        return { chunkIndex: 0, localPage: 0 };
+    }
+
     function updateLayout() {
-        const allWindows = document.querySelectorAll('.page-right .text-window, .page-left .text-window, .single-mode .text-window');
+        const allWindows = document.querySelectorAll('.page-right .text-window, .page-left .text-window');
         if (!textWindow) return;
 
         const oldPageWidth = pageWidth;
@@ -79,45 +138,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (win) win.style.width = '';
         });
 
-        let availableWidth = textWindow.clientWidth;
+        let availableWidth = textWindow.parentElement.clientWidth; // textWindow自身の幅は optimalWidth になるため親（page-right等）から取る
 
         const computedStyle = window.getComputedStyle(textContainers[0]);
         let lineHeight = parseFloat(computedStyle.lineHeight);
         let fontSize = parseFloat(computedStyle.fontSize);
+        if (isNaN(lineHeight)) lineHeight = fontSize * 1.5;
 
-        if (isNaN(lineHeight)) {
-            lineHeight = fontSize * 1.5;
-        }
-
-        // 行ボックスの中で、本文は中央寄せになるため、左右に (lineHeight - fontSize)/2 の隙間ができる。
-        // 本文を左寄せ（縦書きでは左端）にし、右にできたスペースにルビをすっぽり収めるため、
-        // ページ全体をこの隙間分だけ左方向（マイナス）へずらす計算。
         textAlignmentOffset = - (lineHeight - fontSize) / 2;
 
-        // ページ1枚あたりの厚みを考慮して紙のサイズを割り振る
         const paper = document.querySelector('.page-paper');
         const paperWidth = paper ? paper.clientWidth : window.innerWidth * 0.9;
-
-        // paper内部の有効幅（padding等の遊びを設けない）
         availableWidth = paperWidth;
 
-        const totalThickness = totalPages * widthPerPage;
-
-        // 1ページあたりのコンテナの最大幅（小口分を引いて2等分）
+        const totalThickness = globalTotalPages * widthPerPage;
         const maxPageContainerWidth = (availableWidth - totalThickness) / 2;
-
-        // テキストウィンドウ自体の幅（コンテナ幅からページのpadding合計45pxを差し引く）
         const calculatedTextWindowWidth = maxPageContainerWidth - 45;
-
-        // 文字数に合わせた最適な幅（ラインハイトの倍数）
         const optimalWidth = Math.floor(calculatedTextWindowWidth / lineHeight) * lineHeight;
 
-        // CSS変数に設定
         document.documentElement.style.setProperty('--text-window-width', `${optimalWidth}px`);
-
-        // 最適化された幅に合わせてページコンテナの幅も再定義
-        // optimalWidth+45 ではなく maxPageContainerWidth を使うことで、
-        // 余ったスペースをページの余白として吸収し、端の隙間をなくす
         const finalPageWidth = maxPageContainerWidth;
 
         const pages = document.querySelectorAll('.page-right, .page-left');
@@ -131,128 +170,141 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         pageWidth = optimalWidth;
 
-        /* 改ページ（.page-break）の動的補正 */
-        textContainers.forEach(container => {
-            const breaks = container.querySelectorAll('.page-break');
+        // --- 各チャンクのページ数計測と見出し抽出 ---
+        const measurer = document.getElementById('offscreen-measurer');
+        const mWindow = measurer.querySelector('.text-window');
+        const mContainer = measurer.querySelector('.text-container');
+        
+        // 計測用ウィンドウの高さを同期（CSS変数で管理されているはずだが明示的にセット）
+        mWindow.style.height = `${textWindow.clientHeight}px`;
+        mWindow.style.width = `${pageWidth}px`;
+
+        chunkPageCounts = [];
+        chunkTitles = [];
+        chunks.forEach((html, idx) => {
+            mContainer.innerHTML = html;
+            
+            // 各チャンクの最初の見出しを抽出（章タイトルとして使用）
+            const firstHeading = mContainer.querySelector('h1, h2, h3, h4, .az-h1, .az-h2, .az-h3, .az-h4, .ebook-title-main');
+            chunkTitles.push(firstHeading ? firstHeading.textContent.trim() : (bookData.title || '電子書籍'));
+
+            // 改ページ補正（計測用にも適用）
+            const breaks = mContainer.querySelectorAll('.page-break');
             breaks.forEach(pb => {
-                pb.style.marginRight = '0'; // 一旦リセット
+                pb.style.marginRight = '0';
+                const rect = pb.getBoundingClientRect();
+                const containerRect = mContainer.getBoundingClientRect();
+                const currentX = containerRect.right - rect.right;
+                const remainder = currentX % pageWidth;
+                if (remainder > 0) {
+                    pb.style.marginRight = `${pageWidth - remainder}px`;
+                }
             });
 
-            // レイアウト確定を待つため少し遅延させて計算
-            setTimeout(() => {
-                const containerRect = container.getBoundingClientRect();
-                breaks.forEach(pb => {
-                    const rect = pb.getBoundingClientRect();
-                    // コンテナの右端からの距離（xオフセット）を計算
-                    // vertical-rl では右端が 0
-                    const currentX = containerRect.right - rect.right;
-
-                    // 次のページの開始位置までの不足分を計算
-                    const remainder = currentX % pageWidth;
-                    if (remainder > 0) {
-                        const neededGap = pageWidth - remainder;
-                        pb.style.marginRight = `${neededGap}px`;
-                    }
-                });
-
-                // マージン付与後に再度ページ数を計算
-                const scrollWidth = container.scrollWidth;
-                totalPages = Math.ceil(scrollWidth / pageWidth);
-                if (currentPage >= totalPages) {
-                    currentPage = Math.max(0, totalPages - (isSingleMode ? 1 : 2));
-                }
-                renderPages();
-            }, 0);
+            const scrollWidth = mContainer.scrollWidth;
+            const count = Math.ceil(scrollWidth / pageWidth);
+            chunkPageCounts.push(count);
         });
 
-        /* column-widthをCSSの変数に任せ、JS側でのクリアを停止します */
+        globalTotalPages = chunkPageCounts.reduce((a, b) => a + b, 0);
 
         if (oldPageWidth > 0 && oldPageWidth !== pageWidth) {
             currentPage = Math.floor(currentPixelOffset / pageWidth);
         }
 
-        setTimeout(() => {
-            const scrollWidth = textContainers[0].scrollWidth;
-            totalPages = Math.ceil(scrollWidth / pageWidth);
+        if (currentPage >= globalTotalPages) {
+            currentPage = Math.max(0, globalTotalPages - 2);
+        }
+        if (currentPage % 2 !== 0) {
+            currentPage = Math.max(0, currentPage - 1);
+        }
 
-            if (currentPage >= totalPages) {
-                currentPage = Math.max(0, totalPages - (isSingleMode ? 1 : 2));
-            }
-            if (!isSingleMode && currentPage % 2 !== 0) {
-                currentPage = Math.max(0, currentPage - 1);
-            }
-
-            renderPages();
-        }, 100);
+        renderPages();
     }
 
     function renderPages() {
-        if (totalPages === 0) return;
+        if (globalTotalPages === 0 || chunks.length === 0) return;
+
+        const locRight = getGlobalPageLocation(currentPage);
+        const locLeft = getGlobalPageLocation(currentPage + 1);
 
         const containerRight = textContainers[0];
         const containerLeft = textContainers.length > 1 ? textContainers[1] : null;
 
-        // ページ移動に加え、左寄せ補正オフセットを足すことでルビの空白問題と端の切り取りを防ぐ
-        containerRight.style.transform = `translateX(${currentPage * pageWidth + textAlignmentOffset}px)`;
-
-        if (containerLeft && !isSingleMode) {
-            containerLeft.style.transform = `translateX(${(currentPage + 1) * pageWidth + textAlignmentOffset}px)`;
+        // 右ページのコンテンツセットと位置合わせ
+        if (containerRight.dataset.chunkIndex !== String(locRight.chunkIndex)) {
+            containerRight.innerHTML = chunks[locRight.chunkIndex];
+            containerRight.dataset.chunkIndex = locRight.chunkIndex;
+            applyPageBreaks(containerRight);
         }
+        containerRight.style.transform = `translateX(${locRight.localPage * pageWidth + textAlignmentOffset}px)`;
 
-        /* 最初の3ページ分（白紙、タイトル、白紙）にはページ番号をわりあてない */
-        const PAGE_START_OFFSET = 3;
-        const pageNumRight = document.getElementById('page-number-right');
-        const pageNumLeft = document.getElementById('page-number-left');
-        const titleRight = document.getElementById('page-title-right');
-        const titleLeft = document.getElementById('page-title-left');
+        // 左ページのコンテンツセットと位置合わせ
+        if (containerLeft) {
+            if (currentPage + 1 < globalTotalPages) {
+                if (containerLeft.dataset.chunkIndex !== String(locLeft.chunkIndex)) {
+                    containerLeft.innerHTML = chunks[locLeft.chunkIndex];
+                    containerLeft.dataset.chunkIndex = locLeft.chunkIndex;
+                    applyPageBreaks(containerLeft);
+                }
+                containerLeft.style.transform = `translateX(${locLeft.localPage * pageWidth + textAlignmentOffset}px)`;
+                containerLeft.style.visibility = 'visible';
+            } else {
+                containerLeft.style.visibility = 'hidden';
+            }
+        }
 
         const physicalRight = currentPage + 1;
         const physicalLeft = currentPage + 2;
 
-        const displayRight = physicalRight - PAGE_START_OFFSET;
-        const displayLeft = physicalLeft - PAGE_START_OFFSET;
-
-        // 右側のページ表示
+        // 右側のページ表示（柱とノンブル）
         if (titleRight) {
-            titleRight.textContent = (physicalRight <= PAGE_START_OFFSET) ? "" : (bookData.title || '電子書籍');
+            titleRight.textContent = chunkTitles[locRight.chunkIndex] || bookData.title || '';
         }
         if (pageNumRight) {
-            pageNumRight.textContent = (displayRight >= 1) ? displayRight : "";
+            pageNumRight.textContent = physicalRight;
         }
 
-        if (isSingleMode) {
-            if (pageInput) pageInput.value = Math.max(1, displayRight);
-            if (pageTotal) pageTotal.textContent = ` / ${totalPages - PAGE_START_OFFSET}`;
-        } else {
-            // 左側のページ表示（見開きのみ）
-            if (titleLeft) {
-                titleLeft.textContent = (physicalLeft <= PAGE_START_OFFSET || physicalRight === totalPages) ? "" : (bookData.title || '電子書籍');
-            }
-
-            if (pageNumLeft) {
-                if (physicalRight === totalPages || displayLeft < 1) {
-                    pageNumLeft.textContent = '';
-                } else {
-                    pageNumLeft.textContent = displayLeft;
-                }
-            }
-
-            const leftDisplayNum = Math.min(displayLeft, totalPages - PAGE_START_OFFSET);
-            if (pageInput) pageInput.value = Math.max(1, displayRight);
-            if (pageTotal) pageTotal.textContent = `〜${Math.max(1, leftDisplayNum)} / ${totalPages - PAGE_START_OFFSET}`;
+        // 左側のページ表示（柱とノンブル - 見開きのみ）
+        if (titleLeft) {
+            // 左ページが存在しない（最終ページが右で終わる）場合は空
+            titleLeft.textContent = (physicalRight === globalTotalPages) ? "" : (chunkTitles[locLeft.chunkIndex] || bookData.title || '');
         }
+
+        if (pageNumLeft) {
+            if (physicalRight === globalTotalPages) {
+                pageNumLeft.textContent = '';
+            } else {
+                pageNumLeft.textContent = physicalLeft;
+            }
+        }
+
+        const leftDisplayNum = Math.min(physicalLeft, globalTotalPages);
+        if (pageInput) pageInput.value = physicalRight;
+        if (pageTotal) pageTotal.textContent = (physicalRight === globalTotalPages) ? ` / ${globalTotalPages}` : `〜${leftDisplayNum} / ${globalTotalPages}`;
 
         // 小口（本の厚み）の更新
-        if (foreEdgeRight && foreEdgeLeft && !isSingleMode) {
-            const pagesRemaining = Math.max(0, totalPages - (currentPage + 2));
+        if (foreEdgeRight && foreEdgeLeft) {
+            const pagesRemaining = Math.max(0, globalTotalPages - (currentPage + 2));
             const rightWidth = currentPage * widthPerPage;
             foreEdgeRight.style.width = `${rightWidth}px`;
             const leftWidth = pagesRemaining * widthPerPage;
             foreEdgeLeft.style.width = `${leftWidth}px`;
-        } else if (foreEdgeRight && foreEdgeLeft) {
-            foreEdgeRight.style.width = '0';
-            foreEdgeLeft.style.width = '0';
         }
+    }
+
+    function applyPageBreaks(container) {
+        const breaks = container.querySelectorAll('.page-break');
+        breaks.forEach(pb => {
+            pb.style.marginRight = '0';
+            const rect = pb.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const currentX = containerRect.right - rect.right;
+            const remainder = currentX % pageWidth;
+            if (remainder > 0) {
+                pb.style.marginRight = `${pageWidth - remainder}px`;
+            }
+        });
     }
 
     function changePage(newPage) {
@@ -280,7 +332,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             let targetPage = Math.floor(ratio * currentPage);
 
             // 見開きモード時の偶数ページ補正
-            if (!isSingleMode && targetPage % 2 !== 0) {
+            if (targetPage % 2 !== 0) {
                 targetPage = Math.max(0, targetPage - 1);
             }
             changePage(targetPage);
@@ -289,7 +341,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (foreEdgeLeft) {
         foreEdgeLeft.addEventListener('click', (e) => {
-            const pagesRemaining = totalPages - (currentPage + 2);
+            const pagesRemaining = globalTotalPages - (currentPage + 2);
             if (pagesRemaining <= 0) return;
 
             const rect = foreEdgeLeft.getBoundingClientRect();
@@ -298,18 +350,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             let targetPage = (currentPage + 2) + Math.floor(ratio * pagesRemaining);
 
             // 最後のページを超えないように
-            if (targetPage >= totalPages) targetPage = totalPages - 1;
+            if (targetPage >= globalTotalPages) targetPage = globalTotalPages - 1;
 
             // 見開きモード時の奇数ページ補正
-            if (!isSingleMode && targetPage % 2 !== 0) {
-                targetPage = Math.min(totalPages - 1, targetPage - 1);
+            if (targetPage % 2 !== 0) {
+                targetPage = Math.min(globalTotalPages - 1, targetPage - 1);
             }
             changePage(targetPage);
         });
     }
 
     btnPrev.addEventListener('click', () => {
-        const step = isSingleMode ? 1 : 2;
+        const step = 2;
         if (currentPage - step >= 0) {
             changePage(currentPage - step);
         } else if (currentPage > 0) {
@@ -318,8 +370,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     btnNext.addEventListener('click', () => {
-        const step = isSingleMode ? 1 : 2;
-        if (currentPage + step < totalPages) {
+        const step = 2;
+        if (currentPage + step < globalTotalPages) {
             changePage(currentPage + step);
         }
     });
@@ -333,13 +385,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             // 範囲外の補正
             if (val < 1) val = 1;
-            if (val > totalPages) val = totalPages;
+            if (val > globalTotalPages) val = globalTotalPages;
 
             // currentPageは0オリジンなので-1する
             let targetPage = val - 1;
 
             // 見開きモード時の奇数ページ補正（右寄せ）
-            if (!isSingleMode && targetPage % 2 !== 0) {
+            if (targetPage % 2 !== 0) {
                 targetPage = Math.max(0, targetPage - 1);
             }
 
@@ -351,13 +403,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft' || e.key === 'Enter') {
-            const step = isSingleMode ? 1 : 2;
-            if (currentPage + step < totalPages) {
+            const step = 2;
+            if (currentPage + step < globalTotalPages) {
                 changePage(currentPage + step);
             }
         }
         else if (e.key === 'ArrowRight') {
-            const step = isSingleMode ? 1 : 2;
+            const step = 2;
             if (currentPage - step >= 0) {
                 changePage(currentPage - step);
             } else if (currentPage > 0) {
@@ -366,20 +418,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    btnToggleMode.addEventListener('click', () => {
-        isSingleMode = !isSingleMode;
-        if (isSingleMode) {
-            pagePaper.classList.add('single-mode');
-            btnToggleMode.textContent = '見開き表示';
-        } else {
-            pagePaper.classList.remove('single-mode');
-            btnToggleMode.textContent = '単一ページ表示';
-            if (currentPage % 2 !== 0) {
-                currentPage = Math.max(0, currentPage - 1);
-            }
-        }
-        updateLayout();
-    });
+    // 単一ページ表示関連の処理は削除されました
 
     let resizeTimer;
     const resizeObserver = new ResizeObserver(() => {
