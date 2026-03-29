@@ -1,3 +1,4 @@
 backend/data/*
 backend/*.db
+backend/__pycache__
 

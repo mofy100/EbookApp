@@ -86,8 +86,9 @@ def parse_aozora_html(input_filepath, output_dir):
         rp.decompose()
     for font_tag in main_text.find_all('font'):
         font_tag.unwrap()
-    for div in main_text.find_all('div', class_=['bibliographical_information', 'notation_notes']):
-        div.decompose()
+    bib_sections = soup.find_all('div', class_='bibliographical_information')
+    for div in bib_sections:
+        div.extract() # 元の場所から取り出す
     for tag in main_text.find_all(True):
         if 'width' in tag.attrs:
             del tag['width']
@@ -316,6 +317,44 @@ def parse_aozora_html(input_filepath, output_dir):
     
     if temp_nodes:
         save_chapter(temp_nodes, chapter_index)
+        chapter_index += 1
+
+    # 4.5 ビブリオグラフィーの追加
+    if bib_sections:
+        # 文言の修正：「このファイルは...」を「青空文庫で作られたファイルをもとに作成したものです」に置き換える
+        for bib in bib_sections:
+            # '青空文庫作成ファイル： ' のテキストを消す
+            for s in bib.find_all(string=re.compile(r'青空文庫作成ファイル： ' )):
+                s.replace_with("")
+
+            # 「このファイルは、インターネットの図書館」のテキストを消す
+            for s in bib.find_all(string=re.compile(r'このファイルは、インターネットの図書館')):
+                s.replace_with("")
+            
+            # リンクを保持しつつ、その周りのテキストを修正
+            for a in bib.find_all('a', href=re.compile(r'aozora\.gr\.jp')):
+                # リンクテキストを短くする（例：青空文庫（URL） -> 青空文庫）
+                if "青空文庫" in a.get_text():
+                    a.string = "青空文庫"
+                
+                # リンクの後に「で作られたファイルをもとに作成したものです。」を挿入
+                # 既存の「で作られました」などの文字列を探して置換するか、直接 sibling を操作
+                next_node = a.next_sibling
+                if next_node and isinstance(next_node, NavigableString):
+                    if "で作られました" in next_node:
+                        # 以降の文章もまとめて置換
+                        new_tail = "で公開されているデータをもとに作成しました。"
+                        next_node.replace_with(new_tail)
+
+            # 「入力、校正...」のテキストは一旦そのままにするか、ユーザーの要望に合わせて調整
+            # 前回の編集で消していた場合は復活（または削除コードを削除）
+
+        # ビブリオグラフィー用の見出しを模したノードを作成
+        bib_heading = soup.new_tag('h4', attrs={'class': 'naka-midashi'})
+        bib_heading.string = "ビブリオグラフィー"
+        bib_nodes = [bib_heading] + bib_sections
+        save_chapter(bib_nodes, chapter_index)
+        chapter_index += 1
 
     # 5. manifest.json の作成
     manifest = {
