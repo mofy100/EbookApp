@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let isSingleMode = false;
     let pageWidth = 0;
     let textAlignmentOffset = 0; // 行内での左揃え（ルビを右に詰める）のための補正値
+    let bookData = {}; // ここで定義して他関数からも参照可能にする
     const widthPerPage = 0.1; // ページ1枚あたりの厚み(px)
 
     const params = new URLSearchParams(window.location.search);
@@ -41,10 +42,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const res = await fetch(`${API_BASE}/books/${bookId}/text`);
         if (!res.ok) throw new Error('Failed to load text');
-        const data = await res.json();
+        bookData = await res.json();
 
-        const htmlContent = data.content;
-        const bookTitle = data.title || '電子書籍';
+        const htmlContent = bookData.content;
+        const bookTitle = bookData.title || '電子書籍';
 
         document.title = `${bookTitle} - 青空文庫リーダー`;
 
@@ -145,7 +146,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     // コンテナの右端からの距離（xオフセット）を計算
                     // vertical-rl では右端が 0
                     const currentX = containerRect.right - rect.right;
-                    
+
                     // 次のページの開始位置までの不足分を計算
                     const remainder = currentX % pageWidth;
                     if (remainder > 0) {
@@ -198,27 +199,47 @@ document.addEventListener('DOMContentLoaded', async () => {
             containerLeft.style.transform = `translateX(${(currentPage + 1) * pageWidth + textAlignmentOffset}px)`;
         }
 
+        /* 最初の3ページ分（白紙、タイトル、白紙）にはページ番号をわりあてない */
+        const PAGE_START_OFFSET = 3;
         const pageNumRight = document.getElementById('page-number-right');
         const pageNumLeft = document.getElementById('page-number-left');
+        const titleRight = document.getElementById('page-title-right');
+        const titleLeft = document.getElementById('page-title-left');
+
+        const physicalRight = currentPage + 1;
+        const physicalLeft = currentPage + 2;
+
+        const displayRight = physicalRight - PAGE_START_OFFSET;
+        const displayLeft = physicalLeft - PAGE_START_OFFSET;
+
+        // 右側のページ表示
+        if (titleRight) {
+            titleRight.textContent = (physicalRight <= PAGE_START_OFFSET) ? "" : (bookData.title || '電子書籍');
+        }
+        if (pageNumRight) {
+            pageNumRight.textContent = (displayRight >= 1) ? displayRight : "";
+        }
 
         if (isSingleMode) {
-            if (pageInput) pageInput.value = currentPage + 1;
-            if (pageTotal) pageTotal.textContent = ` / ${totalPages}`;
-            if (pageNumRight) pageNumRight.textContent = currentPage + 1;
+            if (pageInput) pageInput.value = Math.max(1, displayRight);
+            if (pageTotal) pageTotal.textContent = ` / ${totalPages - PAGE_START_OFFSET}`;
         } else {
-            const rightNum = currentPage + 1;
-            const leftNum = Math.min(currentPage + 2, totalPages);
-            if (pageInput) pageInput.value = rightNum;
-            if (pageTotal) pageTotal.textContent = `〜${leftNum} / ${totalPages}`;
+            // 左側のページ表示（見開きのみ）
+            if (titleLeft) {
+                titleLeft.textContent = (physicalLeft <= PAGE_START_OFFSET || physicalRight === totalPages) ? "" : (bookData.title || '電子書籍');
+            }
 
-            if (pageNumRight) pageNumRight.textContent = rightNum;
             if (pageNumLeft) {
-                if (rightNum === totalPages) {
+                if (physicalRight === totalPages || displayLeft < 1) {
                     pageNumLeft.textContent = '';
                 } else {
-                    pageNumLeft.textContent = leftNum;
+                    pageNumLeft.textContent = displayLeft;
                 }
             }
+
+            const leftDisplayNum = Math.min(displayLeft, totalPages - PAGE_START_OFFSET);
+            if (pageInput) pageInput.value = Math.max(1, displayRight);
+            if (pageTotal) pageTotal.textContent = `〜${Math.max(1, leftDisplayNum)} / ${totalPages - PAGE_START_OFFSET}`;
         }
 
         // 小口（本の厚み）の更新

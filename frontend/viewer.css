@@ -410,7 +410,8 @@ body {
 
 /* 字詰め (jizume-X) - 1行の文字数制限。Webでは幅（高さ）として表現 */
 [class^="jizume-"] {
-    max-height: 80%; /* 例：全体の80%に抑えるなど（要調整） */
+    max-height: 80%;
+    /* 例：全体の80%に抑えるなど（要調整） */
     display: block;
     margin-inline-start: auto;
     margin-inline-end: auto;
@@ -487,16 +488,28 @@ body {
 }
 
 .ebook-title-main {
+    /*
     font-size: 2em;
     line-height: calc(var(--base-line-height) * 2) !important;
     margin-block-start: var(--base-line-height);
     margin-block-end: 0;
     font-weight: bold;
+    text-align: start;
+    margin-top: 2em;
+    */
+    font-size: 2em;
+    margin: 2em auto;
+    line-height: calc(var(--text-window-width) * 3);
 }
 
 .ebook-author-main {
+    /*
     font-size: 1.2em;
     line-height: var(--base-line-height) !important;
     margin-block-start: var(--base-line-height);
     margin-block-end: calc(var(--base-line-height) * 2);
+    text-align: end;
+    */
+    /* 著者名は表示しない */
+    display: none;
 }
