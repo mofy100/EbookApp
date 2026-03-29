@@ -43,7 +43,7 @@ def get_books(
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    query = "SELECT id, title, author, translator, card_url, text_url, is_downloaded, has_copyright FROM books WHERE 1=1"
+    query = "SELECT id, title, author, translator, card_url, text_url, is_downloaded, has_copyright FROM books WHERE has_copyright = 0"
     params = []
     
     if search:
@@ -57,7 +57,7 @@ def get_books(
     rows = cursor.fetchall()
     
     # 全件数取得
-    count_query = "SELECT COUNT(*) FROM books WHERE 1=1"
+    count_query = "SELECT COUNT(*) FROM books WHERE has_copyright = 0"
     count_params = []
     if search:
         count_query += " AND (title LIKE ? OR author LIKE ?)"
