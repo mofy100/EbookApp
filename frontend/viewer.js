@@ -60,10 +60,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (titleLeft) titleLeft.textContent = bookTitle;
 
         // 2. 各チャンクの取得
-        const chunkPromises = bookData.chapters.map(chapter => 
+        const chunkPromises = bookData.chapters.map(chapter =>
             fetch(`${API_BASE}/books/${bookId}/chunk/${chapter.file}`).then(res => res.json())
         );
-        
+
         const chunkResults = await Promise.all(chunkPromises);
         chunks = chunkResults.map(res => res.content);
 
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const measurer = document.getElementById('offscreen-measurer');
         const mWindow = measurer.querySelector('.text-window');
         const mContainer = measurer.querySelector('.text-container');
-        
+
         // 計測用ウィンドウの高さを同期（CSS変数で管理されているはずだが明示的にセット）
         mWindow.style.height = `${textWindow.clientHeight}px`;
         mWindow.style.width = `${pageWidth}px`;
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         chunkTitles = [];
         chunks.forEach((html, idx) => {
             mContainer.innerHTML = html;
-            
+
             // 各チャンクの最初の見出しを抽出（章タイトルとして使用）
             const firstHeading = mContainer.querySelector('h1, h2, h3, h4, .az-h1, .az-h2, .az-h3, .az-h4, .ebook-title-main');
             chunkTitles.push(firstHeading ? firstHeading.textContent.trim() : (bookData.title || '電子書籍'));
@@ -326,9 +326,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (foreEdgeRight) {
         foreEdgeRight.addEventListener('click', (e) => {
             if (currentPage <= 0) return;
+            // ! YではなくXです
             const rect = foreEdgeRight.getBoundingClientRect();
-            const y = e.clientY - rect.top;
-            const ratio = y / rect.height;
+            const x = rect.right - e.clientX;
+            const ratio = Math.max(0, Math.min(1, x / rect.width));
+            console.log("clientX", e.clientX, "rect.left", rect.left, "rect.width", rect.width, "x", x, "ratio", ratio);
             let targetPage = Math.floor(ratio * currentPage);
 
             // 見開きモード時の偶数ページ補正
@@ -345,8 +347,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (pagesRemaining <= 0) return;
 
             const rect = foreEdgeLeft.getBoundingClientRect();
-            const y = e.clientY - rect.top;
-            const ratio = y / rect.height;
+            const x = rect.right - e.clientX;
+            const ratio = Math.max(0, Math.min(1, x / rect.width));
+            console.log("clientX", e.clientX, "rect.left", rect.left, "rect.width", rect.width, "x", x, "ratio", ratio);
             let targetPage = (currentPage + 2) + Math.floor(ratio * pagesRemaining);
 
             // 最後のページを超えないように
