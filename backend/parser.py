@@ -66,9 +66,9 @@ def parse_aozora_html(input_filepath, output_dir):
 
     # 2. content_0.html (タイトル・著者) の作成
     content_0_soup = BeautifulSoup('<article class="ebook-content title-page"></article>', 'html.parser')
-    p_title = content_0_soup.new_tag('p', attrs={'class': 'ebook-title-main'})
+    p_title = content_0_soup.new_tag('p', attrs={'class': 'ebook-title-main', 'id': 'pos-0'})
     p_title.string = title
-    p_author = content_0_soup.new_tag('p', attrs={'class': 'ebook-author-main'})
+    p_author = content_0_soup.new_tag('p', attrs={'class': 'ebook-author-main', 'id': 'pos-1'})
     p_author.string = author
     content_0_soup.article.append(p_title)
     content_0_soup.article.append(p_author)
@@ -276,6 +276,11 @@ def parse_aozora_html(input_filepath, output_dir):
                 p.decompose()
             else:
                 break
+
+        # 各要素にIDを付与（レイアウトに依存しない位置特定用）
+        # p, div, 見出しなどの主要なブロック要素を対象とする
+        for i, el in enumerate(article.find_all(['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])):
+            el['id'] = f"pos-{i}"
 
         filename = f"content_{index}.html"
         html_str = str(chapter_soup).replace('</p>', '</p>\n').replace('<article class="ebook-content">', '<article class="ebook-content">\n').replace('</article>', '</article>\n')
