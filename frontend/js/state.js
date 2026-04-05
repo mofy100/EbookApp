@@ -1,4 +1,8 @@
-export const API_BASE = "http://127.0.0.1:8000/api";
+// export const API_BASE = "http://127.0.0.1:8000/api";
+// export const API_BASE = "/api"
+export const API_BASE = window.location.hostname === 'localhost'
+    ? 'http://127.0.0.1:8000/api'   // ローカル
+    : '/api';                         // 本番サーバー
 
 export const state = {
     bookId: null,
@@ -11,7 +15,7 @@ export const state = {
     pageWidth: 0,
     textAlignmentOffset: 0,
     widthPerPage: 0.1, // ページ1枚あたりの厚み(px)
-    
+
     // DOM要素のキャッシュ
     elements: {
         textContainers: [],
