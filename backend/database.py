@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # 設定
-CSV_FILE = 'aozora_list_extended.csv'
+CSV_FILE = 'backend/aozora_list_extended.csv'
 DB_FILE = 'backend/aozora.db'
 DATA_DIR = 'backend/data/'
 
