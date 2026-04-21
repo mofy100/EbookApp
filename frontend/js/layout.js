@@ -48,17 +48,22 @@ export function updateLayout(renderPagesCallback) {
     const allWindows = document.querySelectorAll('.page-right .text-window, .page-left .text-window');
     allWindows.forEach(win => { if (win) win.style.width = ''; });
 
-    const computedStyle = window.getComputedStyle(elements.textContainers[0]);
+    const computedStyle = getComputedStyle(elements.textContainers[0]);
     let lineHeight = parseFloat(computedStyle.lineHeight);
     let fontSize = parseFloat(computedStyle.fontSize);
     if (isNaN(lineHeight)) lineHeight = fontSize * 1.5;
 
     state.textAlignmentOffset = - (lineHeight - fontSize) / 2;
 
+    /* pageWidthから、ページの厚み（小口）totalThickness を引いたものが紙面幅 */
     const paperWidth = elements.pagePaper ? elements.pagePaper.clientWidth : window.innerWidth * 0.9;
     const totalThickness = state.globalTotalPages * state.widthPerPage;
     const maxPageContainerWidth = (paperWidth - totalThickness) / 2;
-    const calculatedTextWindowWidth = maxPageContainerWidth - 45;
+    /* pageのpaddingを考慮して、text-windowの幅を計算 */
+    const pageRight = document.querySelector('.page-right');
+    const pageRightPadding = parseFloat(getComputedStyle(pageRight).paddingLeft) + parseFloat(getComputedStyle(pageRight).paddingRight);
+    const calculatedTextWindowWidth = maxPageContainerWidth - pageRightPadding;
+    /* text-windowの幅が、lineHeightの整数倍になるように */
     const optimalWidth = Math.floor(calculatedTextWindowWidth / lineHeight) * lineHeight;
 
     document.documentElement.style.setProperty('--text-window-width', `${optimalWidth}px`);
@@ -70,12 +75,17 @@ export function updateLayout(renderPagesCallback) {
 
     state.pageWidth = optimalWidth;
 
+    /* windowの高さは、文字サイズの整数倍になるように調整 */
+    const windowHeight = elements.textWindow.clientHeight;
+    const optimalHeight = Math.floor(windowHeight / lineHeight) * lineHeight;
+    state.pageHeight = optimalHeight;
+
     // --- 各チャンクのページ数計測 ---
     const measurer = document.getElementById('offscreen-measurer');
     const mWindow = measurer.querySelector('.text-window');
     const mContainer = measurer.querySelector('.text-container');
 
-    mWindow.style.height = `${elements.textWindow.clientHeight}px`;
+    mWindow.style.height = `${state.pageHeight}px`;
     mWindow.style.width = `${state.pageWidth}px`;
 
     state.chunkPageCounts = [];

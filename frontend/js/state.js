@@ -13,6 +13,7 @@ export const state = {
     currentPage: 0,
     globalTotalPages: 0,
     pageWidth: 0,
+    pageHeight: 0,
     textAlignmentOffset: 0,
     widthPerPage: 0.1, // ページ1枚あたりの厚み(px)
 
