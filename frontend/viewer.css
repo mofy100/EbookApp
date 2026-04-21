@@ -4,7 +4,7 @@
     --base-line-height: calc(var(--font-size) * var(--line-height-ratio));
 
     /* テキストウィンドウ（文章枠）の上下左右の余白（％指定） */
-    --window-margin-top: 12%;
+    --window-margin-top: 10%;
     --window-margin-bottom: 6%;
     --window-margin-left: 5%;
     --window-margin-right: 5%;
@@ -188,15 +188,8 @@ body {
     letter-spacing: 0.05em;
 }
 
-#page-title-right {
-    left: 20px;
-    /* 単一ページ時の左上 */
-    display: none;
-    /* 見開き時は非表示 */
-}
-
 #page-title-left {
-    left: 60px;
+    left: 70px;
     /* 左ページの左上。ページ番号（left: 20px配置）の少し右隣に配置 */
 }
 
@@ -204,20 +197,17 @@ body {
 .page-number {
     position: absolute;
     top: 20px;
-    /* 下部から上部へ移動 */
     font-size: 14px;
     font-family: inherit;
     color: #888;
 }
 
 #page-number-right {
-    right: 20px;
-    /* 右ページの外側（右下） */
+    right: 40px;
 }
 
 #page-number-left {
-    left: 20px;
-    /* 左ページの外側（左下） */
+    left: 40px;
 }
 
 /* 小口（本の厚み） */
