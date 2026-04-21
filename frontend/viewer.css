@@ -262,7 +262,9 @@ body {
     column-width: var(--text-window-width);
     column-gap: 0;
 
-    overflow: visible;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+
 }
 
 /* ページめくりのフェード用クラス */
