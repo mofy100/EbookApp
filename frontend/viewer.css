@@ -312,7 +312,6 @@ body {
 
 /* 字下げ (indent-X) - 縦書きでは上方向のパディング */
 .indent-1 {
-    font-size: 0.9em;
     padding-top: 1em;
     padding-bottom: 1em;
     margin-left: calc(var(--base-line-height) * 2) !important;
