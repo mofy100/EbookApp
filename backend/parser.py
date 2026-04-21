@@ -4,6 +4,33 @@ import json
 import glob
 from bs4 import BeautifulSoup, NavigableString, Tag
 
+def gaiji_to_unicode(filename):
+    """
+    青空文庫の外字ファイル名をUnicode文字に変換する。
+    ファイル名形式: {面}-{区}-{点}.png
+    JIS X 0213の区点コードをEUC-JIS-2004でデコードする。
+    """
+    name = os.path.basename(filename)
+    if name.endswith('.png'):
+        name = name[:-4]
+    parts = name.split('-')
+    if len(parts) != 3:
+        return None
+    try:
+        plane, row, cell = int(parts[0]), int(parts[1]), int(parts[2])
+    except ValueError:
+        return None
+    if not (1 <= row <= 94 and 1 <= cell <= 94):
+        return None
+    try:
+        if plane == 1:
+            return bytes([row + 0xA0, cell + 0xA0]).decode('euc_jis_2004')
+        elif plane == 2:
+            return bytes([0x8F, row + 0xA0, cell + 0xA0]).decode('euc_jis_2004')
+    except (UnicodeDecodeError, ValueError):
+        return None
+    return None
+
 def get_standard_classes(aozora_classes):
     """
     青空文庫のクラス名を標準レイアウトクラスに変換する
@@ -98,9 +125,13 @@ def parse_aozora_html(input_filepath, output_dir):
         src = img.get('src', '')
         if 'gaiji' in src:
             filename = os.path.basename(src)
-            img['src'] = f"/api/assets/gaiji/{filename}"
-            img['class'] = img.get('class', []) + ['gaiji']
-            images_to_download.append((src, filename))
+            unicode_char = gaiji_to_unicode(filename)
+            if unicode_char:
+                img.replace_with(unicode_char)
+            else:
+                img['src'] = f"/api/assets/gaiji/{filename}"
+                img['class'] = img.get('class', []) + ['gaiji']
+                images_to_download.append((src, filename))
 
     # 4. 章分割の実行
     chapters = []
@@ -284,6 +315,8 @@ def parse_aozora_html(input_filepath, output_dir):
 
         filename = f"content_{index}.html"
         html_str = str(chapter_soup).replace('</p>', '</p>\n').replace('<article class="ebook-content">', '<article class="ebook-content">\n').replace('</article>', '</article>\n')
+        # カーニング: 。」 と 、」 の間を詰める
+        html_str = re.sub(r'([。、])(」)', r'\1<span class="kern-punct">\2</span>', html_str)
         with open(os.path.join(output_dir, filename), 'w', encoding='utf-8') as f:
             f.write(html_str)
         chapters.append({"index": index, "file": filename})

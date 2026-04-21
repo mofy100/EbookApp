@@ -389,6 +389,19 @@ body {
     padding-right: 0.2em;
 }
 
+/* カーニング: 。」 と 、」 の間を詰める (縦書き) */
+/* Chrome以外：手動カーニング */
+.kern-punct {
+    margin-inline-start: -0.5em;
+}
+
+/* Chrome 123+：text-spacing-trim に任せてマージンをリセット */
+@supports (text-spacing-trim: normal) {
+    .kern-punct {
+        margin-inline-start: 0;
+    }
+}
+
 /* 縦中横 (tatechuyoko) */
 .tatechuyoko {
     text-combine-upright: all;
