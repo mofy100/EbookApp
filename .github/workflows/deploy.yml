@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          # 秘密鍵を書き出す
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+          # ホスト鍵を Secrets から設定（ssh-keyscan より安全）
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Deploy
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "set -e && \
+             cd ${{ secrets.APP_ROOT }} && \
+             git pull origin main && \
+             systemctl restart backend"
+          # set -e によりリモート側のコマンドが失敗したらジョブも失敗する
+
+      # 秘密鍵を確実に削除
+      - name: Cleanup
+        if: always()  # 成功・失敗どちらでも実行
+        run: rm -f ~/.ssh/id_ed25519
