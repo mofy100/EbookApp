@@ -29,7 +29,7 @@ jobs:
             "set -e && \
              cd ${{ secrets.APP_ROOT }} && \
              git pull origin main && \
-             systemctl restart backend"
+             sudo systemctl restart backend.service"
           # set -e によりリモート側のコマンドが失敗したらジョブも失敗する
 
       # 秘密鍵を確実に削除
