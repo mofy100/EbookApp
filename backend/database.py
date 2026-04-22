@@ -2,6 +2,7 @@ import sqlite3
 import pandas as pd
 import os
 
+# aozora.dbが存在しない場合、最初にこれを実行する。
 # 設定
 CSV_FILE = 'backend/aozora_list_extended.csv'
 DB_FILE = 'backend/aozora.db'
