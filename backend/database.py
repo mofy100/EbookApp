@@ -16,6 +16,27 @@ def create_index():
     except:
         df = pd.read_csv(CSV_FILE, encoding='utf-8')
 
+    # 同じタイトルで複数の文字遣い種別がある場合、最新の公開日のものだけ残す
+    work_meta = df.drop_duplicates(subset=['作品ID'])[['作品ID', '作品名', '文字遣い種別', '公開日']].copy()
+    work_meta['公開日'] = pd.to_datetime(work_meta['公開日'], errors='coerce')
+
+    title_kind_counts = work_meta.groupby('作品名')['文字遣い種別'].nunique()
+    multi_kind_titles = title_kind_counts[title_kind_counts > 1].index
+
+    kana_rank = {'新字新仮名': 0, '新字旧仮名': 1, '旧字新仮名': 2, '旧字旧仮名': 3}
+    multi = work_meta[work_meta['作品名'].isin(multi_kind_titles)].copy()
+    multi['文字遣い順位'] = multi['文字遣い種別'].map(kana_rank).fillna(99)
+    newest_of_multi = (
+        multi
+        .sort_values(['公開日', '文字遣い順位'], ascending=[False, True])
+        .drop_duplicates(subset=['作品名'], keep='first')
+    )
+    single_kind = work_meta[~work_meta['作品名'].isin(multi_kind_titles)]
+
+    selected_ids = set(newest_of_multi['作品ID']) | set(single_kind['作品ID'])
+    df = df[df['作品ID'].isin(selected_ids)]
+    print(f"重複処理後: {len(selected_ids)} 作品")
+
     # 1. すべての作品IDを取得し、各作品の著作権状態を判定
     print("作品の著作権フラグを集計中...")
     
