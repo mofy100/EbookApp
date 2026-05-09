@@ -1,6 +1,7 @@
 import sqlite3
 import os
 import re
+import json
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -25,6 +26,17 @@ DATA_DIR = "backend/data"
 FORCE_REPARSE = os.environ.get("FORCE_REPARSE", "0") == "1"
 
 os.makedirs("backend/data/gaiji", exist_ok=True)
+
+def load_summary(book_id: int) -> dict:
+    summary_path = os.path.join(DATA_DIR, str(book_id), "summary.json")
+    if not os.path.exists(summary_path):
+        return {}
+    try:
+        with open(summary_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
 
 def get_db_connection():
     # Rowオブジェクトとして取得することで辞書のようにアクセス可能にする
@@ -82,8 +94,13 @@ def get_books(
         if downloaded_only and not is_downloaded_actual:
             continue
             
+        summary = load_summary(book_dict["id"])
+        book_dict["genre"] = summary.get("genre")
+        book_dict["tags"] = summary.get("tags", [])
+        book_dict["summary_short"] = (summary.get("summary") or "")[:80] or None
+
         books.append(book_dict)
-        
+
     return {
         "total": total_count,
         "limit": limit,
@@ -91,6 +108,12 @@ def get_books(
         "returned_count": len(books),
         "books": books
     }
+
+@app.get("/api/books/{book_id}/summary")
+def get_book_summary(book_id: int):
+    """summary.json の内容を返す。存在しない場合は空オブジェクトを返す。"""
+    return load_summary(book_id)
+
 
 @app.get("/api/books/{book_id}/text")
 def get_book_text(book_id: int):

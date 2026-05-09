@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>青空文庫リーダー</title>
-    <link rel="stylesheet" href="index.css?v=1">
+    <link rel="stylesheet" href="index.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="app">
-        <!-- 検索・一覧画面 -->
         <main id="search-view" class="view active">
             <header>
                 <h1>青空文庫リーダー</h1>
@@ -20,17 +19,42 @@
                     <button id="search-button">検索</button>
                 </div>
             </header>
-            <div id="book-list" class="book-grid"></div>
-            <div class="pagination">
-                <button id="prev-page" disabled>前へ</button>
-                <span id="page-info"></span>
-                <button id="next-page">次へ</button>
+
+            <div class="content-layout">
+                <!-- 左：作品リスト -->
+                <div class="list-column">
+                    <div id="book-list" class="book-list"></div>
+                    <div class="pagination">
+                        <button id="prev-page" disabled>前へ</button>
+                        <span id="page-info"></span>
+                        <button id="next-page">次へ</button>
+                    </div>
+                </div>
+
+                <!-- 右：選択中の作品詳細 -->
+                <aside id="detail-panel">
+                    <div id="detail-placeholder">
+                        <p>作品を選択すると<br>詳細が表示されます</p>
+                    </div>
+                    <div id="detail-content" hidden>
+                        <div id="detail-header">
+                            <div id="detail-thumbnail"></div>
+                            <div id="detail-title-block">
+                                <div id="detail-genre"></div>
+                                <h2 id="detail-title"></h2>
+                                <div id="detail-author"></div>
+                                <div id="detail-meta"></div>
+                            </div>
+                        </div>
+                        <p id="detail-summary"></p>
+                        <div id="detail-tags"></div>
+                        <button id="detail-read-btn">この作品を読む →</button>
+                    </div>
+                </aside>
             </div>
         </main>
-
-
     </div>
-    <script src="js/app.js?v=2"></script>
+    <script src="js/app.js?v=3"></script>
 </body>
 
 </html>
