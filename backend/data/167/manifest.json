@@ -1,0 +1,31 @@
+{
+  "title": "点鬼簿",
+  "author": "芥川龍之介",
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": 0,
+      "file": "content_0.html"
+    },
+    {
+      "index": 1,
+      "file": "content_1.html"
+    },
+    {
+      "index": 2,
+      "file": "content_2.html"
+    },
+    {
+      "index": 3,
+      "file": "content_3.html"
+    },
+    {
+      "index": 4,
+      "file": "content_4.html"
+    },
+    {
+      "index": 5,
+      "file": "content_5.html"
+    }
+  ]
+}
