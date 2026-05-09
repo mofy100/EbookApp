@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Claude Haiku で作品 summary.json を生成するスクリプト。
+Serper API + Claude Haiku で作品 summary.json を生成するスクリプト。
 
 使用例:
-  python -m backend.generate_summaries_claude --id 1000
-  python -m backend.generate_summaries_claude --ids 1,2,3
-  python -m backend.generate_summaries_claude --limit 10 --offset 0
-  python -m backend.generate_summaries_claude --limit 20 --force
+  python -m backend.generate_summary_with_serper --id 1000
+  python -m backend.generate_summary_with_serper --ids 1,2,3
+  python -m backend.generate_summary_with_serper --limit 10 --offset 0
+  python -m backend.generate_summary_with_serper --limit 20 --force
 """
 
 from __future__ import annotations
@@ -17,17 +17,25 @@ import os
 import sqlite3
 import time
 from datetime import datetime, timezone
+from typing import Optional
 
 import anthropic
+import requests
+from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-
-from backend.fetch_wikipedia import fetch_wikipedia
 
 load_dotenv()
 
 DB_FILE = "backend/aozora.db"
 DATA_DIR = "backend/data"
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
+SERPER_SEARCH_URL = "https://google.serper.dev/search"
+
+MAX_CHARS_PER_PAGE = 3000
+MAX_PAGES = 3
+
+SESSION = requests.Session()
+SESSION.headers.update({"User-Agent": "EbooksApp/1.0 (mofy100p@gmail.com)"})
 
 SYSTEM_PROMPT = """\
 あなたは日本文学・世界文学の専門家です。
@@ -38,8 +46,7 @@ SYSTEM_PROMPT = """\
 - 推測禁止。不明な情報は null
 - 日本語・敬体（です・ます調）で記述
 - summary は 300〜500文字。ネタバレを避け、文学的特徴を含める
-- tags は 5〜10個
-- source_urls は空配列 [] を返すこと
+- tags は 5個前後。作品のジャンルやテーマなどを考慮すること
 
 JSON schema:
 {
@@ -53,20 +60,98 @@ JSON schema:
   "publication_year": int | null,
   "japanese_publication_year": int | null,
   "summary": str,
-  "themes": string[],
   "tags": string[],
-  "awards": string[],
-  "notable_points": str | null,
-  "source_urls": []
+  "source_urls": string[],
 }
 """
 
 
-def create_client(api_key: str | None = None) -> anthropic.Anthropic:
+def create_claude_client(api_key: str | None = None) -> anthropic.Anthropic:
     key = api_key or os.environ.get("ANTHROPIC_API_KEY")
     if not key:
         raise RuntimeError("ANTHROPIC_API_KEY not found")
     return anthropic.Anthropic(api_key=key)
+
+
+def get_serper_api_key() -> str:
+    key = os.environ.get("SERPER_API_KEY")
+    if not key:
+        raise RuntimeError("SERPER_API_KEY not found")
+    return key
+
+
+def serper_search(query: str, api_key: str, num: int = 5) -> list[dict]:
+    """Serper API で検索し、結果のリストを返す。"""
+    headers = {
+        "X-API-KEY": api_key,
+        "Content-Type": "application/json",
+    }
+    payload = {"q": query, "num": num, "gl": "jp", "hl": "ja"}
+    resp = SESSION.post(SERPER_SEARCH_URL, headers=headers, json=payload, timeout=10)
+    resp.raise_for_status()
+    data = resp.json()
+    return data.get("organic", [])
+
+
+def fetch_page_text(url: str, max_chars: int = MAX_CHARS_PER_PAGE) -> Optional[str]:
+    """URLのページ本文をテキストで取得する。失敗時は None を返す。"""
+    try:
+        resp = SESSION.get(url, timeout=10)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        for tag in soup(["script", "style", "nav", "header", "footer", "aside"]):
+            tag.decompose()
+        text = soup.get_text(separator="\n", strip=True)
+        return text[:max_chars]
+    except Exception:
+        return None
+
+
+def gather_web_context(title: str, author: str, api_key: str) -> tuple[str, list[str]]:
+    """
+    Serper で作品情報を検索し、ページ本文を収集する。
+
+    Returns:
+        (収集テキストを結合した文字列, 参照したURLリスト)
+    """
+    queries = [
+        f"{title} {author} 作品 解説 あらすじ",
+        f"{title} {author} wikipedia",
+    ]
+
+    seen_urls: set[str] = set()
+    collected: list[tuple[str, str]] = []  # (url, text)
+
+    for query in queries:
+        if len(collected) >= MAX_PAGES:
+            break
+        try:
+            results = serper_search(query, api_key, num=5)
+        except Exception as e:
+            print(f"    Serper Search エラー ({query}): {e}")
+            continue
+
+        for result in results:
+            if len(collected) >= MAX_PAGES:
+                break
+            url = result.get("link", "")
+            if not url or url in seen_urls:
+                continue
+            seen_urls.add(url)
+
+            text = fetch_page_text(url)
+            if text and len(text) > 100:
+                collected.append((url, text))
+                print(f"    取得: {url}")
+
+    if not collected:
+        return "", []
+
+    parts = []
+    for i, (url, text) in enumerate(collected, 1):
+        parts.append(f"--- 参考ページ {i}: {url} ---\n{text}")
+
+    return "\n\n".join(parts), [url for url, _ in collected]
 
 
 def clean_json_text(raw: str) -> str:
@@ -87,32 +172,29 @@ def call_claude(
     title: str,
     author: str,
     translator: str,
-    wikipedia_text: str | None = None,
+    web_context: str,
 ) -> dict:
     translator_line = f"\n翻訳者: {translator}" if translator else ""
 
-    if wikipedia_text:
+    if web_context:
         prompt = (
             f"作品名: {title}\n著者: {author}{translator_line}\n\n"
-            f"以下のWikipedia情報を参考に作品情報JSONを生成してください。\n\n---\n{wikipedia_text}\n---"
+            f"以下のWeb情報を参考に作品情報JSONを生成してください。\n\n{web_context}"
         )
-        kwargs: dict = dict(
-            model=CLAUDE_MODEL,
-            max_tokens=1000,
-            system=[{"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
-            messages=[{"role": "user", "content": prompt}],
-        )
+        system = [{"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}]
     else:
-        prompt = f"作品名: {title}\n著者: {author}{translator_line}\n\nこの作品について、Web検索を利用しながら作品情報JSONを生成してください。"
-        kwargs = dict(
-            model=CLAUDE_MODEL,
-            max_tokens=1000,
-            system=[{"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
-            messages=[{"role": "user", "content": prompt}],
-            tools=[{"type": "web_search_20260209", "name": "web_search", "allowed_callers": ["direct"]}],
+        prompt = (
+            f"作品名: {title}\n著者: {author}{translator_line}\n\n"
+            f"この作品について作品情報JSONを生成してください。"
         )
+        system = SYSTEM_PROMPT
 
-    response = client.messages.create(**kwargs)
+    response = client.messages.create(
+        model=CLAUDE_MODEL,
+        max_tokens=1000,
+        system=system,
+        messages=[{"role": "user", "content": prompt}],
+    )
 
     text = next((b.text for b in reversed(response.content) if b.type == "text"), "")
     if not text:
@@ -128,6 +210,7 @@ def call_claude(
 
 def process_book(
     client: anthropic.Anthropic,
+    serper_api_key: str,
     book_id: int,
     title: str,
     author: str,
@@ -143,19 +226,18 @@ def process_book(
     print(f"  処理中: [{book_id}] {title} / {author}", flush=True)
 
     try:
-        wiki = fetch_wikipedia(title, author)
-        if wiki:
-            print(f"    Wikipedia取得成功: {wiki['url']}")
-            wikipedia_text = wiki.get("full_text") or wiki.get("summary", "")
-            summary = call_claude(client, title, author, translator, wikipedia_text=wikipedia_text)
-        else:
-            print(f"    Wikipedia取得失敗 → web searchで生成")
-            summary = call_claude(client, title, author, translator)
+        web_context, source_urls = gather_web_context(title, author, serper_api_key)
+        if not web_context:
+            print("    Web情報取得失敗 → 知識のみで生成")
+
+        summary = call_claude(client, title, author, translator, web_context)
     except Exception as e:
         print(f"    エラー: {e}")
         return False
 
-    summary["wiki_link"] = wiki["url"] if wiki else None
+    if source_urls and not summary.get("source_urls"):
+        summary["source_urls"] = source_urls
+
     summary["book_id"] = book_id
     summary["generated_at"] = datetime.now(timezone.utc).isoformat()
 
@@ -195,80 +277,27 @@ def get_books(args) -> list[sqlite3.Row]:
     return books
 
 
-def add_wiki_links_to_existing(delay: float = 1.0) -> None:
-    """既存の summary.json に wiki_link フィールドを追加する。"""
-    conn = sqlite3.connect(DB_FILE)
-    conn.row_factory = sqlite3.Row
-    cursor = conn.cursor()
-
-    entries = []
-    for book_dir in os.listdir(DATA_DIR):
-        summary_path = os.path.join(DATA_DIR, book_dir, "summary.json")
-        if os.path.exists(summary_path):
-            entries.append((book_dir, summary_path))
-    entries.sort(key=lambda x: int(x[0]) if x[0].isdigit() else 0)
-
-    updated = skipped = 0
-    for book_dir, summary_path in entries:
-        with open(summary_path, "r", encoding="utf-8") as f:
-            summary = json.load(f)
-
-        if "wiki_link" in summary:
-            skipped += 1
-            continue
-
-        book_id = summary.get("book_id") or (int(book_dir) if book_dir.isdigit() else None)
-        if book_id is None:
-            continue
-
-        cursor.execute("SELECT title, author FROM books WHERE id = ?", (book_id,))
-        row = cursor.fetchone()
-        if row is None:
-            continue
-
-        title, author = row["title"], row["author"] or ""
-        print(f"  処理中: [{book_id}] {title} / {author}", flush=True)
-
-        wiki = fetch_wikipedia(title, author)
-        if wiki:
-            summary["wiki_link"] = wiki["url"]
-            print(f"    Wikipedia取得成功: {wiki['url']}")
-        else:
-            summary["wiki_link"] = None
-            print("    Wikipedia取得失敗 → null を設定")
-
-        with open(summary_path, "w", encoding="utf-8") as f:
-            json.dump(summary, f, ensure_ascii=False, indent=2)
-
-        updated += 1
-        if delay > 0:
-            time.sleep(delay)
-
-    conn.close()
-    print(f"\n完了: {updated} 件更新, {skipped} 件スキップ（既存）")
-
-
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate summaries using Claude Haiku")
+    parser = argparse.ArgumentParser(description="Serper Search + Claude Haiku でサマリーを生成")
     target = parser.add_mutually_exclusive_group()
     target.add_argument("--id", type=int, metavar="ID")
     target.add_argument("--ids", type=str, metavar="ID1,ID2,...")
     parser.add_argument("--limit", type=int, default=10)
     parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--api-key", type=str, metavar="KEY", help="Anthropic APIキー（省略時はANTHROPIC_API_KEY環境変数）")
+    parser.add_argument("--serper-api-key", type=str, metavar="KEY", help="Serper APIキー（省略時はSERPER_API_KEY環境変数）")
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--delay", type=float, default=1.0)
-    parser.add_argument("--add-wiki-links", action="store_true", help="既存 summary.json に wiki_link を追加（Claude 不要）")
     args = parser.parse_args()
 
-    if args.add_wiki_links:
-        add_wiki_links_to_existing(delay=args.delay)
-        return
-
     try:
-        client = create_client(args.api_key)
+        client = create_claude_client(args.api_key)
     except RuntimeError as e:
         parser.error(str(e))
+
+    serper_api_key = args.serper_api_key or os.environ.get("SERPER_API_KEY")
+    if not serper_api_key:
+        parser.error("SERPER_API_KEY not found")
 
     books = get_books(args)
     if not books:
@@ -283,6 +312,7 @@ def main() -> None:
 
         ok = process_book(
             client,
+            serper_api_key,
             book_id=book["id"],
             title=book["title"],
             author=book["author"] or "",
