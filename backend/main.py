@@ -21,6 +21,9 @@ app.add_middleware(
 DB_FILE = "backend/aozora.db"
 DATA_DIR = "backend/data"
 
+# FORCE_REPARSE=1 を設定した場合、manifest が存在しても毎回再パースする
+FORCE_REPARSE = os.environ.get("FORCE_REPARSE", "0") == "1"
+
 os.makedirs("backend/data/gaiji", exist_ok=True)
 
 def get_db_connection():
@@ -138,13 +141,13 @@ def get_book_manifest(book_id: int):
     book_dir = os.path.join(DATA_DIR, str(book_id))
     origin_path = os.path.join(book_dir, "origin.html")
 
-    if os.path.exists(origin_path):
+    manifest_path = os.path.join(book_dir, "manifest.json")
+
+    if os.path.exists(origin_path) and (FORCE_REPARSE or not os.path.exists(manifest_path)):
         try:
             parse_aozora_html(origin_path, book_dir)
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Failed to parse file: {str(e)}")
-
-    manifest_path = os.path.join(book_dir, "manifest.json")
     if os.path.exists(manifest_path):
         with open(manifest_path, "r", encoding="utf-8") as f:
             return json.load(f)

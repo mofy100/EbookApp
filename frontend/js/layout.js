@@ -39,6 +39,7 @@ export function getGlobalPageLocation(globalPage) {
 }
 
 export function updateLayout(renderPagesCallback) {
+    const tLayout = performance.now();
     const { elements } = state;
     if (!elements.textWindow) return;
 
@@ -55,10 +56,11 @@ export function updateLayout(renderPagesCallback) {
 
     state.textAlignmentOffset = - (lineHeight - fontSize) / 2;
 
-    /* pageWidthから、ページの厚み（小口）totalThickness を引いたものが紙面幅 */
+    /* 小口の合計幅はCSSの--fore-edge-totalから取得（固定） */
     const paperWidth = elements.pagePaper ? elements.pagePaper.clientWidth : window.innerWidth * 0.9;
-    const totalThickness = state.globalTotalPages * state.widthPerPage;
-    const maxPageContainerWidth = (paperWidth - totalThickness) / 2;
+    const foreEdgeTotalRatio = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--fore-edge-total')) / 100;
+    state.totalForeEdge = paperWidth * foreEdgeTotalRatio;
+    const maxPageContainerWidth = (paperWidth - state.totalForeEdge) / 2;
     /* pageのpaddingを考慮して、text-windowの幅を計算 */
     const pageRight = document.querySelector('.page-right');
     const pageRightPadding = parseFloat(getComputedStyle(pageRight).paddingLeft) + parseFloat(getComputedStyle(pageRight).paddingRight);
@@ -90,8 +92,12 @@ export function updateLayout(renderPagesCallback) {
 
     state.chunkPageCounts = [];
     state.chunkTitles = [];
-    state.chunks.forEach((html) => {
+    const tMeasure = performance.now();
+    state.chunks.forEach((html, i) => {
+        const tChunk = performance.now();
         mContainer.innerHTML = html;
+        const tInnerHTML = performance.now();
+
         const firstHeading = mContainer.querySelector('h1, h2, h3, h4, .az-h1, .az-h2, .az-h3, .az-h4, .ebook-title-main');
         state.chunkTitles.push(firstHeading ? firstHeading.textContent.trim() : (state.bookData.title || '電子書籍'));
 
@@ -108,7 +114,12 @@ export function updateLayout(renderPagesCallback) {
 
         const scrollWidth = mContainer.scrollWidth;
         state.chunkPageCounts.push(Math.ceil(scrollWidth / state.pageWidth));
+
+        const ms = (performance.now() - tChunk).toFixed(1);
+        const msHTML = (performance.now() - tInnerHTML).toFixed(1);
+        console.log(`[layout] chunk[${i}] 計測: ${ms}ms (innerHTML後: ${msHTML}ms, page-break×${breaks.length}, pages=${state.chunkPageCounts[i]})`);
     });
+    console.log(`[layout] 全chunk計測合計: ${(performance.now() - tMeasure).toFixed(1)}ms`);
 
     state.globalTotalPages = state.chunkPageCounts.reduce((a, b) => a + b, 0);
 
@@ -124,4 +135,5 @@ export function updateLayout(renderPagesCallback) {
     }
 
     if (renderPagesCallback) renderPagesCallback();
+    console.log(`[layout] updateLayout合計: ${(performance.now() - tLayout).toFixed(1)}ms`);
 }

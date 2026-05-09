@@ -55,11 +55,17 @@ export function renderPages() {
         elements.pageTotal.textContent = (physicalRight === state.globalTotalPages) ? ` / ${state.globalTotalPages}` : `〜${leftDisplayNum} / ${state.globalTotalPages}`;
     }
 
-    // 小口（本の厚み）の更新
-    if (elements.foreEdgeRight && elements.foreEdgeLeft) {
-        const pagesRemaining = Math.max(0, state.globalTotalPages - (state.currentPage + 2));
-        elements.foreEdgeRight.style.width = `${state.currentPage * state.widthPerPage}px`;
-        elements.foreEdgeLeft.style.width = `${pagesRemaining * state.widthPerPage}px`;
+    // 小口（本の厚み）の左右分配
+    if (elements.foreEdgeRight && elements.foreEdgeLeft && state.totalForeEdge > 0) {
+        const allChunksLoaded = state.chunks.length >= (state.bookData.chapters || []).length;
+        if (!allChunksLoaded || state.globalTotalPages === 0) {
+            elements.foreEdgeRight.style.width = '0px';
+            elements.foreEdgeLeft.style.width = `${state.totalForeEdge}px`;
+        } else {
+            const ratio = state.currentPage / state.globalTotalPages;
+            elements.foreEdgeRight.style.width = `${state.totalForeEdge * ratio}px`;
+            elements.foreEdgeLeft.style.width = `${state.totalForeEdge * (1 - ratio)}px`;
+        }
     }
 }
 

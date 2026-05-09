@@ -15,7 +15,7 @@ export const state = {
     pageWidth: 0,
     pageHeight: 0,
     textAlignmentOffset: 0,
-    widthPerPage: 0.1, // ページ1枚あたりの厚み(px)
+    totalForeEdge: 0,
 
     // DOM要素のキャッシュ
     elements: {

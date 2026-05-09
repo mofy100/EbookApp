@@ -4,7 +4,15 @@ import { createMeasurer, updateLayout } from './layout.js';
 import { renderPages } from './renderer.js';
 import { setupNavigation } from './navigation.js';
 
+function mark(label, since) {
+    const ms = (performance.now() - since).toFixed(1);
+    console.log(`[viewer] ${label}: ${ms}ms`);
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
+    const t0 = performance.now();
+    console.log('[viewer] DOMContentLoaded');
+
     // 1. 各要素の初期化
     initElements();
 
@@ -22,26 +30,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.title = `読書中 (ID: ${state.bookId})`;
 
     try {
-        // 1. マニフェストとチャンクの取得
+        // 1. マニフェスト取得
+        const t1 = performance.now();
         state.bookData = await fetchManifest(state.bookId);
-        
+        mark('fetchManifest', t1);
+
         const bookTitle = state.bookData.title || '電子書籍';
         document.title = `${bookTitle} - 青空文庫リーダー`;
         if (state.elements.titleRight) state.elements.titleRight.textContent = bookTitle;
         if (state.elements.titleLeft) state.elements.titleLeft.textContent = bookTitle;
 
-        const chunkPromises = state.bookData.chapters.map(chapter => fetchChunk(state.bookId, chapter.file));
-        const chunkResults = await Promise.all(chunkPromises);
-        state.chunks = chunkResults.map(res => res.content);
+        const chapters = state.bookData.chapters;
 
-        // 2. 基本機能のセットアップ
+        // フェーズ1: 最初のチャンクだけ取得して即描画
+        const t2 = performance.now();
+        const firstResult = await fetchChunk(state.bookId, chapters[0].file);
+        mark('fetchChunk[0]', t2);
+
+        state.chunks = [firstResult.content];
+
         createMeasurer();
         setupNavigation();
 
-        // 3. 初回レイアウト計算と描画
-        setTimeout(() => updateLayout(renderPages), 100);
+        const t3 = performance.now();
+        setTimeout(() => {
+            mark('setTimeout待機', t3);
+            updateLayout(renderPages);
+            mark('フェーズ1 合計 (DOMContentLoaded起点)', t0);
+        }, 100);
 
-        // 4. リサイズ監視
+        // リサイズ監視
         let resizeTimer;
         const resizeObserver = new ResizeObserver(() => {
             clearTimeout(resizeTimer);
@@ -49,6 +67,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
         if (state.elements.pagePaper) {
             resizeObserver.observe(state.elements.pagePaper);
+        }
+
+        // フェーズ2: 残りのチャンクをバックグラウンドで順次取得
+        if (chapters.length > 1) {
+            (async () => {
+                for (const chapter of chapters.slice(1)) {
+                    try {
+                        const tChunk = performance.now();
+                        const result = await fetchChunk(state.bookId, chapter.file);
+                        mark(`fetchChunk[${chapter.file}]`, tChunk);
+                        state.chunks.push(result.content);
+                    } catch (e) {
+                        console.warn(`チャンク取得失敗: ${chapter.file}`, e);
+                        state.chunks.push('');
+                    }
+                }
+                // 全チャンク取得完了 → レイアウト再計算で総ページ数を確定
+                const tLayout2 = performance.now();
+                updateLayout(renderPages);
+                mark('フェーズ2 updateLayout', tLayout2);
+            })();
         }
 
     } catch (err) {

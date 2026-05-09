@@ -8,7 +8,9 @@
     --window-margin-bottom: 6%;
     --window-margin-left: 5%;
     --window-margin-right: 5%;
-    --fore-edge-max-width: 40px;
+
+    /* 小口サイズ */
+    --fore-edge-total: 3%;
 
     /* viewer.jsで設定される値 */
     --text-window-width: 100px;
@@ -214,7 +216,7 @@ body {
 /* 小口（本の厚み） */
 .fore-edge {
     flex: 0 0 auto;
-    /* 横幅はJSで動的に制御 */
+    width: 0;
     /* height: calc(100% - 10px); */
     height: 100%;
     margin-top: 0px;
