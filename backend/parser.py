@@ -111,6 +111,19 @@ def parse_aozora_html(input_filepath, output_dir):
 
     for rp in main_text.find_all('rp'):
         rp.decompose()
+
+    # 異常ルビの処理: <ruby><rb>※</rb><rt>ひらがな</rt></ruby>[<span class="notes">...</span>] → ひらがな
+    # ※は青空文庫で符号化できない文字を示す特殊マーカー
+    for ruby in main_text.find_all('ruby'):
+        rb = ruby.find('rb')
+        rt = ruby.find('rt')
+        if rb and rt and '※' in rb.get_text():
+            hiragana = rt.get_text()
+            next_sib = ruby.find_next_sibling()
+            if next_sib and next_sib.name == 'span' and 'notes' in next_sib.get('class', []):
+                next_sib.decompose()
+            ruby.replace_with(hiragana)
+
     for font_tag in main_text.find_all('font'):
         font_tag.unwrap()
     bib_sections = soup.find_all('div', class_='bibliographical_information')
