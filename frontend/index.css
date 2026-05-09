@@ -64,13 +64,6 @@ h1 {
     border-color: var(--accent-color);
 }
 
-.checkbox-label {
-    font-size: 0.95rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
 
 #search-button {
     padding: 0.8rem 2rem;
@@ -130,26 +123,6 @@ h1 {
 .book-author {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 1.5rem;
-}
-
-.book-status {
-    margin-top: auto;
-    font-size: 0.85rem;
-    font-weight: bold;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    align-self: flex-start;
-}
-
-.status-downloaded {
-    background: #e0ece4;
-    color: #2b5b3a;
-}
-
-.status-not-downloaded {
-    background: #f0f0f0;
-    color: #888;
 }
 
 .pagination {
