@@ -300,6 +300,15 @@ body {
     /* 数値を増やすと右にずれます */
 }
 
+/* 返り点（レ点など）に使われる <sub> による行幅拡張を防ぐ */
+/* vertical-align: sub は縦書きで列幅を広げるため、baselineに戻してposition: relativeで見た目を調整 */
+.text-container sub {
+    vertical-align: baseline;
+    font-size: 0.6em;
+    position: relative;
+    left: -0.3em;
+}
+
 /* 段落間の余白 */
 .text-container p {
     margin: 0;
