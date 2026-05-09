@@ -3,3 +3,6 @@ uvicorn[standard]
 beautifulsoup4
 pandas
 requests
+anthropic
+google-generativeai
+python-dotenv
