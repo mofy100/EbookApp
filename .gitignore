@@ -1,5 +1,4 @@
 backend/data/*/*.html
-backend/
 backend/__pycache__
 
 .claude
