@@ -91,19 +91,6 @@ def parse_aozora_html(input_filepath, output_dir):
     author_tag = soup.find('h2', class_='author')
     author = author_tag.get_text(strip=True) if author_tag else "作者不明"
 
-    # 2. content_0.html (タイトル・著者) の作成
-    content_0_soup = BeautifulSoup('<article class="ebook-content title-page"></article>', 'html.parser')
-    p_title = content_0_soup.new_tag('p', attrs={'class': 'ebook-title-main', 'id': 'pos-0'})
-    p_title.string = title
-    p_author = content_0_soup.new_tag('p', attrs={'class': 'ebook-author-main', 'id': 'pos-1'})
-    p_author.string = author
-    content_0_soup.article.append(p_title)
-    content_0_soup.article.append(p_author)
-    
-    content_0_html = str(content_0_soup).replace('</p>', '</p>\n').replace('<article class="ebook-content">', '<article class="ebook-content">\n').replace('</article>', '</article>\n')
-    with open(os.path.join(output_dir, "content_0.html"), 'w', encoding='utf-8') as f:
-        f.write(content_0_html)
-
     # 3. 本文のクレンジング
     main_text = soup.find('div', class_='main_text')
     if not main_text:
@@ -148,9 +135,9 @@ def parse_aozora_html(input_filepath, output_dir):
 
     # 4. 章分割の実行
     chapters = []
-    chapter_index = 1
+    chapter_index = 0
 
-    def save_chapter(nodes, index):
+    def save_chapter(nodes, index, filename=None):
         if not nodes: return
         chapter_soup = BeautifulSoup('<article class="ebook-content"></article>', 'html.parser')
         article = chapter_soup.article
@@ -326,7 +313,8 @@ def parse_aozora_html(input_filepath, output_dir):
         for i, el in enumerate(article.find_all(['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])):
             el['id'] = f"pos-{i}"
 
-        filename = f"content_{index}.html"
+        if filename is None:
+            filename = f"content_{index}.html"
         html_str = str(chapter_soup).replace('</p>', '</p>\n').replace('<article class="ebook-content">', '<article class="ebook-content">\n').replace('</article>', '</article>\n')
         # カーニング: 。」 と 、」 の間を詰める
         html_str = re.sub(r'([。、])(」)', r'\1<span class="kern-punct">\2</span>', html_str)
@@ -355,20 +343,58 @@ def parse_aozora_html(input_filepath, output_dir):
                 if node.find('img'): return True
         return False
 
+    MAX_CHARS_PER_CONTENT = 15000
+
+    def count_text_chars(nodes):
+        total = 0
+        for n in nodes:
+            if isinstance(n, Tag):
+                total += len(n.get_text())
+            elif isinstance(n, NavigableString):
+                total += len(str(n).strip())
+        return total
+
+    def split_nodes_by_size(nodes, max_chars):
+        """ノード群を max_chars 以内のチャンクに分割する（トップレベルノード単位）"""
+        if count_text_chars(nodes) <= max_chars:
+            return [nodes]
+        chunks = []
+        current = []
+        current_chars = 0
+        for node in nodes:
+            node_chars = len(node.get_text()) if isinstance(node, Tag) else len(str(node).strip())
+            if node_chars == 0:
+                current.append(node)
+                continue
+            if current_chars + node_chars > max_chars and current:
+                chunks.append(current)
+                current = []
+                current_chars = 0
+            current.append(node)
+            current_chars += node_chars
+        if current:
+            chunks.append(current)
+        return chunks if chunks else [nodes]
+
+    def flush_chapter(nodes):
+        nonlocal chapter_index
+        if not has_actual_content(nodes):
+            return
+        for chunk in split_nodes_by_size(nodes, MAX_CHARS_PER_CONTENT):
+            save_chapter(chunk, chapter_index)
+            chapter_index += 1
+
     # Heading detection and split
     temp_nodes = []
     for child in list(main_text.children):
         if is_func_heading(child) and temp_nodes:
-            if has_actual_content(temp_nodes):
-                save_chapter(temp_nodes, chapter_index)
-                chapter_index += 1
-                temp_nodes = []
-        
+            flush_chapter(temp_nodes)
+            temp_nodes = []
+
         temp_nodes.append(child)
-    
+
     if temp_nodes:
-        save_chapter(temp_nodes, chapter_index)
-        chapter_index += 1
+        flush_chapter(temp_nodes)
 
     # 4.5 ビブリオグラフィーの追加
     if bib_sections:
@@ -404,15 +430,15 @@ def parse_aozora_html(input_filepath, output_dir):
         bib_heading = soup.new_tag('h4', attrs={'class': 'naka-midashi'})
         bib_heading.string = "ビブリオグラフィー"
         bib_nodes = [bib_heading] + bib_sections
-        save_chapter(bib_nodes, chapter_index)
+        save_chapter(bib_nodes, chapter_index, filename="bib.html")
         chapter_index += 1
 
     # 5. manifest.json の作成
     manifest = {
         "title": title,
         "author": author,
-        "chapter_count": len(chapters) + 1,
-        "chapters": [{"index": 0, "file": "content_0.html"}] + chapters
+        "chapter_count": len(chapters),
+        "chapters": chapters
     }
     with open(os.path.join(output_dir, "manifest.json"), 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)

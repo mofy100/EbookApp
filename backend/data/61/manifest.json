@@ -1,7 +1,7 @@
 {
   "title": "地獄變",
   "author": "芥川龍之介",
-  "chapter_count": 22,
+  "chapter_count": 21,
   "chapters": [
     {
       "index": 0,
@@ -85,11 +85,7 @@
     },
     {
       "index": 20,
-      "file": "content_20.html"
-    },
-    {
-      "index": 21,
-      "file": "content_21.html"
+      "file": "bib.html"
     }
   ]
 }

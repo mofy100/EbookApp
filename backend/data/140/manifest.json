@@ -1,7 +1,7 @@
 {
   "title": "猿蟹合戦",
   "author": "芥川龍之介",
-  "chapter_count": 3,
+  "chapter_count": 2,
   "chapters": [
     {
       "index": 0,
@@ -9,11 +9,7 @@
     },
     {
       "index": 1,
-      "file": "content_1.html"
-    },
-    {
-      "index": 2,
-      "file": "content_2.html"
+      "file": "bib.html"
     }
   ]
 }

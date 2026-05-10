@@ -1,7 +1,7 @@
 {
   "title": "素戔嗚尊",
   "author": "芥川龍之介",
-  "chapter_count": 37,
+  "chapter_count": 36,
   "chapters": [
     {
       "index": 0,
@@ -145,11 +145,7 @@
     },
     {
       "index": 35,
-      "file": "content_35.html"
-    },
-    {
-      "index": 36,
-      "file": "content_36.html"
+      "file": "bib.html"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "title": "秋の瞳",
   "author": "八木重吉",
-  "chapter_count": 120,
+  "chapter_count": 119,
   "chapters": [
     {
       "index": 0,
@@ -477,11 +477,7 @@
     },
     {
       "index": 118,
-      "file": "content_118.html"
-    },
-    {
-      "index": 119,
-      "file": "content_119.html"
+      "file": "bib.html"
     }
   ]
 }

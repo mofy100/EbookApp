@@ -1,7 +1,7 @@
 {
   "title": "西方の人",
   "author": "芥川龍之介",
-  "chapter_count": 39,
+  "chapter_count": 38,
   "chapters": [
     {
       "index": 0,
@@ -153,11 +153,7 @@
     },
     {
       "index": 37,
-      "file": "content_37.html"
-    },
-    {
-      "index": 38,
-      "file": "content_38.html"
+      "file": "bib.html"
     }
   ]
 }

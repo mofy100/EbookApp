@@ -1,7 +1,7 @@
 {
   "title": "あらくれ",
   "author": "徳田秋声",
-  "chapter_count": 115,
+  "chapter_count": 114,
   "chapters": [
     {
       "index": 0,
@@ -457,11 +457,7 @@
     },
     {
       "index": 113,
-      "file": "content_113.html"
-    },
-    {
-      "index": 114,
-      "file": "content_114.html"
+      "file": "bib.html"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "title": "誘惑",
   "author": "芥川龍之介",
-  "chapter_count": 76,
+  "chapter_count": 75,
   "chapters": [
     {
       "index": 0,
@@ -301,11 +301,7 @@
     },
     {
       "index": 74,
-      "file": "content_74.html"
-    },
-    {
-      "index": 75,
-      "file": "content_75.html"
+      "file": "bib.html"
     }
   ]
 }

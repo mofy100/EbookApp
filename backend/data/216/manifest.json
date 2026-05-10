@@ -1,7 +1,7 @@
 {
   "title": "星座",
   "author": "有島武郎",
-  "chapter_count": 3,
+  "chapter_count": 9,
   "chapters": [
     {
       "index": 0,
@@ -14,6 +14,30 @@
     {
       "index": 2,
       "file": "content_2.html"
+    },
+    {
+      "index": 3,
+      "file": "content_3.html"
+    },
+    {
+      "index": 4,
+      "file": "content_4.html"
+    },
+    {
+      "index": 5,
+      "file": "content_5.html"
+    },
+    {
+      "index": 6,
+      "file": "content_6.html"
+    },
+    {
+      "index": 7,
+      "file": "content_7.html"
+    },
+    {
+      "index": 8,
+      "file": "bib.html"
     }
   ]
 }

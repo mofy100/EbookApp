@@ -1,7 +1,7 @@
 {
   "title": "二つの道",
   "author": "有島武郎",
-  "chapter_count": 17,
+  "chapter_count": 16,
   "chapters": [
     {
       "index": 0,
@@ -65,11 +65,7 @@
     },
     {
       "index": 15,
-      "file": "content_15.html"
-    },
-    {
-      "index": 16,
-      "file": "content_16.html"
+      "file": "bib.html"
     }
   ]
 }

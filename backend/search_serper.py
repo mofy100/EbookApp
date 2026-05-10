@@ -117,10 +117,6 @@ def process_book(
     output_path = os.path.join(DATA_DIR, str(book_id), "search.json")
     summary_path = os.path.join(DATA_DIR, str(book_id), "summary.json")
 
-    if not force and (os.path.exists(summary_path) or os.path.exists(output_path)):
-        print(f"  スキップ（既存）: [{book_id}] {title}")
-        return True
-
     print(f"  処理中: [{book_id}] {title} / {author}", flush=True)
 
     try:
@@ -200,7 +196,7 @@ def main() -> None:
     success = 0
     count = 0
     for i, book in enumerate(books):
-        if not args.force and (os.path.exists(f"{DATA_DIR}/{book['id']}/summary.json") or os.path.exists(f"{DATA_DIR}/{book['id']}/serper_search.json")):
+        if not args.force and (os.path.exists(f"{DATA_DIR}/{book['id']}/summary.json") or os.path.exists(f"{DATA_DIR}/{book['id']}/search.json")):
             print(f"  スキップ（既存）: [{book['id']}] {book['title']}")
             continue
 

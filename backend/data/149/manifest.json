@@ -1,7 +1,7 @@
 {
   "title": "白",
   "author": "芥川龍之介",
-  "chapter_count": 7,
+  "chapter_count": 6,
   "chapters": [
     {
       "index": 0,
@@ -25,11 +25,7 @@
     },
     {
       "index": 5,
-      "file": "content_5.html"
-    },
-    {
-      "index": 6,
-      "file": "content_6.html"
+      "file": "bib.html"
     }
   ]
 }
