@@ -1,29 +1,32 @@
 {
+  "book_id": 171,
   "title": "一塊の土",
-  "original_title": null,
   "author": "芥川龍之介",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "文学小説",
-    "人物描写"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "芥川龍之介による短編小説です。近代日本文学の巨匠である芥川が、その独特の視点で人間の本質や社会における個人の位置づけを探究する作品です。芥川の作風は、古典文学から西洋文学まで幅広い知識に基づきながら、日常の出来事の中に非日常的な深さを見出すことで知られています。本作もそうした特徴を備えた作品であると考えられ、芥川が生涯にわたって追求した近代知識人の苦悩や人間の心理の複雑さが表現されています。",
-  "tags": [
-    "芥川龍之介",
-    "短編小説",
-    "日本文学",
-    "近代文学",
-    "人間描写"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "大正文学"
+    ],
+    "文学運動・流派": [
+      "新思潮派"
+    ],
+    "テーマ": [
+      "心理描写",
+      "知識人の苦悩",
+      "人間の内面・自我"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://ja.wikipedia.org/wiki/%E8%8A%A5%E5%B7%9D%E9%BE%8D%E4%B9%8B%E4%BB%8B",
     "https://www.aozora.gr.jp/index_pages/person879.html",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000879"
   ],
-  "book_id": 171,
   "generated_at": "2026-05-09T21:02:55.454243+00:00"
 }

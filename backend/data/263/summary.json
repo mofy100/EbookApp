@@ -1,27 +1,22 @@
 {
+  "book_id": 263,
   "title": "薄明",
-  "original_title": null,
   "author": "太宰治",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "心理小説",
-    "自伝的作品"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "太宰治の作品について調査いたしましたが、「薄明」という作品の詳細情報は提供いただいた参考資料には記載されていません。太宰治の作品年表には「晩年」「二十世紀旗手」「新樹の言葉」「走れメロス」「きりぎりす」「新ハムレット」「津軽」「惜別」「お伽草紙」「パンドラの匣」「ろまん燈籠」「ヴィヨンの妻」「斜陽」「人間失格」「グッド・バイ」などが列挙されており、「薄明」はこれらの中に含まれていません。正確な出版年や内容についての情報がないため、詳細な要約をお示しすることができません。",
-  "tags": [
-    "太宰治",
-    "日本文学",
-    "短編"
-  ],
+  "tags": {
+    "ジャンル": [],
+    "時代": [],
+    "文学運動・流派": [],
+    "テーマ": [],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.yomuhon.com/archives/4607",
     "https://www.mottainaihonpo.com/kaitori/contents/cat01/034-dazai-osusume.html",
     "https://www.aozora.gr.jp/cards/000035/files/263_20161.html"
   ],
-  "book_id": 263,
   "generated_at": "2026-05-09T21:42:21.648416+00:00"
 }

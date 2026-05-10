@@ -1,29 +1,30 @@
 {
+  "book_id": 880,
   "title": "宇宙女囚第一号",
-  "original_title": null,
   "author": "海野十三",
   "translator": null,
   "country": "日本",
-  "genre": "SF小説",
-  "subgenre": [
-    "科学小説",
-    "冒険小説"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "海野十三による科学小説。宇宙を舞台とした冒険譚であり、女性囚人が宇宙空間での事件に巻き込まれるという設定を持つ作品です。海野十三は日本SF文学の先駆者として知られ、科学的な想像力と冒険心溢れる物語を多数執筆しました。本作は宇宙という未知の領域を題材にした、当時としては最先端のSF的想像力を駆使した作品であり、1920年代から1940年代の日本におけるSF文学の発展を示す重要な作品の一つです。",
-  "tags": [
-    "SF小説",
-    "宇宙冒険譚",
-    "科学小説",
-    "昭和文学",
-    "海野十三"
-  ],
+  "tags": {
+    "ジャンル": [
+      "長編小説",
+      "SF・科学小説",
+      "冒険・活劇"
+    ],
+    "時代": [
+      "昭和文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "冒険・活劇"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://ja.wikipedia.org/wiki/%E6%B5%B7%E9%87%8E%E5%8D%81%E4%B8%89",
     "https://www.aozora.gr.jp/index_pages/person160.html",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000160"
   ],
-  "book_id": 880,
   "generated_at": "2026-05-09T23:56:23.447967+00:00"
 }

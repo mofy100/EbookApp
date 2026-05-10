@@ -1,29 +1,29 @@
 {
+  "book_id": 718,
   "title": "栗の花の咲くころ",
-  "original_title": null,
   "author": "佐左木俊郎",
   "translator": null,
   "country": "日本",
-  "genre": "小説",
-  "subgenre": [
-    "短編",
-    "文芸小説"
-  ],
   "publication_year": 1926,
-  "japanese_publication_year": 1926,
   "summary": "佐左木俊郎による短編小説です。大正時代に発表された作品で、栗の花が咲く季節を舞台としています。登場人物たちの人間関係や心情の葛藤が丹念に描かれており、自然描写と人物描写の調和が特徴的です。農民文学としての側面を持ちながらも、普遍的なテーマを扱っており、文学的価値の高い作品として評価されています。短編ながらも深い洞察と情感に満ちた作風が特徴です。",
-  "tags": [
-    "大正文学",
-    "短編小説",
-    "農民文学",
-    "自然描写",
-    "人間関係"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "大正文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "自然描写",
+      "心理描写"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/index_pages/person134.html",
     "https://www.aozora.gr.jp/cards/000134/files/718_20854.html",
     "https://www.aozora.gr.jp/cards/000134/card2308.html"
   ],
-  "book_id": 718,
   "generated_at": "2026-05-09T23:36:28.955051+00:00"
 }

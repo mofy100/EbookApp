@@ -1,29 +1,33 @@
 {
+  "book_id": 662,
   "title": "小熊秀雄全集-07",
-  "original_title": null,
   "author": "小熊秀雄",
   "translator": null,
   "country": "日本",
-  "genre": "詩集",
-  "subgenre": [
-    "詩集成",
-    "全集"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "小熊秀雄（1901-1940）の全集シリーズの第7巻です。小熊秀雄は北海道釧路出身の詩人で、早逝しながらも多くの詩作を遺しました。本巻は詩篇を中心に編まれており、初期詩篇から長篇詩篇、風物詩篇、恋愛詩篇、文壇諷刺詩、そして流民詩集など、多岐にわたるジャンルの詩作を収録しています。社会的な関心と個人的な感情が交錯する作品群が特徴で、近代日本詩壇における重要な詩人の創作軌跡を示す資料となっています。",
-  "tags": [
-    "詩集",
-    "小熊秀雄",
-    "昭和文学",
-    "日本近代詩",
-    "全集"
-  ],
+  "tags": {
+    "ジャンル": [
+      "詩・詩集"
+    ],
+    "時代": [
+      "大正文学",
+      "昭和文学"
+    ],
+    "文学運動・流派": [
+      "プロレタリア文学"
+    ],
+    "テーマ": [
+      "社会批評・風刺",
+      "恋愛・純愛",
+      "貧困・社会問題"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/index_pages/person124.html",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000124",
     "https://bookface.hatenablog.com/entry/2024/01/07/200000"
   ],
-  "book_id": 662,
   "generated_at": "2026-05-09T23:30:00.184239+00:00"
 }

@@ -1,20 +1,22 @@
 {
+  "book_id": 1103,
   "title": "睡蓮",
-  "original_title": null,
   "author": "横光利一",
   "translator": null,
   "country": "日本",
-  "genre": "小説",
-  "subgenre": [],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "申し訳ございませんが、提供いただいた参考ページはクロード・モネの絵画作品『睡蓮』に関する美術解説であり、横光利一による文学作品『睡蓮』についての情報を含んでおりません。そのため、横光利一の『睡蓮』に関する正確な作品情報（発表年、あらすじ、文学的特徴など）を確認することができません。推測に基づいた記述は避けるべきと考え、不明な情報はnullとさせていただいております。",
-  "tags": [],
+  "tags": {
+    "ジャンル": [],
+    "時代": [],
+    "文学運動・流派": [],
+    "テーマ": [],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://wasabi-nomal.com/blogs/others/water-lilies",
     "https://www.nmwa.go.jp/jp/collection/1959-0151.html",
     "https://mono-art.jp/art/monetart/"
   ],
-  "book_id": 1103,
   "generated_at": "2026-05-10T00:16:22.191220+00:00"
 }

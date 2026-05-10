@@ -1,29 +1,30 @@
 {
+  "book_id": 802,
   "title": "杉よ！眼の男よ！",
-  "original_title": null,
   "author": "富岡誠・中浜哲",
   "translator": null,
   "country": "日本",
-  "genre": "詩",
-  "subgenre": [
-    "短歌",
-    "政治詩"
-  ],
   "publication_year": 1924,
-  "japanese_publication_year": 1924,
   "summary": "大正時代の朝鮮独立運動の組織的弾圧に対する抗議の詩です。朝鮮独立運動の機関誌『大正』を発行した朝鮮独立社から出版され、1924年（大正13年）3月1日に掲載されました。強い社会的メッセージを含む短歌形式の作品で、大正アクラシー時代においても、実際には権力による激しい弾圧状況下にあった朝鮮独立運動の現実を詩的に表現しています。富岡誠と中浜哲による共同作品で、当時の進歩的知識人による政治的発言の重要な記録となっています。",
-  "tags": [
-    "大正文学",
-    "短歌",
-    "政治詩",
-    "朝鮮独立運動",
-    "社会詩"
-  ],
+  "tags": {
+    "ジャンル": [
+      "詩・詩集"
+    ],
+    "時代": [
+      "大正文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "社会批評・風刺",
+      "戦争・反戦",
+      "知識人の苦悩"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/cards/000149/card802.html",
     "https://www.aozora.gr.jp/index_pages/person149.html",
     "https://www.aozora.gr.jp/index_pages/person1008.html"
   ],
-  "book_id": 802,
   "generated_at": "2026-05-09T23:46:14.665397+00:00"
 }

@@ -1,29 +1,30 @@
 {
+  "book_id": 866,
   "title": "ある宇宙塵の秘密",
-  "original_title": null,
   "author": "海野十三",
   "translator": null,
   "country": "日本",
-  "genre": "科学小説",
-  "subgenre": [
-    "SF",
-    "冒険小説"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "海野十三による科学小説です。本作品は、著者が得意とした科学的知見と想像力を組み合わせた、宇宙塵をめぐる謎に満ちた物語として展開します。日本SFの始祖の一人とされる海野十三は、電気工学の専門知識を背景に、科学的で論理的なSF作品を多く残しており、本作もその特徴を体現しています。宇宙現象と地球上の出来事が交錯する中で、隠された秘密が明かされていく構成となっており、科学小説ならではの知的興趣と冒険的な面白さが融合した作品です。",
-  "tags": [
-    "科学小説",
-    "SF",
-    "宇宙",
-    "海野十三",
-    "冒険"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説",
+      "SF・科学小説"
+    ],
+    "時代": [
+      "昭和文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "冒険・活劇",
+      "哲学・思想"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://ja.wikipedia.org/wiki/%E6%B5%B7%E9%87%8E%E5%8D%81%E4%B8%89",
     "https://www.aozora.gr.jp/index_pages/person160.html",
     "https://www.aozora.gr.jp/cards/000160/files/866_23839.html"
   ],
-  "book_id": 866,
   "generated_at": "2026-05-09T23:54:08.885957+00:00"
 }

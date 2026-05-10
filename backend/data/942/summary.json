@@ -1,29 +1,29 @@
 {
+  "book_id": 942,
   "title": "雪の塔",
-  "original_title": null,
   "author": "夢野久作",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "幻想小説",
-    "怪奇小説"
-  ],
   "publication_year": 1923,
-  "japanese_publication_year": 1923,
   "summary": "夢野久作による短編小説です。1923年（大正12年）2月に「九州日報」に掲載されました。作者の代表的な作風である幻想性と怪奇性を備えた作品であり、未解読図と不可思議な世界観で日本文学における独特な美学的位置づけを示しています。死の前年に執筆された大作群に含まれる重要な作品で、作者の想像力と文学的特異性が顕著に表現されています。",
-  "tags": [
-    "幻想文学",
-    "怪奇小説",
-    "夢野久作",
-    "大正文学",
-    "短編"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説",
+      "幻想・怪奇小説"
+    ],
+    "時代": [
+      "大正文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "怪談・怪異"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/cards/000096/card942.html",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000096",
     "https://www.aozora.gr.jp/index_pages/person96.html"
   ],
-  "book_id": 942,
   "generated_at": "2026-05-10T00:05:09.155767+00:00"
 }

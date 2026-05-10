@@ -1,29 +1,31 @@
 {
+  "book_id": 1055,
   "title": "号外",
-  "original_title": null,
   "author": "国木田独歩",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "文学",
-    "明治文学"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "国木田独歩による短編小説作品です。独歩は1871年から1908年にかけて活躍した明治の代表的な作家で、ロマン主義から自然主義文学への移行期を代表する文筆家です。独歩の作品は詩情に富みながらも自然観察に基づいた独特の文体で知られており、夏目漱石や芥川龍之介からも高く評価されました。本作も独歩の文学的特徴を示す作品の一つとして位置付けられます。",
-  "tags": [
-    "明治文学",
-    "短編小説",
-    "国木田独歩",
-    "自然主義",
-    "日本文学"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "明治文学"
+    ],
+    "文学運動・流派": [
+      "浪漫主義"
+    ],
+    "テーマ": [
+      "自然描写",
+      "郷愁・ノスタルジア"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/index_pages/person38.html",
     "https://ja.wikipedia.org/wiki/%E5%9B%BD%E6%9C%A8%E7%94%B0%E7%8B%AC%E6%AD%A9",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000038"
   ],
-  "book_id": 1055,
   "generated_at": "2026-05-10T00:11:22.185924+00:00"
 }

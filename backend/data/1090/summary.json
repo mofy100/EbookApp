@@ -1,29 +1,33 @@
 {
+  "book_id": 1090,
   "title": "乱世",
-  "original_title": null,
   "author": "菊池寛",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "文芸小説",
-    "古典文学"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "菊池寛による傑作短編です。新聞記者としての職務を果たしながら、同時に作家として地位を確立した菊池寛の創作活動を代表する作品の一つです。『文藝春秋』の創刊、日本文芸家協会の設立、芥川賞・直木賞の創設など、日本の文学界に多大な貢献をした著者による文学的価値の高い作品です。乱世という題名が示すように、時代の混乱や人間関係の複雑さを題材とした作品として知られています。",
-  "tags": [
-    "日本文学",
-    "短編",
-    "菊池寛",
-    "古典名作",
-    "文芸小説"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "大正文学",
+      "日本近代文学"
+    ],
+    "文学運動・流派": [
+      "新思潮派"
+    ],
+    "テーマ": [
+      "心理描写",
+      "知識人の苦悩",
+      "社会批評・風刺"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/index_pages/person83.html",
     "https://bookwalker.jp/dee906ea5f-ab0d-4d30-8682-5dfa797b08c8/",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000083"
   ],
-  "book_id": 1090,
   "generated_at": "2026-05-10T00:15:13.463572+00:00"
 }

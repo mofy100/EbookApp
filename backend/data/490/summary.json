@@ -1,30 +1,33 @@
 {
+  "book_id": 490,
   "title": "三浦右衛門の最後",
-  "original_title": null,
   "author": "菊池寛",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "歴史小説",
-    "戦国時代",
-    "人間ドラマ"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "戦国時代、今川氏元が織田信長に破れた際、美少年の武士・三浦右衛門は仲間からはぐれ落ち武者狩りに捕まります。村の年配者の理知的な判断で命を助けられ、高天神城へ落ち延びた後、城主天野刑部の厄介になります。しかし主君の討死が報じられると、刑部から裏切られ処刑されることになります。潔く死ぬべき武士の道徳観を持たず、必死に命乞いをする三浦右衛門の姿を通じて、菊池寛は戦国武将の華やかな歴史の陰に隠れた、人間らしい人間の存在を描きます。武士特有の道徳観ではなく、生きたいという強い意志を持つ登場人物の描写は、当時の価値観に対する問題提起となっています。",
-  "tags": [
-    "戦国時代",
-    "歴史小説",
-    "人間ドラマ",
-    "武士",
-    "菊池寛"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説",
+      "歴史小説"
+    ],
+    "時代": [
+      "大正文学"
+    ],
+    "文学運動・流派": [
+      "新思潮派"
+    ],
+    "テーマ": [
+      "道徳・倫理",
+      "死・生死観",
+      "人間の内面・自我"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.city.takamatsu.kagawa.jp/smph/kurashi/kosodate/bunka/kikuchikan/zenshu.html",
     "https://note.com/new_sataketakeru/n/n25f09a169eef",
     "https://www.aozora.gr.jp/index_pages/person83.html"
   ],
-  "book_id": 490,
   "generated_at": "2026-05-09T23:10:27.616000+00:00"
 }

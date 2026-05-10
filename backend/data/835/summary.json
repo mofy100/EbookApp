@@ -1,29 +1,34 @@
 {
+  "book_id": 835,
   "title": "船",
-  "original_title": null,
   "author": "島崎藤村",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "自然主義文学",
-    "散文"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "島崎藤村の作品「船」は、日本近代文学の自然主義を代表する作家による短編小説です。藤村は詩人としてキャリアをスタートさせましたが、やがて自然主義文学へと転向し、『破戒』『春』『家』などの重要な作品を生み出しました。本作は、藤村が自分をより新鮮に、簡素に表現したいという思いから散文へと転じた時期の作品として位置付けられます。故郷の木曽路への深い想いと、自然の描写を通じて、人間の内面世界を描き出す藤村の文学的特徴が窺える作品です。",
-  "tags": [
-    "自然主義文学",
-    "日本近代文学",
-    "短編小説",
-    "島崎藤村",
-    "明治時代"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "明治文学"
+    ],
+    "文学運動・流派": [
+      "自然主義"
+    ],
+    "テーマ": [
+      "自然描写",
+      "郷愁・ノスタルジア",
+      "人間の内面・自我"
+    ],
+    "形式・文体": [
+      "詩的散文"
+    ]
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/index_pages/person158.html",
     "https://ja.wikisource.org/wiki/%E4%BD%9C%E8%80%85:%E5%B3%B6%E5%B4%8E%E8%97%A4%E6%9D%91",
     "https://www.library.pref.gifu.lg.jp/gifu-map/gifu-related-materials/gifu-writers/hizan-nosui/shimazaki-toson.html"
   ],
-  "book_id": 835,
   "generated_at": "2026-05-09T23:49:48.071279+00:00"
 }

@@ -1,30 +1,33 @@
 {
+  "book_id": 1051,
   "title": "義民甚兵衛",
-  "original_title": null,
   "author": "菊池寛",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "歴史小説",
-    "人情小説",
-    "讃岐を舞台とした作品"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "菊池寛が讃岐の民俗と人物を題材に描いた作品です。本作は、讃岐高松地方に伝わる義民甚兵衛という実在の人物をモデルにしており、地域の歴史と文化を背景とした人間ドラマを展開しています。菊池寛は1888年に現在の高松市に生まれ、自身の故郷への深い関心から、地元の伝説的人物や民間伝承を題材とした作品を多く残しました。本作もそうした地域文化の記録と文学的表現を融合させた作品として位置づけられており、讃岐の人々の生き方と道徳観を描いています。菊池寛の作風であるヒューマニズムと現実主義的な視点が、義民の生涯を通じて表現されています。",
-  "tags": [
-    "讃岐の伝説",
-    "義民",
-    "菊池寛",
-    "人情小説",
-    "日本文学"
-  ],
+  "tags": {
+    "ジャンル": [
+      "長編小説",
+      "歴史小説"
+    ],
+    "時代": [
+      "日本近代文学"
+    ],
+    "文学運動・流派": [
+      "新思潮派"
+    ],
+    "テーマ": [
+      "道徳・倫理",
+      "郷愁・ノスタルジア",
+      "社会批評・風刺"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.city.takamatsu.kagawa.jp/smph/kurashi/kosodate/bunka/kikuchikan/kikuti.html",
     "https://www.aozora.gr.jp/cards/000083/files/1051_14603.html",
     "https://www.aozora.gr.jp/index_pages/person83.html"
   ],
-  "book_id": 1051,
   "generated_at": "2026-05-10T00:10:54.163240+00:00"
 }

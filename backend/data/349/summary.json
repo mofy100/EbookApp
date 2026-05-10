@@ -1,30 +1,28 @@
 {
+  "book_id": 349,
   "title": "根岸お行の松　因果塚の由来",
-  "original_title": null,
   "author": "三遊亭円朝",
   "translator": null,
   "country": "日本",
-  "genre": "講談",
-  "subgenre": [
-    "人情話",
-    "因果譚",
-    "江戸文学"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "江戸の根岸を舞台とした人情講談です。無子の夫婦が若き妾を身請けしたことに端を発する複雑な因果関係を描いています。妾の前の主人である伯爵に殺され、その後若い妾は子供を身ごもり、男女の双子が生まれるという展開から、波乱に満ちた運命が描かれます。やがて本物の伯爵と深い仲になりますが、その関係の中で駆け落ちするという劇的なストーリーが展開されます。江戸情緒と人間関係の複雑さ、そして因果応報のテーマが織り交ぜられた作品であり、三遊亭円朝の得意とした人情話の特色が随所に現れています。",
-  "tags": [
-    "江戸文学",
-    "講談",
-    "人情話",
-    "因果譚",
-    "口演芸能"
-  ],
+  "tags": {
+    "ジャンル": [
+      "落語"
+    ],
+    "時代": [
+      "江戸文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "恋愛・純愛"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/cards/000989/card349.html",
     "https://www.aozora.gr.jp/index_pages/person989.html",
     "http://www.nadokoro.com/kogai/ingaduka.htm"
   ],
-  "book_id": 349,
   "generated_at": "2026-05-09T22:37:04.257594+00:00"
 }

@@ -1,29 +1,31 @@
 {
+  "book_id": 797,
   "title": "初秋の一日",
-  "original_title": null,
   "author": "夏目漱石",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "心理小説",
-    "随筆的作品"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "本作品は夏目漱石の作品目録に記載される作品ですが、提供いただいた参考資料には詳細な発表年やあらすじ等の具体的情報が含まれていません。夏目漱石は明治末期から大正初期にかけて活躍した日本近代文学を代表する文豪であり、『吾輩は猫である』『坊っちゃん』『こころ』などの代表作で知られています。漱石の作品群は、近代知識人の内面的葛藤や個人主義的苦悩をテーマとするものが多く、言文一致体を確立させた重要な作家です。本作品についても漱石の文学的特徴を反映した作品と考えられますが、詳細な考察にはさらなる確認が必要です。",
-  "tags": [
-    "夏目漱石",
-    "日本文学",
-    "近代文学",
-    "明治時代",
-    "短編"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "明治文学",
+      "大正文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "知識人の苦悩",
+      "人間の内面・自我",
+      "心理描写"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.library.tohoku.ac.jp/collection/collection/soseki/nenpu.html",
     "https://ja.wikipedia.org/wiki/%E5%A4%8F%E7%9B%AE%E6%BC%B1%E7%9F%B3",
     "https://www.yomuhon.com/archives/4577"
   ],
-  "book_id": 797,
   "generated_at": "2026-05-09T23:45:56.521399+00:00"
 }

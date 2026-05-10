@@ -1,29 +1,27 @@
 {
+  "book_id": 1049,
   "title": "フランス哲学についての感想",
-  "original_title": null,
   "author": "西田幾多郎",
   "translator": null,
   "country": "日本",
-  "genre": "哲学評論",
-  "subgenre": [
-    "哲学論考",
-    "フランス哲学研究",
-    "思想評論"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "西田幾多郎がフランス哲学に対する思想的考察を展開した論考です。デカルト、パスカル、ベルクソンなどのフランス哲学者の思想を検討し、特にパスカルの「心の幾何学」（esprit de géométrie）と「繊細さの精神」（esprit de finesse）の区別に注目しています。西田は、フランス哲学が人間理性と直感的認識のあり方にどのようにアプローチしているかを分析し、日本の哲学的伝統との比較の中でその特質を明らかにしようとしています。論理的思考と感覚的認識の関係性についての深い洞察を含む作品です。",
-  "tags": [
-    "フランス哲学",
-    "西田幾多郎",
-    "思想哲学",
-    "パスカル",
-    "東西哲学比較"
-  ],
+  "tags": {
+    "ジャンル": [
+      "評論・批評"
+    ],
+    "時代": [
+      "日本近代文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "哲学・思想"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/cards/000182/files/1049_40744.html",
     "https://www.aozora.gr.jp/index_pages/person182.html"
   ],
-  "book_id": 1049,
   "generated_at": "2026-05-10T00:10:44.952397+00:00"
 }

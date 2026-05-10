@@ -1,29 +1,30 @@
 {
+  "book_id": 485,
   "title": "青木の出京",
-  "original_title": null,
   "author": "菊池寛",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "文芸小説",
-    "人間ドラマ"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "菊池寛の短編作品です。タイトルから青木という人物が京都へ出ることを題材にしていると推測されます。菊池寛は1888年から1948年にかけて活躍した著名な日本の作家で、短編小説から長編小説まで幅広い作品を発表しました。本作品は青空文庫にも収録されており、日本の文学遺産として保存されています。菊池寛の特徴である人間関係の葛藤や社会的テーマを扱う文学的な手法が用いられていると考えられます。",
-  "tags": [
-    "菊池寛",
-    "短編小説",
-    "日本文学",
-    "大正期文学",
-    "人間ドラマ"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "大正文学"
+    ],
+    "文学運動・流派": [
+      "新思潮派"
+    ],
+    "テーマ": [
+      "成長・青春"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/index_pages/person83.html",
     "https://www.city.takamatsu.kagawa.jp/smph/kurashi/kosodate/bunka/kikuchikan/zenshu.html",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000083"
   ],
-  "book_id": 485,
   "generated_at": "2026-05-09T23:09:40.816963+00:00"
 }

@@ -1,30 +1,29 @@
 {
+  "book_id": 479,
   "title": "心中浪華の春雨",
-  "original_title": null,
   "author": "岡本綺堂",
   "translator": null,
   "country": "日本",
-  "genre": "戯曲",
-  "subgenre": [
-    "新歌舞伎",
-    "心中物",
-    "時代物"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "岡本綺堂による新歌舞伎の作品です。本作は江戸時代の浪華（大阪）を舞台とした心中を題材とした戯曲であり、登場人物たちの複雑な人間関係と運命の糸が織りなすドラマを描いています。綺堂の特徴である情感豊かな描写と江戸情緒が随所に見られ、従来の歌舞伎の様式を継承しつつも新しい表現手法を取り入れた作風が示されています。本作品は綺堂が新歌舞伎の代表的劇作家として活躍した時期の作品であり、登場人物たちの葛藤と悲劇的な結末に向かう緊張感に満ちた構成となっています。",
-  "tags": [
-    "新歌舞伎",
-    "心中",
-    "江戸情緒",
-    "浪華",
-    "戯曲"
-  ],
+  "tags": {
+    "ジャンル": [
+      "戯曲"
+    ],
+    "時代": [
+      "明治文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "死・生死観",
+      "心理描写"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/cards/000082/files/479_33086.html",
     "https://www.aozora.gr.jp/index_pages/person82.html",
     "https://ja.wikipedia.org/wiki/%E5%B2%A1%E6%9C%AC%E7%B6%BA%E5%A0%82"
   ],
-  "book_id": 479,
   "generated_at": "2026-05-09T23:09:03.331788+00:00"
 }

@@ -1,29 +1,30 @@
 {
+  "book_id": 493,
   "title": "大島が出来る話",
-  "original_title": null,
   "author": "菊池寛",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "人情小説",
-    "風刺文学"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "菊池寛の短編作品。参考資料には「大島が出来る話」が菊池寛の作品として記載されており、菊池寛の全集に収録されている作品です。菊池寛は明治から昭和にかけて活躍した日本の代表的な作家で、短編小説から評論まで幅広い作品を執筆しました。本作は短編集に収められた作品であり、菊池寛特有の人情的で風刺的な視点が特徴と考えられます。具体的なあらすじや詳細な内容については、現存する資料から確認することが困難ですが、菊池寛の作風から判断して、日常的な人間関係や社会的な矛盾を題材とした作品と推察されます。",
-  "tags": [
-    "菊池寛",
-    "短編小説",
-    "人情小説",
-    "日本文学",
-    "大正時代文学"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "日本近代文学"
+    ],
+    "文学運動・流派": [
+      "新思潮派"
+    ],
+    "テーマ": [
+      "社会批評・風刺"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.city.takamatsu.kagawa.jp/smph/kurashi/kosodate/bunka/kikuchikan/zenshu.html",
     "https://www.aozora.gr.jp/index_pages/person83.html",
     "https://www.rnc.co.jp/radio/kikuchikanwoyomu/"
   ],
-  "book_id": 493,
   "generated_at": "2026-05-09T23:10:57.620144+00:00"
 }

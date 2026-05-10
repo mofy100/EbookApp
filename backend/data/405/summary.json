@@ -1,29 +1,33 @@
 {
+  "book_id": 405,
   "title": "自分のこと",
-  "original_title": null,
   "author": "南部修太郎",
   "translator": null,
   "country": "日本",
-  "genre": "小説",
-  "subgenre": [
-    "随筆",
-    "評論"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "南部修太郎による自己に関する作品です。著者は1892年宮城県仙台市生まれ、慶應義塾大学文学科出身の小説家で、芥川龍之介を師と仰ぎ「龍門の四天王」と称された文学者です。本作は『三田文学』の編集主任を務めた文学者としての経験や、ロシア文学への傾倒、創作活動の過程など、自身の人生経験と思想について綴った作品と考えられます。大正期の知識人による内省的な作品として、同時代の文学的関心や自己認識のあり方を示しています。",
-  "tags": [
-    "随筆",
-    "自伝的",
-    "大正文学",
-    "自己認識",
-    "知識人"
-  ],
+  "tags": {
+    "ジャンル": [
+      "随筆・エッセイ",
+      "評論・批評"
+    ],
+    "時代": [
+      "大正文学"
+    ],
+    "文学運動・流派": [
+      "新思潮派"
+    ],
+    "テーマ": [
+      "知識人の苦悩",
+      "芸術・創作論",
+      "人間の内面・自我"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/index_pages/person48.html",
     "https://ja.wikipedia.org/wiki/%E5%8D%97%E9%83%A8%E4%BF%AE%E5%A4%AA%E9%83%8E",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000048"
   ],
-  "book_id": 405,
   "generated_at": "2026-05-09T22:41:27.692028+00:00"
 }

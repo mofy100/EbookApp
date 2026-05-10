@@ -1,29 +1,32 @@
 {
+  "book_id": 251,
   "title": "誰",
-  "original_title": null,
   "author": "太宰治",
   "translator": null,
   "country": "日本",
-  "genre": "短編小説",
-  "subgenre": [
-    "心理小説",
-    "実存主義文学"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "太宰治の作品『誰』は、人間の本質と自己同一性を問う作品です。太宰治は自身の複雑な心理状態や社会との葛藤を通じて、「誰であるのか」という根本的な問いを提示します。本作は太宰治が繰り返した自殺未遂や人間関係の苦悩から生まれた作品で、人間の内面的な矛盾と虚構性を鋭く描きます。無頼派の代表作家として知られる太宰治らしく、道徳的な判断を避けながらも、人間存在の本質に迫る文学的特徴を持つ作品です。",
-  "tags": [
-    "太宰治",
-    "心理小説",
-    "人間存在",
-    "無頼派",
-    "昭和文学"
-  ],
+  "tags": {
+    "ジャンル": [
+      "短編小説"
+    ],
+    "時代": [
+      "昭和文学"
+    ],
+    "文学運動・流派": [
+      "無頼派"
+    ],
+    "テーマ": [
+      "人間の内面・自我",
+      "心理描写",
+      "知識人の苦悩"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://ja.wikipedia.org/wiki/%E5%A4%AA%E5%AE%B0%E6%B2%BB",
     "https://news.mynavi.jp/article/20211101-2164518/",
     "https://www.mottainaihonpo.com/kaitori/contents/cat01/034-dazai-osusume.html"
   ],
-  "book_id": 251,
   "generated_at": "2026-05-09T21:40:39.041500+00:00"
 }

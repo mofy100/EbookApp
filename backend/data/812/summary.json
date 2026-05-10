@@ -1,30 +1,29 @@
 {
+  "book_id": 812,
   "title": "初めて見たる小樽",
-  "original_title": null,
   "author": "石川啄木",
   "translator": null,
   "country": "日本",
-  "genre": "短歌",
-  "subgenre": [
-    "叙景詩",
-    "紀行文学",
-    "北海道文学"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "石川啄木が北海道滞在中に小樽を初めて訪れた際に詠んだ作品です。啄木は明治40年代に北海道の函館、札幌、小樽、釧路などで新聞社の校正係や記者として働き、短い北海道生活の中で多くの作品を生み出しました。本作は啄木が第二の故郷と呼んだ函館を離れた後、小樽という港町の風景と出会った時の感動を詩的に表現した作品と考えられます。啄木の北海道体験は後の代表作『一握の砂』（明治43年）の創作に大きな影響を与えました。",
-  "tags": [
-    "石川啄木",
-    "短歌",
-    "北海道",
-    "小樽",
-    "明治文学"
-  ],
+  "tags": {
+    "ジャンル": [
+      "詩・詩集"
+    ],
+    "時代": [
+      "明治文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "郷愁・ノスタルジア",
+      "自然描写"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://tankaness.com/2020/06/18/takuboku_suna/",
     "https://www.aozora.gr.jp/index_pages/person153.html",
     "https://note.com/infinity0105/n/ncfbfed6a23c5"
   ],
-  "book_id": 812,
   "generated_at": "2026-05-09T23:47:03.022969+00:00"
 }

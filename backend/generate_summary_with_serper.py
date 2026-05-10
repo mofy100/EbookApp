@@ -30,6 +30,7 @@ DB_FILE = "backend/aozora.db"
 DATA_DIR = "backend/data"
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
 SERPER_SEARCH_URL = "https://google.serper.dev/search"
+ALLOWED_TAGS_FILE = "backend/allowed_tags.json"
 
 MAX_CHARS_PER_PAGE = 3000
 MAX_PAGES = 3
@@ -37,7 +38,25 @@ MAX_PAGES = 3
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "EbooksApp/1.0 (mofy100p@gmail.com)"})
 
-SYSTEM_PROMPT = """\
+
+def _build_tag_list() -> str:
+    with open(ALLOWED_TAGS_FILE, encoding="utf-8") as f:
+        data = json.load(f)
+    lines = [
+        f"【{category}】" + " / ".join(tags)
+        for category, tags in data["categories"].items()
+    ]
+    notes = data.get("tag_notes", {})
+    if notes:
+        lines.append("\n【タグ使用上の注意】")
+        for tag, note in notes.items():
+            lines.append(f"- {tag}: {note}")
+    return "\n".join(lines)
+
+
+_TAG_LIST = _build_tag_list()
+
+SYSTEM_PROMPT = f"""\
 あなたは日本文学・世界文学の専門家です。
 与えられた作品について百科事典レベルの正確性で作品情報JSONを生成してください。
 
@@ -46,23 +65,31 @@ SYSTEM_PROMPT = """\
 - 推測禁止。不明な情報は null
 - 日本語・敬体（です・ます調）で記述
 - summary は 300〜500文字。ネタバレを避け、文学的特徴を含める
-- tags は 5個前後。作品のジャンルやテーマなどを考慮すること
+- tags はカテゴリ別オブジェクト。各カテゴリに0個以上のタグを配列で入れる
+  - 必ず以下のリストから選ぶこと（リスト外のタグは使用禁止）
+  - 全カテゴリのキーを必ず出力すること（該当なしの場合は空配列 []）
+  - 合計で3〜8個を目安に選ぶ
+
+{_TAG_LIST}
 
 JSON schema:
-{
+{{
   "title": str,
-  "original_title": str | null,
   "author": str,
   "translator": str | null,
   "country": str | null,
   "genre": str | null,
-  "subgenre": string[],
   "publication_year": int | null,
-  "japanese_publication_year": int | null,
   "summary": str,
-  "tags": string[],
-  "source_urls": string[],
-}
+  "tags": {{
+    "ジャンル": string[],
+    "時代": string[],
+    "文学運動・流派": string[],
+    "テーマ": string[],
+    "形式・文体": string[]
+  }},
+  "source_urls": string[]
+}}
 """
 
 

@@ -1,29 +1,30 @@
 {
+  "book_id": 867,
   "title": "地球を狙う者",
-  "original_title": null,
   "author": "海野十三",
   "translator": null,
   "country": "日本",
-  "genre": "SF小説",
-  "subgenre": [
-    "科学小説",
-    "冒険小説"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "海野十三による科学冒険小説です。日本SF文学の先駆者として知られる著者が、科学的想像力を駆使して創造した作品で、地球への脅威を描いています。著者の電気工学の専門知識と、当時としては斬新なSF的アイデアが組み合わされた、戦前から戦中にかけての日本SF文学を代表する一編です。タイトルが示すように、地球外からの脅威や侵略といったテーマを扱う冒険活劇として、科学知識と娯楽性を兼ね備えた作品になっています。",
-  "tags": [
-    "SF小説",
-    "科学冒険小説",
-    "海野十三",
-    "昭和文学",
-    "日本SF"
-  ],
+  "tags": {
+    "ジャンル": [
+      "長編小説",
+      "SF・科学小説",
+      "冒険・活劇"
+    ],
+    "時代": [
+      "昭和文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "冒険・活劇"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://ja.wikipedia.org/wiki/%E6%B5%B7%E9%87%8E%E5%8D%81%E4%B8%89",
     "https://www.aozora.gr.jp/index_pages/person160.html",
     "https://yozora.main.jp/cgi-bin/inp/kokai.cgi?p=000160"
   ],
-  "book_id": 867,
   "generated_at": "2026-05-09T23:54:17.694243+00:00"
 }

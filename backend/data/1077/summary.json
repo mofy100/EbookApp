@@ -1,30 +1,32 @@
 {
+  "book_id": 1077,
   "title": "めくらぶどうと虹",
-  "original_title": null,
   "author": "宮沢賢治",
   "translator": null,
   "country": "日本",
-  "genre": "児童文学",
-  "subgenre": [
-    "童話",
-    "詩的散文",
-    "自然文学"
-  ],
   "publication_year": null,
-  "japanese_publication_year": null,
   "summary": "原稿用紙7枚ほどの短編童話です。東北の野ブドウ「めくらぶどう」と天空に架かる虹との対話を通じて、生命の本質と美について問いかけます。自分を無価値だと考えるめくらぶどうが虹に敬いを捧げようとするのに対し、虹は「敬いを受けるのはあなたも同じ」と答え、両者が同じ根源的生命の異なる姿に過ぎないことを示唆します。瞬間的で儚い存在のうちに無限の生命が息づき、全ての物が「真の力」によって輝いていることを、穏やかで簡潔な言葉で表現した、東洋的・日本的な生命観を体現した作品です。",
-  "tags": [
-    "宮沢賢治",
-    "童話",
-    "自然観",
-    "生命観",
-    "仏教思想"
-  ],
+  "tags": {
+    "ジャンル": [
+      "童話・児童文学",
+      "短編小説",
+      "寓話"
+    ],
+    "時代": [
+      "昭和文学"
+    ],
+    "文学運動・流派": [],
+    "テーマ": [
+      "哲学・思想",
+      "自然描写",
+      "宗教・信仰"
+    ],
+    "形式・文体": []
+  },
   "source_urls": [
     "https://www.aozora.gr.jp/cards/000081/files/1077.html",
     "https://bohemegalante.com/2021/12/24/miyazawa-kenji-ampelopsis-et-arc-en-ciel/",
     "https://www.aozora.gr.jp/index_pages/person81.html"
   ],
-  "book_id": 1077,
   "generated_at": "2026-05-10T00:13:34.224268+00:00"
 }
