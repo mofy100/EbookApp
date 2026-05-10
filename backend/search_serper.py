@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Serper API で作品情報を検索し、結果を data/{id}/serper_search.json に保存するスクリプト。
+Serper API で作品情報を検索し、結果を data/{id}/search.json に保存するスクリプト。
 
 使用例:
   python -m backend.search_serper --id 1000
@@ -30,7 +30,7 @@ DATA_DIR = "backend/data"
 SERPER_SEARCH_URL = "https://google.serper.dev/search"
 
 MAX_CHARS_PER_PAGE = 3000
-MAX_PAGES = 3
+MAX_PAGES = 5
 
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "EbooksApp/1.0 (mofy100p@gmail.com)"})
@@ -114,10 +114,10 @@ def process_book(
     author: str,
     force: bool = False,
 ) -> bool:
-    output_path = os.path.join(DATA_DIR, str(book_id), "serper_search.json")
+    output_path = os.path.join(DATA_DIR, str(book_id), "search.json")
     summary_path = os.path.join(DATA_DIR, str(book_id), "summary.json")
 
-    if not force and os.path.exists(summary_path):
+    if not force and (os.path.exists(summary_path) or os.path.exists(output_path)):
         print(f"  スキップ（既存）: [{book_id}] {title}")
         return True
 
@@ -200,7 +200,7 @@ def main() -> None:
     success = 0
     count = 0
     for i, book in enumerate(books):
-        if not args.force and os.path.exists(f"{DATA_DIR}/{book['id']}/summary.json"):
+        if not args.force and (os.path.exists(f"{DATA_DIR}/{book['id']}/summary.json") or os.path.exists(f"{DATA_DIR}/{book['id']}/serper_search.json")):
             print(f"  スキップ（既存）: [{book['id']}] {book['title']}")
             continue
 

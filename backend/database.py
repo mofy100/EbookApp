@@ -60,7 +60,6 @@ def create_index():
         text_url TEXT,
         xhtml_url TEXT,
         local_path TEXT,
-        is_downloaded INTEGER DEFAULT 0,
         has_copyright INTEGER DEFAULT 0
     )
     ''')
@@ -86,16 +85,13 @@ def create_index():
         text_url = first_row['テキストファイルURL']
         xhtml_url = first_row['XHTML/HTMLファイルURL']
         
-        # ローカルファイルの存在確認
         local_path = f"{work_id}"
-        is_downloaded = 1 if os.path.exists(os.path.join(DATA_DIR, local_path)) else 0
-
         has_copyright = 1 if copyright_protected.get(work_id, False) else 0
 
         cursor.execute('''
-        INSERT INTO books (id, title, author, translator, card_url, text_url, xhtml_url, local_path, is_downloaded, has_copyright)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (int(work_id), title, author_names, translator_names, card_url, text_url, xhtml_url, local_path, is_downloaded, has_copyright))
+        INSERT INTO books (id, title, author, translator, card_url, text_url, xhtml_url, local_path, has_copyright)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (int(work_id), title, author_names, translator_names, card_url, text_url, xhtml_url, local_path, has_copyright))
 
     conn.commit()
     conn.close()

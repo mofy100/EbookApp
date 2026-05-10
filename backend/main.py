@@ -58,7 +58,7 @@ def get_books(
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    query = "SELECT id, title, author, translator, card_url, text_url, is_downloaded, has_copyright FROM books WHERE has_copyright = 0"
+    query = "SELECT id, title, author, translator, card_url, text_url, has_copyright FROM books WHERE has_copyright = 0"
     params = []
     
     if search:
