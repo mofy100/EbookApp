@@ -1,0 +1,30 @@
+{
+  "title": "著作権法",
+  "original_title": null,
+  "author": null,
+  "translator": null,
+  "country": "日本",
+  "genre": "法律",
+  "subgenre": [
+    "知的財産法",
+    "著作権",
+    "法令"
+  ],
+  "publication_year": null,
+  "japanese_publication_year": null,
+  "summary": "著作権法は、著作物を創作した者の権利を保護する日本の法律です。作品の創作者が享受する複製権、公衆送信権、翻案権などの著作権を規定しており、創作活動を保護することで文化発展を促進することを目的としています。著作物には小説、音楽、美術作品、映画、プログラムなど多様な形態が含まれ、著作者が生存する間およびその死後一定期間、法的保護が及びます。著作物の利用には原則として著作者の許可が必要ですが、私的使用や教育目的での利用など、例外的に許可を得ずに利用できる場合も定められています。二次的著作物の作成と利用についても細かく規定されており、著作権侵害時の対処法なども含まれています。",
+  "tags": [
+    "著作権",
+    "知的財産権",
+    "著作物保護",
+    "法律",
+    "創作権"
+  ],
+  "source_urls": [
+    "https://www.bunka.go.jp/seisaku/chosakuken/textbook/pdf/94081601_01.pdf",
+    "https://fungry.co.jp/cnaps/blog/chosakuken/",
+    "https://copyright-qa.azurewebsites.net/Qa/0000338"
+  ],
+  "book_id": 860,
+  "generated_at": "2026-05-09T23:53:19.908521+00:00"
+}
