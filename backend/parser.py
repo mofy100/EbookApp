@@ -344,6 +344,7 @@ def parse_aozora_html(input_filepath, output_dir):
         return False
 
     MAX_CHARS_PER_CONTENT = 15000
+    MIN_CHARS_PER_CONTENT = 3000
 
     def count_text_chars(nodes):
         total = 0
@@ -354,7 +355,7 @@ def parse_aozora_html(input_filepath, output_dir):
                 total += len(str(n).strip())
         return total
 
-    def split_nodes_by_size(nodes, max_chars):
+    def split_nodes_by_size(nodes, max_chars, min_chars=MIN_CHARS_PER_CONTENT):
         """ノード群を max_chars 以内のチャンクに分割する（トップレベルノード単位）"""
         if count_text_chars(nodes) <= max_chars:
             return [nodes]
@@ -374,27 +375,47 @@ def parse_aozora_html(input_filepath, output_dir):
             current_chars += node_chars
         if current:
             chunks.append(current)
+        # min_chars 未満のチャンクは前のチャンクにマージして短すぎる分割を防ぐ
+        if min_chars > 0 and len(chunks) > 1:
+            result = []
+            for chunk in chunks:
+                if result and count_text_chars(chunk) < min_chars:
+                    result[-1] = result[-1] + chunk
+                else:
+                    result.append(chunk)
+            chunks = result
         return chunks if chunks else [nodes]
 
-    def flush_chapter(nodes):
-        nonlocal chapter_index
-        if not has_actual_content(nodes):
-            return
-        for chunk in split_nodes_by_size(nodes, MAX_CHARS_PER_CONTENT):
-            save_chapter(chunk, chapter_index)
-            chapter_index += 1
-
     # Heading detection and split
+    sections = []
     temp_nodes = []
     for child in list(main_text.children):
         if is_func_heading(child) and temp_nodes:
-            flush_chapter(temp_nodes)
+            if has_actual_content(temp_nodes):
+                sections.append(temp_nodes)
             temp_nodes = []
-
         temp_nodes.append(child)
+    if temp_nodes and has_actual_content(temp_nodes):
+        sections.append(temp_nodes)
 
-    if temp_nodes:
-        flush_chapter(temp_nodes)
+    # 小さすぎるセクションを隣接セクションにマージしてから保存
+    accumulated = []
+    accumulated_chars = 0
+    for section in sections:
+        section_chars = count_text_chars(section)
+        if accumulated and accumulated_chars + section_chars > MAX_CHARS_PER_CONTENT and accumulated_chars >= MIN_CHARS_PER_CONTENT:
+            for chunk in split_nodes_by_size(accumulated, MAX_CHARS_PER_CONTENT):
+                save_chapter(chunk, chapter_index)
+                chapter_index += 1
+            accumulated = []
+            accumulated_chars = 0
+        accumulated.extend(section)
+        accumulated_chars += section_chars
+
+    if accumulated and has_actual_content(accumulated):
+        for chunk in split_nodes_by_size(accumulated, MAX_CHARS_PER_CONTENT):
+            save_chapter(chunk, chapter_index)
+            chapter_index += 1
 
     # 4.5 ビブリオグラフィーの追加
     if bib_sections:
@@ -479,6 +500,8 @@ if __name__ == "__main__":
             
         print(f"[{parsed_count+1}] Parsing 作品ID: {work_id} ...")
         try:
+            for old_file in glob.glob(os.path.join(d, 'content_*.html')) + glob.glob(os.path.join(d, 'bib.html')):
+                os.remove(old_file)
             parse_aozora_html(origin_path, d)
             print(f"  => 分割ファイルを生成しました")
             parsed_count += 1
