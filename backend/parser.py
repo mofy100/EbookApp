@@ -65,6 +65,15 @@ def get_standard_classes(aozora_classes):
     
     return list(set(standard))
 
+def generate_title_html(title, author, translator=None):
+    """タイトルページの HTML 断片を生成する。"""
+    parts = [f'<p class="ebook-title-main">{title}</p>']
+    # parts.append(f'<p class="ebook-title-author">{author}</p>')
+    # if translator:
+    #     parts.append(f'<p class="ebook-title-translator">{translator}</p>')
+    return '<article class="ebook-content">\n' + '\n'.join(parts) + '\n</article>\n'
+
+
 def parse_aozora_html(input_filepath, output_dir):
     """
     青空文庫のオリジナルHTMLを読み込み、章ごとに分割された <p> タグ主体の HTML ファイルを作成する。
@@ -78,7 +87,7 @@ def parse_aozora_html(input_filepath, output_dir):
             break
         except UnicodeDecodeError:
             continue
-    
+
     if html_content is None:
         with open(input_filepath, 'r', encoding='utf-8', errors='ignore') as f:
             html_content = f.read()
@@ -90,6 +99,8 @@ def parse_aozora_html(input_filepath, output_dir):
     title = title_tag.get_text(strip=True) if title_tag else "無題"
     author_tag = soup.find('h2', class_='author')
     author = author_tag.get_text(strip=True) if author_tag else "作者不明"
+    translator_tag = soup.find('h2', class_='translator')
+    translator = translator_tag.get_text(strip=True) if translator_tag else None
 
     # 3. 本文のクレンジング
     main_text = soup.find('div', class_='main_text')
@@ -132,6 +143,12 @@ def parse_aozora_html(input_filepath, output_dir):
                 img['src'] = f"/api/assets/gaiji/{filename}"
                 img['class'] = img.get('class', []) + ['gaiji']
                 images_to_download.append((src, filename))
+
+    # 1.5. タイトルページの生成
+    title_html = generate_title_html(title, author, translator)
+    with open(os.path.join(output_dir, "title.html"), 'w', encoding='utf-8') as f:
+        f.write(title_html)
+    title_chapter = {"index": -1, "file": "title.html"}
 
     # 4. 章分割の実行
     chapters = []
@@ -308,6 +325,12 @@ def parse_aozora_html(input_filepath, output_dir):
             else:
                 break
 
+        # content_0.html の先頭に2行分のスペースを挿入
+        if index == 0:
+            for _ in range(2):
+                space_p = chapter_soup.new_tag('p', attrs={'class': 'space-line'})
+                article.insert(0, space_p)
+
         # 各要素にIDを付与（レイアウトに依存しない位置特定用）
         # p, div, 見出しなどの主要なブロック要素を対象とする
         for i, el in enumerate(article.find_all(['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])):
@@ -455,11 +478,13 @@ def parse_aozora_html(input_filepath, output_dir):
         chapter_index += 1
 
     # 5. manifest.json の作成
+    all_chapters = [title_chapter] + chapters
     manifest = {
         "title": title,
         "author": author,
-        "chapter_count": len(chapters),
-        "chapters": chapters
+        "translator": translator,
+        "chapter_count": len(all_chapters),
+        "chapters": all_chapters
     }
     with open(os.path.join(output_dir, "manifest.json"), 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
