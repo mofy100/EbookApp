@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from backend.parser import parse_aozora_html
+from backend.builder import process_aozora
 
 app = FastAPI(title="Aozora Bunko API")
 
@@ -137,7 +137,7 @@ def get_book_text(book_id: int):
     target_file = "content_0.html"
     file_path = os.path.join(book_dir, target_file)
     try:
-        parse_aozora_html(origin_path, book_dir)
+        process_aozora(origin_path, book_dir)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to parse file: {str(e)}")
             
@@ -168,7 +168,7 @@ def get_book_manifest(book_id: int):
 
     if os.path.exists(origin_path) and (FORCE_REPARSE or not os.path.exists(manifest_path)):
         try:
-            parse_aozora_html(origin_path, book_dir)
+            process_aozora(origin_path, book_dir)
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Failed to parse file: {str(e)}")
     if os.path.exists(manifest_path):
