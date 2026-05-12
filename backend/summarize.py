@@ -19,19 +19,33 @@ data/{id}/content_*.html を一括処理して要約を生成する
 
 import argparse
 import json
+import os
 import re
+import socket
+import subprocess
 import sys
+import time
 import urllib.request
+from contextlib import contextmanager
 from html.parser import HTMLParser
 from pathlib import Path
 
 # ── 設定 ─────────────────────────────────────────────
 MODEL = "qwen3.5:35b"
-OLLAMA_URL = "http://localhost:11434/api/chat"
-TAG_WHITELIST_PATH = "/app/data/tags.json"
+TAG_WHITELIST_PATH = "./backend/tags.json"
 TEXT_MAX_CHARS = 100000
 REQUEST_TIMEOUT = 300
 REQUIRED_CATEGORIES = ["ジャンル", "時代", "文学運動・流派", "テーマ", "形式・文体"]
+
+# SSH トンネル設定
+# OLLAMA_SSH_HOST: リモートホスト（例: user@remote.example.com）
+# OLLAMA_SSH_REMOTE_PORT: リモート側の Ollama ポート（デフォルト 11434）
+# OLLAMA_LOCAL_PORT: ローカルにマッピングするポート（デフォルト 11434）
+_OLLAMA_SSH_HOST = os.environ.get("OLLAMA_SSH_HOST", "")
+_OLLAMA_SSH_REMOTE_PORT = int(os.environ.get("OLLAMA_SSH_REMOTE_PORT", "11434"))
+_OLLAMA_LOCAL_PORT = int(os.environ.get("OLLAMA_LOCAL_PORT", "11434"))
+
+OLLAMA_URL = f"http://localhost:{_OLLAMA_LOCAL_PORT}/api/chat"
 
 
 # 見出しクラスのパターン
@@ -123,6 +137,47 @@ def build_tag_notes(whitelist: dict) -> str:
     for tag, note in whitelist.get("tag_notes", {}).items():
         lines.append(f"・{tag}: {note}")
     return "\n".join(lines)
+
+
+# ── SSH トンネル ─────────────────────────────────────
+@contextmanager
+def ollama_ssh_tunnel():
+    """OLLAMA_SSH_HOST が設定されている場合に SSH トンネルを張る。"""
+    if not _OLLAMA_SSH_HOST:
+        yield
+        return
+
+    cmd = [
+        "ssh", "-N",
+        "-L", f"{_OLLAMA_LOCAL_PORT}:localhost:{_OLLAMA_SSH_REMOTE_PORT}",
+        "-o", "ExitOnForwardFailure=yes",
+        "-o", "ServerAliveInterval=30",
+        _OLLAMA_SSH_HOST,
+    ]
+    print(f"SSHトンネル起動: {_OLLAMA_SSH_HOST} → localhost:{_OLLAMA_LOCAL_PORT}", file=sys.stderr)
+    proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    # トンネル確立を最大15秒待つ
+    for _ in range(30):
+        if proc.poll() is not None:
+            raise RuntimeError(f"SSHトンネルが異常終了しました (exit={proc.returncode})")
+        try:
+            with socket.create_connection(("localhost", _OLLAMA_LOCAL_PORT), timeout=1):
+                break
+        except OSError:
+            time.sleep(0.5)
+    else:
+        proc.terminate()
+        proc.wait()
+        raise RuntimeError(f"SSHトンネル確立タイムアウト (localhost:{_OLLAMA_LOCAL_PORT})")
+
+    print(f"SSHトンネル確立完了", file=sys.stderr)
+    try:
+        yield
+    finally:
+        proc.terminate()
+        proc.wait()
+        print("SSHトンネルを閉じました", file=sys.stderr)
 
 
 # ── Ollama API 呼び出し ───────────────────────────────
@@ -222,14 +277,14 @@ def summarize_content(html_path: Path, prev_summary: str = "") -> dict:
 {context_section}
 ## 要約
 200〜400字で以下を含めてください：
-- この部分のあらすじ（ネタバレなし）
+- この部分のあらすじ（ネタバレなし、曖昧な表現を避ける）
 - 描かれている心情・状況・展開のポイント
 - 語り手や視点に変化があれば明記すること
 
 ## 出力
 JSON形式（説明文・マークダウン不要）:
 {{
-    "summary": "200〜400字の要約をここに"
+    "summary": "300〜500字の要約をここに"
 }}
 
 ## テキスト
@@ -374,7 +429,7 @@ def process_book(book_dir: Path, whitelist: dict, force: bool) -> dict:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("ids", nargs="*", help="処理するID（例: 10 11 12）省略時は全件")
-    parser.add_argument("--data-dir", default="data", help="dataディレクトリのパス")
+    parser.add_argument("--data-dir", default="backend/data", help="dataディレクトリのパス")
     parser.add_argument("--force", action="store_true", help="既存のsummary.jsonを上書き")
     args = parser.parse_args()
 
@@ -406,14 +461,14 @@ def main():
 
     ok = skip = error = 0
 
-    # ディレクトリ単位は逐次（Step1内部で並列）
-    for book_dir in book_dirs:
-        res = process_book(book_dir, whitelist, args.force)
-        print(f"[{res['status'].upper():5s}] {res['id']}: {res['message']}")
-        if res["status"] == "ok":      ok += 1
-        elif res["status"] == "skip":  skip += 1
-        elif res["status"] == "partial": error += 1
-        else:                          error += 1
+    with ollama_ssh_tunnel():
+        for book_dir in book_dirs:
+            res = process_book(book_dir, whitelist, args.force)
+            print(f"[{res['status'].upper():5s}] {res['id']}: {res['message']}")
+            if res["status"] == "ok":        ok += 1
+            elif res["status"] == "skip":    skip += 1
+            elif res["status"] == "partial": error += 1
+            else:                            error += 1
 
     print("-" * 50)
     print(f"完了: ok={ok}  skip={skip}  error={error}")

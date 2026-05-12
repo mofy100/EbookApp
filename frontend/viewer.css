@@ -444,14 +444,15 @@ body {
 
 .az-h4 {
     font-size: 1em;
-    line-height: calc(var(--base-line-height) * 2);
+    line-height: calc(var(--base-line-height) * 3);
 }
 
+/*
 .az-naka-midashi {
     border-right: 1px solid #ccc;
-    padding-right: 0.2em;
-    margin-right: 0.5em;
+    line-height: var(--base-line-height * 3);
 }
+*/
 
 /* ページの中央に配置 */
 .page-center {
