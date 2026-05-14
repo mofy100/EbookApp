@@ -1,0 +1,64 @@
+{
+  "title": "パアテル・セルギウス",
+  "author": "レオ・トルストイ　Lev Nikolaevich Tolstoi",
+  "translator": "森林太郎訳",
+  "chapter_count": 8,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "パアテル・セルギウス",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9793
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三",
+      "level": 2,
+      "char_count": 9733
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "四",
+      "level": 2,
+      "char_count": 9525
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "五",
+      "level": 2,
+      "char_count": 9360
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "六",
+      "level": 2,
+      "char_count": 9858
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 4888
+    },
+    {
+      "index": 6,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 166
+    }
+  ]
+}

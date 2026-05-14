@@ -1,0 +1,29 @@
+{
+  "title": "眠る森のお姫さま",
+  "author": "ペロー　Perrault",
+  "translator": "楠山正雄訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "眠る森のお姫さま",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 8338
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 227
+    }
+  ]
+}

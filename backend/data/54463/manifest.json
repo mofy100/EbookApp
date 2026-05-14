@@ -1,0 +1,36 @@
+{
+  "title": "妖影",
+  "author": "大倉※［＃「火＋華」、第3水準1-87-62］子",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "妖影",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一、暗号",
+      "level": 2,
+      "char_count": 9708
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 781
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 171
+    }
+  ]
+}

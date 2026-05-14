@@ -1,0 +1,29 @@
+{
+  "title": "兒童語彙解説",
+  "author": "柳田國男",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "兒童語彙解説",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "外遊び",
+      "level": 2,
+      "char_count": 3514
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 117
+    }
+  ]
+}

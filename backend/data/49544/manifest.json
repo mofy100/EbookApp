@@ -1,0 +1,57 @@
+{
+  "title": "正雪の二代目",
+  "author": "岡本綺堂",
+  "translator": null,
+  "chapter_count": 7,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "正雪の二代目",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "登場人物",
+      "level": 1,
+      "char_count": 167
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第一幕",
+      "level": 1,
+      "char_count": 9954
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 8701
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第二幕",
+      "level": 1,
+      "char_count": 9953
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "三",
+      "level": 2,
+      "char_count": 7805
+    },
+    {
+      "index": 5,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 228
+    }
+  ]
+}

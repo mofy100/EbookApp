@@ -1,0 +1,155 @@
+{
+  "title": "食道楽",
+  "author": "村井弦斎",
+  "translator": null,
+  "chapter_count": 21,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "食道楽",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "緒言",
+      "level": 2,
+      "char_count": 256
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "春の巻",
+      "level": 1,
+      "char_count": 9798
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第八　料理自慢",
+      "level": 2,
+      "char_count": 8950
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第十四　廃物利用",
+      "level": 2,
+      "char_count": 8866
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "第二十　大得意",
+      "level": 2,
+      "char_count": 9516
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "第二十六　名物",
+      "level": 2,
+      "char_count": 9334
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "第三十二　料理の原則",
+      "level": 2,
+      "char_count": 9458
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "第三十八　玉子の善悪",
+      "level": 2,
+      "char_count": 9341
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "第四十四　流動物",
+      "level": 2,
+      "char_count": 9614
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "第四十九　イチゴ酒",
+      "level": 2,
+      "char_count": 9185
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "第五十五　イチボ",
+      "level": 2,
+      "char_count": 9114
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "第六十一　火の倹約",
+      "level": 2,
+      "char_count": 9124
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "第六十八　村の誉れ",
+      "level": 2,
+      "char_count": 9544
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "第七十五　十日に十色",
+      "level": 2,
+      "char_count": 9807
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "第八十一　手製菓子",
+      "level": 2,
+      "char_count": 9083
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "第八十七　出迎い",
+      "level": 2,
+      "char_count": 4651
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "付録",
+      "level": 1,
+      "char_count": 9980
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "○葉茎菜類並ニ瓜蓏類",
+      "level": 3,
+      "char_count": 9999
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "○貝類",
+      "level": 3,
+      "char_count": 4661
+    },
+    {
+      "index": 19,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 362
+    }
+  ]
+}

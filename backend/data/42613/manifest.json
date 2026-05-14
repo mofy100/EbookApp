@@ -1,0 +1,50 @@
+{
+  "title": "國文學の發生（第三稿）",
+  "author": "折口信夫",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "國文學の發生（第三稿）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 9729
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9728
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9612
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 8005
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 338
+    }
+  ]
+}

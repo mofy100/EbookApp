@@ -1,0 +1,29 @@
+{
+  "title": "ランボオ詩集≪学校時代の詩≫",
+  "author": "ジャン・ニコラ・アルチュール・ランボー　Jean Nicolas Arthur Rimbaud",
+  "translator": "中原中也訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ランボオ詩集≪学校時代の詩≫",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 6316
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 433
+    }
+  ]
+}

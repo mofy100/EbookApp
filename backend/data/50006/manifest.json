@@ -1,0 +1,29 @@
+{
+  "title": "夜寒に火を囲んで懐しい雑炊",
+  "author": "北大路魯山人",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "夜寒に火を囲んで懐しい雑炊",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "牡蠣雑炊",
+      "level": 2,
+      "char_count": 3042
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 203
+    }
+  ]
+}

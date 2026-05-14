@@ -1,0 +1,36 @@
+{
+  "title": "狂人は笑う",
+  "author": "夢野久作",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "狂人は笑う",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "青ネクタイ",
+      "level": 2,
+      "char_count": 9927
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 2926
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 152
+    }
+  ]
+}

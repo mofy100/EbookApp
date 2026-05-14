@@ -1,0 +1,78 @@
+{
+  "title": "大阪の町人學者富永仲基",
+  "author": "内藤湖南",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "大阪の町人學者富永仲基",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 270
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "大天才富永仲基",
+      "level": 1,
+      "char_count": 2868
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "佛教の研究と其の學説――「出定後語」",
+      "level": 1,
+      "char_count": 9574
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "研究法と學説の價値",
+      "level": 1,
+      "char_count": 1689
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "支那學研究の原則と神道の批判――「説蔽」・「翁の文」",
+      "level": 1,
+      "char_count": 1601
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "「翁の文」の新學説",
+      "level": 1,
+      "char_count": 656
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "家系と其の攷學",
+      "level": 1,
+      "char_count": 1953
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "獨創的識見",
+      "level": 1,
+      "char_count": 1070
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 290
+    }
+  ]
+}

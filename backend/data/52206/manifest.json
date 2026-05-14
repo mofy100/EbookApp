@@ -1,0 +1,29 @@
+{
+  "title": "麺くひ",
+  "author": "桂三木助",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "麺くひ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 809
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 168
+    }
+  ]
+}

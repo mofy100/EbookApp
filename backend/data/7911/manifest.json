@@ -1,0 +1,71 @@
+{
+  "title": "お久美さんと其の周囲",
+  "author": "宮本百合子",
+  "translator": null,
+  "chapter_count": 9,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "お久美さんと其の周囲",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 9997
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9911
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9996
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 9993
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 9950
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 9975
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 9571
+    },
+    {
+      "index": 7,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 182
+    }
+  ]
+}

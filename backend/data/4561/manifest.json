@@ -1,0 +1,85 @@
+{
+  "title": "照葉狂言",
+  "author": "泉鏡花",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "照葉狂言",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "鞠唄",
+      "level": 1,
+      "char_count": 5414
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "仙冠者",
+      "level": 1,
+      "char_count": 2411
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "野衾",
+      "level": 1,
+      "char_count": 6114
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "狂言",
+      "level": 1,
+      "char_count": 7291
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "夜の辻",
+      "level": 1,
+      "char_count": 6184
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "仮小屋",
+      "level": 1,
+      "char_count": 6488
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "井筒",
+      "level": 1,
+      "char_count": 6657
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "重井筒",
+      "level": 1,
+      "char_count": 6498
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "峰の堂",
+      "level": 1,
+      "char_count": 2671
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 169
+    }
+  ]
+}

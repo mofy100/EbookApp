@@ -1,0 +1,36 @@
+{
+  "title": "高島異誌",
+  "author": "国枝史郎",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "高島異誌",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "妖僧の一泊",
+      "level": 2,
+      "char_count": 9870
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "奇怪の光景",
+      "level": 2,
+      "char_count": 3076
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 176
+    }
+  ]
+}

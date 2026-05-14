@@ -1,0 +1,29 @@
+{
+  "title": "雑草一束",
+  "author": "国枝史郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "雑草一束",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "支那の秘密結社",
+      "level": 2,
+      "char_count": 2544
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 159
+    }
+  ]
+}

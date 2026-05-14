@@ -1,0 +1,29 @@
+{
+  "title": "幽靈思想の變遷",
+  "author": "柳田國男",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "幽靈思想の變遷",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　土俗の荒廢と葬儀",
+      "level": 2,
+      "char_count": 4879
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 107
+    }
+  ]
+}

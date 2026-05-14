@@ -1,0 +1,71 @@
+{
+  "title": "潜航艇「鷹の城」",
+  "author": "小栗虫太郎",
+  "translator": null,
+  "chapter_count": 9,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "潜航艇「鷹の城」",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 9956
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9893
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9872
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 9925
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 9673
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 9954
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 5005
+    },
+    {
+      "index": 7,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 431
+    }
+  ]
+}

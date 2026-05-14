@@ -1,0 +1,36 @@
+{
+  "title": "機密の魅惑",
+  "author": "大倉※［＃「火＋華」、第3水準1-87-62］子",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "機密の魅惑",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１",
+      "level": 2,
+      "char_count": 9929
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "４",
+      "level": 2,
+      "char_count": 8465
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 214
+    }
+  ]
+}

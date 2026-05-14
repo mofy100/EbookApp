@@ -1,0 +1,43 @@
+{
+  "title": "京洛日記",
+  "author": "室生犀星",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "京洛日記",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "前書",
+      "level": 2,
+      "char_count": 9874
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "十五、飛雲閣",
+      "level": 2,
+      "char_count": 9765
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "二十、圓山公園",
+      "level": 2,
+      "char_count": 3456
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 287
+    }
+  ]
+}

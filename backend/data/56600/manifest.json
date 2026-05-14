@@ -1,0 +1,36 @@
+{
+  "title": "物貰ひの話",
+  "author": "三田村鳶魚",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "物貰ひの話",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "せぶりと世間師",
+      "level": 2,
+      "char_count": 9982
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "寺社奉行支配の願人坊主",
+      "level": 2,
+      "char_count": 1856
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 266
+    }
+  ]
+}

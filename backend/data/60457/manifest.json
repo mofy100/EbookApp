@@ -1,0 +1,29 @@
+{
+  "title": "古調月明集",
+  "author": "北原白秋",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "古調月明集",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "春",
+      "level": 2,
+      "char_count": 75
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 135
+    }
+  ]
+}

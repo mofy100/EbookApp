@@ -1,0 +1,43 @@
+{
+  "title": "雷門以北",
+  "author": "久保田万太郎",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "雷門以北",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "広小路（一）",
+      "level": 2,
+      "char_count": 9777
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "仲見世（四）",
+      "level": 2,
+      "char_count": 9627
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "「古い浅草」と「新しい浅草」（三）",
+      "level": 2,
+      "char_count": 2435
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 133
+    }
+  ]
+}

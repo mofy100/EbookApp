@@ -1,0 +1,36 @@
+{
+  "title": "明治演劇年表",
+  "author": "岡本綺堂",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "明治演劇年表",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "明治元年（戊辰）　一八六八",
+      "level": 2,
+      "char_count": 9982
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "二十九年（丙申）　一八九六",
+      "level": 2,
+      "char_count": 7554
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 255
+    }
+  ]
+}

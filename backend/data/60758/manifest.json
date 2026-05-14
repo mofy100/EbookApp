@@ -1,0 +1,29 @@
+{
+  "title": "燒跡",
+  "author": "齋藤茂吉",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "燒跡",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "洋傘",
+      "level": 2,
+      "char_count": 2538
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 147
+    }
+  ]
+}

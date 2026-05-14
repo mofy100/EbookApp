@@ -1,0 +1,50 @@
+{
+  "title": "茶話",
+  "author": "薄田泣菫",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "茶話",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "帽子＊＊＊",
+      "level": 1,
+      "char_count": 1435
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "贈り物・貰ひ物",
+      "level": 1,
+      "char_count": 1345
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "彫刻",
+      "level": 1,
+      "char_count": 1473
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "箱の中",
+      "level": 1,
+      "char_count": 1498
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 292
+    }
+  ]
+}

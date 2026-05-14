@@ -1,0 +1,36 @@
+{
+  "title": "奥州における御館藤原氏",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "奥州における御館藤原氏",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　緒言",
+      "level": 2,
+      "char_count": 9971
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "四　頼朝奥州征伐の顛末",
+      "level": 2,
+      "char_count": 7176
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 228
+    }
+  ]
+}

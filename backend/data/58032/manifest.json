@@ -1,0 +1,50 @@
+{
+  "title": "食料名彙",
+  "author": "柳田國男",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "食料名彙",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "序",
+      "level": 2,
+      "char_count": 9957
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "ズリ",
+      "level": 2,
+      "char_count": 9915
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "カケガラシ",
+      "level": 2,
+      "char_count": 9906
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "モクダ",
+      "level": 2,
+      "char_count": 343
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 139
+    }
+  ]
+}

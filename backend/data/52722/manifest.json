@@ -1,0 +1,36 @@
+{
+  "title": "〔編輯余話〕",
+  "author": "牧野信一",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "〔編輯余話〕",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "入社の辞〔『少女』〕",
+      "level": 2,
+      "char_count": 9782
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "私に送られた詩",
+      "level": 2,
+      "char_count": 3575
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 3789
+    }
+  ]
+}

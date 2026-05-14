@@ -1,0 +1,29 @@
+{
+  "title": "根子の番楽・金砂の田楽",
+  "author": "折口信夫",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "根子の番楽・金砂の田楽",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "東北の芸能",
+      "level": 2,
+      "char_count": 8395
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 312
+    }
+  ]
+}

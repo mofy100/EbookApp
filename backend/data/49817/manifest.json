@@ -1,0 +1,43 @@
+{
+  "title": "間人考",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "間人考",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　はしがき",
+      "level": 2,
+      "char_count": 9955
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "七　間人とハチヤ",
+      "level": 2,
+      "char_count": 9756
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 1572
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 195
+    }
+  ]
+}

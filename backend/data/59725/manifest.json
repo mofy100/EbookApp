@@ -1,0 +1,43 @@
+{
+  "title": "共産主義者の犯罪",
+  "author": "Ｇ・Ｋ・チェスタートン　G. K. Chesterton",
+  "translator": "村崎敏郎訳",
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "共産主義者の犯罪",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 9860
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9875
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 743
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 178
+    }
+  ]
+}

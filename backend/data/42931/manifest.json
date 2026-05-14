@@ -1,0 +1,36 @@
+{
+  "title": "見えざる人",
+  "author": "チェスタートン　Chesterton",
+  "translator": "直木三十五訳",
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "見えざる人",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9783
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三",
+      "level": 2,
+      "char_count": 7005
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 558
+    }
+  ]
+}

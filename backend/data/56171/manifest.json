@@ -1,0 +1,64 @@
+{
+  "title": "希臘十字",
+  "author": "高祖保",
+  "translator": null,
+  "chapter_count": 8,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "希臘十字",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "Kalokagathia",
+      "level": 2,
+      "char_count": 1260
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "Lethe",
+      "level": 1,
+      "char_count": 2517
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "硝子建築",
+      "level": 1,
+      "char_count": 605
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "共和国風俗",
+      "level": 1,
+      "char_count": 1447
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "Archaic",
+      "level": 1,
+      "char_count": 394
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "湖畔集",
+      "level": 1,
+      "char_count": 1335
+    },
+    {
+      "index": 6,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 132
+    }
+  ]
+}

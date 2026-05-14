@@ -1,0 +1,29 @@
+{
+  "title": "川端茅舎句集",
+  "author": "川端茅舎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "川端茅舎句集",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "序",
+      "level": 2,
+      "char_count": 4618
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 163
+    }
+  ]
+}

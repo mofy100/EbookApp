@@ -1,0 +1,43 @@
+{
+  "title": "俳人蕪村",
+  "author": "正岡子規",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "俳人蕪村",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "緒言",
+      "level": 2,
+      "char_count": 9880
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "精細的美",
+      "level": 2,
+      "char_count": 9895
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "時代",
+      "level": 2,
+      "char_count": 6402
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 349
+    }
+  ]
+}

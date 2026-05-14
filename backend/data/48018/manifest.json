@@ -1,0 +1,29 @@
+{
+  "title": "少年探偵　呉田博士と与一",
+  "author": "平林初之輔",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "少年探偵　呉田博士と与一",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "第一夜",
+      "level": 2,
+      "char_count": 5568
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 116
+    }
+  ]
+}

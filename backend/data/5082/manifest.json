@@ -1,0 +1,176 @@
+{
+  "title": "万葉秀歌",
+  "author": "斎藤茂吉",
+  "translator": null,
+  "chapter_count": 24,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "万葉秀歌",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "序",
+      "level": 2,
+      "char_count": 9598
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9959
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9669
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "巻第二",
+      "level": 2,
+      "char_count": 9776
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 9918
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 9924
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "巻第三",
+      "level": 2,
+      "char_count": 9828
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 9613
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "巻第四",
+      "level": 2,
+      "char_count": 9550
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "巻第五",
+      "level": 2,
+      "char_count": 9888
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "巻第六",
+      "level": 2,
+      "char_count": 9741
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "巻第七",
+      "level": 2,
+      "char_count": 9919
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "巻第八",
+      "level": 2,
+      "char_count": 9806
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "巻第九",
+      "level": 2,
+      "char_count": 9741
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "巻第十",
+      "level": 2,
+      "char_count": 9974
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "",
+      "level": null,
+      "char_count": 9809
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "巻第十二",
+      "level": 2,
+      "char_count": 9674
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "巻第十三",
+      "level": 2,
+      "char_count": 9922
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "巻第十五",
+      "level": 2,
+      "char_count": 9757
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "巻第十六",
+      "level": 2,
+      "char_count": 9771
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "巻第十九",
+      "level": 2,
+      "char_count": 9756
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "",
+      "level": null,
+      "char_count": 7525
+    },
+    {
+      "index": 22,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 324
+    }
+  ]
+}

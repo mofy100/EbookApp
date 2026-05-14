@@ -1,0 +1,29 @@
+{
+  "title": "妾の会つた男の人々（野依秀一、中村弧月印象録）",
+  "author": "伊藤野枝",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "妾の会つた男の人々（野依秀一、中村弧月印象録）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "野依秀一氏",
+      "level": 2,
+      "char_count": 3785
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 280
+    }
+  ]
+}

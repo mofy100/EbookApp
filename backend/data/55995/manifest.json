@@ -1,0 +1,43 @@
+{
+  "title": "黒部川を遡る",
+  "author": "木暮理太郎",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "黒部川を遡る",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "はしがき",
+      "level": 2,
+      "char_count": 9731
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "折尾谷の出合",
+      "level": 2,
+      "char_count": 9818
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 2035
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 220
+    }
+  ]
+}

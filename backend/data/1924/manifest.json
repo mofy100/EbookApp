@@ -1,0 +1,43 @@
+{
+  "title": "グスコーブドリの伝記",
+  "author": "宮沢賢治",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "グスコーブドリの伝記",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　森",
+      "level": 2,
+      "char_count": 9975
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "四　クーボー大博士",
+      "level": 2,
+      "char_count": 9928
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "八　秋",
+      "level": 2,
+      "char_count": 5396
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 170
+    }
+  ]
+}

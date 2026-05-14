@@ -1,0 +1,36 @@
+{
+  "title": "春と修羅　第三集",
+  "author": "宮沢賢治",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "春と修羅　第三集",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "七〇六　　村娘",
+      "level": 2,
+      "char_count": 10000
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "一〇四三　　市場帰り",
+      "level": 2,
+      "char_count": 8527
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 209
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "title": "吉田松陰",
+  "author": "徳富蘇峰",
+  "translator": null,
+  "chapter_count": 16,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "吉田松陰",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "緒言",
+      "level": 2,
+      "char_count": 9596
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第四　鎖国的政策",
+      "level": 2,
+      "char_count": 9972
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第五　天保時代",
+      "level": 2,
+      "char_count": 9679
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第七　長防二州",
+      "level": 2,
+      "char_count": 9966
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "第九　象山と松陰",
+      "level": 2,
+      "char_count": 9520
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "第十　攘夷",
+      "level": 2,
+      "char_count": 9960
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "第十一　尊王",
+      "level": 2,
+      "char_count": 9708
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "第十二　幕政の変局",
+      "level": 2,
+      "char_count": 9931
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "第十三　松下村塾",
+      "level": 2,
+      "char_count": 9848
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "第十四　打撃的運動",
+      "level": 2,
+      "char_count": 9970
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "第十六　最後",
+      "level": 2,
+      "char_count": 9980
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "第十七　松陰とマヂニー",
+      "level": 2,
+      "char_count": 9287
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "第十八　家庭における松陰",
+      "level": 2,
+      "char_count": 9979
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "第十九　人物",
+      "level": 2,
+      "char_count": 7990
+    },
+    {
+      "index": 14,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 368
+    }
+  ]
+}

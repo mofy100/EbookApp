@@ -1,0 +1,78 @@
+{
+  "title": "新頌",
+  "author": "北原白秋",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "新頌",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "海道東征",
+      "level": 1,
+      "char_count": 2783
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "建速須佐之男命",
+      "level": 1,
+      "char_count": 1880
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "大陸序曲",
+      "level": 1,
+      "char_count": 2113
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "清明古調",
+      "level": 1,
+      "char_count": 1584
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "煙霞余情",
+      "level": 1,
+      "char_count": 1490
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "長唄元寇",
+      "level": 1,
+      "char_count": 1365
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "制作年表",
+      "level": 1,
+      "char_count": 269
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "巻末記",
+      "level": 1,
+      "char_count": 4352
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 259
+    }
+  ]
+}

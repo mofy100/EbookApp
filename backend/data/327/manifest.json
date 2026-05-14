@@ -1,0 +1,29 @@
+{
+  "title": "恋を恋する人",
+  "author": "国木田独歩",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "恋を恋する人",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 8195
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 141
+    }
+  ]
+}

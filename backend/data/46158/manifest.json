@@ -1,0 +1,50 @@
+{
+  "title": "天國の記録",
+  "author": "下村千秋",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "天國の記録",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9979
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "四",
+      "level": 2,
+      "char_count": 9986
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "七",
+      "level": 2,
+      "char_count": 9985
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "十一",
+      "level": 2,
+      "char_count": 8084
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 179
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "歡樂",
+  "author": "永井壯吉",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "歡樂",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9346
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "六",
+      "level": 2,
+      "char_count": 9677
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "十",
+      "level": 2,
+      "char_count": 6470
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 284
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "深夜の客",
+  "author": "大倉※［＃「火＋華」、第3水準1-87-62］子",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "深夜の客",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "声",
+      "level": 2,
+      "char_count": 9854
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "レコード",
+      "level": 2,
+      "char_count": 4057
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 224
+    }
+  ]
+}

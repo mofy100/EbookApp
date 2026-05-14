@@ -1,0 +1,246 @@
+{
+  "title": "海潮音",
+  "author": "上田敏",
+  "translator": "上田敏訳",
+  "chapter_count": 34,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "海潮音",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 54
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "海潮音序",
+      "level": 1,
+      "char_count": 2348
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "ガブリエレ・ダンヌンチオ",
+      "level": 1,
+      "char_count": 570
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "ルコント・ドゥ・リイル",
+      "level": 1,
+      "char_count": 3581
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "ホセ・マリヤ・デ・エレディヤ",
+      "level": 1,
+      "char_count": 800
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "シュリ・プリュドン",
+      "level": 1,
+      "char_count": 308
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "シャルル・ボドレエル",
+      "level": 1,
+      "char_count": 1923
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "ポオル・ヹルレエヌ",
+      "level": 1,
+      "char_count": 735
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "ヸクトル・ユウゴオ",
+      "level": 1,
+      "char_count": 1199
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "フランソア・コペエ",
+      "level": 1,
+      "char_count": 1414
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "ヰルヘルム・アレント",
+      "level": 1,
+      "char_count": 70
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "カアル・ブッセ",
+      "level": 1,
+      "char_count": 77
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "パウル・バルシュ",
+      "level": 1,
+      "char_count": 101
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "オイゲン・クロアサン",
+      "level": 1,
+      "char_count": 95
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "ヘリベルタ・フォン・ポシンゲル",
+      "level": 1,
+      "char_count": 108
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "テオドル・ストルム",
+      "level": 1,
+      "char_count": 79
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "ハインリッヒ・ハイネ",
+      "level": 1,
+      "char_count": 175
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "ロバアト・ブラウニング",
+      "level": 1,
+      "char_count": 1962
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "ヰリアム・シェイクスピヤ",
+      "level": 1,
+      "char_count": 190
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "クリスティナ・ロセッティ",
+      "level": 1,
+      "char_count": 201
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "ダンテ・ゲブリエル・ロセッティ",
+      "level": 1,
+      "char_count": 934
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "ダンテ・アリギエリ",
+      "level": 1,
+      "char_count": 307
+    },
+    {
+      "index": 22,
+      "file": "content_22.html",
+      "title": "エミイル・ヹルハアレン",
+      "level": 1,
+      "char_count": 1766
+    },
+    {
+      "index": 23,
+      "file": "content_23.html",
+      "title": "ジォルジュ・ロオデンバッハ",
+      "level": 1,
+      "char_count": 410
+    },
+    {
+      "index": 24,
+      "file": "content_24.html",
+      "title": "アンリ・ドゥ・レニエ",
+      "level": 1,
+      "char_count": 2020
+    },
+    {
+      "index": 25,
+      "file": "content_25.html",
+      "title": "フランシス・ヸエレ・グリフィン",
+      "level": 1,
+      "char_count": 495
+    },
+    {
+      "index": 26,
+      "file": "content_26.html",
+      "title": "アルベエル・サマン",
+      "level": 1,
+      "char_count": 196
+    },
+    {
+      "index": 27,
+      "file": "content_27.html",
+      "title": "ジァン・モレアス",
+      "level": 1,
+      "char_count": 1305
+    },
+    {
+      "index": 28,
+      "file": "content_28.html",
+      "title": "ステファンヌ・マラルメ",
+      "level": 1,
+      "char_count": 442
+    },
+    {
+      "index": 29,
+      "file": "content_29.html",
+      "title": "テオドル・オオバネル",
+      "level": 1,
+      "char_count": 272
+    },
+    {
+      "index": 30,
+      "file": "content_30.html",
+      "title": "アルトゥロ・グラアフ",
+      "level": 1,
+      "char_count": 135
+    },
+    {
+      "index": 31,
+      "file": "content_31.html",
+      "title": "ガブリエレ・ダンヌンチオ",
+      "level": 1,
+      "char_count": 257
+    },
+    {
+      "index": 32,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 170
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "歌う白骨",
+  "author": "リチャード・オースティン・フリーマン　Richard Austin Freeman",
+  "translator": "妹尾韶夫訳",
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "歌う白骨",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "犯罪編",
+      "level": 2,
+      "char_count": 9997
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "推理編",
+      "level": 2,
+      "char_count": 9978
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9384
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 113
+    }
+  ]
+}

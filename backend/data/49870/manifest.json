@@ -1,0 +1,43 @@
+{
+  "title": "仁王門",
+  "author": "橘外男",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "仁王門",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9966
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "五",
+      "level": 2,
+      "char_count": 9897
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "七",
+      "level": 2,
+      "char_count": 8532
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 139
+    }
+  ]
+}

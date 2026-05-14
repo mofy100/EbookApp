@@ -1,0 +1,43 @@
+{
+  "title": "落葉日記（三場）",
+  "author": "岸田國士",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "落葉日記（三場）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9986
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三",
+      "level": 2,
+      "char_count": 9993
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 3402
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 183
+    }
+  ]
+}

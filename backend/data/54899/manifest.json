@@ -1,0 +1,106 @@
+{
+  "title": "鶴彬全川柳",
+  "author": "鶴彬",
+  "translator": null,
+  "chapter_count": 14,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "鶴彬全川柳",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "大正十三年篇　一九二四年（十五歳）",
+      "level": 1,
+      "char_count": 1652
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "大正十四年篇　一九二五年（十六歳）",
+      "level": 1,
+      "char_count": 3435
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "大正十五年篇　一九二六年（十七歳）",
+      "level": 1,
+      "char_count": 4457
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "昭和二年篇　一九二七年（十八歳）",
+      "level": 1,
+      "char_count": 2262
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "昭和三年篇　一九二八年（十九歳）",
+      "level": 1,
+      "char_count": 2139
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "昭和四年篇　一九二九年（二十歳）",
+      "level": 1,
+      "char_count": 1862
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "昭和五年篇　一九三〇年（二十一歳）",
+      "level": 1,
+      "char_count": 666
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "昭和五～八年　金沢第七聯隊在営期篇一九三〇～一九三三年（二十一～二十四歳）",
+      "level": 1,
+      "char_count": 172
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "昭和九年篇　一九三四年（二十五歳）",
+      "level": 1,
+      "char_count": 2204
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "昭和十年篇　一九三五年（二十六歳）",
+      "level": 1,
+      "char_count": 2639
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "昭和十一年篇　一九三六年（二十七歳）",
+      "level": 1,
+      "char_count": 2173
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "昭和十二年篇　一九三七年（二十八歳）",
+      "level": 1,
+      "char_count": 2939
+    },
+    {
+      "index": 12,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 342
+    }
+  ]
+}

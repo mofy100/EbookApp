@@ -1,0 +1,589 @@
+{
+  "title": "明日は天気になれ",
+  "author": "坂口安吾",
+  "translator": null,
+  "chapter_count": 83,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "明日は天気になれ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "ゴルフをしなかった話",
+      "level": 1,
+      "char_count": 5641
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "日本の常識",
+      "level": 1,
+      "char_count": 1144
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "うっちゃり",
+      "level": 1,
+      "char_count": 1187
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "寄りの三根",
+      "level": 1,
+      "char_count": 1095
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "かわずがけ",
+      "level": 1,
+      "char_count": 1153
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "乱世の抜け穴",
+      "level": 1,
+      "char_count": 1140
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "アンコウのドブ煮",
+      "level": 1,
+      "char_count": 1178
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "相撲とフグ",
+      "level": 1,
+      "char_count": 1074
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "冬の怪談",
+      "level": 1,
+      "char_count": 1213
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "年賀状",
+      "level": 1,
+      "char_count": 1142
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "日本犬の話",
+      "level": 1,
+      "char_count": 1175
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "コンニャク論",
+      "level": 1,
+      "char_count": 1129
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "豪勢な貧乏",
+      "level": 1,
+      "char_count": 1167
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "神伝夢想流",
+      "level": 1,
+      "char_count": 1140
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "真庭念流",
+      "level": 1,
+      "char_count": 3485
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "エライ狂人の話",
+      "level": 1,
+      "char_count": 2404
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "バカの仕放題",
+      "level": 1,
+      "char_count": 1164
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "炭坑の偉業",
+      "level": 1,
+      "char_count": 1082
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "芥川賞一風景",
+      "level": 1,
+      "char_count": 1115
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "ある九州の魂",
+      "level": 1,
+      "char_count": 1120
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "最も健全な夢の国",
+      "level": 1,
+      "char_count": 1206
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "文化の序列",
+      "level": 1,
+      "char_count": 1229
+    },
+    {
+      "index": 22,
+      "file": "content_22.html",
+      "title": "モロッコミヤゲ物",
+      "level": 1,
+      "char_count": 2302
+    },
+    {
+      "index": 23,
+      "file": "content_23.html",
+      "title": "戦備ととのわぬ話",
+      "level": 1,
+      "char_count": 2325
+    },
+    {
+      "index": 24,
+      "file": "content_24.html",
+      "title": "女子衰えたり",
+      "level": 1,
+      "char_count": 1224
+    },
+    {
+      "index": 25,
+      "file": "content_25.html",
+      "title": "日本のアンマ",
+      "level": 1,
+      "char_count": 1151
+    },
+    {
+      "index": 26,
+      "file": "content_26.html",
+      "title": "珍試合の巻",
+      "level": 1,
+      "char_count": 5867
+    },
+    {
+      "index": 27,
+      "file": "content_27.html",
+      "title": "空とぶ円盤",
+      "level": 1,
+      "char_count": 1142
+    },
+    {
+      "index": 28,
+      "file": "content_28.html",
+      "title": "小戦国の話",
+      "level": 1,
+      "char_count": 1093
+    },
+    {
+      "index": 29,
+      "file": "content_29.html",
+      "title": "立直りの試合の話",
+      "level": 1,
+      "char_count": 5723
+    },
+    {
+      "index": 30,
+      "file": "content_30.html",
+      "title": "引越し性分",
+      "level": 1,
+      "char_count": 1160
+    },
+    {
+      "index": 31,
+      "file": "content_31.html",
+      "title": "神薬の話",
+      "level": 1,
+      "char_count": 1212
+    },
+    {
+      "index": 32,
+      "file": "content_32.html",
+      "title": "木炭の発明",
+      "level": 1,
+      "char_count": 1093
+    },
+    {
+      "index": 33,
+      "file": "content_33.html",
+      "title": "ささやかな愉しみ",
+      "level": 1,
+      "char_count": 1155
+    },
+    {
+      "index": 34,
+      "file": "content_34.html",
+      "title": "楽天国の風俗",
+      "level": 1,
+      "char_count": 1055
+    },
+    {
+      "index": 35,
+      "file": "content_35.html",
+      "title": "二番目は酒",
+      "level": 1,
+      "char_count": 1098
+    },
+    {
+      "index": 36,
+      "file": "content_36.html",
+      "title": "目的を失った脱獄囚",
+      "level": 1,
+      "char_count": 1193
+    },
+    {
+      "index": 37,
+      "file": "content_37.html",
+      "title": "池の金魚との戦い",
+      "level": 1,
+      "char_count": 2282
+    },
+    {
+      "index": 38,
+      "file": "content_38.html",
+      "title": "長崎チャンポン",
+      "level": 1,
+      "char_count": 1207
+    },
+    {
+      "index": 39,
+      "file": "content_39.html",
+      "title": "悲劇のままの城趾",
+      "level": 1,
+      "char_count": 1189
+    },
+    {
+      "index": 40,
+      "file": "content_40.html",
+      "title": "名のない女",
+      "level": 1,
+      "char_count": 1146
+    },
+    {
+      "index": 41,
+      "file": "content_41.html",
+      "title": "予言狂時代",
+      "level": 1,
+      "char_count": 1143
+    },
+    {
+      "index": 42,
+      "file": "content_42.html",
+      "title": "発明の拷問",
+      "level": 1,
+      "char_count": 1212
+    },
+    {
+      "index": 43,
+      "file": "content_43.html",
+      "title": "お灸好き",
+      "level": 1,
+      "char_count": 1100
+    },
+    {
+      "index": 44,
+      "file": "content_44.html",
+      "title": "雑草と瘠せた人間",
+      "level": 1,
+      "char_count": 1094
+    },
+    {
+      "index": 45,
+      "file": "content_45.html",
+      "title": "ビラまき飛行機",
+      "level": 1,
+      "char_count": 1087
+    },
+    {
+      "index": 46,
+      "file": "content_46.html",
+      "title": "日本の道路",
+      "level": 1,
+      "char_count": 1146
+    },
+    {
+      "index": 47,
+      "file": "content_47.html",
+      "title": "無料言いわけ業",
+      "level": 1,
+      "char_count": 1167
+    },
+    {
+      "index": 48,
+      "file": "content_48.html",
+      "title": "詩境と借金",
+      "level": 1,
+      "char_count": 1157
+    },
+    {
+      "index": 49,
+      "file": "content_49.html",
+      "title": "碁会所開店",
+      "level": 1,
+      "char_count": 2265
+    },
+    {
+      "index": 50,
+      "file": "content_50.html",
+      "title": "日本の便所",
+      "level": 1,
+      "char_count": 1185
+    },
+    {
+      "index": 51,
+      "file": "content_51.html",
+      "title": "宮様屋敷",
+      "level": 1,
+      "char_count": 1138
+    },
+    {
+      "index": 52,
+      "file": "content_52.html",
+      "title": "松井大将の書斎",
+      "level": 1,
+      "char_count": 1057
+    },
+    {
+      "index": 53,
+      "file": "content_53.html",
+      "title": "ウドンへの反逆",
+      "level": 1,
+      "char_count": 1179
+    },
+    {
+      "index": 54,
+      "file": "content_54.html",
+      "title": "冷水浴",
+      "level": 1,
+      "char_count": 1181
+    },
+    {
+      "index": 55,
+      "file": "content_55.html",
+      "title": "バカヤロー",
+      "level": 1,
+      "char_count": 1124
+    },
+    {
+      "index": 56,
+      "file": "content_56.html",
+      "title": "山菜料理",
+      "level": 1,
+      "char_count": 1202
+    },
+    {
+      "index": 57,
+      "file": "content_57.html",
+      "title": "文士の碁将棋",
+      "level": 1,
+      "char_count": 1103
+    },
+    {
+      "index": 58,
+      "file": "content_58.html",
+      "title": "多忙な人たち",
+      "level": 1,
+      "char_count": 1124
+    },
+    {
+      "index": 59,
+      "file": "content_59.html",
+      "title": "現代ヤジロー",
+      "level": 1,
+      "char_count": 1187
+    },
+    {
+      "index": 60,
+      "file": "content_60.html",
+      "title": "簡単生活",
+      "level": 1,
+      "char_count": 1155
+    },
+    {
+      "index": 61,
+      "file": "content_61.html",
+      "title": "忍術",
+      "level": 1,
+      "char_count": 1145
+    },
+    {
+      "index": 62,
+      "file": "content_62.html",
+      "title": "ドデウ論争",
+      "level": 1,
+      "char_count": 1133
+    },
+    {
+      "index": 63,
+      "file": "content_63.html",
+      "title": "一ツの最後的な革命",
+      "level": 1,
+      "char_count": 1152
+    },
+    {
+      "index": 64,
+      "file": "content_64.html",
+      "title": "解散列車",
+      "level": 1,
+      "char_count": 1142
+    },
+    {
+      "index": 65,
+      "file": "content_65.html",
+      "title": "現代の忍術",
+      "level": 1,
+      "char_count": 1112
+    },
+    {
+      "index": 66,
+      "file": "content_66.html",
+      "title": "泥酔三年",
+      "level": 1,
+      "char_count": 1168
+    },
+    {
+      "index": 67,
+      "file": "content_67.html",
+      "title": "酒の飲み方",
+      "level": 1,
+      "char_count": 1128
+    },
+    {
+      "index": 68,
+      "file": "content_68.html",
+      "title": "健全な胃袋",
+      "level": 1,
+      "char_count": 1151
+    },
+    {
+      "index": 69,
+      "file": "content_69.html",
+      "title": "酒豪日本一",
+      "level": 1,
+      "char_count": 1181
+    },
+    {
+      "index": 70,
+      "file": "content_70.html",
+      "title": "音速の壁",
+      "level": 1,
+      "char_count": 1135
+    },
+    {
+      "index": 71,
+      "file": "content_71.html",
+      "title": "キャッチボール",
+      "level": 1,
+      "char_count": 1196
+    },
+    {
+      "index": 72,
+      "file": "content_72.html",
+      "title": "高校野球",
+      "level": 1,
+      "char_count": 1174
+    },
+    {
+      "index": 73,
+      "file": "content_73.html",
+      "title": "桜の花ざかり",
+      "level": 1,
+      "char_count": 1143
+    },
+    {
+      "index": 74,
+      "file": "content_74.html",
+      "title": "山里の悲劇",
+      "level": 1,
+      "char_count": 1100
+    },
+    {
+      "index": 75,
+      "file": "content_75.html",
+      "title": "変な弟子",
+      "level": 1,
+      "char_count": 1133
+    },
+    {
+      "index": 76,
+      "file": "content_76.html",
+      "title": "春の訪客",
+      "level": 1,
+      "char_count": 1116
+    },
+    {
+      "index": 77,
+      "file": "content_77.html",
+      "title": "すばらしい根気",
+      "level": 1,
+      "char_count": 1176
+    },
+    {
+      "index": 78,
+      "file": "content_78.html",
+      "title": "ケダモノと武器",
+      "level": 1,
+      "char_count": 1196
+    },
+    {
+      "index": 79,
+      "file": "content_79.html",
+      "title": "動物の言葉",
+      "level": 1,
+      "char_count": 1209
+    },
+    {
+      "index": 80,
+      "file": "content_80.html",
+      "title": "さようなら",
+      "level": 1,
+      "char_count": 745
+    },
+    {
+      "index": 81,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 212
+    }
+  ]
+}

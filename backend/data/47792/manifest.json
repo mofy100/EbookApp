@@ -1,0 +1,43 @@
+{
+  "title": "街衢の戦死者",
+  "author": "折口信夫",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "街衢の戦死者",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "役者容姿論",
+      "level": 2,
+      "char_count": 9923
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "鴈治郎の後継者",
+      "level": 2,
+      "char_count": 9428
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "お亀とお軽と",
+      "level": 2,
+      "char_count": 7691
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 287
+    }
+  ]
+}

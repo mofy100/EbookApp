@@ -1,0 +1,43 @@
+{
+  "title": "赤いカブトムシ",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "赤いカブトムシ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１",
+      "level": 2,
+      "char_count": 9986
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "７",
+      "level": 2,
+      "char_count": 9970
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "12",
+      "level": 2,
+      "char_count": 3281
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 151
+    }
+  ]
+}

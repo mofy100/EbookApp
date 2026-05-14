@@ -1,0 +1,29 @@
+{
+  "title": "映画界・小言幸兵衛",
+  "author": "小津安二郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "映画界・小言幸兵衛",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "阿呆が監督しても客は来る",
+      "level": 2,
+      "char_count": 6616
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 129
+    }
+  ]
+}

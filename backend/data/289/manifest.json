@@ -1,0 +1,71 @@
+{
+  "title": "虚構の春",
+  "author": "太宰治",
+  "translator": null,
+  "chapter_count": 9,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "虚構の春",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 9837
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9395
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9667
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 4515
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 9483
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 9884
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 1805
+    },
+    {
+      "index": 7,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 170
+    }
+  ]
+}

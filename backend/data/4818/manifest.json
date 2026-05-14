@@ -1,0 +1,50 @@
+{
+  "title": "幼年時代",
+  "author": "堀辰雄",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "幼年時代",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "無花果のある家",
+      "level": 2,
+      "char_count": 9992
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "入道雲",
+      "level": 2,
+      "char_count": 9985
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "洪水",
+      "level": 2,
+      "char_count": 9689
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "小学生",
+      "level": 2,
+      "char_count": 7405
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 349
+    }
+  ]
+}

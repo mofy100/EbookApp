@@ -1,0 +1,36 @@
+{
+  "title": "美しい日本の歴史",
+  "author": "吉川英治",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "美しい日本の歴史",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "鼻の白粉",
+      "level": 2,
+      "char_count": 9947
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "性花斉放",
+      "level": 2,
+      "char_count": 8615
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 223
+    }
+  ]
+}

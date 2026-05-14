@@ -1,0 +1,29 @@
+{
+  "title": "田園情調あり",
+  "author": "佐々木邦",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "田園情調あり",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "秋晴れの清遊",
+      "level": 2,
+      "char_count": 9319
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 125
+    }
+  ]
+}

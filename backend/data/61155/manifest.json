@@ -1,0 +1,29 @@
+{
+  "title": "いまだ癒えぬ傷あと",
+  "author": "大田洋子",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "いまだ癒えぬ傷あと",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "放射線火傷で右手をうしなつた木挽きの妻に",
+      "level": 2,
+      "char_count": 4595
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 116
+    }
+  ]
+}

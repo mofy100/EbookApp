@@ -1,0 +1,50 @@
+{
+  "title": "民藝とは何か",
+  "author": "柳宗悦",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "民藝とは何か",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "第一篇　なぜ民藝に心を惹かれているか",
+      "level": 1,
+      "char_count": 9544
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "四　私達は民藝の美に盲目であっていいか",
+      "level": 2,
+      "char_count": 8555
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第二篇　民藝から何を私が学び得たか",
+      "level": 1,
+      "char_count": 9982
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "五　正しい民藝はいかなる社会から起ったか",
+      "level": 2,
+      "char_count": 3967
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 147
+    }
+  ]
+}

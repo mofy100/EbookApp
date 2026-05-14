@@ -1,0 +1,29 @@
+{
+  "title": "早すぎる埋葬",
+  "author": "エドガー・アラン・ポー　Edgar Allan Poe",
+  "translator": "佐々木直次郎訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "早すぎる埋葬",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 9714
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 6067
+    }
+  ]
+}

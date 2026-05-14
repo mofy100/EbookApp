@@ -1,0 +1,29 @@
+{
+  "title": "饑餓の饗宴",
+  "author": "ランボー",
+  "translator": "富永太郎訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "饑餓の饗宴",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 279
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 162
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "鴨の喜劇",
+  "author": "魯迅",
+  "translator": "井上紅梅訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "鴨の喜劇",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 2502
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 420
+    }
+  ]
+}

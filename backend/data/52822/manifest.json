@@ -1,0 +1,29 @@
+{
+  "title": "その村を憶ひて",
+  "author": "牧野信一",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "その村を憶ひて",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "怒田村のこと",
+      "level": 2,
+      "char_count": 4017
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 206
+    }
+  ]
+}

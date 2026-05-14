@@ -1,0 +1,85 @@
+{
+  "title": "柿の種",
+  "author": "寺田寅彦",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "柿の種",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "自序",
+      "level": 1,
+      "char_count": 1174
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "短章　その一",
+      "level": 1,
+      "char_count": 9992
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "三毛の墓",
+      "level": 2,
+      "char_count": 9980
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "震生湖より",
+      "level": 2,
+      "char_count": 9996
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "曙町より（五）",
+      "level": 2,
+      "char_count": 9972
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "曙町より（二十三）",
+      "level": 2,
+      "char_count": 3439
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "短章　その二",
+      "level": 1,
+      "char_count": 9980
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "学会",
+      "level": 2,
+      "char_count": 9996
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "",
+      "level": null,
+      "char_count": 5626
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 410
+    }
+  ]
+}

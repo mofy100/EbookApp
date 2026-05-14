@@ -1,0 +1,43 @@
+{
+  "title": "ダス・ゲマイネ",
+  "author": "太宰治",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ダス・ゲマイネ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　幻燈",
+      "level": 2,
+      "char_count": 9958
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三　登龍門",
+      "level": 2,
+      "char_count": 9752
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "四",
+      "level": 2,
+      "char_count": 1960
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 202
+    }
+  ]
+}

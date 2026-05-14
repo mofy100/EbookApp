@@ -1,0 +1,36 @@
+{
+  "title": "港の妖婦",
+  "author": "田中貢太郎",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "港の妖婦",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "Ⅰ",
+      "level": 2,
+      "char_count": 9927
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "Ⅲ",
+      "level": 2,
+      "char_count": 7819
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 143
+    }
+  ]
+}

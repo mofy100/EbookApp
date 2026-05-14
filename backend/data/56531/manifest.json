@@ -1,0 +1,36 @@
+{
+  "title": "坊つちやん「遺蹟めぐり」",
+  "author": "岡本一平",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "坊つちやん「遺蹟めぐり」",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "〈上〉",
+      "level": 1,
+      "char_count": 4758
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "〈下〉",
+      "level": 1,
+      "char_count": 5458
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 218
+    }
+  ]
+}

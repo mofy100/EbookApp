@@ -1,0 +1,36 @@
+{
+  "title": "親は眺めて考えている",
+  "author": "金森徳次郎",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "親は眺めて考えている",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "ペンギンの連想",
+      "level": 2,
+      "char_count": 9948
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "博雄を観察する",
+      "level": 2,
+      "char_count": 4455
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 144
+    }
+  ]
+}

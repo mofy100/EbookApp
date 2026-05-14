@@ -1,0 +1,78 @@
+{
+  "title": "グリュックスブルグ王室異聞",
+  "author": "橘外男",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "グリュックスブルグ王室異聞",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "はしがき",
+      "level": 2,
+      "char_count": 9936
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "フィリップ殿下と大怪盗",
+      "level": 2,
+      "char_count": 9960
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "ヨアンネス少年",
+      "level": 2,
+      "char_count": 9986
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "夏至祭の頃",
+      "level": 2,
+      "char_count": 9971
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "伯爵夫人と外務次官令嬢",
+      "level": 2,
+      "char_count": 9910
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "ペーデル・ステーンセン伯爵",
+      "level": 2,
+      "char_count": 10000
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "先王陛下の枕辺",
+      "level": 2,
+      "char_count": 9868
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 619
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 213
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "銀河鉄道の夜",
+  "author": "宮沢賢治",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "銀河鉄道の夜",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一、午后の授業",
+      "level": 2,
+      "char_count": 9915
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "〔七、〕北十字とプリオシン海岸",
+      "level": 2,
+      "char_count": 9652
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9617
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 9425
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 242
+    }
+  ]
+}

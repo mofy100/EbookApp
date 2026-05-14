@@ -1,0 +1,78 @@
+{
+  "title": "ジーキル博士とハイド氏の怪事件",
+  "author": "スティーヴンスン　Stevenson Robert Louis",
+  "translator": "佐々木直次郎訳",
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ジーキル博士とハイド氏の怪事件",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "戸口の話",
+      "level": 2,
+      "char_count": 9165
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "ジーキル博士は全く安らかであった",
+      "level": 2,
+      "char_count": 9787
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "手紙の出来事",
+      "level": 2,
+      "char_count": 9611
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "窓際の出来事",
+      "level": 2,
+      "char_count": 9801
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "ラニョン博士の手記",
+      "level": 2,
+      "char_count": 9887
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "この事件に関するヘンリー・ジーキルの委しい陳述書",
+      "level": 2,
+      "char_count": 9983
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 9419
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "注",
+      "level": 2,
+      "char_count": 6054
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 164
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "小説「墓場」に現れたる著者木下氏の思想と平民社一派の消息",
+  "author": "石川啄木",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "小説「墓場」に現れたる著者木下氏の思想と平民社一派の消息",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 2447
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 112
+    }
+  ]
+}

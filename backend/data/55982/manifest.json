@@ -1,0 +1,50 @@
+{
+  "title": "秩父の奥山",
+  "author": "木暮理太郎",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "秩父の奥山",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "国司岳",
+      "level": 2,
+      "char_count": 9532
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "燕山、古礼山、水晶山",
+      "level": 2,
+      "char_count": 9774
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "国師岳",
+      "level": 2,
+      "char_count": 9597
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 1610
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 245
+    }
+  ]
+}

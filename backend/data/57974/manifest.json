@@ -1,0 +1,29 @@
+{
+  "title": "観想の時",
+  "author": "北原白秋",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "観想の時",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "黎明の不尽",
+      "level": 2,
+      "char_count": 9118
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 200
+    }
+  ]
+}

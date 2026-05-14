@@ -1,0 +1,57 @@
+{
+  "title": "自分は見た",
+  "author": "千家元麿",
+  "translator": null,
+  "chapter_count": 7,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "自分は見た",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "自序",
+      "level": 2,
+      "char_count": 9983
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "雨",
+      "level": 2,
+      "char_count": 9977
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "樹木",
+      "level": 2,
+      "char_count": 9996
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "雀",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "雪の日",
+      "level": 2,
+      "char_count": 6336
+    },
+    {
+      "index": 5,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 200
+    }
+  ]
+}

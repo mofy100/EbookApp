@@ -1,0 +1,561 @@
+{
+  "title": "仏教人生読本",
+  "author": "岡本かの子",
+  "translator": null,
+  "chapter_count": 79,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "仏教人生読本",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "この書を世に贈るについての言葉",
+      "level": 1,
+      "char_count": 265
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第一課　悲観と楽観",
+      "level": 1,
+      "char_count": 1609
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第二課　誰でも持つたから",
+      "level": 1,
+      "char_count": 718
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第三課　飽くまで生き抜く力",
+      "level": 1,
+      "char_count": 3757
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "第四課　苦労について",
+      "level": 1,
+      "char_count": 1661
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "第五課　たしなみ",
+      "level": 1,
+      "char_count": 3555
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "第六課　人情に殉じ、人情を完うす",
+      "level": 1,
+      "char_count": 1967
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "第七課　性質を矯め過ぎるな",
+      "level": 1,
+      "char_count": 765
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "第八課　あまり放縦でも困る",
+      "level": 1,
+      "char_count": 951
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "第九課　人生の広い道",
+      "level": 1,
+      "char_count": 1286
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "第一〇課　人格完成",
+      "level": 1,
+      "char_count": 1065
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "第一一課　世の中",
+      "level": 1,
+      "char_count": 263
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "第一二課　衣食住",
+      "level": 1,
+      "char_count": 1435
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "第一三課　憂鬱と笑い",
+      "level": 1,
+      "char_count": 166
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "第一四課　涙の価値",
+      "level": 1,
+      "char_count": 1692
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "第一五課　無駄",
+      "level": 1,
+      "char_count": 1149
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "第一六課　誤解された時",
+      "level": 1,
+      "char_count": 3186
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "第一七課　誘惑",
+      "level": 1,
+      "char_count": 2043
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "第一八課　勇気",
+      "level": 1,
+      "char_count": 1030
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "第一九課　好き嫌い",
+      "level": 1,
+      "char_count": 1042
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "第二〇課　試合の練習",
+      "level": 1,
+      "char_count": 377
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "第二一課　橋は流れて水は流れず",
+      "level": 1,
+      "char_count": 761
+    },
+    {
+      "index": 22,
+      "file": "content_22.html",
+      "title": "第二二課　敵、味方",
+      "level": 1,
+      "char_count": 797
+    },
+    {
+      "index": 23,
+      "file": "content_23.html",
+      "title": "第二三課　不平の征服",
+      "level": 1,
+      "char_count": 2029
+    },
+    {
+      "index": 24,
+      "file": "content_24.html",
+      "title": "第二四課　軽い考え方・重い考え方",
+      "level": 1,
+      "char_count": 1261
+    },
+    {
+      "index": 25,
+      "file": "content_25.html",
+      "title": "第二五課　母性愛",
+      "level": 1,
+      "char_count": 873
+    },
+    {
+      "index": 26,
+      "file": "content_26.html",
+      "title": "第二六課　父性愛",
+      "level": 1,
+      "char_count": 1345
+    },
+    {
+      "index": 27,
+      "file": "content_27.html",
+      "title": "第二七課　兄弟愛",
+      "level": 1,
+      "char_count": 1294
+    },
+    {
+      "index": 28,
+      "file": "content_28.html",
+      "title": "第二八課　自分と他人",
+      "level": 1,
+      "char_count": 3049
+    },
+    {
+      "index": 29,
+      "file": "content_29.html",
+      "title": "第二九課　慈悲",
+      "level": 1,
+      "char_count": 2140
+    },
+    {
+      "index": 30,
+      "file": "content_30.html",
+      "title": "第三〇課　愛・憎",
+      "level": 1,
+      "char_count": 1435
+    },
+    {
+      "index": 31,
+      "file": "content_31.html",
+      "title": "第三一課　性欲",
+      "level": 1,
+      "char_count": 769
+    },
+    {
+      "index": 32,
+      "file": "content_32.html",
+      "title": "第三二課　恋愛",
+      "level": 1,
+      "char_count": 1057
+    },
+    {
+      "index": 33,
+      "file": "content_33.html",
+      "title": "第三三課　婚約の前に八方手を尽せ",
+      "level": 1,
+      "char_count": 1443
+    },
+    {
+      "index": 34,
+      "file": "content_34.html",
+      "title": "第三四課　結婚と夫婦愛",
+      "level": 1,
+      "char_count": 2321
+    },
+    {
+      "index": 35,
+      "file": "content_35.html",
+      "title": "第三五課　家庭",
+      "level": 1,
+      "char_count": 403
+    },
+    {
+      "index": 36,
+      "file": "content_36.html",
+      "title": "第三六課　ハムレット",
+      "level": 1,
+      "char_count": 616
+    },
+    {
+      "index": 37,
+      "file": "content_37.html",
+      "title": "第三七課お茶時",
+      "level": 1,
+      "char_count": 1474
+    },
+    {
+      "index": 38,
+      "file": "content_38.html",
+      "title": "第三八課　懺悔",
+      "level": 1,
+      "char_count": 366
+    },
+    {
+      "index": 39,
+      "file": "content_39.html",
+      "title": "第三九課　入学試験に臨んで",
+      "level": 1,
+      "char_count": 2418
+    },
+    {
+      "index": 40,
+      "file": "content_40.html",
+      "title": "第四〇課　僻み",
+      "level": 1,
+      "char_count": 372
+    },
+    {
+      "index": 41,
+      "file": "content_41.html",
+      "title": "第四一課　体育",
+      "level": 1,
+      "char_count": 2841
+    },
+    {
+      "index": 42,
+      "file": "content_42.html",
+      "title": "第四二課　虚栄",
+      "level": 1,
+      "char_count": 206
+    },
+    {
+      "index": 43,
+      "file": "content_43.html",
+      "title": "第四三課　時計と椅子と袴",
+      "level": 1,
+      "char_count": 1178
+    },
+    {
+      "index": 44,
+      "file": "content_44.html",
+      "title": "第四四課　人間の味",
+      "level": 1,
+      "char_count": 1075
+    },
+    {
+      "index": 45,
+      "file": "content_45.html",
+      "title": "第四五課　賞める・叱る",
+      "level": 1,
+      "char_count": 677
+    },
+    {
+      "index": 46,
+      "file": "content_46.html",
+      "title": "第四六課　他愛",
+      "level": 1,
+      "char_count": 1025
+    },
+    {
+      "index": 47,
+      "file": "content_47.html",
+      "title": "第四七課　利己主義",
+      "level": 1,
+      "char_count": 1329
+    },
+    {
+      "index": 48,
+      "file": "content_48.html",
+      "title": "第四八課　女のヒステリー",
+      "level": 1,
+      "char_count": 2748
+    },
+    {
+      "index": 49,
+      "file": "content_49.html",
+      "title": "第四九課　仕事",
+      "level": 1,
+      "char_count": 610
+    },
+    {
+      "index": 50,
+      "file": "content_50.html",
+      "title": "第五〇課　塹壕戦",
+      "level": 1,
+      "char_count": 2106
+    },
+    {
+      "index": 51,
+      "file": "content_51.html",
+      "title": "第五一課　人間万歳",
+      "level": 1,
+      "char_count": 502
+    },
+    {
+      "index": 52,
+      "file": "content_52.html",
+      "title": "第五二課　成功",
+      "level": 1,
+      "char_count": 1646
+    },
+    {
+      "index": 53,
+      "file": "content_53.html",
+      "title": "第五三課　失敗",
+      "level": 1,
+      "char_count": 237
+    },
+    {
+      "index": 54,
+      "file": "content_54.html",
+      "title": "第五四課　金",
+      "level": 1,
+      "char_count": 1122
+    },
+    {
+      "index": 55,
+      "file": "content_55.html",
+      "title": "第五五課　運命",
+      "level": 1,
+      "char_count": 1446
+    },
+    {
+      "index": 56,
+      "file": "content_56.html",
+      "title": "第五六課　達人の病苦観",
+      "level": 1,
+      "char_count": 2985
+    },
+    {
+      "index": 57,
+      "file": "content_57.html",
+      "title": "第五七課　死",
+      "level": 1,
+      "char_count": 1841
+    },
+    {
+      "index": 58,
+      "file": "content_58.html",
+      "title": "第五八課　信仰に入る前の準備",
+      "level": 1,
+      "char_count": 726
+    },
+    {
+      "index": 59,
+      "file": "content_59.html",
+      "title": "第五九課　迷信の話",
+      "level": 1,
+      "char_count": 604
+    },
+    {
+      "index": 60,
+      "file": "content_60.html",
+      "title": "第六〇課　信仰",
+      "level": 1,
+      "char_count": 3552
+    },
+    {
+      "index": 61,
+      "file": "content_61.html",
+      "title": "第六一課　信仰生活のあらまし",
+      "level": 1,
+      "char_count": 2735
+    },
+    {
+      "index": 62,
+      "file": "content_62.html",
+      "title": "第六二課　仏、菩薩は染物屋にあらず",
+      "level": 1,
+      "char_count": 1548
+    },
+    {
+      "index": 63,
+      "file": "content_63.html",
+      "title": "第六三課　智慧の説明",
+      "level": 1,
+      "char_count": 2193
+    },
+    {
+      "index": 64,
+      "file": "content_64.html",
+      "title": "第六四課　因果ということの説明",
+      "level": 1,
+      "char_count": 4583
+    },
+    {
+      "index": 65,
+      "file": "content_65.html",
+      "title": "第六五課　唯物と唯心",
+      "level": 1,
+      "char_count": 1064
+    },
+    {
+      "index": 66,
+      "file": "content_66.html",
+      "title": "第六六課　現実と理想",
+      "level": 1,
+      "char_count": 1725
+    },
+    {
+      "index": 67,
+      "file": "content_67.html",
+      "title": "第六七課　光明中のハイキング",
+      "level": 1,
+      "char_count": 1740
+    },
+    {
+      "index": 68,
+      "file": "content_68.html",
+      "title": "第六八課　差別と平等",
+      "level": 1,
+      "char_count": 2839
+    },
+    {
+      "index": 69,
+      "file": "content_69.html",
+      "title": "第六九課　都会と田舎",
+      "level": 1,
+      "char_count": 3604
+    },
+    {
+      "index": 70,
+      "file": "content_70.html",
+      "title": "第七〇課　知られざる傑作",
+      "level": 1,
+      "char_count": 2699
+    },
+    {
+      "index": 71,
+      "file": "content_71.html",
+      "title": "第七一課　モダン極楽・モダン地獄",
+      "level": 1,
+      "char_count": 1087
+    },
+    {
+      "index": 72,
+      "file": "content_72.html",
+      "title": "第七二課　さとり",
+      "level": 1,
+      "char_count": 1900
+    },
+    {
+      "index": 73,
+      "file": "content_73.html",
+      "title": "第七三課　仏陀",
+      "level": 1,
+      "char_count": 4699
+    },
+    {
+      "index": 74,
+      "file": "content_74.html",
+      "title": "第七四課　聖徳太子仰讃",
+      "level": 1,
+      "char_count": 2446
+    },
+    {
+      "index": 75,
+      "file": "content_75.html",
+      "title": "第七五課　日本の仏教",
+      "level": 1,
+      "char_count": 4917
+    },
+    {
+      "index": 76,
+      "file": "content_76.html",
+      "title": "跋",
+      "level": 1,
+      "char_count": 435
+    },
+    {
+      "index": 77,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 145
+    }
+  ]
+}

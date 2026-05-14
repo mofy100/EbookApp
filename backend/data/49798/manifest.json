@@ -1,0 +1,36 @@
+{
+  "title": "八坂瓊之曲玉考",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "八坂瓊之曲玉考",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　緒言",
+      "level": 2,
+      "char_count": 9914
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "七　結語",
+      "level": 2,
+      "char_count": 2785
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 141
+    }
+  ]
+}

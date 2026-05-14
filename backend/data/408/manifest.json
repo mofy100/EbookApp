@@ -1,0 +1,43 @@
+{
+  "title": "陣中日誌（遺稿）",
+  "author": "山中貞雄",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "陣中日誌（遺稿）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "遺書",
+      "level": 1,
+      "char_count": 264
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "従軍記",
+      "level": 1,
+      "char_count": 4073
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "手紙",
+      "level": 1,
+      "char_count": 3755
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 241
+    }
+  ]
+}

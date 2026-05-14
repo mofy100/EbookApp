@@ -1,0 +1,85 @@
+{
+  "title": "柳生月影抄",
+  "author": "吉川英治",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "柳生月影抄",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "弟の窓・兄の窓",
+      "level": 1,
+      "char_count": 3018
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "隻眼子",
+      "level": 1,
+      "char_count": 2052
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "菩提恋華",
+      "level": 1,
+      "char_count": 4621
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "摘んだ野菊",
+      "level": 1,
+      "char_count": 2444
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "鬢の霜",
+      "level": 1,
+      "char_count": 3429
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "紅梅を繞って",
+      "level": 1,
+      "char_count": 3609
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "春風烈霜",
+      "level": 1,
+      "char_count": 3530
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "毒",
+      "level": 1,
+      "char_count": 2899
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "天命一つ一つ",
+      "level": 1,
+      "char_count": 2291
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 170
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": "泣菫詩抄",
+  "author": "薄田泣菫",
+  "translator": null,
+  "chapter_count": 9,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "泣菫詩抄",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "自序",
+      "level": 1,
+      "char_count": 164
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "「こもり唄」より（明治四十一年）",
+      "level": 1,
+      "char_count": 2947
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "「暮笛集」より（明治三十二年）",
+      "level": 1,
+      "char_count": 6856
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "「ゆく春」より（明治三十四年）",
+      "level": 1,
+      "char_count": 5444
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "「二十五絃」より（明治三十八年）",
+      "level": 1,
+      "char_count": 6090
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "「白羊宮」より（明治三十九年）",
+      "level": 1,
+      "char_count": 6824
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "「十字街頭」より（明治四十二年）",
+      "level": 1,
+      "char_count": 4479
+    },
+    {
+      "index": 7,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 160
+    }
+  ]
+}

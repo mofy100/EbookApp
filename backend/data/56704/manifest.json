@@ -1,0 +1,36 @@
+{
+  "title": "音波の殺人",
+  "author": "野村胡堂",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "音波の殺人",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "流行歌手の死",
+      "level": 2,
+      "char_count": 9966
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "スタートの踏直し",
+      "level": 2,
+      "char_count": 5433
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 160
+    }
+  ]
+}

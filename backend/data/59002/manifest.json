@@ -1,0 +1,29 @@
+{
+  "title": "小品四つ",
+  "author": "中勘助",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "小品四つ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "秋草",
+      "level": 2,
+      "char_count": 3011
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 209
+    }
+  ]
+}

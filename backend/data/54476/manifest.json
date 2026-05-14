@@ -1,0 +1,36 @@
+{
+  "title": "蛇性の執念",
+  "author": "大倉※［＃「火＋華」、第3水準1-87-62］子",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "蛇性の執念",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１",
+      "level": 2,
+      "char_count": 9946
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "５",
+      "level": 2,
+      "char_count": 9035
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 167
+    }
+  ]
+}

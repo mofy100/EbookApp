@@ -1,0 +1,50 @@
+{
+  "title": "人外魔境",
+  "author": "小栗虫太郎",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "人外魔境",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "大魔境「悪魔の尿溜」",
+      "level": 2,
+      "char_count": 9925
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "ナイルの水源閉塞者",
+      "level": 2,
+      "char_count": 9976
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "「猿酒郷」の一夜",
+      "level": 2,
+      "char_count": 9998
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "遂に「悪魔の尿溜」敗る",
+      "level": 2,
+      "char_count": 8909
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 182
+    }
+  ]
+}

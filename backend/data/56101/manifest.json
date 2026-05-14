@@ -1,0 +1,36 @@
+{
+  "title": "芳年写生帖",
+  "author": "野村胡堂",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "芳年写生帖",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "絵師の誇り",
+      "level": 2,
+      "char_count": 9981
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "描き出す怨女の悪相",
+      "level": 2,
+      "char_count": 2646
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 240
+    }
+  ]
+}

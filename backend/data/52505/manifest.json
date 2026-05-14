@@ -1,0 +1,113 @@
+{
+  "title": "山の人生",
+  "author": "柳田国男",
+  "translator": null,
+  "chapter_count": 15,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "山の人生",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "自序",
+      "level": 1,
+      "char_count": 9949
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "七　町にも不思議なる迷子ありしこと",
+      "level": 2,
+      "char_count": 9353
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "一〇　小児の言によって幽界を知らんとせしこと",
+      "level": 2,
+      "char_count": 9483
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "一二　大和尚に化けて廻国せし狸のこと",
+      "level": 2,
+      "char_count": 9940
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "一五　生きているかと思う場合多かりしこと",
+      "level": 2,
+      "char_count": 9810
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "一八　学問はいまだこの不思議を解釈しえざること",
+      "level": 2,
+      "char_count": 9383
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "二〇　深山に小児を見るということ",
+      "level": 2,
+      "char_count": 8708
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "二二　山女多くは人を懐かしがること",
+      "level": 2,
+      "char_count": 9854
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "二六　山男が町に出で来たりしこと",
+      "level": 2,
+      "char_count": 9964
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "二九　巨人の足跡を崇敬せしこと",
+      "level": 2,
+      "char_count": 9621
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "三〇　これは日本文化史の未解決の問題なること",
+      "level": 2,
+      "char_count": 7228
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "山人考",
+      "level": 1,
+      "char_count": 9701
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "",
+      "level": null,
+      "char_count": 2991
+    },
+    {
+      "index": 13,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 294
+    }
+  ]
+}

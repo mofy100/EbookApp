@@ -1,0 +1,36 @@
+{
+  "title": "乘用車發表に際して",
+  "author": "豊田喜一郎",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "乘用車發表に際して",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 610
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "率先輸入して流線型を研究――常務の回顧談",
+      "level": 1,
+      "char_count": 2376
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 217
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "漁師の娘",
+  "author": "徳冨蘆花",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "漁師の娘",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9616
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "六",
+      "level": 2,
+      "char_count": 1955
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 266
+    }
+  ]
+}

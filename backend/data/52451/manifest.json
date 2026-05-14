@@ -1,0 +1,71 @@
+{
+  "title": "旗岡巡査",
+  "author": "吉川英治",
+  "translator": null,
+  "chapter_count": 9,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "旗岡巡査",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "雲雀も啼かぬ日",
+      "level": 1,
+      "char_count": 4763
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "花菖蒲",
+      "level": 1,
+      "char_count": 2685
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "毛虫桜",
+      "level": 1,
+      "char_count": 4750
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "山と町",
+      "level": 1,
+      "char_count": 2092
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "開化の鈍人",
+      "level": 1,
+      "char_count": 3921
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "妖鬼燈",
+      "level": 1,
+      "char_count": 2870
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "銀洋燈",
+      "level": 1,
+      "char_count": 3339
+    },
+    {
+      "index": 7,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 217
+    }
+  ]
+}

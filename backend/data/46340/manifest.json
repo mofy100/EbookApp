@@ -1,0 +1,99 @@
+{
+  "title": "ファラデーの伝",
+  "author": "愛知敬一",
+  "translator": null,
+  "chapter_count": 13,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ファラデーの伝",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 0
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "序",
+      "level": 1,
+      "char_count": 1463
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "前編　生涯",
+      "level": 1,
+      "char_count": 9937
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "一六　デビー夫人",
+      "level": 3,
+      "char_count": 9951
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "二九　協会の財政",
+      "level": 3,
+      "char_count": 9840
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "四三　病気",
+      "level": 3,
+      "char_count": 9950
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "附記",
+      "level": 2,
+      "char_count": 3805
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "後編　研究",
+      "level": 1,
+      "char_count": 9983
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "一四　静電気の研究",
+      "level": 3,
+      "char_count": 9977
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "参考書類",
+      "level": 2,
+      "char_count": 9993
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "マ",
+      "level": 3,
+      "char_count": 1996
+    },
+    {
+      "index": 11,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 1349
+    }
+  ]
+}

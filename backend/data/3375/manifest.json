@@ -1,0 +1,64 @@
+{
+  "title": "大宇宙遠征隊",
+  "author": "海野十三",
+  "translator": null,
+  "chapter_count": 8,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "大宇宙遠征隊",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "噴行艇は征く",
+      "level": 2,
+      "char_count": 9981
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "当直の報告",
+      "level": 2,
+      "char_count": 9870
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "着陸命令",
+      "level": 2,
+      "char_count": 9991
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "怪物の訊問",
+      "level": 2,
+      "char_count": 9984
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "斥候隊の行方",
+      "level": 2,
+      "char_count": 9958
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "火星の食べ物",
+      "level": 2,
+      "char_count": 4183
+    },
+    {
+      "index": 6,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 181
+    }
+  ]
+}

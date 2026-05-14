@@ -1,0 +1,78 @@
+{
+  "title": "夜光人間",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "夜光人間",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "きもだめしの会",
+      "level": 2,
+      "char_count": 9997
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "魔法の名刺",
+      "level": 2,
+      "char_count": 9977
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "チンピラ隊の活躍",
+      "level": 2,
+      "char_count": 9938
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "密室の怪人",
+      "level": 2,
+      "char_count": 9978
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "ふたりの明智小五郎",
+      "level": 2,
+      "char_count": 9977
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "エレベーター",
+      "level": 2,
+      "char_count": 9968
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "おとし穴",
+      "level": 2,
+      "char_count": 9977
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "鉄格子",
+      "level": 2,
+      "char_count": 5195
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 120
+    }
+  ]
+}

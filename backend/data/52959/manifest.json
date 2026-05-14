@@ -1,0 +1,29 @@
+{
+  "title": "失うた帳面を記憶力で書き復した人",
+  "author": "南方熊楠",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "失うた帳面を記憶力で書き復した人",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 2884
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 146
+    }
+  ]
+}

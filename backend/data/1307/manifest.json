@@ -1,0 +1,169 @@
+{
+  "title": "青蛙堂鬼談",
+  "author": "岡本綺堂",
+  "translator": null,
+  "chapter_count": 23,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "青蛙堂鬼談",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "青蛙神",
+      "level": 1,
+      "char_count": 9974
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 429
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "利根の渡",
+      "level": 1,
+      "char_count": 9867
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 537
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "兄妹の魂",
+      "level": 1,
+      "char_count": 9859
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 751
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "猿の眼",
+      "level": 1,
+      "char_count": 9955
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 984
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "蛇精",
+      "level": 1,
+      "char_count": 9929
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "",
+      "level": null,
+      "char_count": 873
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "清水の井",
+      "level": 1,
+      "char_count": 8193
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "窯変",
+      "level": 1,
+      "char_count": 9955
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "",
+      "level": null,
+      "char_count": 587
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "蟹",
+      "level": 1,
+      "char_count": 9896
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "",
+      "level": null,
+      "char_count": 928
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "一本足の女",
+      "level": 1,
+      "char_count": 10000
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "",
+      "level": null,
+      "char_count": 864
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "黄いろい紙",
+      "level": 1,
+      "char_count": 8218
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "笛塚",
+      "level": 1,
+      "char_count": 9138
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "龍馬の池",
+      "level": 1,
+      "char_count": 9878
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "",
+      "level": null,
+      "char_count": 625
+    },
+    {
+      "index": 21,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 424
+    }
+  ]
+}

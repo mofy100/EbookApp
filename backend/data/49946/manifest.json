@@ -1,0 +1,43 @@
+{
+  "title": "移轍（Anakoluth）",
+  "author": "関口存男",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "移轍（Anakoluth）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "許されない移轍",
+      "level": 2,
+      "char_count": 9916
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "〔Ａ〕主文・副文↘〔Ｂ〕副文・主文",
+      "level": 2,
+      "char_count": 9993
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "（４）「もう少しのところで…………するところだった」",
+      "level": 2,
+      "char_count": 7424
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 316
+    }
+  ]
+}

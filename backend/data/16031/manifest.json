@@ -1,0 +1,36 @@
+{
+  "title": "水の女",
+  "author": "折口信夫",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "水の女",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　古代詞章の上の用語例の問題",
+      "level": 2,
+      "char_count": 9772
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "九　兄媛弟媛",
+      "level": 2,
+      "char_count": 8761
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 272
+    }
+  ]
+}

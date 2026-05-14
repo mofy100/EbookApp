@@ -1,0 +1,29 @@
+{
+  "title": "峠に関する二、三の考察",
+  "author": "柳田国男",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "峠に関する二、三の考察",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　山の彼方",
+      "level": 2,
+      "char_count": 5027
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 211
+    }
+  ]
+}

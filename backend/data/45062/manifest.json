@@ -1,0 +1,43 @@
+{
+  "title": "シロ・クロ物語",
+  "author": "豊島与志雄",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "シロ・クロ物語",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　公園の占師",
+      "level": 2,
+      "char_count": 9965
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "五　ひみつの部屋の鍵",
+      "level": 2,
+      "char_count": 9978
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 188
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 173
+    }
+  ]
+}

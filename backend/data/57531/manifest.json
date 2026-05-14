@@ -1,0 +1,106 @@
+{
+  "title": "偉大なる夢",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 14,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "偉大なる夢",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "作者の言葉",
+      "level": 2,
+      "char_count": 9964
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "白堊館の密話",
+      "level": 2,
+      "char_count": 9968
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "敵国の触手",
+      "level": 2,
+      "char_count": 9977
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "望月憲兵少佐",
+      "level": 2,
+      "char_count": 9943
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "火焔放射器",
+      "level": 2,
+      "char_count": 9993
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "鉄の指",
+      "level": 2,
+      "char_count": 9973
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "Ｆ３号",
+      "level": 2,
+      "char_count": 9956
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "女工員",
+      "level": 2,
+      "char_count": 9942
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "横穴待避壕",
+      "level": 2,
+      "char_count": 9931
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "聖女",
+      "level": 2,
+      "char_count": 9973
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "大秘密",
+      "level": 2,
+      "char_count": 9923
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "月光の妖術",
+      "level": 2,
+      "char_count": 8446
+    },
+    {
+      "index": 12,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 369
+    }
+  ]
+}

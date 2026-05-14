@@ -1,0 +1,85 @@
+{
+  "title": "地球発狂事件",
+  "author": "海野十三",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "地球発狂事件",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "発端",
+      "level": 2,
+      "char_count": 9913
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "渦巻く山頂",
+      "level": 2,
+      "char_count": 9949
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "鍵は大西洋に",
+      "level": 2,
+      "char_count": 9974
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "鍵は何処に",
+      "level": 2,
+      "char_count": 9928
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "早合点",
+      "level": 2,
+      "char_count": 9923
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "深海の争闘",
+      "level": 2,
+      "char_count": 9921
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "発信者は誰",
+      "level": 2,
+      "char_count": 9972
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "変装の友",
+      "level": 2,
+      "char_count": 9932
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "怪人集団を呼ぶ",
+      "level": 2,
+      "char_count": 6794
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 179
+    }
+  ]
+}

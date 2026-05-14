@@ -1,0 +1,176 @@
+{
+  "title": "鵠が音",
+  "author": "折口春洋",
+  "translator": null,
+  "chapter_count": 24,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "鵠が音",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "昭和十九年――五十首――",
+      "level": 1,
+      "char_count": 1544
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "昭和十八年――百首――",
+      "level": 1,
+      "char_count": 2973
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "昭和十七年――百四十一首――",
+      "level": 1,
+      "char_count": 4245
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "昭和十六年――百二十七首――",
+      "level": 1,
+      "char_count": 3681
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "昭和十五年――百二十八首――",
+      "level": 1,
+      "char_count": 3792
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "昭和十四年――九十四首――",
+      "level": 1,
+      "char_count": 2736
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "昭和十三年――八十九首――",
+      "level": 1,
+      "char_count": 2646
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "昭和十二年――二十三首――",
+      "level": 1,
+      "char_count": 714
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "昭和十一年――二十七首――",
+      "level": 1,
+      "char_count": 826
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "昭和十年――二十三首――",
+      "level": 1,
+      "char_count": 703
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "昭和九年昭和八年――四十七首――昭和七年",
+      "level": 1,
+      "char_count": 1504
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "昭和六年――三十六首――",
+      "level": 1,
+      "char_count": 1140
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "昭和五年――四十一首――",
+      "level": 1,
+      "char_count": 1260
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "昭和四年――五十三首――昭和三年",
+      "level": 1,
+      "char_count": 1786
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "昭和二年――二十七首――",
+      "level": 1,
+      "char_count": 904
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "大正十五年――十二首――",
+      "level": 1,
+      "char_count": 373
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "島の消息",
+      "level": 1,
+      "char_count": 2908
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "鵠が音　追ひ書きその一",
+      "level": 1,
+      "char_count": 2564
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "追ひ書きその二",
+      "level": 1,
+      "char_count": 242
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "追ひ書きその三",
+      "level": 1,
+      "char_count": 1189
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "追ひ書きその四",
+      "level": 1,
+      "char_count": 678
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "追ひ書きその五",
+      "level": 1,
+      "char_count": 464
+    },
+    {
+      "index": 22,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 163
+    }
+  ]
+}

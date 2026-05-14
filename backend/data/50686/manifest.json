@@ -1,0 +1,148 @@
+{
+  "title": "食道楽",
+  "author": "村井弦斎",
+  "translator": null,
+  "chapter_count": 20,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "食道楽",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "秋の巻",
+      "level": 1,
+      "char_count": 9110
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第百八十八　蠅取器械",
+      "level": 2,
+      "char_count": 9214
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第百九十四　鮎と犢",
+      "level": 2,
+      "char_count": 9284
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第二百菓物の効",
+      "level": 2,
+      "char_count": 8950
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "第二百六　玉子の雪",
+      "level": 2,
+      "char_count": 9298
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "第二百十二　魚のグレー",
+      "level": 2,
+      "char_count": 9907
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "第二百十九下駄と帽子",
+      "level": 2,
+      "char_count": 9314
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "第二百二十四　西洋の葛餅",
+      "level": 2,
+      "char_count": 9385
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "第二百三十　赤茄子の味",
+      "level": 2,
+      "char_count": 9962
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "第二百三十七媒妁役",
+      "level": 2,
+      "char_count": 9434
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "第二百四十四　アイスクリーム",
+      "level": 2,
+      "char_count": 9198
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "第二百五十一琺瑯鍋",
+      "level": 2,
+      "char_count": 9670
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "第二百五十七　カステラ菓子",
+      "level": 2,
+      "char_count": 9975
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "第二百六十四　看病料理",
+      "level": 2,
+      "char_count": 8932
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "第二百七十茶碗鮨",
+      "level": 2,
+      "char_count": 9612
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "付録",
+      "level": 1,
+      "char_count": 9936
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "第八　サフラン飯",
+      "level": 3,
+      "char_count": 9898
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "第七　軽便ミルクトース",
+      "level": 3,
+      "char_count": 6234
+    },
+    {
+      "index": 18,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 372
+    }
+  ]
+}

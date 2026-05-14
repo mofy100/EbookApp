@@ -1,0 +1,29 @@
+{
+  "title": "草木塔",
+  "author": "種田山頭火",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "草木塔",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "茶の花",
+      "level": 2,
+      "char_count": 1123
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 175
+    }
+  ]
+}

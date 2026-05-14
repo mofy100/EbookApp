@@ -1,0 +1,43 @@
+{
+  "title": "名字の話",
+  "author": "柳田國男",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "名字の話",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "日本はきわめて名字の数の多い国",
+      "level": 2,
+      "char_count": 9923
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "荘園の増加",
+      "level": 2,
+      "char_count": 9922
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "二字免許の制度の由来",
+      "level": 2,
+      "char_count": 3938
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 217
+    }
+  ]
+}

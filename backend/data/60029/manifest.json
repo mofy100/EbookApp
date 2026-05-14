@@ -1,0 +1,29 @@
+{
+  "title": "子どもたちが屠殺ごっこをした話",
+  "author": "ヤーコップ、ウィルヘルム・グリム　Jacob u. Wilhelm Grimm",
+  "translator": "金田鬼一訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "子どもたちが屠殺ごっこをした話",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "（一）第一話",
+      "level": 2,
+      "char_count": 1348
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 192
+    }
+  ]
+}

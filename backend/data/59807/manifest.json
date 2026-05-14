@@ -1,0 +1,29 @@
+{
+  "title": "ディズニーの人と作品",
+  "author": "中谷宇吉郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ディズニーの人と作品",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　ディズニーの風貌",
+      "level": 2,
+      "char_count": 6273
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 171
+    }
+  ]
+}

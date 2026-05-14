@@ -1,0 +1,36 @@
+{
+  "title": "かいじん二十めんそう",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "かいじん二十めんそう",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１",
+      "level": 2,
+      "char_count": 9940
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "13",
+      "level": 2,
+      "char_count": 2552
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 325
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "title": "ジャン・クリストフ",
+  "author": "ロマン・ローラン　Romain Rolland",
+  "translator": "豊島与志雄訳",
+  "chapter_count": 12,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ジャン・クリストフ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 9581
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9390
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9778
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 9761
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 9617
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 8878
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 9985
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 9785
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "",
+      "level": null,
+      "char_count": 9799
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "",
+      "level": null,
+      "char_count": 5941
+    },
+    {
+      "index": 10,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 129
+    }
+  ]
+}

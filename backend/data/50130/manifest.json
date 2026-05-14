@@ -1,0 +1,29 @@
+{
+  "title": "最後の晩餐",
+  "author": "フィオナ・マクラウド　Fiona Macleod",
+  "translator": "松村みね子訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "最後の晩餐",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 5346
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 186
+    }
+  ]
+}

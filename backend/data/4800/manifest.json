@@ -1,0 +1,50 @@
+{
+  "title": "ほととぎす",
+  "author": "堀辰雄",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ほととぎす",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "その一",
+      "level": 2,
+      "char_count": 9877
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "その二",
+      "level": 2,
+      "char_count": 9885
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "その四",
+      "level": 2,
+      "char_count": 9988
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 502
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 295
+    }
+  ]
+}

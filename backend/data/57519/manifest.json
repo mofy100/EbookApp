@@ -1,0 +1,64 @@
+{
+  "title": "地獄風景",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 8,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "地獄風景",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "奇怪なる娯楽園",
+      "level": 2,
+      "char_count": 10000
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "怪短劔",
+      "level": 2,
+      "char_count": 9964
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "日記帳と遠眼鏡",
+      "level": 2,
+      "char_count": 9983
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "餌差宗助",
+      "level": 2,
+      "char_count": 9901
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "地獄谷",
+      "level": 2,
+      "char_count": 9906
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "悪魔の昇天",
+      "level": 2,
+      "char_count": 4020
+    },
+    {
+      "index": 6,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 415
+    }
+  ]
+}

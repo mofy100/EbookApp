@@ -1,0 +1,85 @@
+{
+  "title": "青銅の魔人",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "青銅の魔人",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "歯車の音",
+      "level": 2,
+      "char_count": 9929
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "明智小五郎と小林少年",
+      "level": 2,
+      "char_count": 9953
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "チンピラ別働隊",
+      "level": 2,
+      "char_count": 9931
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "鏡の中の怪人",
+      "level": 2,
+      "char_count": 9982
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "古井戸の底",
+      "level": 2,
+      "char_count": 9900
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "ゴム人形",
+      "level": 2,
+      "char_count": 9972
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "古井戸の秘密",
+      "level": 2,
+      "char_count": 9990
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "最後の切り札",
+      "level": 2,
+      "char_count": 9742
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "",
+      "level": null,
+      "char_count": 2564
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 171
+    }
+  ]
+}

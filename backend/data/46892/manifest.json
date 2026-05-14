@@ -1,0 +1,29 @@
+{
+  "title": "青春の天刑病者達",
+  "author": "北條民雄",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "青春の天刑病者達",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "霧の夜",
+      "level": 1,
+      "char_count": 9991
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 200
+    }
+  ]
+}

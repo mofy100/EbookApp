@@ -1,0 +1,36 @@
+{
+  "title": "呪われの家",
+  "author": "小酒井不木",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "呪われの家",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9990
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "五",
+      "level": 2,
+      "char_count": 8544
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 202
+    }
+  ]
+}

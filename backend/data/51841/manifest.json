@@ -1,0 +1,36 @@
+{
+  "title": "六百五十句",
+  "author": "高浜虚子",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "六百五十句",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "序",
+      "level": 2,
+      "char_count": 9999
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "昭和二十四年",
+      "level": 2,
+      "char_count": 8202
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 332
+    }
+  ]
+}

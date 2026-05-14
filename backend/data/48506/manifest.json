@@ -1,0 +1,36 @@
+{
+  "title": "妙義山の五日",
+  "author": "大町桂月",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "妙義山の五日",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9964
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "六",
+      "level": 2,
+      "char_count": 3731
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 149
+    }
+  ]
+}

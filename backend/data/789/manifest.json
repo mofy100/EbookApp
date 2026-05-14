@@ -1,0 +1,260 @@
+{
+  "title": "吾輩は猫である",
+  "author": "夏目漱石",
+  "translator": null,
+  "chapter_count": 36,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "吾輩は猫である",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9603
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "二",
+      "level": 2,
+      "char_count": 9712
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 8260
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 9614
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 8291
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "三",
+      "level": 2,
+      "char_count": 9222
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 9691
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 9753
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "",
+      "level": null,
+      "char_count": 6096
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "四",
+      "level": 2,
+      "char_count": 9932
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "",
+      "level": null,
+      "char_count": 9725
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "五",
+      "level": 2,
+      "char_count": 9940
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "",
+      "level": null,
+      "char_count": 9993
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "",
+      "level": null,
+      "char_count": 9942
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "六",
+      "level": 2,
+      "char_count": 9822
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "",
+      "level": null,
+      "char_count": 9105
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "七",
+      "level": 2,
+      "char_count": 9384
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "",
+      "level": null,
+      "char_count": 9523
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "",
+      "level": null,
+      "char_count": 8877
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "八",
+      "level": 2,
+      "char_count": 9277
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "",
+      "level": null,
+      "char_count": 9719
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "",
+      "level": null,
+      "char_count": 9995
+    },
+    {
+      "index": 22,
+      "file": "content_22.html",
+      "title": "九",
+      "level": 2,
+      "char_count": 9288
+    },
+    {
+      "index": 23,
+      "file": "content_23.html",
+      "title": "",
+      "level": null,
+      "char_count": 9919
+    },
+    {
+      "index": 24,
+      "file": "content_24.html",
+      "title": "",
+      "level": null,
+      "char_count": 9992
+    },
+    {
+      "index": 25,
+      "file": "content_25.html",
+      "title": "十",
+      "level": 2,
+      "char_count": 9715
+    },
+    {
+      "index": 26,
+      "file": "content_26.html",
+      "title": "",
+      "level": null,
+      "char_count": 9972
+    },
+    {
+      "index": 27,
+      "file": "content_27.html",
+      "title": "",
+      "level": null,
+      "char_count": 9705
+    },
+    {
+      "index": 28,
+      "file": "content_28.html",
+      "title": "十一",
+      "level": 2,
+      "char_count": 9996
+    },
+    {
+      "index": 29,
+      "file": "content_29.html",
+      "title": "",
+      "level": null,
+      "char_count": 9988
+    },
+    {
+      "index": 30,
+      "file": "content_30.html",
+      "title": "",
+      "level": null,
+      "char_count": 9991
+    },
+    {
+      "index": 31,
+      "file": "content_31.html",
+      "title": "",
+      "level": null,
+      "char_count": 9993
+    },
+    {
+      "index": 32,
+      "file": "content_32.html",
+      "title": "",
+      "level": null,
+      "char_count": 9982
+    },
+    {
+      "index": 33,
+      "file": "content_33.html",
+      "title": "",
+      "level": null,
+      "char_count": 4781
+    },
+    {
+      "index": 34,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 320
+    }
+  ]
+}

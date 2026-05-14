@@ -1,0 +1,29 @@
+{
+  "title": "準備は出來たトヨタは邁進します",
+  "author": "豊田喜一郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "準備は出來たトヨタは邁進します",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "材料の問題について",
+      "level": 2,
+      "char_count": 1986
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 143
+    }
+  ]
+}

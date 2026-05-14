@@ -1,0 +1,85 @@
+{
+  "title": "生活と一枚の宗教",
+  "author": "倉田百三",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "生活と一枚の宗教",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　信仰の経路について",
+      "level": 1,
+      "char_count": 7246
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "二　信仰と生活",
+      "level": 1,
+      "char_count": 9408
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "生命の生長と犠牲",
+      "level": 2,
+      "char_count": 5175
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "三　善悪を横に截る――法的自然主義の生活へ――",
+      "level": 1,
+      "char_count": 8285
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "法的自然主義の生活へ",
+      "level": 2,
+      "char_count": 9265
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "善悪を横に截る",
+      "level": 2,
+      "char_count": 8799
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "四　万有ことごとくこれ如来",
+      "level": 1,
+      "char_count": 8987
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "絶対としての生命の姿",
+      "level": 2,
+      "char_count": 7671
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "万有ことごとくこれ如来",
+      "level": 2,
+      "char_count": 4445
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 203
+    }
+  ]
+}

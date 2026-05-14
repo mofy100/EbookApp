@@ -1,0 +1,29 @@
+{
+  "title": "世評（一幕二場）",
+  "author": "菊池寛",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "世評（一幕二場）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "人物　所　時",
+      "level": 2,
+      "char_count": 4154
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 125
+    }
+  ]
+}

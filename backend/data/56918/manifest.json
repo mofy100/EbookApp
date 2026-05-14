@@ -1,0 +1,29 @@
+{
+  "title": "魔女",
+  "author": "小熊秀雄",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "魔女",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "叙事詩「魔女」の人物",
+      "level": 2,
+      "char_count": 4445
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 168
+    }
+  ]
+}

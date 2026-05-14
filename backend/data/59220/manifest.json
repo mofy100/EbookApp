@@ -1,0 +1,29 @@
+{
+  "title": "墨並びに硯の物理学的研究",
+  "author": "中谷宇吉郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "墨並びに硯の物理学的研究",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "墨を磨る装置",
+      "level": 2,
+      "char_count": 7889
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 307
+    }
+  ]
+}

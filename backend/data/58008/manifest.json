@@ -1,0 +1,29 @@
+{
+  "title": "ガリレオ・ガリレイ",
+  "author": "石原純",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ガリレオ・ガリレイ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "緒言",
+      "level": 2,
+      "char_count": 5606
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 390
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "天空の魔人",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "天空の魔人",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "雲の上の怪物",
+      "level": 2,
+      "char_count": 9940
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "貨車昇天",
+      "level": 2,
+      "char_count": 9985
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "大魔術",
+      "level": 2,
+      "char_count": 4031
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 127
+    }
+  ]
+}

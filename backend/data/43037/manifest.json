@@ -1,0 +1,43 @@
+{
+  "title": "あたらしい憲法のはなし",
+  "author": "文部省",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "あたらしい憲法のはなし",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　憲法",
+      "level": 2,
+      "char_count": 9948
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "九　政党",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "十五　最高法規",
+      "level": 2,
+      "char_count": 895
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 268
+    }
+  ]
+}

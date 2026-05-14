@@ -1,0 +1,78 @@
+{
+  "title": "魔法人形",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "魔法人形",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "腹話術",
+      "level": 2,
+      "char_count": 9910
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "小林少年",
+      "level": 2,
+      "char_count": 9883
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "刀のきっさき",
+      "level": 2,
+      "char_count": 9895
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "人形むすめ",
+      "level": 2,
+      "char_count": 9901
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "どろぼう人形",
+      "level": 2,
+      "char_count": 9902
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "人造人間",
+      "level": 2,
+      "char_count": 9954
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "ゴリラと大ワシ",
+      "level": 2,
+      "char_count": 9939
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 3092
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 124
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "古い玩具（一幕六場）",
+  "author": "岸田國士",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "古い玩具（一幕六場）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "プロロオグ",
+      "level": 2,
+      "char_count": 9992
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第三場",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第四場",
+      "level": 2,
+      "char_count": 9999
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第六場",
+      "level": 2,
+      "char_count": 2275
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 268
+    }
+  ]
+}

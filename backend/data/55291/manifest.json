@@ -1,0 +1,36 @@
+{
+  "title": "『唯研ニュース』",
+  "author": "戸坂潤",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "『唯研ニュース』",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "創刊の辞",
+      "level": 2,
+      "char_count": 9895
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "天然色映画讃――色彩映画の問題",
+      "level": 2,
+      "char_count": 7675
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 263
+    }
+  ]
+}

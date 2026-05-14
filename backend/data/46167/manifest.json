@@ -1,0 +1,29 @@
+{
+  "title": "六羽の白鳥",
+  "author": "グリム兄弟　Bruder Grimm",
+  "translator": "楠山正雄訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "六羽の白鳥",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 6588
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 187
+    }
+  ]
+}

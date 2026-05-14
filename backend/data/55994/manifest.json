@@ -1,0 +1,78 @@
+{
+  "title": "黒部川奥の山旅",
+  "author": "木暮理太郎",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "黒部川奥の山旅",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "片貝谷まで",
+      "level": 2,
+      "char_count": 9900
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "釜谷の奥",
+      "level": 2,
+      "char_count": 9738
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "小黒部谷の入り・中（赤谷山及び赤兀白兀）",
+      "level": 2,
+      "char_count": 9676
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 9990
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "小黒部谷の入り・下（大窓及び池の平）",
+      "level": 2,
+      "char_count": 9945
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "立山を越ゆ",
+      "level": 2,
+      "char_count": 9922
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "黒部川の峡谷",
+      "level": 2,
+      "char_count": 9786
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "附記",
+      "level": 2,
+      "char_count": 7468
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 582
+    }
+  ]
+}

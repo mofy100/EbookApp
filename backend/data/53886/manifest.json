@@ -1,0 +1,57 @@
+{
+  "title": "あの世の入口",
+  "author": "知里真志保",
+  "translator": null,
+  "chapter_count": 7,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "あの世の入口",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "まえがき",
+      "level": 1,
+      "char_count": 1123
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "一　あの世の入口に関する酋長談",
+      "level": 1,
+      "char_count": 6773
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "二　あの世の入口に関する各地の伝説",
+      "level": 1,
+      "char_count": 9986
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "（17）静内のアフンポール（19）",
+      "level": 2,
+      "char_count": 987
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "三　登別のアフンルパㇽについて",
+      "level": 1,
+      "char_count": 4123
+    },
+    {
+      "index": 5,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 309
+    }
+  ]
+}

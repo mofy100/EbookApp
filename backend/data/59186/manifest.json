@@ -1,0 +1,36 @@
+{
+  "title": "無法な火葬",
+  "author": "小泉八雲",
+  "translator": "佐藤春夫訳",
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "無法な火葬",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "恐るべき秘密暴露の恐怖",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "市史の記録によれば（以下譯者註）",
+      "level": 2,
+      "char_count": 730
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 312
+    }
+  ]
+}

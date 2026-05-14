@@ -1,0 +1,29 @@
+{
+  "title": "ここに薔薇ありせば",
+  "author": "イエンス・ペーター・ヤコブセン　Jens Peter Jacobsen",
+  "translator": "矢崎源九郎訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ここに薔薇ありせば",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 5527
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 122
+    }
+  ]
+}

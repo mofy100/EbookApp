@@ -1,0 +1,99 @@
+{
+  "title": "阿難と呪術師の娘",
+  "author": "岡本かの子",
+  "translator": null,
+  "chapter_count": 13,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "阿難と呪術師の娘",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 55
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第一場",
+      "level": 1,
+      "char_count": 564
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第二場",
+      "level": 1,
+      "char_count": 1260
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第三場",
+      "level": 1,
+      "char_count": 1316
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "第四場",
+      "level": 1,
+      "char_count": 4563
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "第五場",
+      "level": 1,
+      "char_count": 1257
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "第六場",
+      "level": 1,
+      "char_count": 1945
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "第七場",
+      "level": 1,
+      "char_count": 1717
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "第八場",
+      "level": 1,
+      "char_count": 8682
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "第九場",
+      "level": 1,
+      "char_count": 5808
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "あとがき",
+      "level": 1,
+      "char_count": 758
+    },
+    {
+      "index": 11,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 175
+    }
+  ]
+}

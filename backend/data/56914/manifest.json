@@ -1,0 +1,36 @@
+{
+  "title": "諜報中継局",
+  "author": "海野十三",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "諜報中継局",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１",
+      "level": 2,
+      "char_count": 9942
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "６",
+      "level": 2,
+      "char_count": 9595
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 186
+    }
+  ]
+}

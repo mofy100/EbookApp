@@ -1,0 +1,78 @@
+{
+  "title": "式部小路",
+  "author": "泉鏡花",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "式部小路",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "序",
+      "level": 2,
+      "char_count": 9993
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "八",
+      "level": 2,
+      "char_count": 9993
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "十五",
+      "level": 2,
+      "char_count": 9944
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "二十二",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "二十八",
+      "level": 2,
+      "char_count": 9979
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "三十五",
+      "level": 2,
+      "char_count": 9996
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "四十一",
+      "level": 2,
+      "char_count": 9967
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 4897
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 264
+    }
+  ]
+}

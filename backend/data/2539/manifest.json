@@ -1,0 +1,78 @@
+{
+  "title": "十二支考",
+  "author": "南方熊楠",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "十二支考",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "（一）概言",
+      "level": 1,
+      "char_count": 9395
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "２",
+      "level": 2,
+      "char_count": 9435
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "（二）性質",
+      "level": 1,
+      "char_count": 9509
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 2741
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "（三）民俗",
+      "level": 1,
+      "char_count": 9136
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "２",
+      "level": 2,
+      "char_count": 9128
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 9174
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 9549
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 454
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "獄中生活",
+  "author": "堺利彦",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "獄中生活",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　監獄は今が入り時",
+      "level": 2,
+      "char_count": 9986
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "一二　役、労働時間、工賃",
+      "level": 2,
+      "char_count": 5435
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 227
+    }
+  ]
+}

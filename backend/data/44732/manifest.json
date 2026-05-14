@@ -1,0 +1,99 @@
+{
+  "title": "日本人とは？",
+  "author": "岸田國士",
+  "translator": null,
+  "chapter_count": 13,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "日本人とは？",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "「大事なこと」とは？",
+      "level": 2,
+      "char_count": 9991
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9987
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "平衡感覚について",
+      "level": 2,
+      "char_count": 9870
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "精神の健康不健康について",
+      "level": 2,
+      "char_count": 9795
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "恐怖なき生活について",
+      "level": 2,
+      "char_count": 9958
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "悲しき習性について",
+      "level": 2,
+      "char_count": 9974
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "「人間らしさ」といふこと",
+      "level": 2,
+      "char_count": 9881
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 9781
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "いはゆる教育について",
+      "level": 2,
+      "char_count": 9690
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "",
+      "level": null,
+      "char_count": 9890
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "",
+      "level": null,
+      "char_count": 539
+    },
+    {
+      "index": 11,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 1036
+    }
+  ]
+}

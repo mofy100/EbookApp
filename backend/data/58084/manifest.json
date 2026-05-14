@@ -1,0 +1,29 @@
+{
+  "title": "婦人に対する実業思想の急務",
+  "author": "大隈重信",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "婦人に対する実業思想の急務",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一千万人の婦人は国民の基礎なり",
+      "level": 2,
+      "char_count": 2740
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 142
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "title": "俳句への道",
+  "author": "高浜虚子",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "俳句への道",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 52
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "序",
+      "level": 1,
+      "char_count": 551
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "俳句への道",
+      "level": 1,
+      "char_count": 9790
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "俳句",
+      "level": 1,
+      "char_count": 9973
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "いずれも宇宙の現れの一つ",
+      "level": 2,
+      "char_count": 9896
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "深は新なり",
+      "level": 3,
+      "char_count": 9994
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "慧眼の士のみ",
+      "level": 2,
+      "char_count": 9984
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "花鳥諷詠論に誇りを持つ",
+      "level": 2,
+      "char_count": 5725
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "俳諧",
+      "level": 1,
+      "char_count": 4629
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 1334
+    }
+  ]
+}

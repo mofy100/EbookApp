@@ -1,0 +1,50 @@
+{
+  "title": "文庫版『雀の卵』覚書",
+  "author": "北原白秋",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "文庫版『雀の卵』覚書",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "Ⅰ初版本について",
+      "level": 1,
+      "char_count": 1591
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "Ⅱ訂正作について",
+      "level": 1,
+      "char_count": 4859
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "Ⅲ拾遺と新作とについて",
+      "level": 1,
+      "char_count": 839
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "Ⅳ全集補遺篇について",
+      "level": 1,
+      "char_count": 389
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 136
+    }
+  ]
+}

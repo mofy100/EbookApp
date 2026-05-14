@@ -1,0 +1,29 @@
+{
+  "title": "新歸朝者日記　拾遺",
+  "author": "永井荷風",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "新歸朝者日記　拾遺",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "二月五日",
+      "level": 2,
+      "char_count": 2968
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 228
+    }
+  ]
+}

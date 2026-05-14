@@ -1,0 +1,85 @@
+{
+  "title": "泡鳴五部作",
+  "author": "岩野泡鳴",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "泡鳴五部作",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9918
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "四",
+      "level": 2,
+      "char_count": 9896
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "五",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "七",
+      "level": 2,
+      "char_count": 9905
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "九",
+      "level": 2,
+      "char_count": 9963
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "十",
+      "level": 2,
+      "char_count": 9793
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "十三",
+      "level": 2,
+      "char_count": 9992
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "十五",
+      "level": 2,
+      "char_count": 9951
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "十七",
+      "level": 2,
+      "char_count": 5158
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 222
+    }
+  ]
+}

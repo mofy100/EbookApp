@@ -1,0 +1,120 @@
+{
+  "title": "門",
+  "author": "夏目漱石",
+  "translator": null,
+  "chapter_count": 16,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "門",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "四",
+      "level": 2,
+      "char_count": 9979
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9880
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "五",
+      "level": 2,
+      "char_count": 9970
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "七",
+      "level": 2,
+      "char_count": 9721
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "八",
+      "level": 2,
+      "char_count": 9970
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "十",
+      "level": 2,
+      "char_count": 9988
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "十二",
+      "level": 2,
+      "char_count": 9719
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "十四",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "十五",
+      "level": 2,
+      "char_count": 9947
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "十七",
+      "level": 2,
+      "char_count": 9943
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "十八",
+      "level": 2,
+      "char_count": 9823
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "十九",
+      "level": 2,
+      "char_count": 9870
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "二十二",
+      "level": 2,
+      "char_count": 6311
+    },
+    {
+      "index": 14,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 247
+    }
+  ]
+}

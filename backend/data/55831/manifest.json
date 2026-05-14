@@ -1,0 +1,36 @@
+{
+  "title": "ロマンスと縁談",
+  "author": "佐々木邦",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ロマンスと縁談",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "大海に釣らん",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "行き方の違う恩師",
+      "level": 2,
+      "char_count": 3733
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 149
+    }
+  ]
+}

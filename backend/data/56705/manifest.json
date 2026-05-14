@@ -1,0 +1,43 @@
+{
+  "title": "九つの鍵",
+  "author": "野村胡堂",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "九つの鍵",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "蜘蛛の糸",
+      "level": 2,
+      "char_count": 9954
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "予備の鍵",
+      "level": 2,
+      "char_count": 10000
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 1395
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 189
+    }
+  ]
+}

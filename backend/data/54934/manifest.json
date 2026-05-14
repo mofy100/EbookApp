@@ -1,0 +1,29 @@
+{
+  "title": "ベートーヴェンの生涯",
+  "author": "ルートヴィヒ・ヴァン・ベートーヴェン　Ludwig van Beethoven、ロマン・ロラン　Romain Rolland",
+  "translator": "片山敏彦訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ベートーヴェンの生涯",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "音楽について",
+      "level": 2,
+      "char_count": 2809
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 177
+    }
+  ]
+}

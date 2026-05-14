@@ -1,0 +1,29 @@
+{
+  "title": "白河の七日",
+  "author": "大町桂月",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "白河の七日",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　南湖公園",
+      "level": 2,
+      "char_count": 3868
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 82
+    }
+  ]
+}

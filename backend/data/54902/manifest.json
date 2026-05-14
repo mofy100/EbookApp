@@ -1,0 +1,50 @@
+{
+  "title": "私の履歴書",
+  "author": "井上貞治郎",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "私の履歴書",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "「よし偉いもんになったるぞ」",
+      "level": 2,
+      "char_count": 9922
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "浮草ざんげ",
+      "level": 2,
+      "char_count": 9926
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "クーリー船の人買い男",
+      "level": 2,
+      "char_count": 9955
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "聯合紙器創立",
+      "level": 2,
+      "char_count": 4577
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 151
+    }
+  ]
+}

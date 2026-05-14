@@ -1,0 +1,50 @@
+{
+  "title": "青蛙神",
+  "author": "岡本綺堂",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "青蛙神",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "第一幕",
+      "level": 2,
+      "char_count": 9939
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第二幕",
+      "level": 2,
+      "char_count": 9984
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9955
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 2415
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 152
+    }
+  ]
+}

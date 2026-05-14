@@ -1,0 +1,29 @@
+{
+  "title": "驛傳馬車",
+  "author": "アーヴィング",
+  "translator": "高垣松雄訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "驛傳馬車",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 6046
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 128
+    }
+  ]
+}

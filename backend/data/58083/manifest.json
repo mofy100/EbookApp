@@ -1,0 +1,29 @@
+{
+  "title": "福沢先生の処世主義と我輩の処世主義",
+  "author": "大隈重信",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "福沢先生の処世主義と我輩の処世主義",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "凡人主義の勝利者",
+      "level": 2,
+      "char_count": 5054
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 222
+    }
+  ]
+}

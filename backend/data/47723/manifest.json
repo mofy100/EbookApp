@@ -1,0 +1,29 @@
+{
+  "title": "巫女と遊女と",
+  "author": "折口信夫",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "巫女と遊女と",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "大尽と末社",
+      "level": 2,
+      "char_count": 2528
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 240
+    }
+  ]
+}

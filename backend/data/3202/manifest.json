@@ -1,0 +1,29 @@
+{
+  "title": "川端康成第四短篇集「心中」を主題とせるヴァリエイシヨン",
+  "author": "梶井基次郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "川端康成第四短篇集「心中」を主題とせるヴァリエイシヨン",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 2517
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 221
+    }
+  ]
+}

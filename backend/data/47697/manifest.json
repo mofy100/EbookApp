@@ -1,0 +1,29 @@
+{
+  "title": "信州新野の雪祭り",
+  "author": "折口信夫",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "信州新野の雪祭り",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "前代文明の残溜地",
+      "level": 2,
+      "char_count": 3517
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 235
+    }
+  ]
+}

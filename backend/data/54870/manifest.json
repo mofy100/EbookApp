@@ -1,0 +1,351 @@
+{
+  "title": "ロザリオの鎖",
+  "author": "永井隆",
+  "translator": null,
+  "chapter_count": 49,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ロザリオの鎖",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "自序",
+      "level": 1,
+      "char_count": 620
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "ロザリオの鎖",
+      "level": 1,
+      "char_count": 3377
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "肉身",
+      "level": 1,
+      "char_count": 3620
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "死床日記",
+      "level": 1,
+      "char_count": 9983
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "鐘",
+      "level": 2,
+      "char_count": 2451
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "ひとの物",
+      "level": 1,
+      "char_count": 825
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "くろだい",
+      "level": 1,
+      "char_count": 859
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "ご恩返し",
+      "level": 1,
+      "char_count": 1596
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "透視室",
+      "level": 1,
+      "char_count": 5422
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "一つの試練",
+      "level": 1,
+      "char_count": 2770
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "歯車",
+      "level": 1,
+      "char_count": 1355
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "科学者の夢想",
+      "level": 1,
+      "char_count": 1209
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "花",
+      "level": 1,
+      "char_count": 3265
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "丸ぼうろ",
+      "level": 1,
+      "char_count": 3154
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "死にそこね",
+      "level": 1,
+      "char_count": 2451
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "結婚",
+      "level": 1,
+      "char_count": 1767
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "魚",
+      "level": 1,
+      "char_count": 732
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "四つ葉のクローバー",
+      "level": 1,
+      "char_count": 1026
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "夢",
+      "level": 1,
+      "char_count": 1273
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "物と心",
+      "level": 1,
+      "char_count": 664
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "井上と山下",
+      "level": 1,
+      "char_count": 3308
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "友愛",
+      "level": 1,
+      "char_count": 2987
+    },
+    {
+      "index": 22,
+      "file": "content_22.html",
+      "title": "水瓜",
+      "level": 1,
+      "char_count": 1786
+    },
+    {
+      "index": 23,
+      "file": "content_23.html",
+      "title": "判決",
+      "level": 1,
+      "char_count": 1208
+    },
+    {
+      "index": 24,
+      "file": "content_24.html",
+      "title": "悪意なき虐待",
+      "level": 1,
+      "char_count": 1266
+    },
+    {
+      "index": 25,
+      "file": "content_25.html",
+      "title": "幸いなるかな泣く人",
+      "level": 1,
+      "char_count": 1643
+    },
+    {
+      "index": 26,
+      "file": "content_26.html",
+      "title": "パン",
+      "level": 1,
+      "char_count": 2400
+    },
+    {
+      "index": 27,
+      "file": "content_27.html",
+      "title": "へちま",
+      "level": 1,
+      "char_count": 1455
+    },
+    {
+      "index": 28,
+      "file": "content_28.html",
+      "title": "文化生活",
+      "level": 1,
+      "char_count": 793
+    },
+    {
+      "index": 29,
+      "file": "content_29.html",
+      "title": "けちんぼ",
+      "level": 1,
+      "char_count": 1139
+    },
+    {
+      "index": 30,
+      "file": "content_30.html",
+      "title": "熊野先生",
+      "level": 1,
+      "char_count": 1001
+    },
+    {
+      "index": 31,
+      "file": "content_31.html",
+      "title": "三老人",
+      "level": 1,
+      "char_count": 2615
+    },
+    {
+      "index": 32,
+      "file": "content_32.html",
+      "title": "基本",
+      "level": 1,
+      "char_count": 519
+    },
+    {
+      "index": 33,
+      "file": "content_33.html",
+      "title": "科学者の信仰",
+      "level": 1,
+      "char_count": 6144
+    },
+    {
+      "index": 34,
+      "file": "content_34.html",
+      "title": "ありと砂糖",
+      "level": 1,
+      "char_count": 1105
+    },
+    {
+      "index": 35,
+      "file": "content_35.html",
+      "title": "空気",
+      "level": 1,
+      "char_count": 1472
+    },
+    {
+      "index": 36,
+      "file": "content_36.html",
+      "title": "車内道徳",
+      "level": 1,
+      "char_count": 481
+    },
+    {
+      "index": 37,
+      "file": "content_37.html",
+      "title": "無限軌道",
+      "level": 1,
+      "char_count": 1505
+    },
+    {
+      "index": 38,
+      "file": "content_38.html",
+      "title": "砂糖とサッカリン",
+      "level": 1,
+      "char_count": 1097
+    },
+    {
+      "index": 39,
+      "file": "content_39.html",
+      "title": "雪責め",
+      "level": 1,
+      "char_count": 3537
+    },
+    {
+      "index": 40,
+      "file": "content_40.html",
+      "title": "父と子と運命と",
+      "level": 1,
+      "char_count": 3886
+    },
+    {
+      "index": 41,
+      "file": "content_41.html",
+      "title": "ねずみ星を知らず",
+      "level": 1,
+      "char_count": 4596
+    },
+    {
+      "index": 42,
+      "file": "content_42.html",
+      "title": "父の落第記",
+      "level": 1,
+      "char_count": 2754
+    },
+    {
+      "index": 43,
+      "file": "content_43.html",
+      "title": "人形問答",
+      "level": 1,
+      "char_count": 2835
+    },
+    {
+      "index": 44,
+      "file": "content_44.html",
+      "title": "娘カヤノの養女話",
+      "level": 1,
+      "char_count": 2256
+    },
+    {
+      "index": 45,
+      "file": "content_45.html",
+      "title": "父母の思い出",
+      "level": 1,
+      "char_count": 2595
+    },
+    {
+      "index": 46,
+      "file": "content_46.html",
+      "title": "人形を待つ子供たち",
+      "level": 1,
+      "char_count": 2548
+    },
+    {
+      "index": 47,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 235
+    }
+  ]
+}

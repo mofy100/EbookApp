@@ -1,0 +1,85 @@
+{
+  "title": "近代美の研究",
+  "author": "中井正一",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "近代美の研究",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "現代における美の諸性格",
+      "level": 1,
+      "char_count": 9713
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "七",
+      "level": 2,
+      "char_count": 4452
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "機械美の構造",
+      "level": 1,
+      "char_count": 9700
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 1117
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "スポーツ気分の構造",
+      "level": 1,
+      "char_count": 8385
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "近代美と世界観",
+      "level": 1,
+      "char_count": 9945
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 433
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "思想的危機における芸術ならびにその動向",
+      "level": 1,
+      "char_count": 9435
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "",
+      "level": null,
+      "char_count": 2020
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 300
+    }
+  ]
+}

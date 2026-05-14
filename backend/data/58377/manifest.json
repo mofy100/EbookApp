@@ -1,0 +1,29 @@
+{
+  "title": "食魔に贈る",
+  "author": "岡本かの子",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "食魔に贈る",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "Larue",
+      "level": 2,
+      "char_count": 9619
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 217
+    }
+  ]
+}

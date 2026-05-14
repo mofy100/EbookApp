@@ -1,0 +1,29 @@
+{
+  "title": "アッシャア家の覆滅",
+  "author": "エドガー・アラン・ポオ",
+  "translator": "谷崎潤一郎訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "アッシャア家の覆滅",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 3594
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 195
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "糸くず",
+  "author": "モーパッサン　Guy De Maupassant",
+  "translator": "国木田独歩訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "糸くず",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 6018
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 298
+    }
+  ]
+}

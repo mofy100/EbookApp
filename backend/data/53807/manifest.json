@@ -1,0 +1,50 @@
+{
+  "title": "四つの都",
+  "author": "織田作之助",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "四つの都",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "『四つの都』の起案より脱稿まで",
+      "level": 1,
+      "char_count": 2272
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "四つの都",
+      "level": 1,
+      "char_count": 9962
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "二〇　寄宿舎。",
+      "level": 2,
+      "char_count": 9968
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "四〇　口縄坂。",
+      "level": 2,
+      "char_count": 8803
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 183
+    }
+  ]
+}

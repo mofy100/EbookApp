@@ -1,0 +1,50 @@
+{
+  "title": "「イーリアス」例言",
+  "author": "土井晩翠",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "「イーリアス」例言",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "（一）梗概",
+      "level": 1,
+      "char_count": 2590
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "（二）イーリアス中に出づる主要の神と人",
+      "level": 1,
+      "char_count": 1223
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "（三）如何に「イーリアス」を讀み初むべきか",
+      "level": 1,
+      "char_count": 677
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "（四）固有名詞の發音について",
+      "level": 1,
+      "char_count": 830
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 108
+    }
+  ]
+}

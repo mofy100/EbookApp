@@ -1,0 +1,99 @@
+{
+  "title": "少年探偵団",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 13,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "少年探偵団",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "黒い魔物",
+      "level": 2,
+      "char_count": 9980
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "黒い手",
+      "level": 2,
+      "char_count": 9923
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "少年捜索隊",
+      "level": 2,
+      "char_count": 9952
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "四つのなぞ",
+      "level": 2,
+      "char_count": 9940
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "さかさの首",
+      "level": 2,
+      "char_count": 9987
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "悪魔の昇天",
+      "level": 2,
+      "char_count": 9878
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "怪少女",
+      "level": 2,
+      "char_count": 9949
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "天井の声",
+      "level": 2,
+      "char_count": 9927
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "きみが二十面相だ！",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "美術室の怪",
+      "level": 2,
+      "char_count": 9982
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "",
+      "level": null,
+      "char_count": 3024
+    },
+    {
+      "index": 11,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 176
+    }
+  ]
+}

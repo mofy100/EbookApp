@@ -1,0 +1,29 @@
+{
+  "title": "ある遊郭での出来事",
+  "author": "若杉鳥子",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ある遊郭での出来事",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１　大泥棒の客",
+      "level": 2,
+      "char_count": 5679
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 196
+    }
+  ]
+}

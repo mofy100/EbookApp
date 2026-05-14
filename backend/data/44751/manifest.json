@@ -1,0 +1,29 @@
+{
+  "title": "Ｓ夫人への手紙［別稿］",
+  "author": "岸田國士",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "Ｓ夫人への手紙［別稿］",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "四",
+      "level": 2,
+      "char_count": 3459
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 152
+    }
+  ]
+}

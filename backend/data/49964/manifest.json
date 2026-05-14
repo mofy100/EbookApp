@@ -1,0 +1,29 @@
+{
+  "title": "衰えてきた日本料理は救わねばならぬ",
+  "author": "北大路魯山人",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "衰えてきた日本料理は救わねばならぬ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 4483
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 172
+    }
+  ]
+}

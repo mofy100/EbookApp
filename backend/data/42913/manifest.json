@@ -1,0 +1,36 @@
+{
+  "title": "戯作者文学論",
+  "author": "坂口安吾",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "戯作者文学論",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "七月八日",
+      "level": 2,
+      "char_count": 9980
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "七月二十日",
+      "level": 2,
+      "char_count": 5376
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 189
+    }
+  ]
+}

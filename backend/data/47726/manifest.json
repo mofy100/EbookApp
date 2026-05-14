@@ -1,0 +1,64 @@
+{
+  "title": "山の霜月舞",
+  "author": "折口信夫",
+  "translator": null,
+  "chapter_count": 8,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "山の霜月舞",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 3066
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "山の神人団体",
+      "level": 1,
+      "char_count": 5605
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "近世に於ける移動",
+      "level": 1,
+      "char_count": 4017
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "花祭り行事の主なる問題",
+      "level": 1,
+      "char_count": 7751
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "延年舞との比較",
+      "level": 1,
+      "char_count": 3231
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "結語",
+      "level": 1,
+      "char_count": 878
+    },
+    {
+      "index": 6,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 209
+    }
+  ]
+}

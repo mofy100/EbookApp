@@ -1,0 +1,71 @@
+{
+  "title": "星より來れる者",
+  "author": "室生犀星",
+  "translator": null,
+  "chapter_count": 9,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "星より來れる者",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "「星より來れる者」序",
+      "level": 1,
+      "char_count": 927
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "我庭の景",
+      "level": 1,
+      "char_count": 4244
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "都會の川",
+      "level": 1,
+      "char_count": 3803
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "巣",
+      "level": 1,
+      "char_count": 4219
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "障子の内",
+      "level": 1,
+      "char_count": 1637
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "夏晝",
+      "level": 1,
+      "char_count": 2832
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "雀どり",
+      "level": 1,
+      "char_count": 1100
+    },
+    {
+      "index": 7,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 297
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "アパートの殺人",
+  "author": "平林初之輔",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "アパートの殺人",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　前がき",
+      "level": 2,
+      "char_count": 9943
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "五　植田欣子の証言",
+      "level": 2,
+      "char_count": 9636
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 149
+    }
+  ]
+}

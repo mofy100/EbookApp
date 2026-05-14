@@ -1,0 +1,36 @@
+{
+  "title": "和算の社会的・芸術的特性について",
+  "author": "三上義夫",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "和算の社会的・芸術的特性について",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "〈一　和算とは〉",
+      "level": 2,
+      "char_count": 9467
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "〈九　和算の教授〉",
+      "level": 2,
+      "char_count": 5070
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 299
+    }
+  ]
+}

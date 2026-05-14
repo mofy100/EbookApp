@@ -1,0 +1,78 @@
+{
+  "title": "茶漬三略",
+  "author": "吉川英治",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "茶漬三略",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "柾木孫平治覚え書",
+      "level": 1,
+      "char_count": 2866
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "くらやみの太陽",
+      "level": 1,
+      "char_count": 5595
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "大日越え",
+      "level": 1,
+      "char_count": 7329
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "開く桔梗",
+      "level": 1,
+      "char_count": 4088
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "備中行",
+      "level": 1,
+      "char_count": 5225
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "さみだれ陣",
+      "level": 1,
+      "char_count": 4244
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "湖心の扇",
+      "level": 1,
+      "char_count": 3739
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "惟任退治譜",
+      "level": 1,
+      "char_count": 5060
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 222
+    }
+  ]
+}

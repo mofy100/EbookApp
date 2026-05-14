@@ -1,0 +1,50 @@
+{
+  "title": "森林と樹木と動物",
+  "author": "本多靜六",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "森林と樹木と動物",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "山と人",
+      "level": 1,
+      "char_count": 5352
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "樹木の話",
+      "level": 1,
+      "char_count": 7049
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "日本森林植物帶の話",
+      "level": 1,
+      "char_count": 7465
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "山の動物",
+      "level": 1,
+      "char_count": 3817
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 286
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "本州横断　痛快徒歩旅行",
+  "author": "押川春浪補",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "本州横断　痛快徒歩旅行",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "▲ヨタ馬車を追い越せッ",
+      "level": 2,
+      "char_count": 9900
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "▲憤慨また憤慨",
+      "level": 2,
+      "char_count": 4132
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 210
+    }
+  ]
+}

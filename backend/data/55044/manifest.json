@@ -1,0 +1,106 @@
+{
+  "title": "春泥",
+  "author": "久保田万太郎",
+  "translator": null,
+  "chapter_count": 14,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "春泥",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "向島",
+      "level": 1,
+      "char_count": 9959
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "十",
+      "level": 2,
+      "char_count": 2190
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "三羽烏",
+      "level": 1,
+      "char_count": 9758
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "九",
+      "level": 2,
+      "char_count": 4059
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "みぞれ",
+      "level": 1,
+      "char_count": 9798
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "九",
+      "level": 2,
+      "char_count": 3712
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "冬至",
+      "level": 1,
+      "char_count": 9915
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "十",
+      "level": 2,
+      "char_count": 2372
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "むほん",
+      "level": 1,
+      "char_count": 9953
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "九",
+      "level": 2,
+      "char_count": 2973
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "夕焼雲",
+      "level": 1,
+      "char_count": 9953
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "九",
+      "level": 2,
+      "char_count": 1947
+    },
+    {
+      "index": 12,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 198
+    }
+  ]
+}

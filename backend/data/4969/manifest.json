@@ -1,0 +1,57 @@
+{
+  "title": "華々しき瞬間",
+  "author": "久坂葉子",
+  "translator": null,
+  "chapter_count": 7,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "華々しき瞬間",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 9989
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 9524
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9917
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 9860
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 5824
+    },
+    {
+      "index": 5,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 129
+    }
+  ]
+}

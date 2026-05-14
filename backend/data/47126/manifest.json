@@ -1,0 +1,50 @@
+{
+  "title": "ディカーニカ近郷夜話　前篇",
+  "author": "ニコライ・ゴーゴリ　Nikolai Vasilievitch Gogoli",
+  "translator": "平井肇訳",
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ディカーニカ近郷夜話　前篇",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　ハンナ",
+      "level": 2,
+      "char_count": 8991
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三　思ひもかけぬ敵手　策謀",
+      "level": 2,
+      "char_count": 9773
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "五　水死女",
+      "level": 2,
+      "char_count": 9940
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "六　目醒めて",
+      "level": 2,
+      "char_count": 3886
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 326
+    }
+  ]
+}

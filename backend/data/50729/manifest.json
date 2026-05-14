@@ -1,0 +1,29 @@
+{
+  "title": "国際聯盟とは如何なものか",
+  "author": "新渡戸稲造",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "国際聯盟とは如何なものか",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "国際聯盟とその加盟国",
+      "level": 2,
+      "char_count": 5307
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 279
+    }
+  ]
+}

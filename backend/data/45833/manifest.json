@@ -1,0 +1,36 @@
+{
+  "title": "金談にからまる詩的要素の神秘性に就て",
+  "author": "坂口安吾",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "金談にからまる詩的要素の神秘性に就て",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一の巻",
+      "level": 2,
+      "char_count": 9898
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "二の巻",
+      "level": 2,
+      "char_count": 1164
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 220
+    }
+  ]
+}

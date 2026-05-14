@@ -1,0 +1,43 @@
+{
+  "title": "法隆寺再建非再建論の回顧",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "法隆寺再建非再建論の回顧",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　はしがき",
+      "level": 2,
+      "char_count": 9976
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "五　法隆寺に関するその後の諸問題",
+      "level": 2,
+      "char_count": 9986
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "六　余論",
+      "level": 2,
+      "char_count": 5342
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 212
+    }
+  ]
+}

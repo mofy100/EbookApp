@@ -1,0 +1,43 @@
+{
+  "title": "震災後記",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "震災後記",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "九月七日",
+      "level": 2,
+      "char_count": 9974
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "十月八日",
+      "level": 2,
+      "char_count": 9955
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "★期せずして一族の会合",
+      "level": 2,
+      "char_count": 615
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 194
+    }
+  ]
+}

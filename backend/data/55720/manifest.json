@@ -1,0 +1,43 @@
+{
+  "title": "新古細句銀座通",
+  "author": "岸田劉生",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "新古細句銀座通",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "おもいで（一）",
+      "level": 2,
+      "char_count": 9784
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "銀ぶら道中記（二）",
+      "level": 2,
+      "char_count": 9453
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "銀ぶら道中記（九）",
+      "level": 2,
+      "char_count": 3254
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 157
+    }
+  ]
+}

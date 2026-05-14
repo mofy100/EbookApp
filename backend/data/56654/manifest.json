@@ -1,0 +1,29 @@
+{
+  "title": "身体検査",
+  "author": "ソログーブ・フョードル",
+  "translator": "米川正夫訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "身体検査",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "前がき",
+      "level": 2,
+      "char_count": 5845
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 231
+    }
+  ]
+}

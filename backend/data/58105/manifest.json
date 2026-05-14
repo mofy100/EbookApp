@@ -1,0 +1,29 @@
+{
+  "title": "国民教育の複本位",
+  "author": "大隈重信",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "国民教育の複本位",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "〔成瀬君からの依頼〕",
+      "level": 2,
+      "char_count": 5417
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 253
+    }
+  ]
+}

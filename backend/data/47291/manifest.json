@@ -1,0 +1,43 @@
+{
+  "title": "芸術と数学及び科学",
+  "author": "三上義夫",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "芸術と数学及び科学",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "〈一　和歌と俳句〉",
+      "level": 2,
+      "char_count": 9819
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "〈七　芸術と科学（一）〉",
+      "level": 2,
+      "char_count": 9950
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "〈九　結論〉",
+      "level": 2,
+      "char_count": 412
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 379
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "狂人日記",
+  "author": "ギィ・ドゥ・モオパッサン　Guy de Maupassant",
+  "translator": "秋田滋訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "狂人日記",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 6619
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 407
+    }
+  ]
+}

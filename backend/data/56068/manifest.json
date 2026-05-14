@@ -1,0 +1,43 @@
+{
+  "title": "篝火の女",
+  "author": "吉川英治",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "篝火の女",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "朱い横笛",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "齲歯むすめ",
+      "level": 2,
+      "char_count": 9978
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "不落の城",
+      "level": 2,
+      "char_count": 7737
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 155
+    }
+  ]
+}

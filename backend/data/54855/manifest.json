@@ -1,0 +1,71 @@
+{
+  "title": "賤民概説",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 9,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "賤民概説",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１　緒言",
+      "level": 2,
+      "char_count": 9807
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "７　賤民の解放と武士の興起",
+      "level": 2,
+      "char_count": 9867
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "10河原者、坂の者、散所の者",
+      "level": 2,
+      "char_count": 9561
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "13いわゆるエタ（餌取、穢多）",
+      "level": 2,
+      "char_count": 9962
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "16御坊と土師部、鉢屋と茶筅",
+      "level": 2,
+      "char_count": 9925
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "18声聞師と下司法師",
+      "level": 2,
+      "char_count": 9593
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "20結語",
+      "level": 2,
+      "char_count": 5029
+    },
+    {
+      "index": 7,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 128
+    }
+  ]
+}

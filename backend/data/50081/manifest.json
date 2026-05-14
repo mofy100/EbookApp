@@ -1,0 +1,29 @@
+{
+  "title": "鰍沢雪の夜噺（小室山の御封、玉子酒、熊の膏薬）",
+  "author": "三遊亭円朝",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "鰍沢雪の夜噺（小室山の御封、玉子酒、熊の膏薬）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 3773
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 208
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "title": "草わかば",
+  "author": "蒲原有明",
+  "translator": null,
+  "chapter_count": 26,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "草わかば",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 108
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "春の歌",
+      "level": 1,
+      "char_count": 120
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "日神頌歌",
+      "level": 1,
+      "char_count": 419
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "をとめごころ",
+      "level": 1,
+      "char_count": 134
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "新譜",
+      "level": 1,
+      "char_count": 453
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "彩雲",
+      "level": 1,
+      "char_count": 326
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "春の野べ",
+      "level": 1,
+      "char_count": 217
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "戀ぐさ",
+      "level": 1,
+      "char_count": 289
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "君やわれや",
+      "level": 1,
+      "char_count": 320
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "牡蠣の殼",
+      "level": 1,
+      "char_count": 256
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "樹蔭",
+      "level": 1,
+      "char_count": 128
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "青野花草",
+      "level": 1,
+      "char_count": 212
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "枳殼",
+      "level": 1,
+      "char_count": 197
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "可怜小汀",
+      "level": 1,
+      "char_count": 328
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "菱の實採るは誰が子ぞや",
+      "level": 1,
+      "char_count": 334
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "ゆふづつ",
+      "level": 1,
+      "char_count": 276
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "夕かげ",
+      "level": 1,
+      "char_count": 249
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "問ふをやめよ",
+      "level": 1,
+      "char_count": 154
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "憂愁",
+      "level": 1,
+      "char_count": 207
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "かたみの星",
+      "level": 1,
+      "char_count": 128
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "追憶",
+      "level": 1,
+      "char_count": 326
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "かすかに胸に",
+      "level": 1,
+      "char_count": 495
+    },
+    {
+      "index": 22,
+      "file": "content_22.html",
+      "title": "草莽蕪頌",
+      "level": 1,
+      "char_count": 266
+    },
+    {
+      "index": 23,
+      "file": "content_23.html",
+      "title": "高潮",
+      "level": 1,
+      "char_count": 750
+    },
+    {
+      "index": 24,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 185
+    }
+  ]
+}

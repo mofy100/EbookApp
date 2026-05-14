@@ -1,0 +1,43 @@
+{
+  "title": "笠折半九郎",
+  "author": "山本周五郎",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "笠折半九郎",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "失火",
+      "level": 1,
+      "char_count": 3669
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "恩賞",
+      "level": 1,
+      "char_count": 5219
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "この主君",
+      "level": 1,
+      "char_count": 4097
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 179
+    }
+  ]
+}

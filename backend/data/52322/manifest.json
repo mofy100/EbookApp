@@ -1,0 +1,29 @@
+{
+  "title": "甘話休題",
+  "author": "古川緑波",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "甘話休題",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "Ⅰ",
+      "level": 2,
+      "char_count": 7335
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 131
+    }
+  ]
+}

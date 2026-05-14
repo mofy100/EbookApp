@@ -1,0 +1,36 @@
+{
+  "title": "呪の金剛石",
+  "author": "野村胡堂",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "呪の金剛石",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "プロローグ",
+      "level": 2,
+      "char_count": 9984
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "七",
+      "level": 2,
+      "char_count": 4409
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 226
+    }
+  ]
+}

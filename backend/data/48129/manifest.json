@@ -1,0 +1,29 @@
+{
+  "title": "夢がたり",
+  "author": "ガルシン　Vsevolod Mikhailvich Garshin",
+  "translator": "神西清訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "夢がたり",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 5908
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 134
+    }
+  ]
+}

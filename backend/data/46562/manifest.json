@@ -1,0 +1,29 @@
+{
+  "title": "子供の保護",
+  "author": "エマ・ゴオルドマン",
+  "translator": "伊藤野枝訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "子供の保護",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 4282
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 207
+    }
+  ]
+}

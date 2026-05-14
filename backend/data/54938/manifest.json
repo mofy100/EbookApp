@@ -1,0 +1,36 @@
+{
+  "title": "断腸亭日乗",
+  "author": "断膓亭日記巻之四大正九年歳次庚申",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "断腸亭日乗",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "正月元旦。",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "十月廿二日。",
+      "level": 2,
+      "char_count": 1941
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 193
+    }
+  ]
+}

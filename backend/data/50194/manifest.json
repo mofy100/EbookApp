@@ -1,0 +1,50 @@
+{
+  "title": "歌の話",
+  "author": "折口信夫",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "歌の話",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "歌の話について",
+      "level": 2,
+      "char_count": 9924
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "九、人麿の歌の傳へにいろ／＼あること",
+      "level": 2,
+      "char_count": 9665
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "一七、ほんとうに優美な歌",
+      "level": 2,
+      "char_count": 9907
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "二四、香川景樹",
+      "level": 2,
+      "char_count": 5375
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 195
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "烈日",
+  "author": "若杉鳥子",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "烈日",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "急坂",
+      "level": 2,
+      "char_count": 2130
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 111
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "title": "こがね丸",
+  "author": "巌谷小波",
+  "translator": null,
+  "chapter_count": 8,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "こがね丸",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "少年文学序",
+      "level": 1,
+      "char_count": 182
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "凡例",
+      "level": 1,
+      "char_count": 672
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "上巻",
+      "level": 1,
+      "char_count": 9685
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第七回",
+      "level": 2,
+      "char_count": 5138
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "下巻",
+      "level": 1,
+      "char_count": 9542
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "第十五回",
+      "level": 2,
+      "char_count": 5767
+    },
+    {
+      "index": 6,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 330
+    }
+  ]
+}

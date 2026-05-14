@@ -1,0 +1,29 @@
+{
+  "title": "たま※［＃「ころもへん＋攀」、U+897B］",
+  "author": "一葉女史",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "たま※［＃「ころもへん＋攀」、U+897B］",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "上の一",
+      "level": 2,
+      "char_count": 8456
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 187
+    }
+  ]
+}

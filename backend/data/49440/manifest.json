@@ -1,0 +1,43 @@
+{
+  "title": "二葉亭余談",
+  "author": "内田魯庵",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "二葉亭余談",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　二葉亭との初対面",
+      "level": 2,
+      "char_count": 9362
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "五　犬と猫",
+      "level": 2,
+      "char_count": 9828
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "十　二葉亭の風丰人品",
+      "level": 2,
+      "char_count": 2831
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 192
+    }
+  ]
+}

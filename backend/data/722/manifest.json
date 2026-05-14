@@ -1,0 +1,36 @@
+{
+  "title": "錯覚の拷問室",
+  "author": "佐左木俊郎",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "錯覚の拷問室",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１",
+      "level": 2,
+      "char_count": 9819
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "９",
+      "level": 2,
+      "char_count": 4325
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 114
+    }
+  ]
+}

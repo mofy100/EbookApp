@@ -1,0 +1,29 @@
+{
+  "title": "天狗岩の殺人魔",
+  "author": "山本周五郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "天狗岩の殺人魔",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "いよいよこの村へも殺人鬼",
+      "level": 2,
+      "char_count": 8688
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 200
+    }
+  ]
+}

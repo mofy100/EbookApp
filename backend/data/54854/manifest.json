@@ -1,0 +1,36 @@
+{
+  "title": "旃陀羅考",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "旃陀羅考",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１　緒言",
+      "level": 2,
+      "char_count": 9257
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "５　日蓮のいわゆる旃陀羅は漁人の称",
+      "level": 2,
+      "char_count": 5122
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 135
+    }
+  ]
+}

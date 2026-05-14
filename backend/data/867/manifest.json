@@ -1,0 +1,36 @@
+{
+  "title": "地球を狙う者",
+  "author": "海野十三",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "地球を狙う者",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "父島を南に",
+      "level": 2,
+      "char_count": 9790
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "死後のためのメモ",
+      "level": 2,
+      "char_count": 4703
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 135
+    }
+  ]
+}

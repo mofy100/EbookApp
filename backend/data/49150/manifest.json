@@ -1,0 +1,43 @@
+{
+  "title": "哲学の現代的意義",
+  "author": "戸坂潤",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "哲学の現代的意義",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "思想の科学",
+      "level": 2,
+      "char_count": 9997
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "クリティシズムと科学的精神",
+      "level": 2,
+      "char_count": 9686
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 3035
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 169
+    }
+  ]
+}

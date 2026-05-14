@@ -1,0 +1,29 @@
+{
+  "title": "小指一本の大試合",
+  "author": "山中峯太郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "小指一本の大試合",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "すごい「ブル」",
+      "level": 2,
+      "char_count": 5927
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 227
+    }
+  ]
+}

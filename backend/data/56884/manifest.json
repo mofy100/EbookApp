@@ -1,0 +1,64 @@
+{
+  "title": "つゆじも",
+  "author": "斎藤茂吉",
+  "translator": null,
+  "chapter_count": 8,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "つゆじも",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "大正七年大正八年",
+      "level": 1,
+      "char_count": 1957
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "大正九年",
+      "level": 1,
+      "char_count": 9991
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "長崎より",
+      "level": 2,
+      "char_count": 1204
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "大正十年",
+      "level": 1,
+      "char_count": 9976
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "十二月十四日マルセーユ",
+      "level": 3,
+      "char_count": 770
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "「つゆじも」後記",
+      "level": 1,
+      "char_count": 2751
+    },
+    {
+      "index": 6,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 277
+    }
+  ]
+}

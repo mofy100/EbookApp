@@ -1,0 +1,36 @@
+{
+  "title": "黄金機会",
+  "author": "若松賤子",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "黄金機会",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "上",
+      "level": 2,
+      "char_count": 9882
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "下　　続",
+      "level": 2,
+      "char_count": 4134
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 336
+    }
+  ]
+}

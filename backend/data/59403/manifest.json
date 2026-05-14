@@ -1,0 +1,36 @@
+{
+  "title": "黒岩山を探る",
+  "author": "沼井鐵太郎",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "黒岩山を探る",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一、日光より檜枝岐へ",
+      "level": 2,
+      "char_count": 9732
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "五、後記",
+      "level": 2,
+      "char_count": 3282
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 183
+    }
+  ]
+}

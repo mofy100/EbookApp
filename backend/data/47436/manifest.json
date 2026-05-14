@@ -1,0 +1,43 @@
+{
+  "title": "西班牙の恋",
+  "author": "国枝史郎",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "西班牙の恋",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　熱病やみか狂人か",
+      "level": 2,
+      "char_count": 9956
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "五　傷痕のない屍骸",
+      "level": 2,
+      "char_count": 9796
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "九　あの人を愛していた",
+      "level": 2,
+      "char_count": 4638
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 205
+    }
+  ]
+}

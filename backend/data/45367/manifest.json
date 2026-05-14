@@ -1,0 +1,36 @@
+{
+  "title": "武者窓日記",
+  "author": "牧野信一",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "武者窓日記",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9904
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三",
+      "level": 2,
+      "char_count": 6312
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 193
+    }
+  ]
+}

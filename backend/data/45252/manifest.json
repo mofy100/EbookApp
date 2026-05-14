@@ -1,0 +1,344 @@
+{
+  "title": "有明集",
+  "author": "蒲原有明",
+  "translator": null,
+  "chapter_count": 48,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "有明集",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 21
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "豹の血（小曲八篇）",
+      "level": 1,
+      "char_count": 1781
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "偶感",
+      "level": 1,
+      "char_count": 60
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "秋のこころ",
+      "level": 1,
+      "char_count": 280
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "大河",
+      "level": 1,
+      "char_count": 420
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "甕の水",
+      "level": 1,
+      "char_count": 242
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "朱のまだら",
+      "level": 1,
+      "char_count": 239
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "坂路",
+      "level": 1,
+      "char_count": 364
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "不安",
+      "level": 1,
+      "char_count": 365
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "絶望",
+      "level": 1,
+      "char_count": 367
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "燈火",
+      "level": 1,
+      "char_count": 202
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "草びら",
+      "level": 1,
+      "char_count": 167
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "孤寂",
+      "level": 1,
+      "char_count": 261
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "この時",
+      "level": 1,
+      "char_count": 242
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "音もなし",
+      "level": 1,
+      "char_count": 170
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "夏の歌",
+      "level": 1,
+      "char_count": 276
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "秋の歌",
+      "level": 1,
+      "char_count": 257
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "苦惱",
+      "level": 1,
+      "char_count": 474
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "癡夢",
+      "level": 1,
+      "char_count": 345
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "滅の香",
+      "level": 1,
+      "char_count": 404
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "底の底",
+      "level": 1,
+      "char_count": 269
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "灰色",
+      "level": 1,
+      "char_count": 168
+    },
+    {
+      "index": 22,
+      "file": "content_22.html",
+      "title": "われ迷ふ",
+      "level": 1,
+      "char_count": 231
+    },
+    {
+      "index": 23,
+      "file": "content_23.html",
+      "title": "穎割葉",
+      "level": 1,
+      "char_count": 180
+    },
+    {
+      "index": 24,
+      "file": "content_24.html",
+      "title": "沙は燬けぬ",
+      "level": 1,
+      "char_count": 612
+    },
+    {
+      "index": 25,
+      "file": "content_25.html",
+      "title": "海蛆",
+      "level": 1,
+      "char_count": 240
+    },
+    {
+      "index": 26,
+      "file": "content_26.html",
+      "title": "大鋸",
+      "level": 1,
+      "char_count": 360
+    },
+    {
+      "index": 27,
+      "file": "content_27.html",
+      "title": "淨妙華",
+      "level": 1,
+      "char_count": 530
+    },
+    {
+      "index": 28,
+      "file": "content_28.html",
+      "title": "信樂",
+      "level": 1,
+      "char_count": 738
+    },
+    {
+      "index": 29,
+      "file": "content_29.html",
+      "title": "惡の祕所",
+      "level": 1,
+      "char_count": 510
+    },
+    {
+      "index": 30,
+      "file": "content_30.html",
+      "title": "どくだみ",
+      "level": 1,
+      "char_count": 435
+    },
+    {
+      "index": 31,
+      "file": "content_31.html",
+      "title": "碑銘",
+      "level": 1,
+      "char_count": 283
+    },
+    {
+      "index": 32,
+      "file": "content_32.html",
+      "title": "かかる日を冬もこそゆけ",
+      "level": 1,
+      "char_count": 272
+    },
+    {
+      "index": 33,
+      "file": "content_33.html",
+      "title": "橡の雨",
+      "level": 1,
+      "char_count": 256
+    },
+    {
+      "index": 34,
+      "file": "content_34.html",
+      "title": "皐月の歌",
+      "level": 1,
+      "char_count": 188
+    },
+    {
+      "index": 35,
+      "file": "content_35.html",
+      "title": "晩秋",
+      "level": 1,
+      "char_count": 358
+    },
+    {
+      "index": 36,
+      "file": "content_36.html",
+      "title": "序のしらべ",
+      "level": 1,
+      "char_count": 536
+    },
+    {
+      "index": 37,
+      "file": "content_37.html",
+      "title": "やまうど",
+      "level": 1,
+      "char_count": 353
+    },
+    {
+      "index": 38,
+      "file": "content_38.html",
+      "title": "鐘は鳴り出づ",
+      "level": 1,
+      "char_count": 715
+    },
+    {
+      "index": 39,
+      "file": "content_39.html",
+      "title": "水のおも",
+      "level": 1,
+      "char_count": 490
+    },
+    {
+      "index": 40,
+      "file": "content_40.html",
+      "title": "おもひで",
+      "level": 1,
+      "char_count": 216
+    },
+    {
+      "index": 41,
+      "file": "content_41.html",
+      "title": "眞晝",
+      "level": 1,
+      "char_count": 232
+    },
+    {
+      "index": 42,
+      "file": "content_42.html",
+      "title": "聖燈",
+      "level": 1,
+      "char_count": 236
+    },
+    {
+      "index": 43,
+      "file": "content_43.html",
+      "title": "『ルバイヤット』より",
+      "level": 1,
+      "char_count": 427
+    },
+    {
+      "index": 44,
+      "file": "content_44.html",
+      "title": "蠅",
+      "level": 1,
+      "char_count": 217
+    },
+    {
+      "index": 45,
+      "file": "content_45.html",
+      "title": "人魚の海",
+      "level": 1,
+      "char_count": 2369
+    },
+    {
+      "index": 46,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 198
+    }
+  ]
+}

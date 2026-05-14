@@ -1,0 +1,43 @@
+{
+  "title": "監獄挿話　面会人控所",
+  "author": "伊藤野枝",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "監獄挿話　面会人控所",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　静かな読書生活",
+      "level": 2,
+      "char_count": 9979
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "六　スリツパ泥棒の恐縮",
+      "level": 2,
+      "char_count": 9892
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "九　小窓から出たＥの顔",
+      "level": 2,
+      "char_count": 2835
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 276
+    }
+  ]
+}

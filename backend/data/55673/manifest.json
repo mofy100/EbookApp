@@ -1,0 +1,36 @@
+{
+  "title": "暗夜",
+  "author": "一葉",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "暗夜",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "（その一）",
+      "level": 2,
+      "char_count": 9958
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "（その八）",
+      "level": 2,
+      "char_count": 9418
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 394
+    }
+  ]
+}

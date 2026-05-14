@@ -1,0 +1,36 @@
+{
+  "title": "春の遠山入り",
+  "author": "松濤明",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "春の遠山入り",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "遠山入り",
+      "level": 2,
+      "char_count": 9667
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "山を去る",
+      "level": 2,
+      "char_count": 8363
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 197
+    }
+  ]
+}

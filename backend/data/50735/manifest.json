@@ -1,0 +1,57 @@
+{
+  "title": "合本三太郎の日記の後に",
+  "author": "阿部次郎",
+  "translator": null,
+  "chapter_count": 7,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "合本三太郎の日記の後に",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 1012
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三太郎の日記　第一",
+      "level": 1,
+      "char_count": 1087
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "三太郎の日記　第二",
+      "level": 1,
+      "char_count": 680
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "三太郎の日記　第三",
+      "level": 1,
+      "char_count": 596
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "附録",
+      "level": 1,
+      "char_count": 302
+    },
+    {
+      "index": 5,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 171
+    }
+  ]
+}

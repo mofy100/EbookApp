@@ -1,0 +1,232 @@
+{
+  "title": "三国志",
+  "author": "吉川英治",
+  "translator": null,
+  "chapter_count": 32,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "三国志",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "降参船",
+      "level": 1,
+      "char_count": 6893
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "赤壁の大襲撃",
+      "level": 1,
+      "char_count": 4108
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "山谷笑う",
+      "level": 1,
+      "char_count": 5486
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "功なき関羽",
+      "level": 1,
+      "char_count": 6802
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "一掴三城",
+      "level": 1,
+      "char_count": 9942
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "九",
+      "level": 2,
+      "char_count": 2624
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "白羽扇",
+      "level": 1,
+      "char_count": 9495
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "黄忠の矢",
+      "level": 1,
+      "char_count": 5799
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "針鼠",
+      "level": 1,
+      "char_count": 4127
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "柳眉剣簪",
+      "level": 1,
+      "char_count": 7498
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "鴛鴦陣",
+      "level": 1,
+      "char_count": 5785
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "朝の月",
+      "level": 1,
+      "char_count": 4269
+    },
+    {
+      "index": 12,
+      "file": "content_12.html",
+      "title": "凛々細腰の剣",
+      "level": 1,
+      "char_count": 4430
+    },
+    {
+      "index": 13,
+      "file": "content_13.html",
+      "title": "周瑜・気死す",
+      "level": 1,
+      "char_count": 2760
+    },
+    {
+      "index": 14,
+      "file": "content_14.html",
+      "title": "文武競春",
+      "level": 1,
+      "char_count": 5152
+    },
+    {
+      "index": 15,
+      "file": "content_15.html",
+      "title": "荊州往来",
+      "level": 1,
+      "char_count": 7068
+    },
+    {
+      "index": 16,
+      "file": "content_16.html",
+      "title": "鳳雛去る",
+      "level": 1,
+      "char_count": 4204
+    },
+    {
+      "index": 17,
+      "file": "content_17.html",
+      "title": "酔県令",
+      "level": 1,
+      "char_count": 2694
+    },
+    {
+      "index": 18,
+      "file": "content_18.html",
+      "title": "馬騰と一族",
+      "level": 1,
+      "char_count": 4292
+    },
+    {
+      "index": 19,
+      "file": "content_19.html",
+      "title": "不倶戴天",
+      "level": 1,
+      "char_count": 5823
+    },
+    {
+      "index": 20,
+      "file": "content_20.html",
+      "title": "渭水を挟んで",
+      "level": 1,
+      "char_count": 7287
+    },
+    {
+      "index": 21,
+      "file": "content_21.html",
+      "title": "火水木金土",
+      "level": 1,
+      "char_count": 5572
+    },
+    {
+      "index": 22,
+      "file": "content_22.html",
+      "title": "敵中作敵",
+      "level": 1,
+      "char_count": 4344
+    },
+    {
+      "index": 23,
+      "file": "content_23.html",
+      "title": "兵学談義",
+      "level": 1,
+      "char_count": 4311
+    },
+    {
+      "index": 24,
+      "file": "content_24.html",
+      "title": "蜀人・張松",
+      "level": 1,
+      "char_count": 4452
+    },
+    {
+      "index": 25,
+      "file": "content_25.html",
+      "title": "孟徳新書",
+      "level": 1,
+      "char_count": 3092
+    },
+    {
+      "index": 26,
+      "file": "content_26.html",
+      "title": "西蜀四十一州図",
+      "level": 1,
+      "char_count": 6105
+    },
+    {
+      "index": 27,
+      "file": "content_27.html",
+      "title": "進軍",
+      "level": 1,
+      "char_count": 3036
+    },
+    {
+      "index": 28,
+      "file": "content_28.html",
+      "title": "鴻門の会に非ず",
+      "level": 1,
+      "char_count": 4362
+    },
+    {
+      "index": 29,
+      "file": "content_29.html",
+      "title": "珠",
+      "level": 1,
+      "char_count": 5780
+    },
+    {
+      "index": 30,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 233
+    }
+  ]
+}

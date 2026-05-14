@@ -1,0 +1,36 @@
+{
+  "title": "悦しき知識",
+  "author": "深瀬基寛",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "悦しき知識",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "まえおき",
+      "level": 2,
+      "char_count": 8932
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "Ⅳ",
+      "level": 2,
+      "char_count": 7940
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 248
+    }
+  ]
+}

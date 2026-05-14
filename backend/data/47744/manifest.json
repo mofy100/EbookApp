@@ -1,0 +1,36 @@
+{
+  "title": "異版　浅草燈籠",
+  "author": "正岡容",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "異版　浅草燈籠",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "花川戸の家",
+      "level": 2,
+      "char_count": 9711
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "旧宮戸座の記憶から",
+      "level": 2,
+      "char_count": 7300
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 230
+    }
+  ]
+}

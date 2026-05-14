@@ -1,0 +1,50 @@
+{
+  "title": "青べか日記",
+  "author": "山本周五郎",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "青べか日記",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "二五八八年＝昭和三年＝二五歳",
+      "level": 2,
+      "char_count": 9938
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "二五八九年＝昭和四年＝二六歳",
+      "level": 2,
+      "char_count": 9994
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "在浦安町",
+      "level": 3,
+      "char_count": 9894
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "在浦安町",
+      "level": 3,
+      "char_count": 7467
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 231
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "杉田玄白",
+  "author": "石原純",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "杉田玄白",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "江戸時代の医学",
+      "level": 2,
+      "char_count": 4385
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 284
+    }
+  ]
+}

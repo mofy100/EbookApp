@@ -1,0 +1,99 @@
+{
+  "title": "この子を残して",
+  "author": "永井隆",
+  "translator": null,
+  "chapter_count": 13,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "この子を残して",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "この子を残して",
+      "level": 2,
+      "char_count": 9804
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "遺産",
+      "level": 2,
+      "char_count": 9876
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "微笑",
+      "level": 2,
+      "char_count": 9940
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "神の力と人の力",
+      "level": 2,
+      "char_count": 9708
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "泣く人",
+      "level": 2,
+      "char_count": 9930
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "子に向かってもらした言葉",
+      "level": 2,
+      "char_count": 9822
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "入学式",
+      "level": 2,
+      "char_count": 9774
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "死ぬほうがよい",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "科学者と宗教",
+      "level": 2,
+      "char_count": 9954
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "医者",
+      "level": 2,
+      "char_count": 9791
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "骨肉",
+      "level": 2,
+      "char_count": 3330
+    },
+    {
+      "index": 11,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 385
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "在りし日の歌",
+  "author": "中原中也",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "在りし日の歌",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "在りし日の歌",
+      "level": 1,
+      "char_count": 9997
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "曇天",
+      "level": 2,
+      "char_count": 601
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "永訣の秋",
+      "level": 1,
+      "char_count": 5070
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 221
+    }
+  ]
+}

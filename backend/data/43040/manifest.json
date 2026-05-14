@@ -1,0 +1,29 @@
+{
+  "title": "『春と修羅』補遺",
+  "author": "宮沢賢治",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "『春と修羅』補遺",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "手簡",
+      "level": 2,
+      "char_count": 6169
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 167
+    }
+  ]
+}

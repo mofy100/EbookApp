@@ -1,0 +1,43 @@
+{
+  "title": "かげろふ断章",
+  "author": "原民喜",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "かげろふ断章",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "昨日の雨",
+      "level": 1,
+      "char_count": 1662
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "断章",
+      "level": 1,
+      "char_count": 1705
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "散文詩",
+      "level": 1,
+      "char_count": 3766
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 769
+    }
+  ]
+}

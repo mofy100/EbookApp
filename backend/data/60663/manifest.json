@@ -1,0 +1,50 @@
+{
+  "title": "島の便り",
+  "author": "折口春洋",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "島の便り",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　　昭和十九年八月十九日着信",
+      "level": 2,
+      "char_count": 9985
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "八　　昭和十九年十月下旬",
+      "level": 2,
+      "char_count": 9765
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "一三　　昭和十九年十二月中旬",
+      "level": 2,
+      "char_count": 9755
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "一八　　昭和二十年一月上旬",
+      "level": 2,
+      "char_count": 9193
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 143
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "遺愛集",
+  "author": "島秋人",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "遺愛集",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "「あとがき」に添えて",
+      "level": 2,
+      "char_count": 2746
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 128
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "水中の怪人",
+  "author": "山本周五郎",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "水中の怪人",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "人間か河童か？　海底を歩く怪物",
+      "level": 2,
+      "char_count": 8895
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 182
+    }
+  ]
+}

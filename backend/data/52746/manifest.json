@@ -1,0 +1,29 @@
+{
+  "title": "貧しき文学的経験（文壇へ出るまで）",
+  "author": "牧野信一",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "貧しき文学的経験（文壇へ出るまで）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "（一）同人雑誌「十三人」",
+      "level": 2,
+      "char_count": 3586
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 243
+    }
+  ]
+}

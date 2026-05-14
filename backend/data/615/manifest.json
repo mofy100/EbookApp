@@ -1,0 +1,50 @@
+{
+  "title": "長塚節歌集　下",
+  "author": "長塚節",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "長塚節歌集　下",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "明治四十四年",
+      "level": 1,
+      "char_count": 366
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "明治四十五年",
+      "level": 1,
+      "char_count": 3117
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "大正三年",
+      "level": 1,
+      "char_count": 9980
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "四",
+      "level": 3,
+      "char_count": 1699
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 110
+    }
+  ]
+}

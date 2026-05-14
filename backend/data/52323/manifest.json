@@ -1,0 +1,29 @@
+{
+  "title": "牛鍋からすき焼へ",
+  "author": "古川緑波",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "牛鍋からすき焼へ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "Ⅰ",
+      "level": 2,
+      "char_count": 5234
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 131
+    }
+  ]
+}

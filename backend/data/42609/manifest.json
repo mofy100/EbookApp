@@ -1,0 +1,29 @@
+{
+  "title": "ジャン・クリストフ",
+  "author": "豊島与志雄",
+  "translator": "豊島与志雄訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ジャン・クリストフ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 1650
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 128
+    }
+  ]
+}

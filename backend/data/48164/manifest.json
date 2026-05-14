@@ -1,0 +1,50 @@
+{
+  "title": "A LETTER FROM PRISON",
+  "author": "石川啄木",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "A LETTER FROM PRISON",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "無政府主義と暗殺",
+      "level": 2,
+      "char_count": 9993
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "聞取書及調書の杜撰",
+      "level": 2,
+      "char_count": 9833
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9362
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "",
+      "level": null,
+      "char_count": 7360
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 348
+    }
+  ]
+}

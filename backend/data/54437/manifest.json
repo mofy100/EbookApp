@@ -1,0 +1,43 @@
+{
+  "title": "エタ源流考",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "エタ源流考",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１　緒言",
+      "level": 2,
+      "char_count": 9955
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "８　エタと細工人",
+      "level": 2,
+      "char_count": 9794
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "14結論",
+      "level": 2,
+      "char_count": 3931
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 184
+    }
+  ]
+}

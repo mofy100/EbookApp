@@ -1,0 +1,29 @@
+{
+  "title": "真夏の夢",
+  "author": "ストリンドベルヒ　August Strindberg",
+  "translator": "有島武郎訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "真夏の夢",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 8697
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 255
+    }
+  ]
+}

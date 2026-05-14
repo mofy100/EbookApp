@@ -1,0 +1,50 @@
+{
+  "title": "現代語訳　平家物語",
+  "author": "第二巻",
+  "translator": "尾崎士郎訳",
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "現代語訳　平家物語",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "座主流し",
+      "level": 2,
+      "char_count": 9906
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "少将乞請",
+      "level": 2,
+      "char_count": 9957
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "烽火",
+      "level": 2,
+      "char_count": 9998
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "善光寺炎上",
+      "level": 2,
+      "char_count": 5337
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 207
+    }
+  ]
+}

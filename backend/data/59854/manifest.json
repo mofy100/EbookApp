@@ -1,0 +1,29 @@
+{
+  "title": "美術学校時代の岡倉先生",
+  "author": "板谷波山",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "美術学校時代の岡倉先生",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "先生の講義",
+      "level": 2,
+      "char_count": 7952
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 172
+    }
+  ]
+}

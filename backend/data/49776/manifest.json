@@ -1,0 +1,92 @@
+{
+  "title": "浮標",
+  "author": "三好十郎",
+  "translator": null,
+  "chapter_count": 12,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "浮標",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "１　家で",
+      "level": 2,
+      "char_count": 9956
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "２　浜で",
+      "level": 2,
+      "char_count": 9022
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9739
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "３　家で",
+      "level": 2,
+      "char_count": 9999
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 9898
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "４　浜で",
+      "level": 2,
+      "char_count": 9952
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 9923
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "５　家で",
+      "level": 2,
+      "char_count": 9968
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "",
+      "level": null,
+      "char_count": 9941
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "",
+      "level": null,
+      "char_count": 4028
+    },
+    {
+      "index": 10,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 284
+    }
+  ]
+}

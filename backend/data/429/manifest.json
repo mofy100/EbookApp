@@ -1,0 +1,36 @@
+{
+  "title": "城のある町にて",
+  "author": "梶井基次郎",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "城のある町にて",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "ある午後",
+      "level": 2,
+      "char_count": 9986
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "勝子",
+      "level": 2,
+      "char_count": 7886
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 191
+    }
+  ]
+}

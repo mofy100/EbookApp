@@ -1,0 +1,64 @@
+{
+  "title": "基督信徒のなぐさめ",
+  "author": "内村鑑三",
+  "translator": null,
+  "chapter_count": 8,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "基督信徒のなぐさめ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "自序",
+      "level": 2,
+      "char_count": 9903
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第二章国人に捨てられし時",
+      "level": 2,
+      "char_count": 9048
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第四章　事業に失敗せし時",
+      "level": 2,
+      "char_count": 9820
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第五章貧に迫りし時",
+      "level": 2,
+      "char_count": 9868
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "第六章　不治の病に罹りし時",
+      "level": 2,
+      "char_count": 9871
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 2005
+    },
+    {
+      "index": 6,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 568
+    }
+  ]
+}

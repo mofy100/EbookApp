@@ -1,0 +1,29 @@
+{
+  "title": "そり（童話）",
+  "author": "オイゲン・チリコフ",
+  "translator": "鈴木三重吉訳",
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "そり（童話）",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "",
+      "level": null,
+      "char_count": 7828
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 192
+    }
+  ]
+}

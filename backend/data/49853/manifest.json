@@ -1,0 +1,71 @@
+{
+  "title": "愛ちやんの夢物語",
+  "author": "レウィス、キァロル　Lewis Carroll",
+  "translator": "丸山英觀訳",
+  "chapter_count": 9,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "愛ちやんの夢物語",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "はしがき",
+      "level": 2,
+      "char_count": 9909
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第四章蜥蜴の『甚公』",
+      "level": 2,
+      "char_count": 9876
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第五章芋蟲の訓誨",
+      "level": 2,
+      "char_count": 9986
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第七章狂人の茶話會",
+      "level": 2,
+      "char_count": 9961
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "第九章海龜の話",
+      "level": 2,
+      "char_count": 9923
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "第十章蝦の舞踏",
+      "level": 2,
+      "char_count": 9900
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 5030
+    },
+    {
+      "index": 7,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 1235
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "人でなしの恋",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "人でなしの恋",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9809
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "七",
+      "level": 2,
+      "char_count": 7436
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 232
+    }
+  ]
+}

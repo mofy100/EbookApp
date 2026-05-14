@@ -1,0 +1,50 @@
+{
+  "title": "小説新論",
+  "author": "田山録弥",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "小説新論",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　読書と実生活",
+      "level": 2,
+      "char_count": 9903
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "四　表現",
+      "level": 2,
+      "char_count": 9931
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "七　短篇と長篇",
+      "level": 2,
+      "char_count": 9893
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "十　象徴といふこと",
+      "level": 2,
+      "char_count": 3028
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 169
+    }
+  ]
+}

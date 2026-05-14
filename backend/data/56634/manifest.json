@@ -1,0 +1,78 @@
+{
+  "title": "幻化",
+  "author": "梅崎春生",
+  "translator": null,
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "幻化",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "同行者",
+      "level": 2,
+      "char_count": 9875
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "白い花",
+      "level": 2,
+      "char_count": 9883
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 9975
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "砂浜",
+      "level": 2,
+      "char_count": 9914
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "町",
+      "level": 2,
+      "char_count": 9988
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "",
+      "level": null,
+      "char_count": 9921
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "火",
+      "level": 2,
+      "char_count": 9941
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "",
+      "level": null,
+      "char_count": 1454
+    },
+    {
+      "index": 8,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 178
+    }
+  ]
+}

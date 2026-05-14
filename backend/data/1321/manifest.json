@@ -1,0 +1,43 @@
+{
+  "title": "人外魔境",
+  "author": "小栗虫太郎",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "人外魔境",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "死体、橇を駆る⁈",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "「冥路の国」争奪",
+      "level": 2,
+      "char_count": 9910
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 624
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 364
+    }
+  ]
+}

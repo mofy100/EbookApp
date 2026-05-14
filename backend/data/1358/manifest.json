@@ -1,0 +1,36 @@
+{
+  "title": "桶狭間合戦",
+  "author": "菊池寛",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "桶狭間合戦",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "信長の崛起",
+      "level": 2,
+      "char_count": 9695
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "結末並に余説",
+      "level": 2,
+      "char_count": 3089
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 241
+    }
+  ]
+}

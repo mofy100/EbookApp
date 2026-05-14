@@ -1,0 +1,29 @@
+{
+  "title": "食べたり君よ",
+  "author": "古川緑波",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "食べたり君よ",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "菊池先生の憶い出",
+      "level": 2,
+      "char_count": 2100
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 177
+    }
+  ]
+}

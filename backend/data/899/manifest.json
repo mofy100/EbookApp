@@ -1,0 +1,36 @@
+{
+  "title": "優しき歌　※［＃ローマ数字1、1-13-21］・※［＃ローマ数字2、1-13-22］",
+  "author": "立原道造",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "優しき歌　※［＃ローマ数字1、1-13-21］・※［＃ローマ数字2、1-13-22］",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "優しき歌Ⅰ",
+      "level": 1,
+      "char_count": 2882
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "優しき歌Ⅱ",
+      "level": 1,
+      "char_count": 2209
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 145
+    }
+  ]
+}

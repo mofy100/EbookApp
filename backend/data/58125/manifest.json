@@ -1,0 +1,36 @@
+{
+  "title": "三たび東方の平和を論ず",
+  "author": "大隈重信",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "三たび東方の平和を論ず",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　極端より極端に移る対支政策",
+      "level": 2,
+      "char_count": 9550
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "十一　今度の革命は出来損ねたり",
+      "level": 2,
+      "char_count": 2539
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 275
+    }
+  ]
+}

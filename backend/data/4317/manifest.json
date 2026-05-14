@@ -1,0 +1,43 @@
+{
+  "title": "人外魔境",
+  "author": "小栗虫太郎",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "人外魔境",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "魔境からの使者",
+      "level": 2,
+      "char_count": 9962
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "生きている氷河",
+      "level": 2,
+      "char_count": 9938
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 393
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 232
+    }
+  ]
+}

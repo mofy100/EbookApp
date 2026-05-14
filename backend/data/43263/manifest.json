@@ -1,0 +1,50 @@
+{
+  "title": "幾何学と空間",
+  "author": "戸坂潤",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "幾何学と空間",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9173
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "二",
+      "level": 2,
+      "char_count": 9643
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "三",
+      "level": 2,
+      "char_count": 8507
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "四",
+      "level": 2,
+      "char_count": 9645
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 231
+    }
+  ]
+}

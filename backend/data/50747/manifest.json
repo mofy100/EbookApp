@@ -1,0 +1,29 @@
+{
+  "title": "デモクラシーの要素",
+  "author": "新渡戸稲造",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "デモクラシーの要素",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "片言ながらも外国に後れなかった思想",
+      "level": 2,
+      "char_count": 5582
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 197
+    }
+  ]
+}

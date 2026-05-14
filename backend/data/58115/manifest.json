@@ -1,0 +1,29 @@
+{
+  "title": "列強環視の中心に在る日本",
+  "author": "大隈重信",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "列強環視の中心に在る日本",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　文明はすべて調和なり",
+      "level": 2,
+      "char_count": 5124
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 188
+    }
+  ]
+}

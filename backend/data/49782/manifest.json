@@ -1,0 +1,43 @@
+{
+  "title": "其中日記",
+  "author": "種田山頭火",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "其中日記",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "旅日記",
+      "level": 1,
+      "char_count": 9981
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "九月十八日",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "十月十四日",
+      "level": 2,
+      "char_count": 8973
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 188
+    }
+  ]
+}

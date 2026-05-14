@@ -1,0 +1,57 @@
+{
+  "title": "思い違い物語",
+  "author": "山本周五郎",
+  "translator": null,
+  "chapter_count": 7,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "思い違い物語",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一の一",
+      "level": 2,
+      "char_count": 9943
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "二の一",
+      "level": 2,
+      "char_count": 9999
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "三の一",
+      "level": 2,
+      "char_count": 9984
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "四の一",
+      "level": 2,
+      "char_count": 9973
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "四の四",
+      "level": 2,
+      "char_count": 4941
+    },
+    {
+      "index": 5,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 130
+    }
+  ]
+}

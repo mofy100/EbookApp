@@ -1,0 +1,36 @@
+{
+  "title": "震災日誌",
+  "author": "喜田貞吉",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "震災日誌",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "●土塵濛々",
+      "level": 2,
+      "char_count": 9847
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "●食糧の心配",
+      "level": 2,
+      "char_count": 9710
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 185
+    }
+  ]
+}

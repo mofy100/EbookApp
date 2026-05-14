@@ -1,0 +1,85 @@
+{
+  "title": "奇巌城",
+  "author": "モーリス・ルプラン",
+  "translator": "菊池寛訳",
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "奇巌城",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　夜半の銃声",
+      "level": 1,
+      "char_count": 9939
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 851
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "二　怪中学生",
+      "level": 1,
+      "char_count": 6580
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "三　惨死体",
+      "level": 1,
+      "char_count": 5496
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "四　侠少年対怪盗",
+      "level": 1,
+      "char_count": 9984
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "秘密の古城",
+      "level": 2,
+      "char_count": 9982
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "",
+      "level": null,
+      "char_count": 1939
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "五　奇巌城",
+      "level": 1,
+      "char_count": 9999
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "血の雨、血の涙",
+      "level": 2,
+      "char_count": 1264
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 1272
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "title": "北越雪譜",
+  "author": "京山人百樹刪定",
+  "translator": null,
+  "chapter_count": 11,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "北越雪譜",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "北越雪譜二編　巻一",
+      "level": 1,
+      "char_count": 9988
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "○春寒の力",
+      "level": 2,
+      "char_count": 6706
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "北越雪譜二編　巻二",
+      "level": 1,
+      "char_count": 7780
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "○餅花",
+      "level": 2,
+      "char_count": 9617
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "",
+      "level": null,
+      "char_count": 1615
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "北越雪譜二編　巻三",
+      "level": 1,
+      "char_count": 9669
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "○田代の七ツ釜",
+      "level": 2,
+      "char_count": 5094
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "北越雪譜二編　巻之四",
+      "level": 1,
+      "char_count": 9232
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "○鶴恩に報ゆ",
+      "level": 2,
+      "char_count": 1697
+    },
+    {
+      "index": 9,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 381
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "title": "新宝島",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 13,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "新宝島",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "序",
+      "level": 2,
+      "char_count": 9975
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "生か死か",
+      "level": 2,
+      "char_count": 9943
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "鹿と鸚鵡",
+      "level": 2,
+      "char_count": 9988
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "難破船",
+      "level": 2,
+      "char_count": 9945
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "哲雄君の第二の手柄",
+      "level": 2,
+      "char_count": 9910
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "洞窟の怪人",
+      "level": 2,
+      "char_count": 9953
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "魔の湖",
+      "level": 2,
+      "char_count": 10000
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "地獄への旅",
+      "level": 2,
+      "char_count": 9933
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "星だ！　星だ！",
+      "level": 2,
+      "char_count": 9820
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "黄金宮殿",
+      "level": 2,
+      "char_count": 9919
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "",
+      "level": null,
+      "char_count": 204
+    },
+    {
+      "index": 11,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 364
+    }
+  ]
+}

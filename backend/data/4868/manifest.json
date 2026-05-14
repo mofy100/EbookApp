@@ -1,0 +1,57 @@
+{
+  "title": "認識論",
+  "author": "三木清",
+  "translator": null,
+  "chapter_count": 7,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "認識論",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一　存在と眞理",
+      "level": 2,
+      "char_count": 9098
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "二　直觀と判斷",
+      "level": 2,
+      "char_count": 9394
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "三　主觀と客觀",
+      "level": 2,
+      "char_count": 9624
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "四　認識と生",
+      "level": 2,
+      "char_count": 9588
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "五　認識論",
+      "level": 2,
+      "char_count": 8911
+    },
+    {
+      "index": 5,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 192
+    }
+  ]
+}

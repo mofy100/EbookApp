@@ -1,0 +1,57 @@
+{
+  "title": "茶の本",
+  "author": "岡倉覚三",
+  "translator": "村岡博訳",
+  "chapter_count": 7,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "茶の本",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "目次",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "第三章　道教と禅道",
+      "level": 2,
+      "char_count": 9989
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "第五章　芸術鑑賞",
+      "level": 2,
+      "char_count": 9768
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "第六章　花",
+      "level": 2,
+      "char_count": 9912
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "第七章　茶の宗匠",
+      "level": 2,
+      "char_count": 5307
+    },
+    {
+      "index": 5,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 167
+    }
+  ]
+}

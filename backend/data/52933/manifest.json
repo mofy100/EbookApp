@@ -1,0 +1,36 @@
+{
+  "title": "火山の話",
+  "author": "今村明恒",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "火山の話",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一、はしがき",
+      "level": 2,
+      "char_count": 9829
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三、噴出物",
+      "level": 2,
+      "char_count": 5210
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 282
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "深見夫人の死",
+  "author": "岡本綺堂",
+  "translator": null,
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "深見夫人の死",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9825
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "三",
+      "level": 2,
+      "char_count": 9974
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "",
+      "level": null,
+      "char_count": 6645
+    },
+    {
+      "index": 3,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 254
+    }
+  ]
+}

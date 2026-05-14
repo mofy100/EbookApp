@@ -1,0 +1,36 @@
+{
+  "title": "平和事業の将来",
+  "author": "大隈重信",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "平和事業の将来",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "〔二十二年間の平和会員〕",
+      "level": 2,
+      "char_count": 9884
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "",
+      "level": null,
+      "char_count": 1436
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 256
+    }
+  ]
+}

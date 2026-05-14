@@ -1,0 +1,36 @@
+{
+  "title": "葬制の沿革について",
+  "author": "柳田國男",
+  "translator": null,
+  "chapter_count": 4,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "葬制の沿革について",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 9714
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "一〇",
+      "level": 2,
+      "char_count": 9219
+    },
+    {
+      "index": 2,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 112
+    }
+  ]
+}

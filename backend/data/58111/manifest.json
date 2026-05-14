@@ -1,0 +1,29 @@
+{
+  "title": "日本の文明",
+  "author": "大隈重信",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "日本の文明",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "〔日本と東西両洋の文明〕",
+      "level": 2,
+      "char_count": 6737
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 229
+    }
+  ]
+}

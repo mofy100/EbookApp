@@ -1,0 +1,106 @@
+{
+  "title": "我が愛する詩人の伝記",
+  "author": "室生犀星",
+  "translator": null,
+  "chapter_count": 14,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "我が愛する詩人の伝記",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "北原白秋",
+      "level": 2,
+      "char_count": 9868
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "高村光太郎",
+      "level": 2,
+      "char_count": 9633
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "萩原朔太郎",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "釈迢空",
+      "level": 2,
+      "char_count": 9962
+    },
+    {
+      "index": 4,
+      "file": "content_4.html",
+      "title": "堀辰雄",
+      "level": 2,
+      "char_count": 9546
+    },
+    {
+      "index": 5,
+      "file": "content_5.html",
+      "title": "立原道造",
+      "level": 2,
+      "char_count": 9980
+    },
+    {
+      "index": 6,
+      "file": "content_6.html",
+      "title": "津村信夫",
+      "level": 2,
+      "char_count": 9946
+    },
+    {
+      "index": 7,
+      "file": "content_7.html",
+      "title": "山村暮鳥",
+      "level": 2,
+      "char_count": 9415
+    },
+    {
+      "index": 8,
+      "file": "content_8.html",
+      "title": "百田宗治",
+      "level": 2,
+      "char_count": 9679
+    },
+    {
+      "index": 9,
+      "file": "content_9.html",
+      "title": "千家元麿",
+      "level": 2,
+      "char_count": 9984
+    },
+    {
+      "index": 10,
+      "file": "content_10.html",
+      "title": "島崎藤村",
+      "level": 2,
+      "char_count": 9926
+    },
+    {
+      "index": 11,
+      "file": "content_11.html",
+      "title": "あとがき",
+      "level": 2,
+      "char_count": 8337
+    },
+    {
+      "index": 12,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 698
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "序に代えて人生観上の自然主義を論ず",
+  "author": "島村抱月",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "序に代えて人生観上の自然主義を論ず",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "一",
+      "level": 2,
+      "char_count": 5453
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 169
+    }
+  ]
+}

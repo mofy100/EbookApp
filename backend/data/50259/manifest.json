@@ -1,0 +1,29 @@
+{
+  "title": "ヂェラルド・ド・ネルヴァル",
+  "author": "中原中也",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "ヂェラルド・ド・ネルヴァル",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "アルテミス",
+      "level": 2,
+      "char_count": 2073
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 137
+    }
+  ]
+}

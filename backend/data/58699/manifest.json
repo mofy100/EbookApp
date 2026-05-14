@@ -1,0 +1,29 @@
+{
+  "title": "悪霊物語",
+  "author": "江戸川乱歩",
+  "translator": null,
+  "chapter_count": 3,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "悪霊物語",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "老人形師",
+      "level": 2,
+      "char_count": 8207
+    },
+    {
+      "index": 1,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 183
+    }
+  ]
+}

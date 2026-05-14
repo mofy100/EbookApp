@@ -1,0 +1,50 @@
+{
+  "title": "雲南守備兵",
+  "author": "木村荘十",
+  "translator": null,
+  "chapter_count": 6,
+  "chapters": [
+    {
+      "index": -1,
+      "file": "title.html",
+      "title": "雲南守備兵",
+      "level": 0,
+      "char_count": 0
+    },
+    {
+      "index": 0,
+      "file": "content_0.html",
+      "title": "孫伍長",
+      "level": 2,
+      "char_count": 9995
+    },
+    {
+      "index": 1,
+      "file": "content_1.html",
+      "title": "坑道の底",
+      "level": 2,
+      "char_count": 9990
+    },
+    {
+      "index": 2,
+      "file": "content_2.html",
+      "title": "生きた死骸",
+      "level": 2,
+      "char_count": 9941
+    },
+    {
+      "index": 3,
+      "file": "content_3.html",
+      "title": "灯なき街",
+      "level": 2,
+      "char_count": 7918
+    },
+    {
+      "index": 4,
+      "file": "bib.html",
+      "title": "ビブリオグラフィー",
+      "level": 2,
+      "char_count": 367
+    }
+  ]
+}
