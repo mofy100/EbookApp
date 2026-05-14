@@ -122,28 +122,29 @@ function showDetail(book, summary) {
     thumb.textContent = book.title;
     detailThumbnail.appendChild(thumb);
 
-    // ジャンル
-    const genre = summary?.genre || null;
-    detailGenre.innerHTML = genre ? `<span>${escapeHTML(genre)}</span>` : '';
+    // ジャンル（overallタグに統合したため非表示）
+    detailGenre.innerHTML = '';
 
     // タイトル・著者
     detailTitle.textContent = book.title || '';
     detailAuthor.textContent = book.author || '';
 
-    // メタ情報
-    const metaParts = [];
-    if (summary?.translator)       metaParts.push(`翻訳：${summary.translator}`);
-    if (summary?.country)          metaParts.push(`国：${summary.country}`);
-    if (summary?.publication_year) metaParts.push(`発表：${summary.publication_year}年`);
-    detailMeta.innerHTML = metaParts.map(escapeHTML).join('&emsp;');
+    // メタ情報（新フォーマットではフィールドなし）
+    detailMeta.innerHTML = '';
 
     // 概要
-    detailSummary.textContent = summary?.summary || '';
-    detailSummary.hidden = !summary?.summary;
+    const overallSummary = summary?.overall?.summary;
+    detailSummary.textContent = overallSummary || '';
+    detailSummary.hidden = !overallSummary;
 
-    // タグ
-    const tags = summary?.tags || [];
-    detailTags.innerHTML = tags.map(t => `<span>${escapeHTML(t)}</span>`).join('');
+    // タグ（カテゴリ別）
+    const tagsObj = summary?.overall?.tags || {};
+    const tagLines = Object.entries(tagsObj)
+        .filter(([, vals]) => vals.length > 0)
+        .map(([cat, vals]) =>
+            `<div class="tag-category"><span class="tag-category-label">${escapeHTML(cat)}：</span>${vals.map(t => `<span>${escapeHTML(t)}</span>`).join('')}</div>`
+        );
+    detailTags.innerHTML = tagLines.join('');
 
     // 読むボタン
     detailReadBtn.onclick = () => { window.location.href = `viewer.html?id=${book.id}`; };

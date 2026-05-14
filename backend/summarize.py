@@ -297,7 +297,7 @@ JSON形式（説明文・マークダウン不要）:
 
 
 # ── Step2: 作品全体の統合要約 ─────────────────────────
-def summarize_overall(contents: dict, whitelist: dict) -> dict:
+def summarize_overall(contents: dict, whitelist: dict, title: str = "", author: str = "") -> dict:
     """
     各contentのsummaryを順序通りに結合し、作品全体の要約とタグを生成する。
     contents: {"content_0.html": {"summary": "..."}, ...} （順序保証済み）
@@ -310,10 +310,19 @@ def summarize_overall(contents: dict, whitelist: dict) -> dict:
         parts.append(f"【パート{i}】\n{data['summary']}")
     combined = "\n\n".join(parts)
 
+    work_info = ""
+    if title or author:
+        work_info = f"\n## 作品情報\n"
+        if title:
+            work_info += f"タイトル: {title}\n"
+        if author:
+            work_info += f"著者: {author}\n"
+
     prompt = f"""
 あなたは日本文学に精通した書評家です。
 以下は、ある小説を複数のパートに分けて要約したものです。
 これらを統合して、作品全体の解説文とタグを生成してください。
+{work_info}
 
 ## 解説文のルール
 500字前後で以下をすべて含めてください：
@@ -399,10 +408,21 @@ def process_book(book_dir: Path, whitelist: dict, force: bool) -> dict:
             "message": f"Step1: {ok_count}/{len(html_files)} 完了 / 失敗: {errors} / summary_qwen.json 未作成",
         }
 
+    # ── manifest.json から作品名・著者名を取得 ──────────
+    title = author = ""
+    manifest_path = book_dir / "manifest.json"
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            title  = manifest.get("title", "")
+            author = manifest.get("author", "")
+        except Exception:
+            pass
+
     # ── Step2: 作品全体の統合要約（逐次） ───────────────
     print(f"  [{book_id}] Step2: 統合要約を生成中...")
     try:
-        overall = summarize_overall(ordered_contents, whitelist)
+        overall = summarize_overall(ordered_contents, whitelist, title=title, author=author)
         print(f"    [ok] {book_id}/overall")
     except Exception as e:
         print(f"    [error] {book_id}/overall: {e}", file=sys.stderr)

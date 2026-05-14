@@ -294,8 +294,21 @@ h1 {
 /* タグ */
 #detail-tags {
     display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.tag-category {
+    display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    align-items: baseline;
+    gap: 0.35rem;
+}
+
+.tag-category-label {
+    font-size: 0.75rem;
+    color: #999;
+    white-space: nowrap;
 }
 
 #detail-tags span {

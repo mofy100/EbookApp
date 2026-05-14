@@ -28,15 +28,14 @@ FORCE_REPARSE = os.environ.get("FORCE_REPARSE", "0") == "1"
 os.makedirs("backend/data/gaiji", exist_ok=True)
 
 def load_summary(book_id: int) -> dict:
-    summary_path = os.path.join(DATA_DIR, str(book_id), "summary.json")
-    if not os.path.exists(summary_path):
-        return {}
-    try:
-        with open(summary_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return {}
-
+    path = os.path.join(DATA_DIR, str(book_id), "summary_qwen.json")
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"[WARN] load_summary: failed to parse {path}: {e}")
+    return {}
 
 def get_db_connection():
     # Rowオブジェクトとして取得することで辞書のようにアクセス可能にする
@@ -95,9 +94,8 @@ def get_books(
             continue
             
         summary = load_summary(book_dict["id"])
-        book_dict["genre"] = summary.get("genre")
-        book_dict["tags"] = summary.get("tags", [])
-        book_dict["summary_short"] = (summary.get("summary") or "")[:80] or None
+        book_dict["tags"] = summary.get("overall", {}).get("tags", [])
+        book_dict["summary"] = summary.get("overall", {}).get("summary") or None
 
         books.append(book_dict)
 
