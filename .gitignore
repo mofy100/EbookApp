@@ -1,4 +1,6 @@
 backend/data/*/*.html
+backend/data/*/manifest.json
+
 backend/__pycache__
 
 .claude
