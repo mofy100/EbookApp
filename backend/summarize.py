@@ -18,6 +18,7 @@ data/{id}/content_*.html を一括処理して要約を生成する
 """
 
 import argparse
+import http.client
 import json
 import os
 import re
@@ -25,6 +26,7 @@ import socket
 import subprocess
 import sys
 import time
+import urllib.error
 import urllib.request
 from contextlib import contextmanager
 from html.parser import HTMLParser
@@ -46,6 +48,18 @@ _OLLAMA_SSH_REMOTE_PORT = int(os.environ.get("OLLAMA_SSH_REMOTE_PORT", "11434"))
 _OLLAMA_LOCAL_PORT = int(os.environ.get("OLLAMA_LOCAL_PORT", "11434"))
 
 OLLAMA_URL = f"http://localhost:{_OLLAMA_LOCAL_PORT}/api/chat"
+
+
+class OllamaConnectionError(Exception):
+    """Ollamaへのネットワーク接続が切断された場合に発生する例外。"""
+
+
+def _is_connection_error(e: Exception) -> bool:
+    return isinstance(e, (
+        urllib.error.URLError,
+        ConnectionError,
+        http.client.RemoteDisconnected,
+    ))
 
 
 # 見出しクラスのパターン
@@ -211,6 +225,8 @@ def call_ollama(prompt: str, retries: int = 2) -> str:
             return content
 
         except Exception as e:
+            if _is_connection_error(e):
+                raise OllamaConnectionError(f"Ollamaへの接続が切れました: {e}") from e
             last_err = e
             if attempt < retries:
                 print(f"    [retry {attempt+1}/{retries}] {e}", file=sys.stderr)
@@ -219,9 +235,69 @@ def call_ollama(prompt: str, retries: int = 2) -> str:
 
 
 # ── JSON パース ───────────────────────────────────────
+def _extract_balanced_braces(text: str) -> str | None:
+    """先頭の { から対応する閉じ } までを抽出する。"""
+    if not text.startswith("{"):
+        return None
+    depth = 0
+    in_string = False
+    escape = False
+    for i, ch in enumerate(text):
+        if escape:
+            escape = False
+            continue
+        if ch == "\\" and in_string:
+            escape = True
+            continue
+        if ch == '"':
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                return text[: i + 1]
+    return None
+
+
+def _regex_extract(text: str) -> dict:
+    """JSONパース失敗時に "summary" と "tags" を正規表現で個別抽出する。"""
+    result: dict = {}
+
+    m_sum = re.search(r'"summary"\s*:\s*"', text)
+    if not m_sum:
+        return result
+
+    body_start = m_sum.end()
+    m_tags = re.search(r'"tags"\s*:', text[body_start:])
+
+    if m_tags:
+        tags_abs = body_start + m_tags.start()
+        # summary本文: body_startからtagsキーの手前まで（末尾の ",\s* を除去）
+        raw_summary = re.sub(r'["\s,]+$', "", text[body_start:tags_abs])
+        result["summary"] = raw_summary
+
+        tags_val_start = body_start + m_tags.end()
+        block = _extract_balanced_braces(text[tags_val_start:].lstrip())
+        if block:
+            try:
+                result["tags"] = json.loads(block)
+            except json.JSONDecodeError:
+                pass
+    else:
+        # tagsが見つからない場合はsummaryのみ
+        result["summary"] = re.sub(r'["\s}]+$', "", text[body_start:])
+
+    return result
+
+
 def parse_json(raw: str, fallback_key: str | None = None) -> dict:
-    # fallback_key 指定時: JSONパース失敗でもプレーンテキストをそのまま返す
     cleaned = re.sub(r"```(?:json)?", "", raw).strip().rstrip("`").strip()
+    # 【出力】【解説文】 などのプレフィックスを除去
+    cleaned = re.sub(r"^【[^】]*】\s*", "", cleaned)
     if not cleaned:
         raise ValueError(f"パース対象が空です。元のレスポンス: {repr(raw[:200])}")
     # モデルがf-stringエスケープ記法 {{ }} をそのまま出力した場合に修正
@@ -229,6 +305,14 @@ def parse_json(raw: str, fallback_key: str | None = None) -> dict:
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
+        # 正規表現でsummary/tagsを個別抽出（fallbackより先に試みる）
+        extracted = _regex_extract(cleaned)
+        if extracted.get("summary"):
+            print(
+                f"    [warn] JSONパース失敗→regex抽出で復元 (keys={list(extracted)})",
+                file=sys.stderr,
+            )
+            return extracted
         if fallback_key:
             print(f"    [warn] JSONパース失敗。プレーンテキストを '{fallback_key}' として使用", file=sys.stderr)
             return {fallback_key: cleaned}
@@ -392,6 +476,8 @@ def process_book(book_dir: Path, whitelist: dict, force: bool) -> dict:
             ordered_contents[p.name] = result
             prev_summary = result["summary"]  # 次のcontentへ引き継ぐ
             print(f"    [ok] {book_id}/{p.name}")
+        except OllamaConnectionError:
+            raise
         except Exception as e:
             ordered_contents[p.name] = EMPTY_CONTENT
             errors.append(p.name)
@@ -424,6 +510,8 @@ def process_book(book_dir: Path, whitelist: dict, force: bool) -> dict:
     try:
         overall = summarize_overall(ordered_contents, whitelist, title=title, author=author)
         print(f"    [ok] {book_id}/overall")
+    except OllamaConnectionError:
+        raise
     except Exception as e:
         print(f"    [error] {book_id}/overall: {e}", file=sys.stderr)
         return {
@@ -487,7 +575,12 @@ def main():
 
     with ollama_ssh_tunnel():
         for book_dir in book_dirs:
-            res = process_book(book_dir, whitelist, args.force)
+            try:
+                res = process_book(book_dir, whitelist, args.force)
+            except OllamaConnectionError as e:
+                print(f"\n[fatal] {e}", file=sys.stderr)
+                print(f"完了: ok={ok}  skip={skip}  error={error}  (接続切断により中断)", file=sys.stderr)
+                sys.exit(1)
             print(f"[{res['status'].upper():5s}] {res['id']}: {res['message']}")
             if res["status"] == "ok":        ok += 1
             elif res["status"] == "skip":    skip += 1
