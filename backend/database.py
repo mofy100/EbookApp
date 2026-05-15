@@ -1,6 +1,7 @@
 import sqlite3
 import pandas as pd
 import os
+import re
 
 # aozora.dbが存在しない場合、最初にこれを実行する。
 # 設定
@@ -60,7 +61,8 @@ def create_index():
         text_url TEXT,
         xhtml_url TEXT,
         local_path TEXT,
-        has_copyright INTEGER DEFAULT 0
+        has_copyright INTEGER DEFAULT 0,
+        publication_year INTEGER
     )
     ''')
 
@@ -84,18 +86,87 @@ def create_index():
         card_url = first_row['図書カードURL']
         text_url = first_row['テキストファイルURL']
         xhtml_url = first_row['XHTML/HTMLファイルURL']
-        
+
         local_path = f"{work_id}"
         has_copyright = 1 if copyright_protected.get(work_id, False) else 0
 
+        shoshu = first_row['初出']
+        pub_year = None
+        if pd.notna(shoshu):
+            m = re.search(r'(\d{4})', str(shoshu))
+            if m:
+                pub_year = int(m.group(1))
+
         cursor.execute('''
-        INSERT INTO books (id, title, author, translator, card_url, text_url, xhtml_url, local_path, has_copyright)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (int(work_id), title, author_names, translator_names, card_url, text_url, xhtml_url, local_path, has_copyright))
+        INSERT INTO books (id, title, author, translator, card_url, text_url, xhtml_url, local_path, has_copyright, publication_year)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (int(work_id), title, author_names, translator_names, card_url, text_url, xhtml_url, local_path, has_copyright, pub_year))
 
     conn.commit()
     conn.close()
     print(f"完了！ {DB_FILE} が作成されました。")
+
+def create_authors():
+    print("著者テーブルを構築中...")
+    try:
+        df = pd.read_csv(CSV_FILE, encoding='shift_jis')
+    except:
+        df = pd.read_csv(CSV_FILE, encoding='utf-8')
+
+    persons = df.drop_duplicates(subset=['人物ID'])[
+        ['人物ID', '姓', '名', '姓読み', '名読み', '生年月日', '没年月日']
+    ].copy()
+
+    def extract_year(val):
+        if pd.isna(val):
+            return None
+        m = re.search(r'(\d{4})', str(val))
+        return int(m.group(1)) if m else None
+
+    def guess_nationality(last_name):
+        if pd.isna(last_name):
+            return None
+        # カタカナのみで構成されていれば外国人（国籍は別途補完）
+        if re.fullmatch(r'[゠-ヿ・\s]+', str(last_name)):
+            return None
+        return '日本'
+
+    conn = sqlite3.connect(DB_FILE)
+    cursor = conn.cursor()
+
+    cursor.execute('DROP TABLE IF EXISTS authors')
+    cursor.execute('''
+    CREATE TABLE authors (
+        id INTEGER PRIMARY KEY,
+        last_name TEXT,
+        first_name TEXT,
+        last_name_kana TEXT,
+        first_name_kana TEXT,
+        birth_year INTEGER,
+        death_year INTEGER,
+        nationality TEXT
+    )
+    ''')
+
+    for _, row in persons.iterrows():
+        cursor.execute('''
+        INSERT INTO authors (id, last_name, first_name, last_name_kana, first_name_kana, birth_year, death_year, nationality)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (
+            int(row['人物ID']),
+            row['姓'] if pd.notna(row['姓']) else None,
+            row['名'] if pd.notna(row['名']) else None,
+            row['姓読み'] if pd.notna(row['姓読み']) else None,
+            row['名読み'] if pd.notna(row['名読み']) else None,
+            extract_year(row['生年月日']),
+            extract_year(row['没年月日']),
+            guess_nationality(row['姓']),
+        ))
+
+    conn.commit()
+    conn.close()
+    print(f"完了！ {len(persons)} 人の著者を登録しました。")
+
 
 if __name__ == '__main__':
     create_index()
