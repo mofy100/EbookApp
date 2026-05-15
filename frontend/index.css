@@ -300,25 +300,184 @@ h1 {
 
 .tag-category {
     display: flex;
-    flex-wrap: wrap;
     align-items: baseline;
-    gap: 0.35rem;
+    gap: 0.5rem;
 }
 
 .tag-category-label {
     font-size: 0.75rem;
     color: #999;
     white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 9em;
 }
 
-#detail-tags span {
+.tag-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: baseline;
+}
+
+.tag-item {
     padding: 0.2rem 0.65rem;
-    background: #f0ede8;
-    border: 1px solid var(--border-color);
     border-radius: 3px;
     font-size: 0.8rem;
-    color: #666;
+    border: 1px solid transparent;
 }
+
+/* ジャンル：琥珀・ゴールド */
+[data-cat="ジャンル"] .tag-category-label { color: #8a6a00; }
+[data-cat="ジャンル"] .tag-item {
+    background: #fdf5d9;
+    border-color: #d4a800;
+    color: #7a5c00;
+}
+
+/* 時代：セージグリーン */
+[data-cat="時代"] .tag-category-label { color: #2d7a5a; }
+[data-cat="時代"] .tag-item {
+    background: #e6f5ee;
+    border-color: #5aaa88;
+    color: #1e6048;
+}
+
+/* 文学運動・流派：ラベンダー */
+[data-cat="文学運動・流派"] .tag-category-label { color: #5a3890; }
+[data-cat="文学運動・流派"] .tag-item {
+    background: #f2eafc;
+    border-color: #9a70cc;
+    color: #4a2880;
+}
+
+/* テーマ：ダスティローズ */
+[data-cat="テーマ"] .tag-category-label { color: #903040; }
+[data-cat="テーマ"] .tag-item {
+    background: #faeaec;
+    border-color: #c07080;
+    color: #7a2030;
+}
+
+/* 形式・文体：スレートブルー */
+[data-cat="形式・文体"] .tag-category-label { color: #2050a0; }
+[data-cat="形式・文体"] .tag-item {
+    background: #e8edf8;
+    border-color: #6080c0;
+    color: #1a3e90;
+}
+
+/* ---- タグフィルター（右カラム） ---- */
+#tag-filter-column {
+    width: 260px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--border-color);
+    background: var(--bg-color);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#tag-filter-header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#tag-filter-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    letter-spacing: 0.02em;
+}
+
+#tag-clear-btn {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 3px;
+    padding: 0.1rem 0.5rem;
+    font-family: inherit;
+    font-size: 0.7rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#tag-clear-btn:hover {
+    background: rgba(140, 115, 85, 0.1);
+}
+
+#tag-filter {
+    padding: 0.3rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-section {
+    padding: 0.5rem 0.7rem 0.4rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+}
+
+.filter-section-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+    display: block;
+}
+
+.filter-section-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.filter-chip {
+    cursor: pointer;
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    border: 1px solid transparent;
+    font-family: inherit;
+    line-height: 1.6;
+    transition: filter 0.12s;
+}
+
+.filter-chip:hover { filter: brightness(0.92); }
+
+.filter-chip[data-cat="ジャンル"] { background: #fdf5d9; border-color: #d4a800; color: #7a5c00; }
+.filter-chip[data-cat="ジャンル"].active { background: #d4a800; color: white; }
+.filter-section[data-cat="ジャンル"] .filter-section-label { color: #8a6a00; }
+
+.filter-chip[data-cat="時代"] { background: #e6f5ee; border-color: #5aaa88; color: #1e6048; }
+.filter-chip[data-cat="時代"].active { background: #5aaa88; color: white; }
+.filter-section[data-cat="時代"] .filter-section-label { color: #2d7a5a; }
+
+.filter-chip[data-cat="文学運動・流派"] { background: #f2eafc; border-color: #9a70cc; color: #4a2880; }
+.filter-chip[data-cat="文学運動・流派"].active { background: #9a70cc; color: white; }
+.filter-section[data-cat="文学運動・流派"] .filter-section-label { color: #5a3890; }
+
+.filter-chip[data-cat="テーマ"] { background: #faeaec; border-color: #c07080; color: #7a2030; }
+.filter-chip[data-cat="テーマ"].active { background: #c07080; color: white; }
+.filter-section[data-cat="テーマ"] .filter-section-label { color: #903040; }
+
+.filter-chip[data-cat="形式・文体"] { background: #e8edf8; border-color: #6080c0; color: #1a3e90; }
+.filter-chip[data-cat="形式・文体"].active { background: #6080c0; color: white; }
+.filter-section[data-cat="形式・文体"] .filter-section-label { color: #2050a0; }
+
+/* 詳細パネルのタグをクリック可能にする */
+.tag-item {
+    cursor: pointer;
+    transition: filter 0.12s;
+}
+
+.tag-item:hover { filter: brightness(0.88); }
 
 /* 読むボタン */
 #detail-read-btn {
