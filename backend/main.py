@@ -99,7 +99,7 @@ def ensure_book_tags():
             book_id INTEGER NOT NULL,
             tag     TEXT    NOT NULL,
             PRIMARY KEY (book_id, tag),
-            FOREIGN KEY (book_id) REFERENCES books(id)
+            FOREIGN KEY (book_id) REFERENCES books(book_id)
         )
     """)
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_book_tags_tag ON book_tags(tag)")
@@ -186,7 +186,7 @@ def get_books(
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    query = "SELECT id, title, author, translator, card_url, text_url, has_copyright, publication_year FROM books WHERE has_copyright = 0"
+    query = "SELECT book_id, title, author, translator, publication_year FROM books WHERE 1=1"
     params = []
 
     if search:
@@ -194,23 +194,23 @@ def get_books(
         params.extend([f"%{search}%", f"%{search}%"])
 
     for i, tag in enumerate(tags):
-        query += f" AND EXISTS (SELECT 1 FROM book_tags bt{i} WHERE bt{i}.book_id = books.id AND bt{i}.tag = ?)"
+        query += f" AND EXISTS (SELECT 1 FROM book_tags bt{i} WHERE bt{i}.book_id = books.book_id AND bt{i}.tag = ?)"
         params.append(tag)
 
-    query += " ORDER BY id ASC LIMIT ? OFFSET ?"
+    query += " ORDER BY book_id ASC LIMIT ? OFFSET ?"
     params.extend([limit, offset])
 
     cursor.execute(query, params)
     rows = cursor.fetchall()
 
     # 全件数取得
-    count_query = "SELECT COUNT(*) FROM books WHERE has_copyright = 0"
+    count_query = "SELECT COUNT(*) FROM books WHERE 1=1"
     count_params = []
     if search:
         count_query += " AND (title LIKE ? OR author LIKE ?)"
         count_params.extend([f"%{search}%", f"%{search}%"])
     for i, tag in enumerate(tags):
-        count_query += f" AND EXISTS (SELECT 1 FROM book_tags bt{i} WHERE bt{i}.book_id = books.id AND bt{i}.tag = ?)"
+        count_query += f" AND EXISTS (SELECT 1 FROM book_tags bt{i} WHERE bt{i}.book_id = books.book_id AND bt{i}.tag = ?)"
         count_params.append(tag)
 
     cursor.execute(count_query, count_params)
@@ -220,16 +220,14 @@ def get_books(
     books = []
     for r in rows:
         book_dict = dict(r)
-        # ディレクトリが存在し中身があるかをチェックして真のダウンロード状態を判定
-        book_dir = os.path.join(DATA_DIR, str(book_dict["id"]))
+        book_dir = os.path.join(DATA_DIR, str(book_dict["book_id"]))
         is_downloaded_actual = os.path.exists(book_dir) and len(os.listdir(book_dir)) > 0
         book_dict["is_downloaded_actual"] = is_downloaded_actual
-        
-        # ダウンロード済みの本だけ返すモードの場合のスキップ処理
+
         if downloaded_only and not is_downloaded_actual:
             continue
-            
-        summary = load_summary(book_dict["id"])
+
+        summary = load_summary(book_dict["book_id"])
         book_dict["tags"] = summary.get("overall", {}).get("tags", [])
         book_dict["summary"] = summary.get("overall", {}).get("summary") or None
 
@@ -253,7 +251,7 @@ def get_book_summary(book_id: int):
 def get_book_text(book_id: int):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT id, title, author FROM books WHERE id = ?", (book_id,))
+    cursor.execute("SELECT book_id, title, author FROM books WHERE book_id = ?", (book_id,))
     row = cursor.fetchone()
     conn.close()
     
@@ -285,7 +283,7 @@ def get_book_text(book_id: int):
     # 全角スペースの詰まりなどは parser 側で処理済、あるいはCSSの字下げで処理されます
         
     return {
-        "id": row["id"],
+        "id": row["book_id"],
         "title": row["title"],
         "author": row["author"],
         "filename": target_file,
@@ -312,7 +310,7 @@ def get_book_manifest(book_id: int):
     # origin.html もマニフェストもない場合のフォールバック
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT title, author FROM books WHERE id = ?", (book_id,))
+    cursor.execute("SELECT title, author FROM books WHERE book_id = ?", (book_id,))
     row = cursor.fetchone()
     conn.close()
 

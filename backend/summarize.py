@@ -37,7 +37,7 @@ MODEL = "qwen3.5:35b"
 TAG_WHITELIST_PATH = "./backend/tags.json"
 TEXT_MAX_CHARS = 100000
 REQUEST_TIMEOUT = 300
-REQUIRED_CATEGORIES = ["ジャンル", "時代", "文学運動・流派", "テーマ", "形式・文体"]
+REQUIRED_CATEGORIES = ["ジャンル", "サブジャンル", "時代", "文学運動・流派", "テーマ", "形式・文体"]
 
 # SSH トンネル設定
 # OLLAMA_SSH_HOST: リモートホスト（例: user@remote.example.com）
@@ -416,7 +416,8 @@ def summarize_overall(contents: dict, whitelist: dict, title: str = "", author: 
 
 ## タグ選択ルール
 - 下記ホワイトリストに含まれるタグのみを選ぶこと（それ以外は使用禁止）
-- 3〜8個を目安に選択する
+- ジャンルは1作品につき1つだけ選択すること
+- サブジャンル・テーマは複数選択可（サブジャンル＋テーマ合計で3〜7個を目安）
 - 複数カテゴリから選んでよい
 
 ### タグホワイトリスト
@@ -431,9 +432,10 @@ JSON形式（説明文・マークダウン不要）:
     "summary": "500字前後の解説文をここに",
     "tags": {{
         "ジャンル": ["tag1"],
+        "サブジャンル": ["tag2"],
         "時代": [],
         "文学運動・流派": [],
-        "テーマ": ["tag2", "tag3"],
+        "テーマ": ["tag3", "tag4"],
         "形式・文体": []
     }}
 }}

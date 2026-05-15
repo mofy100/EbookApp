@@ -53,7 +53,7 @@ tagClearBtn.addEventListener('click', () => {
 });
 
 // タグフィルター
-const CAT_ORDER = ["ジャンル", "時代", "文学運動・流派", "テーマ", "形式・文体"];
+const CAT_ORDER = ["ジャンル", "サブジャンル", "時代", "文学運動・流派", "テーマ", "形式・文体"];
 
 async function fetchTags() {
     try {
@@ -157,8 +157,8 @@ function renderBooks(books, total) {
 
     books.forEach(book => {
         const card = document.createElement('div');
-        card.className = 'book-card' + (book.id === selectedBookId ? ' selected' : '');
-        card.dataset.id = book.id;
+        card.className = 'book-card' + (book.book_id === selectedBookId ? ' selected' : '');
+        card.dataset.id = book.book_id;
         card.title = book.title;
 
         card.innerHTML = `
@@ -166,7 +166,7 @@ function renderBooks(books, total) {
             <div class="book-author">${escapeHTML(book.author || '')}</div>
         `;
 
-        card.addEventListener('click', () => selectBook(book.id, book));
+        card.addEventListener('click', () => selectBook(book.book_id, book));
         bookList.appendChild(card);
     });
 
@@ -225,11 +225,12 @@ function showDetail(book, summary) {
 
     // タグ（カテゴリ別）
     const tagsObj = summary?.overall?.tags || {};
-    const tagLines = Object.entries(tagsObj)
-        .filter(([, vals]) => vals.length > 0)
-        .map(([cat, vals]) =>
-            `<div class="tag-category" data-cat="${escapeHTML(cat)}"><span class="tag-category-label">${escapeHTML(cat)}：</span><div class="tag-items">${vals.map(t => `<span class="tag-item" data-tag="${escapeHTML(t)}" title="このタグで絞り込む">${escapeHTML(t)}</span>`).join('')}</div></div>`
-        );
+    const tagEntries = CAT_ORDER
+        .filter(cat => tagsObj[cat]?.length > 0)
+        .map(cat => [cat, tagsObj[cat]]);
+    const tagLines = tagEntries.map(([cat, vals]) =>
+        `<div class="tag-category" data-cat="${escapeHTML(cat)}"><span class="tag-category-label">${escapeHTML(cat)}：</span><div class="tag-items">${vals.map(t => `<span class="tag-item" data-tag="${escapeHTML(t)}" title="このタグで絞り込む">${escapeHTML(t)}</span>`).join('')}</div></div>`
+    );
     detailTags.innerHTML = tagLines.join('');
 
     // 詳細パネルのタグをクリックでフィルター適用
@@ -238,7 +239,7 @@ function showDetail(book, summary) {
     });
 
     // 読むボタン
-    detailReadBtn.onclick = () => { window.location.href = `viewer.html?id=${book.id}`; };
+    detailReadBtn.onclick = () => { window.location.href = `viewer.html?id=${book.book_id}`; };
 }
 
 function escapeHTML(str) {
