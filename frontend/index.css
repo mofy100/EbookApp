@@ -334,6 +334,14 @@ h1 {
     color: #7a5c00;
 }
 
+/* サブジャンル：テラコッタ・オレンジ */
+[data-cat="サブジャンル"] .tag-category-label { color: #904010; }
+[data-cat="サブジャンル"] .tag-item {
+    background: #fdebd8;
+    border-color: #c87830;
+    color: #7a4010;
+}
+
 /* 時代：セージグリーン */
 [data-cat="時代"] .tag-category-label { color: #2d7a5a; }
 [data-cat="時代"] .tag-item {
@@ -454,6 +462,10 @@ h1 {
 .filter-chip[data-cat="ジャンル"] { background: #fdf5d9; border-color: #d4a800; color: #7a5c00; }
 .filter-chip[data-cat="ジャンル"].active { background: #d4a800; color: white; }
 .filter-section[data-cat="ジャンル"] .filter-section-label { color: #8a6a00; }
+
+.filter-chip[data-cat="サブジャンル"] { background: #fdebd8; border-color: #c87830; color: #7a4010; }
+.filter-chip[data-cat="サブジャンル"].active { background: #c87830; color: white; }
+.filter-section[data-cat="サブジャンル"] .filter-section-label { color: #904010; }
 
 .filter-chip[data-cat="時代"] { background: #e6f5ee; border-color: #5aaa88; color: #1e6048; }
 .filter-chip[data-cat="時代"].active { background: #5aaa88; color: white; }
