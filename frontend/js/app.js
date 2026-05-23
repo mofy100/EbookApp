@@ -15,6 +15,10 @@ const tagFilterEl     = document.getElementById('tag-filter');
 const tagFilterTitle  = document.getElementById('tag-filter-title');
 const tagClearBtn     = document.getElementById('tag-clear-btn');
 
+const mobileBackBtn   = document.getElementById('mobile-back-btn');
+const filterOpenBtn   = document.getElementById('filter-open-btn');
+const filterCloseBtn  = document.getElementById('filter-close-btn');
+
 const detailPlaceholder = document.getElementById('detail-placeholder');
 const detailContent     = document.getElementById('detail-content');
 const detailThumbnail   = document.getElementById('detail-thumbnail');
@@ -43,6 +47,18 @@ prevPageBtn.addEventListener('click', () => {
 nextPageBtn.addEventListener('click', () => {
     currentPage++;
     fetchBooks();
+});
+
+mobileBackBtn.addEventListener('click', () => {
+    document.body.classList.remove('mobile-detail-open');
+});
+
+filterOpenBtn.addEventListener('click', () => {
+    document.body.classList.add('mobile-filter-open');
+});
+
+filterCloseBtn.addEventListener('click', () => {
+    document.body.classList.remove('mobile-filter-open');
 });
 
 tagClearBtn.addEventListener('click', () => {
@@ -120,10 +136,11 @@ function toggleTag(tag) {
 }
 
 function updateFilterHeader() {
-    tagClearBtn.hidden = selectedTags.length === 0;
-    tagFilterTitle.textContent = selectedTags.length === 0
-        ? 'タグで絞り込む'
-        : `タグで絞り込む（${selectedTags.length}）`;
+    const count = selectedTags.length;
+    tagClearBtn.hidden = count === 0;
+    tagFilterTitle.textContent = count === 0 ? 'タグで絞り込む' : `タグで絞り込む（${count}）`;
+    filterOpenBtn.textContent = count === 0 ? '絞り込む' : `絞り込む（${count}）`;
+    filterOpenBtn.classList.toggle('has-filter', count > 0);
 }
 
 async function fetchBooks() {
@@ -187,6 +204,10 @@ async function selectBook(bookId, bookFromList) {
 
     // リストデータで即時表示（summaryなし）
     showDetail(bookFromList, null);
+
+    if (window.innerWidth < 768) {
+        document.body.classList.add('mobile-detail-open');
+    }
 
     // 全量summaryを取得して上書き
     try {

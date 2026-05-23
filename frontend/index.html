@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>青空文庫リーダー</title>
-    <link rel="stylesheet" href="index.css?v=3">
+    <link rel="stylesheet" href="index.css?v=4">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -17,6 +17,7 @@
                 <div class="search-bar">
                     <input type="text" id="search-input" placeholder="タイトルや著者名で検索...">
                     <button id="search-button">検索</button>
+                    <button id="filter-open-btn">絞り込む</button>
                 </div>
             </header>
 
@@ -33,6 +34,7 @@
 
                 <!-- 中央：選択中の作品詳細 -->
                 <aside id="detail-panel">
+                    <button id="mobile-back-btn">← 一覧に戻る</button>
                     <div id="detail-placeholder">
                         <p>作品を選択すると<br>詳細が表示されます</p>
                     </div>
@@ -56,14 +58,17 @@
                 <div id="tag-filter-column">
                     <div id="tag-filter-header">
                         <span id="tag-filter-title">タグで絞り込む</span>
-                        <button id="tag-clear-btn" hidden>クリア</button>
+                        <div class="tag-filter-header-actions">
+                            <button id="tag-clear-btn" hidden>クリア</button>
+                            <button id="filter-close-btn">✕</button>
+                        </div>
                     </div>
                     <div id="tag-filter"></div>
                 </div>
             </div>
         </main>
     </div>
-    <script src="js/app.js?v=3"></script>
+    <script src="js/app.js?v=4"></script>
 </body>
 
 </html>
