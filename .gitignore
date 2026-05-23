@@ -3,7 +3,7 @@ backend/data/*/manifest.json
 
 backend/__pycache__
 
-backend/aozora.db
+backend/aozora.db*
 
 .claude
 
