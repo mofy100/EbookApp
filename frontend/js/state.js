@@ -16,6 +16,7 @@ export const state = {
     pageHeight: 0,
     textAlignmentOffset: 0,
     totalForeEdge: 0,
+    isMobile: false,
 
     // DOM要素のキャッシュ
     elements: {
@@ -34,6 +35,10 @@ export const state = {
         foreEdgeLeft: null
     }
 };
+
+export function updateIsMobile() {
+    state.isMobile = window.innerWidth < 768;
+}
 
 export function initElements() {
     state.elements.textContainers = document.querySelectorAll('.text-container');

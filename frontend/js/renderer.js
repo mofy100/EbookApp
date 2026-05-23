@@ -20,14 +20,13 @@ export function renderPages() {
     }
     containerRight.style.transform = `translateX(${locRight.localPage * state.pageWidth + state.textAlignmentOffset}px)`;
 
-    // 左ページ
-    if (containerLeft) {
+    // 左ページ（デスクトップのみ）
+    if (containerLeft && !state.isMobile) {
         if (state.currentPage + 1 < state.globalTotalPages) {
             if (containerLeft.dataset.chunkIndex !== String(locLeft.chunkIndex)) {
                 containerLeft.innerHTML = state.chunks[locLeft.chunkIndex];
                 containerLeft.dataset.chunkIndex = locLeft.chunkIndex;
                 applyPageBreaks(containerLeft);
-                // applyHighlights(containerLeft);
             }
             containerLeft.style.transform = `translateX(${locLeft.localPage * state.pageWidth + state.textAlignmentOffset}px)`;
             containerLeft.style.visibility = 'visible';
@@ -42,17 +41,23 @@ export function renderPages() {
     if (elements.titleRight) elements.titleRight.textContent = state.chunkTitles[locRight.chunkIndex] || state.bookData.title || '';
     if (elements.pageNumRight) elements.pageNumRight.textContent = physicalRight;
 
-    if (elements.titleLeft) {
-        elements.titleLeft.textContent = (physicalRight === state.globalTotalPages) ? "" : (state.chunkTitles[locLeft.chunkIndex] || state.bookData.title || '');
-    }
-    if (elements.pageNumLeft) {
-        elements.pageNumLeft.textContent = (physicalRight === state.globalTotalPages) ? '' : physicalLeft;
+    if (!state.isMobile) {
+        if (elements.titleLeft) {
+            elements.titleLeft.textContent = (physicalRight === state.globalTotalPages) ? "" : (state.chunkTitles[locLeft.chunkIndex] || state.bookData.title || '');
+        }
+        if (elements.pageNumLeft) {
+            elements.pageNumLeft.textContent = (physicalRight === state.globalTotalPages) ? '' : physicalLeft;
+        }
     }
 
-    const leftDisplayNum = Math.min(physicalLeft, state.globalTotalPages);
     if (elements.pageInput) elements.pageInput.value = physicalRight;
     if (elements.pageTotal) {
-        elements.pageTotal.textContent = (physicalRight === state.globalTotalPages) ? ` / ${state.globalTotalPages}` : `〜${leftDisplayNum} / ${state.globalTotalPages}`;
+        if (state.isMobile) {
+            elements.pageTotal.textContent = ` / ${state.globalTotalPages}`;
+        } else {
+            const leftDisplayNum = Math.min(physicalLeft, state.globalTotalPages);
+            elements.pageTotal.textContent = (physicalRight === state.globalTotalPages) ? ` / ${state.globalTotalPages}` : `〜${leftDisplayNum} / ${state.globalTotalPages}`;
+        }
     }
 
     // 小口（本の厚み）の左右分配

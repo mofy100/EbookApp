@@ -507,3 +507,56 @@ body {
 .ebook-author-main {
     display: none;
 }
+
+/* ---- モバイルレイアウト ---- */
+@media (max-width: 767px) {
+
+    /* 左ページと小口を非表示 */
+    .page-left,
+    .fore-edge {
+        display: none;
+    }
+
+    /* 右ページが全幅を占める */
+    .page-right {
+        flex: 1;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-shadow: none;
+    }
+
+    /* 本の枠 */
+    .book-frame {
+        width: 95vw;
+        max-width: none;
+        height: calc(100vh - 100px);
+        max-height: none;
+    }
+
+    /* 画面パディング縮小 */
+    .screen-container {
+        padding: 8px;
+    }
+
+    /* コントロールバー：戻るボタンを1行目に、ナビを2行目に */
+    .controls-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 12px;
+    }
+    #back-button {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .controls-bar button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    #page-input {
+        width: 45px;
+        font-size: 13px;
+    }
+    .page-jump-container {
+        font-size: 13px;
+    }
+}

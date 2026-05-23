@@ -21,14 +21,19 @@ export function setupNavigation() {
 
     if (elements.btnPrev) {
         elements.btnPrev.addEventListener('click', () => {
-            if (state.currentPage - 2 >= 0) changePage(state.currentPage - 2);
-            else if (state.currentPage > 0) changePage(0);
+            if (state.isMobile) {
+                if (state.currentPage > 0) changePage(state.currentPage - 1);
+            } else {
+                if (state.currentPage - 2 >= 0) changePage(state.currentPage - 2);
+                else if (state.currentPage > 0) changePage(0);
+            }
         });
     }
 
     if (elements.btnNext) {
         elements.btnNext.addEventListener('click', () => {
-            if (state.currentPage + 2 < state.globalTotalPages) changePage(state.currentPage + 2);
+            const step = state.isMobile ? 1 : 2;
+            if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage + step);
         });
     }
 
@@ -40,7 +45,7 @@ export function setupNavigation() {
             if (val > state.globalTotalPages) val = state.globalTotalPages;
 
             let targetPage = val - 1;
-            if (targetPage % 2 !== 0) targetPage = Math.max(0, targetPage - 1);
+            if (!state.isMobile && targetPage % 2 !== 0) targetPage = Math.max(0, targetPage - 1);
             changePage(targetPage);
             e.target.value = targetPage + 1;
         });
@@ -73,11 +78,28 @@ export function setupNavigation() {
     }
 
     document.addEventListener('keydown', (e) => {
+        const step = state.isMobile ? 1 : 2;
         if (e.key === 'ArrowLeft' || e.key === 'Enter') {
-            if (state.currentPage + 2 < state.globalTotalPages) changePage(state.currentPage + 2);
+            if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage + step);
         } else if (e.key === 'ArrowRight') {
-            if (state.currentPage - 2 >= 0) changePage(state.currentPage - 2);
+            if (state.currentPage - step >= 0) changePage(state.currentPage - step);
             else if (state.currentPage > 0) changePage(0);
+        }
+    });
+
+    // タッチスワイプナビゲーション
+    let touchStartX = 0;
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    document.addEventListener('touchend', (e) => {
+        if (!state.isMobile) return;
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) < 50) return;
+        if (diff > 0) {
+            if (state.currentPage + 1 < state.globalTotalPages) changePage(state.currentPage + 1);
+        } else {
+            if (state.currentPage > 0) changePage(state.currentPage - 1);
         }
     });
 }
