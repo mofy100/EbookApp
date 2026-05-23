@@ -56,11 +56,16 @@ export function updateLayout(renderPagesCallback) {
 
     state.textAlignmentOffset = - (lineHeight - fontSize) / 2;
 
-    /* 小口の合計幅はCSSの--fore-edge-totalから取得（固定） */
     const paperWidth = elements.pagePaper ? elements.pagePaper.clientWidth : window.innerWidth * 0.9;
-    const foreEdgeTotalRatio = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--fore-edge-total')) / 100;
-    state.totalForeEdge = paperWidth * foreEdgeTotalRatio;
-    const maxPageContainerWidth = (paperWidth - state.totalForeEdge) / 2;
+    let maxPageContainerWidth;
+    if (state.isMobile) {
+        state.totalForeEdge = 0;
+        maxPageContainerWidth = paperWidth;
+    } else {
+        const foreEdgeTotalRatio = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--fore-edge-total')) / 100;
+        state.totalForeEdge = paperWidth * foreEdgeTotalRatio;
+        maxPageContainerWidth = (paperWidth - state.totalForeEdge) / 2;
+    }
     /* pageのpaddingを考慮して、text-windowの幅を計算 */
     const pageRight = document.querySelector('.page-right');
     const pageRightPadding = parseFloat(getComputedStyle(pageRight).paddingLeft) + parseFloat(getComputedStyle(pageRight).paddingRight);
@@ -71,8 +76,13 @@ export function updateLayout(renderPagesCallback) {
     document.documentElement.style.setProperty('--text-window-width', `${optimalWidth}px`);
     const finalPageWidth = maxPageContainerWidth;
 
-    const pages = document.querySelectorAll('.page-right, .page-left');
-    pages.forEach(p => { if (p) p.style.flex = `0 0 ${finalPageWidth}px`; });
+    if (state.isMobile) {
+        const pageRightEl = document.querySelector('.page-right');
+        if (pageRightEl) pageRightEl.style.flex = '';
+    } else {
+        const pages = document.querySelectorAll('.page-right, .page-left');
+        pages.forEach(p => { if (p) p.style.flex = `0 0 ${finalPageWidth}px`; });
+    }
     allWindows.forEach(win => { if (win) win.style.width = `${optimalWidth}px`; });
 
     state.pageWidth = optimalWidth;
@@ -130,7 +140,7 @@ export function updateLayout(renderPagesCallback) {
     if (state.currentPage >= state.globalTotalPages) {
         state.currentPage = Math.max(0, state.globalTotalPages - 2);
     }
-    if (state.currentPage % 2 !== 0) {
+    if (!state.isMobile && state.currentPage % 2 !== 0) {
         state.currentPage = Math.max(0, state.currentPage - 1);
     }
 

@@ -1,4 +1,4 @@
-import { state, initElements } from './state.js';
+import { state, initElements, updateIsMobile } from './state.js';
 import { fetchManifest, fetchChunk } from './api.js';
 import { createMeasurer, updateLayout } from './layout.js';
 import { renderPages } from './renderer.js';
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 1. 各要素の初期化
     initElements();
+    updateIsMobile();
 
     const params = new URLSearchParams(window.location.search);
     state.bookId = params.get('id');
@@ -63,7 +64,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         let resizeTimer;
         const resizeObserver = new ResizeObserver(() => {
             clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => updateLayout(renderPages), 150);
+            resizeTimer = setTimeout(() => {
+                updateIsMobile();
+                updateLayout(renderPages);
+            }, 150);
         });
         if (state.elements.pagePaper) {
             resizeObserver.observe(state.elements.pagePaper);

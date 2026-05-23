@@ -509,3 +509,140 @@ h1 {
 #detail-read-btn:hover {
     background: #6a553c;
 }
+
+/* ---- タグフィルターヘッダー右側グループ ---- */
+.tag-filter-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ---- モバイル専用要素（デスクトップでは非表示） ---- */
+#mobile-back-btn,
+#filter-open-btn,
+#filter-close-btn {
+    display: none;
+}
+
+/* ---- モバイルレイアウト ---- */
+@media (max-width: 767px) {
+
+    /* スクロール制御 */
+    body.mobile-detail-open,
+    body.mobile-filter-open {
+        overflow: hidden;
+    }
+
+    /* 検索バー：フィルターボタンを2行目に */
+    .search-bar {
+        flex-wrap: wrap;
+    }
+    #search-input {
+        min-width: 0;
+    }
+    #filter-open-btn {
+        display: block;
+        flex-basis: 100%;
+        padding: 0.45rem 1rem;
+        background: none;
+        border: 1px solid var(--accent-color);
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 0.9rem;
+        color: var(--accent-color);
+        cursor: pointer;
+        text-align: center;
+        transition: background 0.15s;
+    }
+    #filter-open-btn:hover {
+        background: rgba(140, 115, 85, 0.08);
+    }
+    #filter-open-btn.has-filter {
+        background: var(--accent-color);
+        color: white;
+    }
+
+    /* コンテンツレイアウト：リストが全幅 */
+    .list-column {
+        width: 100%;
+        border-right: none;
+    }
+
+    /* 詳細パネル：デフォルト非表示→フルスクリーンオーバーレイ */
+    #detail-panel {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        padding: 0;
+        overflow-y: auto;
+    }
+    body.mobile-detail-open #detail-panel {
+        display: block;
+    }
+
+    /* 戻るボタン */
+    #mobile-back-btn {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background: var(--card-bg);
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        font-family: inherit;
+        font-size: 0.9rem;
+        color: var(--accent-color);
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    /* 詳細パネル内のコンテンツにパディング付与 */
+    #detail-placeholder,
+    #detail-content {
+        padding: 1.5rem 1.2rem;
+    }
+    #detail-content {
+        max-width: none;
+    }
+
+    /* タグフィルター列：デフォルト非表示→フルスクリーンオーバーレイ */
+    #tag-filter-column {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        width: 100%;
+        border-left: none;
+        overflow: hidden;
+    }
+    body.mobile-filter-open #tag-filter-column {
+        display: flex;
+    }
+
+    /* フィルター内のチップエリアだけスクロール */
+    #tag-filter {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    /* フィルター閉じるボタン */
+    #filter-close-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        color: #666;
+        cursor: pointer;
+        padding: 0.1rem 0.25rem;
+        line-height: 1;
+    }
+    #filter-close-btn:hover {
+        color: #333;
+    }
+}
