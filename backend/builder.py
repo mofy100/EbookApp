@@ -324,7 +324,7 @@ def process_aozora(input_filepath, output_dir):
             .replace('<article class="ebook-content">', '<article class="ebook-content">\n')
             .replace('</article>', '</article>\n')
         )
-        html_str = re.sub(r'([。、])(」)', r'\1<span class="kern-punct">\2</span>', html_str)
+        html_str = re.sub(r'([。、])([」』）〕〉》】])', r'\1<span class="kern-punct">\2</span>', html_str)
 
         with open(os.path.join(output_dir, filename), 'w', encoding='utf-8') as f:
             f.write(html_str)
