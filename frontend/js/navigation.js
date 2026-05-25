@@ -87,19 +87,44 @@ export function setupNavigation() {
         }
     });
 
-    // タッチスワイプナビゲーション
+    // タッチスワイプ＆タップナビゲーション
     let touchStartX = 0;
+    let touchStartY = 0;
     document.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
     }, { passive: true });
     document.addEventListener('touchend', (e) => {
-        if (!state.isMobile) return;
-        const diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) < 50) return;
-        if (diff > 0) {
-            if (state.currentPage + 1 < state.globalTotalPages) changePage(state.currentPage + 1);
-        } else {
-            if (state.currentPage > 0) changePage(state.currentPage - 1);
+        // コントロールバー上のタッチは無視
+        if (e.target.closest('.controls-bar')) return;
+
+        const diffX = touchStartX - e.changedTouches[0].clientX;
+        const diffY = touchStartY - e.changedTouches[0].clientY;
+        const step = state.isMobile ? 1 : 2;
+
+        // スワイプ判定（移動量が大きい場合）
+        if (Math.abs(diffX) >= 50 && Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage + step);
+            } else {
+                if (state.currentPage - step >= 0) changePage(state.currentPage - step);
+                else if (state.currentPage > 0) changePage(0);
+            }
+            return;
+        }
+
+        // タップ判定（ほぼ動いていない場合）
+        if (Math.abs(diffX) < 10 && Math.abs(diffY) < 10) {
+            const tapX = e.changedTouches[0].clientX;
+            const halfWidth = window.innerWidth / 2;
+            if (tapX < halfWidth) {
+                // 左タップ → 次ページ
+                if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage + step);
+            } else {
+                // 右タップ → 前ページ
+                if (state.currentPage - step >= 0) changePage(state.currentPage - step);
+                else if (state.currentPage > 0) changePage(0);
+            }
         }
     });
 }
