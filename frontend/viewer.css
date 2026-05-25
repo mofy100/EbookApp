@@ -1,4 +1,5 @@
 :root {
+    --mobile-breakpoint: 768px;
     --font-size: 18px;
     --line-height-ratio: 1.5;
     --base-line-height: calc(var(--font-size) * var(--line-height-ratio));
@@ -193,15 +194,28 @@ body {
 }
 
 #page-title-left {
-    left: 70px;
-    /* 左ページの左上。ページ番号（left: 20px配置）の少し右隣に配置 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#page-title-right {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+
+    /* --mobile-breakpoint */
+    #page-title-right {
+        display: none;
+    }
 }
 
 /* ページ番号（ノンブル） */
 .page-number {
     position: absolute;
     top: 20px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: inherit;
     color: #888;
 }
@@ -510,6 +524,7 @@ body {
 
 /* ---- モバイルレイアウト ---- */
 @media (max-width: 767px) {
+    /* --mobile-breakpoint - 1px */
 
     /* 左ページと小口を非表示 */
     .page-left,
@@ -544,18 +559,22 @@ body {
         gap: 8px;
         padding: 8px 12px;
     }
+
     #back-button {
         flex-basis: 100%;
         text-align: center;
     }
+
     .controls-bar button {
         padding: 6px 12px;
         font-size: 13px;
     }
+
     #page-input {
         width: 45px;
         font-size: 13px;
     }
+
     .page-jump-container {
         font-size: 13px;
     }

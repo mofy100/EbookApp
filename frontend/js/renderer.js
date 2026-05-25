@@ -38,12 +38,12 @@ export function renderPages() {
     const physicalRight = state.currentPage + 1;
     const physicalLeft = state.currentPage + 2;
 
-    if (elements.titleRight) elements.titleRight.textContent = state.chunkTitles[locRight.chunkIndex] || state.bookData.title || '';
+    if (elements.titleRight) elements.titleRight.textContent = state.bookData.title || '';
     if (elements.pageNumRight) elements.pageNumRight.textContent = physicalRight;
 
     if (!state.isMobile) {
         if (elements.titleLeft) {
-            elements.titleLeft.textContent = (physicalRight === state.globalTotalPages) ? "" : (state.chunkTitles[locLeft.chunkIndex] || state.bookData.title || '');
+            elements.titleLeft.textContent = (physicalRight === state.globalTotalPages) ? "" : (state.bookData.title || '');
         }
         if (elements.pageNumLeft) {
             elements.pageNumLeft.textContent = (physicalRight === state.globalTotalPages) ? '' : physicalLeft;
