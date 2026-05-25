@@ -1,6 +1,10 @@
 import { state } from './state.js';
 import { renderPages } from './renderer.js';
 
+// タップゾーンの境界比率（0〜1）。左右の合計が 1 未満なら中央ゾーンが生まれる
+export const TAP_LEFT_RATIO = 0.25;   // 画面左端からこの割合まで → 左タップ
+export const TAP_RIGHT_RATIO = 0.25;  // 画面右端からこの割合まで → 右タップ
+
 export function changePage(newPage) {
     if (state.currentPage === newPage) return;
 
@@ -105,9 +109,9 @@ export function setupNavigation() {
         // スワイプ判定（移動量が大きい場合）
         if (Math.abs(diffX) >= 50 && Math.abs(diffX) > Math.abs(diffY)) {
             if (diffX > 0) {
-                if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage + step);
+                if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage - step);
             } else {
-                if (state.currentPage - step >= 0) changePage(state.currentPage - step);
+                if (state.currentPage - step >= 0) changePage(state.currentPage + step);
                 else if (state.currentPage > 0) changePage(0);
             }
             return;
@@ -116,15 +120,16 @@ export function setupNavigation() {
         // タップ判定（ほぼ動いていない場合）
         if (Math.abs(diffX) < 10 && Math.abs(diffY) < 10) {
             const tapX = e.changedTouches[0].clientX;
-            const halfWidth = window.innerWidth / 2;
-            if (tapX < halfWidth) {
+            const width = window.innerWidth;
+            if (tapX < width * TAP_LEFT_RATIO) {
                 // 左タップ → 次ページ
                 if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage + step);
-            } else {
+            } else if (tapX > width * (1 - TAP_RIGHT_RATIO)) {
                 // 右タップ → 前ページ
                 if (state.currentPage - step >= 0) changePage(state.currentPage - step);
                 else if (state.currentPage > 0) changePage(0);
             }
+            // TAP_LEFT_RATIO + TAP_RIGHT_RATIO < 1 のとき中央ゾーンとして何もしない
         }
     });
 }
