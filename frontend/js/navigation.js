@@ -109,10 +109,10 @@ export function setupNavigation() {
         // スワイプ判定（移動量が大きい場合）
         if (Math.abs(diffX) >= 50 && Math.abs(diffX) > Math.abs(diffY)) {
             if (diffX > 0) {
-                if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage - step);
-            } else {
-                if (state.currentPage - step >= 0) changePage(state.currentPage + step);
+                if (state.currentPage - step >= 0) changePage(state.currentPage - step);
                 else if (state.currentPage > 0) changePage(0);
+            } else {
+                if (state.currentPage + step < state.globalTotalPages) changePage(state.currentPage + step);
             }
             return;
         }
