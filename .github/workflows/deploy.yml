@@ -28,7 +28,8 @@ jobs:
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
             "set -e && \
              cd ${{ secrets.APP_ROOT }} && \
-             git pull origin main && \
+             git fetch origin main && \
+             git reset --hard origin/main && \
              sudo systemctl restart backend.service"
           # set -e によりリモート側のコマンドが失敗したらジョブも失敗する
 
