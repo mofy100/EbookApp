@@ -2,73 +2,298 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>青空文庫リーダー</title>
-    <link rel="stylesheet" href="index.css?v=4">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ふだん読み — 青空文庫を縦書きで読もう。無料の読書Webアプリ</title>
+  <meta name="description" content="青空文庫の1万冊以上を縦書きで読める無料Webアプリ。夏目漱石・太宰治・宮沢賢治など名作が揃い、あらすじ要約とタグで読みたい本をすぐ見つけられます。インストール・アカウント不要。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mofybook.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mofybook.com/">
+  <meta property="og:title" content="ふだん読み — 青空文庫を縦書きで読もう。">
+  <meta property="og:description" content="青空文庫の1万冊以上を縦書きで読める無料Webアプリ。あらすじ要約とタグで読みたい本をすぐ見つけられます。">
+  <meta property="og:image" content="https://mofybook.com/ogp.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="ふだん読み">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ふだん読み — 青空文庫を縦書きで読もう。">
+  <meta name="twitter:description" content="青空文庫の1万冊以上を縦書きで読める無料Webアプリ。あらすじ要約とタグで読みたい本をすぐ見つけられます。">
+  <meta name="twitter:image" content="https://mofybook.com/ogp.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ふだん読み",
+    "url": "https://mofybook.com/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "ja",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "description": "青空文庫の1万冊以上を縦書きで読める無料Webアプリ。あらすじ要約とタグで読みたい本をすぐ見つけられます。"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div id="app">
-        <main id="search-view" class="view active">
-            <header>
-                <h1>青空文庫リーダー</h1>
-                <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="タイトルや著者名で検索...">
-                    <button id="search-button">検索</button>
-                    <button id="filter-open-btn">絞り込む</button>
-                </div>
-            </header>
 
-            <div class="content-layout">
-                <!-- 左：作品リスト -->
-                <div class="list-column">
-                    <div id="book-list" class="book-list"></div>
-                    <div class="pagination">
-                        <button id="prev-page" disabled>前へ</button>
-                        <span id="page-info"></span>
-                        <button id="next-page">次へ</button>
-                    </div>
-                </div>
-
-                <!-- 中央：選択中の作品詳細 -->
-                <aside id="detail-panel">
-                    <button id="mobile-back-btn">← 一覧に戻る</button>
-                    <div id="detail-placeholder">
-                        <p>作品を選択すると<br>詳細が表示されます</p>
-                    </div>
-                    <div id="detail-content" hidden>
-                        <div id="detail-header">
-                            <div id="detail-thumbnail"></div>
-                            <div id="detail-title-block">
-                                <div id="detail-genre"></div>
-                                <h2 id="detail-title"></h2>
-                                <div id="detail-author"></div>
-                                <div id="detail-meta"></div>
-                            </div>
-                        </div>
-                        <p id="detail-summary"></p>
-                        <div id="detail-tags"></div>
-                        <button id="detail-read-btn">この作品を読む →</button>
-                    </div>
-                </aside>
-
-                <!-- 右：タグフィルター -->
-                <div id="tag-filter-column">
-                    <div id="tag-filter-header">
-                        <span id="tag-filter-title">タグで絞り込む</span>
-                        <div class="tag-filter-header-actions">
-                            <button id="tag-clear-btn" hidden>クリア</button>
-                            <button id="filter-close-btn">✕</button>
-                        </div>
-                    </div>
-                    <div id="tag-filter"></div>
-                </div>
-            </div>
-        </main>
+  <nav>
+    <div class="nav-logo">
+      <span class="nav-mark">📖</span>ふだん読み
     </div>
-    <script src="js/app.js?v=4"></script>
+    <div class="nav-links">
+      <a href="#features">機能</a>
+      <a href="#howto">使い方</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+  </nav>
+
+  <main>
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">青空文庫ビューア、公開しました</div>
+      <h1><span class="accent">青空文庫</span>を、縦書きで。<br>無料の読書Webアプリ</h1>
+      <p class="hero-desc">
+        電子書籍がなんとなく読みづらい、と感じていませんか？<br>
+        縦書きで、日本語の読み心地そのままに。<br>
+        インストール不要。ブラウザからすぐ使えます。
+      </p>
+      <div>
+        <a href="/app" class="btn-main">無料で読み始める</a>
+        <a href="#features" class="btn-ghost">詳しく見る</a>
+      </div>
+    </div>
+
+    <div class="book-illo">
+      <div class="book-stack">
+        <div class="bk bk1">
+          <div class="bk-spine"></div>
+          <div class="bk-inner">草枕</div>
+        </div>
+        <div class="bk bk2">
+          <div class="bk-spine"></div>
+          <div class="bk-inner">こころ</div>
+        </div>
+        <div class="bk bk3">
+          <div class="bk-spine"></div>
+          <div class="bk-inner">銀河鉄道の夜</div>
+        </div>
+      </div>
+      <div class="book-shadow"></div>
+    </div>
+  </section>
+
+  <div class="intro-strip">
+    <div class="intro-item">
+      <div class="intro-num">1万冊+</div>
+      <div class="intro-label">青空文庫収録作品</div>
+    </div>
+    <div class="intro-item">
+      <div class="intro-num">Webアプリ</div>
+      <div class="intro-label">インストール不要</div>
+    </div>
+    <div class="intro-item">
+      <div class="intro-num">完全無料</div>
+      <div class="intro-label">すべての機能</div>
+    </div>
+    <div class="intro-item">
+      <div class="intro-num">縦書き</div>
+      <div class="intro-label">日本語らしい読み心地</div>
+    </div>
+  </div>
+
+  <section class="features" id="features">
+    <h2 class="sec-head">読みやすさを、とことん。</h2>
+    <p class="sec-sub">電子書籍がなんとなく読みづらい方のために、つくりました。</p>
+
+    <div class="feat-row">
+      <div class="feat-icon">📖</div>
+      <div>
+        <h3 class="feat-title">縦書き表示で、日本語らしい読み心地</h3>
+        <p class="feat-desc">日本語の小説・随筆は、縦書きで読むのがいちばん自然です。ふだん読みは縦書きを基本に設計しており、文章のリズムを損なわず最後まで読み進められます。</p>
+      </div>
+    </div>
+    <div class="feat-row">
+      <div class="feat-icon">🏷️</div>
+      <div>
+        <h3 class="feat-title">要約・タグで、読みたい本がすぐ見つかる</h3>
+        <p class="feat-desc">各作品にはあらすじの要約とジャンル・テーマのタグを整備しています。「何を読もうか迷ったとき」にも、ぴったりの一冊を探しやすい仕組みになっています。</p>
+      </div>
+    </div>
+    <div class="feat-row">
+      <div class="feat-icon">📚</div>
+      <div>
+        <h3 class="feat-title">青空文庫の名作が、すべて無料</h3>
+        <p class="feat-desc">夏目漱石・太宰治・宮沢賢治など、青空文庫に収録された1万冊以上の作品をそのまま読めます。会員登録もアカウントも不要です。</p>
+      </div>
+    </div>
+    <div class="feat-row">
+      <div class="feat-icon">✨</div>
+      <div>
+        <h3 class="feat-title">随時、機能追加予定</h3>
+        <p class="feat-desc">より読みやすく、より使いやすくなるよう、機能を少しずつ追加していきます。ご意見・ご要望はお気軽にお聞かせください。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="warm-block">
+    <blockquote>「電子書籍、なんとなく読みづらい」<br>そう感じていた自分のために、つくりました。</blockquote>
+    <cite>— ふだん読み、開発者より</cite>
+  </div>
+
+  <div class="aozora-block">
+    <p class="aozora-text">
+      本サービスは、<a href="https://www.aozora.gr.jp/" target="_blank" rel="noopener noreferrer">青空文庫</a>のテキストデータを利用しています。<br>
+      無償で良質な電子テキストを公開・整備し続けてくださっているボランティアの皆様に、心より感謝申し上げます。
+    </p>
+  </div>
+
+  <section class="howto" id="howto">
+    <h2 class="sec-head">はじめ方は、かんたん。</h2>
+    <p class="sec-sub">インストール不要。ブラウザを開くだけで、すぐ読み始められます。</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">一</div>
+        <h3 class="step-title">ブラウザで開く</h3>
+        <p class="step-desc">スマートフォンでもパソコンでも。インストール不要、アカウント登録も不要です。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">二</div>
+        <h3 class="step-title">読みたい本を選ぶ</h3>
+        <p class="step-desc">作者名や書名、タグで検索。青空文庫の名作が揃っています。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">三</div>
+        <h3 class="step-title">読み始める</h3>
+        <p class="step-desc">縦書き表示でそのまま読み始められます。要約やタグを参考に、次の一冊も探してみてください。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band" id="start">
+    <h2>今日から、読もう。</h2>
+    <p>インストール不要。ブラウザからすぐ使えます。</p>
+    <div>
+      <a href="/app" class="cta-btn-w">📖 読み始める（無料）</a>
+    </div>
+  </div>
+
+  <section class="contact-section" id="contact">
+    <h2 class="sec-head">みんなの声</h2>
+    <p class="sec-sub">ご意見・ご感想・不具合のご報告など、お気軽にお寄せください。<br>いただいたご意見は、今後の機能改善に活かしていきます。</p>
+    <form class="contact-form" id="post-form">
+      <div class="form-group">
+        <label for="contact-name">お名前</label>
+        <input type="text" id="contact-name" placeholder="山田 太郎" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-message">メッセージ</label>
+        <textarea id="contact-message" rows="5" placeholder="ご意見・ご要望などをご記入ください" required></textarea>
+      </div>
+      <button type="submit" class="btn-main">送信する</button>
+      <p id="post-status" class="post-status"></p>
+    </form>
+    <div class="posts-list" id="posts-list"></div>
+  </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">📖 ふだん読み</div>
+    <div class="footer-links">
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">利用規約</a>
+      <a href="#contact">お問い合わせ</a>
+      <a href="https://www.aozora.gr.jp/" target="_blank" rel="noopener noreferrer">青空文庫</a>
+    </div>
+    <div class="footer-copy">© 2025 ふだん読み. All rights reserved.<br>本サービスは青空文庫のテキストデータを利用しています。</div>
+  </footer>
+
+  <script>
+    const els = document.querySelectorAll('.feat-row, .step');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(el => obs.observe(el));
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function formatDate(dateStr) {
+      const d = new Date(dateStr);
+      return `${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}`;
+    }
+
+    async function loadPosts() {
+      const list = document.getElementById('posts-list');
+      try {
+        const res = await fetch('/api/posts?limit=20');
+        const posts = await res.json();
+        if (posts.length === 0) {
+          list.innerHTML = '<p class="no-posts">まだ投稿がありません</p>';
+          return;
+        }
+        list.innerHTML = posts.map(p => `
+          <div class="post-item">
+            <div class="post-header">
+              <span class="post-name">${escapeHtml(p.name)}</span>
+              <span class="post-date">${formatDate(p.created_at)}</span>
+            </div>
+            <p class="post-message">${escapeHtml(p.message)}</p>
+          </div>
+        `).join('');
+      } catch {
+        list.innerHTML = '<p class="no-posts">投稿の読み込みに失敗しました</p>';
+      }
+    }
+
+    document.getElementById('post-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+      const status = document.getElementById('post-status');
+      try {
+        const res = await fetch('/api/posts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, message }),
+        });
+        if (res.ok) {
+          status.textContent = '送信しました！';
+          status.className = 'post-status post-status--ok';
+          e.target.reset();
+          loadPosts();
+        } else {
+          status.textContent = '送信に失敗しました。';
+          status.className = 'post-status post-status--err';
+        }
+      } catch {
+        status.textContent = '送信に失敗しました。';
+        status.className = 'post-status post-status--err';
+      }
+    });
+
+    loadPosts();
+  </script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from backend.builder import process_aozora
+from backend.routers.posts import router as posts_router, ensure_posts_table
 
 app = FastAPI(title="Aozora Bunko API")
 
@@ -137,6 +138,8 @@ def get_db_connection():
 
 
 ensure_book_tags()
+ensure_posts_table()
+app.include_router(posts_router)
 
 
 @app.get("/api/tags")
@@ -348,10 +351,10 @@ app.mount("/api/assets/gaiji", StaticFiles(directory="backend/data/gaiji"), name
 
 @app.get("/")
 def read_root():
-    return FileResponse("frontend/ebook-launch.html")
+    return FileResponse("frontend/index.html")
 
 @app.get("/app")
 def read_app():
-    return FileResponse("frontend/index.html")
+    return FileResponse("frontend/app.html")
 
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
