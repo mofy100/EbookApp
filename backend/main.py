@@ -348,6 +348,10 @@ app.mount("/api/assets/gaiji", StaticFiles(directory="backend/data/gaiji"), name
 
 @app.get("/")
 def read_root():
+    return FileResponse("frontend/ebook-launch.html")
+
+@app.get("/app")
+def read_app():
     return FileResponse("frontend/index.html")
 
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
