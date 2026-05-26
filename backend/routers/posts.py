@@ -34,6 +34,7 @@ def ensure_posts_table():
 class PostCreate(BaseModel):
     name: str
     message: str
+    is_hidden: bool = False
 
 
 class PostResponse(BaseModel):
@@ -66,8 +67,8 @@ def create_post(body: PostCreate):
         raise HTTPException(status_code=422, detail="名前とメッセージは必須です")
     conn = _get_conn()
     cur = conn.execute(
-        "INSERT INTO posts (name, message) VALUES (?, ?)",
-        (name, message),
+        "INSERT INTO posts (name, message, is_hidden) VALUES (?, ?, ?)",
+        (name, message, body.is_hidden),
     )
     conn.commit()
     row = conn.execute(

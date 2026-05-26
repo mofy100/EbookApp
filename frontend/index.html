@@ -196,12 +196,18 @@
     <p class="sec-sub">ご意見・ご感想・不具合のご報告など、お気軽にお寄せください。<br>いただいたご意見は、今後の機能改善に活かしていきます。</p>
     <form class="contact-form" id="post-form">
       <div class="form-group">
-        <label for="contact-name">お名前</label>
+        <label for="contact-name">お名前・ニックネーム</label>
         <input type="text" id="contact-name" placeholder="山田 太郎" required>
       </div>
       <div class="form-group">
         <label for="contact-message">メッセージ</label>
         <textarea id="contact-message" rows="5" placeholder="ご意見・ご要望などをご記入ください" required></textarea>
+      </div>
+      <div class="form-group form-group--checkbox">
+        <label class="checkbox-label">
+          <input type="checkbox" id="contact-hidden">
+          <span>掲示板には公開しない（非公開で送信）</span>
+        </label>
       </div>
       <button type="submit" class="btn-main">送信する</button>
       <p id="post-status" class="post-status"></p>
@@ -271,12 +277,13 @@
       e.preventDefault();
       const name = document.getElementById('contact-name').value.trim();
       const message = document.getElementById('contact-message').value.trim();
+      const is_hidden = document.getElementById('contact-hidden').checked;
       const status = document.getElementById('post-status');
       try {
         const res = await fetch('/api/posts', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, message }),
+          body: JSON.stringify({ name, message, is_hidden }),
         });
         if (res.ok) {
           status.textContent = '送信しました！';

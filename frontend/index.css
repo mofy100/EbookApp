@@ -325,6 +325,17 @@ nav {
   border-color: var(--green);
 }
 .form-group textarea { resize: vertical; }
+.form-group--checkbox { flex-direction: row; align-items: center; }
+.checkbox-label {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.85rem; color: var(--muted);
+  cursor: pointer; user-select: none;
+}
+.checkbox-label input[type="checkbox"] {
+  width: 1rem; height: 1rem;
+  accent-color: var(--green);
+  cursor: pointer;
+}
 
 .post-status {
   font-size: 0.85rem; margin-top: -0.5rem;
