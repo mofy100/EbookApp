@@ -336,6 +336,12 @@ nav {
   margin-top: 3rem;
   display: flex; flex-direction: column; gap: 1.2rem;
 }
+.contact-direct {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
 .no-posts {
   font-size: 0.85rem; color: var(--muted); text-align: center;
 }
