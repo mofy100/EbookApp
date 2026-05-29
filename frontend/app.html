@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>青空文庫リーダー</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="app.css?v=4">
+    <link rel="stylesheet" href="app.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -58,11 +58,14 @@
                 <!-- 右：タグフィルター -->
                 <div id="tag-filter-column">
                     <div id="tag-filter-header">
-                        <span id="tag-filter-title">タグで絞り込む</span>
-                        <div class="tag-filter-header-actions">
-                            <button id="tag-clear-btn" hidden>クリア</button>
-                            <button id="filter-close-btn">✕</button>
+                        <div id="tag-filter-header-top">
+                            <span id="tag-filter-title">タグで絞り込む</span>
+                            <div class="tag-filter-header-actions">
+                                <button id="tag-clear-btn" hidden>クリア</button>
+                                <button id="filter-close-btn">✕</button>
+                            </div>
                         </div>
+                        <p id="tag-limit-msg" hidden>タグは最大10個まで選択できます</p>
                     </div>
                     <div id="tag-filter"></div>
                 </div>

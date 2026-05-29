@@ -186,6 +186,9 @@ def get_books(
     """
     本の一覧を取得するAPI。検索・タグ絞り込み・ページネーションをサポート。
     """
+    if len(tags) > 10:
+        raise HTTPException(status_code=400, detail="タグの選択は最大10個までです")
+
     conn = get_db_connection()
     cursor = conn.cursor()
 

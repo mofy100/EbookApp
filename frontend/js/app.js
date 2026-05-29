@@ -1,4 +1,5 @@
 const API_BASE = '/api';
+const TAG_LIMIT = 10;
 let currentPage = 0;
 const limit = 50;
 let currentSearch = '';
@@ -14,6 +15,7 @@ const pageInfo        = document.getElementById('page-info');
 const tagFilterEl     = document.getElementById('tag-filter');
 const tagFilterTitle  = document.getElementById('tag-filter-title');
 const tagClearBtn     = document.getElementById('tag-clear-btn');
+const tagLimitMsg     = document.getElementById('tag-limit-msg');
 
 const mobileBackBtn   = document.getElementById('mobile-back-btn');
 const filterOpenBtn   = document.getElementById('filter-open-btn');
@@ -68,6 +70,7 @@ filterCloseBtn.addEventListener('click', () => {
 
 tagClearBtn.addEventListener('click', () => {
     selectedTags = [];
+    tagLimitMsg.hidden = true;
     document.querySelectorAll('.filter-chip').forEach(btn => btn.classList.remove('active'));
     updateFilterHeader();
     fetchBooks();
@@ -128,9 +131,14 @@ function renderTagFilter(tags) {
 function toggleTag(tag) {
     const idx = selectedTags.indexOf(tag);
     if (idx === -1) {
+        if (selectedTags.length >= TAG_LIMIT) {
+            tagLimitMsg.hidden = false;
+            return;
+        }
         selectedTags.push(tag);
     } else {
         selectedTags.splice(idx, 1);
+        tagLimitMsg.hidden = true;
     }
     currentPage = 0;
     document.querySelectorAll('.filter-chip').forEach(btn => {
@@ -158,6 +166,11 @@ async function fetchBooks() {
 
     try {
         const res = await fetch(url);
+        if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            bookList.innerHTML = `<div class="list-message">${err.detail ?? 'エラーが発生しました。'}</div>`;
+            return;
+        }
         const data = await res.json();
         renderBooks(data.books, data.total);
     } catch (err) {
