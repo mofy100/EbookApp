@@ -31,8 +31,13 @@ const detailTags        = document.getElementById('detail-tags');
 const detailReadBtn     = document.getElementById('detail-read-btn');
 
 searchButton.addEventListener('click', () => {
+    const query = searchInput.value.trim();
+    if (query.length > 100) {
+        alert('検索ワードは100文字以内で入力してください。');
+        return;
+    }
     currentPage = 0;
-    currentSearch = searchInput.value.trim();
+    currentSearch = query;
     fetchBooks();
 });
 
