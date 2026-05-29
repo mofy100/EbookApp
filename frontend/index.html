@@ -198,11 +198,12 @@
     <form class="contact-form" id="post-form">
       <div class="form-group">
         <label for="contact-name">お名前・ニックネーム</label>
-        <input type="text" id="contact-name" placeholder="山田 太郎" required>
+        <input type="text" id="contact-name" placeholder="山田 太郎" maxlength="50" required>
       </div>
       <div class="form-group">
         <label for="contact-message">メッセージ</label>
-        <textarea id="contact-message" rows="5" placeholder="ご意見・ご要望などをご記入ください" required></textarea>
+        <textarea id="contact-message" rows="5" placeholder="ご意見・ご要望などをご記入ください" maxlength="500" required></textarea>
+        <p class="char-count" id="message-count">0 / 500</p>
       </div>
       <div class="form-group form-group--checkbox">
         <label class="checkbox-label">
@@ -274,12 +275,30 @@
       }
     }
 
+    const messageEl = document.getElementById('contact-message');
+    const messageCount = document.getElementById('message-count');
+    messageEl.addEventListener('input', () => {
+      const len = messageEl.value.length;
+      messageCount.textContent = `${len} / 500`;
+      messageCount.classList.toggle('char-count--over', len >= 500);
+    });
+
     document.getElementById('post-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.getElementById('contact-name').value.trim();
       const message = document.getElementById('contact-message').value.trim();
       const is_hidden = document.getElementById('contact-hidden').checked;
       const status = document.getElementById('post-status');
+      if (name.length > 50) {
+        status.textContent = 'お名前は50文字以内で入力してください。';
+        status.className = 'post-status post-status--err';
+        return;
+      }
+      if (message.length > 500) {
+        status.textContent = 'メッセージは500文字以内で入力してください。';
+        status.className = 'post-status post-status--err';
+        return;
+      }
       try {
         const res = await fetch('/api/posts', {
           method: 'POST',

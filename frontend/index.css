@@ -343,6 +343,11 @@ nav {
 .post-status--ok  { color: var(--green2); }
 .post-status--err { color: #c0392b; }
 
+.char-count {
+  font-size: 0.78rem; color: #999; text-align: right; margin-top: 0.25rem;
+}
+.char-count--over { color: #c0392b; font-weight: 600; }
+
 .posts-list {
   margin-top: 3rem;
   margin-bottom: 3rem;
