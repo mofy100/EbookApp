@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         mark('fetchManifest', t1);
 
         const bookTitle = state.bookData.title || '電子書籍';
-        document.title = `${bookTitle} - 青空文庫リーダー`;
+        document.title = `${bookTitle} - ボケット文学`;
         if (state.elements.titleRight) state.elements.titleRight.textContent = bookTitle;
         if (state.elements.titleLeft) state.elements.titleLeft.textContent = bookTitle;
 
