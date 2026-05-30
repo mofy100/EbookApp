@@ -3,6 +3,7 @@ backend/data/*/manifest.json
 backend/data/*/summary*
 
 backend/__pycache__
+backend/*/__pycache__
 
 backend/aozora.db*
 

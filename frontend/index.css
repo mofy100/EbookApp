@@ -100,14 +100,6 @@ nav {
   transition: background 0.25s, transform 0.2s;
 }
 .btn-main:hover { background: var(--green2); transform: translateY(-1px); }
-.btn-ghost {
-  display: inline-block; color: var(--muted);
-  font-size: 0.82rem; padding: 0.85rem 1.5rem;
-  text-decoration: none; border: 1px solid var(--border);
-  border-radius: 3px; letter-spacing: 0.05em; margin-left: 0.8rem;
-  transition: border-color 0.2s, color 0.2s;
-}
-.btn-ghost:hover { border-color: var(--muted); color: var(--text); }
 
 /* BOOK STACK */
 .book-illo { position: relative; }
@@ -143,23 +135,6 @@ nav {
   background: radial-gradient(ellipse, rgba(0,0,0,0.15) 0%, transparent 70%);
 }
 
-/* STRIP */
-.intro-strip {
-  background: var(--paper);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 2.5rem;
-  display: flex; justify-content: center;
-  gap: 4rem; flex-wrap: wrap;
-}
-.intro-item { text-align: center; }
-.intro-num {
-  font-family: 'Shippori Mincho', serif;
-  font-size: 1.8rem; color: var(--green2);
-  line-height: 1; margin-bottom: 0.3rem;
-}
-.intro-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; }
-
 /* FEATURES */
 .features {
   max-width: 900px; margin: 0 auto;
@@ -168,7 +143,7 @@ nav {
 .sec-head {
   font-family: 'Shippori Mincho', serif;
   font-size: 1.6rem; font-weight: 500;
-  color: var(--text); margin-bottom: 0.5rem;
+  color: var(--text); margin-bottom: 2.5rem;
 }
 .sec-sub {
   font-size: 0.875rem; color: var(--muted); margin-bottom: 3.5rem;
@@ -193,54 +168,7 @@ nav {
   font-size: 1.05rem; font-weight: 500;
   color: var(--text); margin-bottom: 0.4rem;
 }
-.feat-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.9; max-width: 520px; }
-
-/* QUOTE */
-.warm-block {
-  background: var(--bg2);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 5rem 2.5rem; text-align: center;
-}
-.warm-block blockquote {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.3rem, 3vw, 1.9rem);
-  font-weight: 400; color: var(--text);
-  line-height: 1.8; max-width: 580px;
-  margin: 0 auto 1.5rem;
-}
-.warm-block cite {
-  font-size: 0.78rem; color: var(--faint);
-  letter-spacing: 0.15em; font-style: normal;
-}
-
-/* HOW TO */
-.howto {
-  max-width: 900px; margin: 0 auto;
-  padding: 6rem 2.5rem;
-}
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem; margin-top: 3rem;
-}
-.step {
-  padding: 1.8rem; background: var(--paper);
-  border: 1px solid var(--border); border-radius: 4px;
-  opacity: 0; transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.step.visible { opacity: 1; transform: translateY(0); }
-.step-num {
-  font-family: 'Libre Baskerville', serif;
-  font-style: italic; font-size: 2.2rem;
-  color: var(--border); line-height: 1; margin-bottom: 1rem;
-}
-.step-title {
-  font-family: 'Shippori Mincho', serif;
-  font-size: 1rem; color: var(--text); margin-bottom: 0.5rem;
-}
-.step-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.9; }
+.feat-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.9; }
 
 /* CTA BAND */
 .cta-band {
@@ -250,10 +178,6 @@ nav {
   font-family: 'Shippori Mincho', serif;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 500; color: #fff; margin-bottom: 0.8rem;
-}
-.cta-band p {
-  font-size: 0.9rem; color: rgba(255,255,255,0.75);
-  margin-bottom: 2.5rem; letter-spacing: 0.05em;
 }
 .cta-btn-w {
   display: inline-block; background: #fff; color: var(--green2);
@@ -273,24 +197,6 @@ nav {
   font-family: 'Noto Sans JP', sans-serif;
 }
 .cta-btn-o:hover { border-color: rgba(255,255,255,0.8); }
-
-/* AOZORA BLOCK */
-.aozora-block {
-  background: var(--paper);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 2.5rem 2.5rem;
-  text-align: center;
-}
-.aozora-text {
-  font-size: 0.82rem; color: var(--muted);
-  line-height: 2; max-width: 600px; margin: 0 auto;
-}
-.aozora-text a {
-  color: var(--green2); text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.aozora-text a:hover { color: var(--green); }
 
 /* CONTACT FORM */
 .contact-section {
@@ -409,7 +315,6 @@ footer {
 @media (max-width: 680px) {
   .hero { grid-template-columns: 1fr; }
   .book-illo { display: none; }
-  .intro-strip { gap: 2rem; }
   footer { flex-direction: column; text-align: center; }
   .footer-copy { text-align: center; }
 }
