@@ -21,6 +21,7 @@ load_dotenv()
 DB_FILE = "backend/aozora.db"
 AUTHORS_DIR = Path("backend/authors_data")
 MODEL = "claude-sonnet-4-6"
+# MODEL="claude-haiku-4-5"
 
 
 def get_author(author_id: int) -> dict | None:
