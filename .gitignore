@@ -2,6 +2,8 @@ backend/data/*/*.html
 backend/data/*/manifest.json
 backend/data/*/summary*
 
+backend/authors/*
+
 backend/__pycache__
 backend/*/__pycache__
 
