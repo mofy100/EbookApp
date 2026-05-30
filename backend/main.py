@@ -22,13 +22,11 @@ app.add_middleware(
 )
 
 DB_FILE = "backend/aozora.db"
-DATA_DIR = "backend/data"
+DATA_DIR = "backend/books_data"
 TAGS_JSON_PATH = "backend/tags.json"
 
 # FORCE_REPARSE=1 を設定した場合、manifest が存在しても毎回再パースする
 FORCE_REPARSE = os.environ.get("FORCE_REPARSE", "0") == "1"
-
-os.makedirs("backend/data/gaiji", exist_ok=True)
 
 # タグのカテゴリマップ・順序マップ（tags.json から構築）
 def _build_tag_maps() -> tuple[dict, dict]:
@@ -348,9 +346,6 @@ def get_book_chunk(book_id: int, filename: str):
         return {"content": content}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to read chunk: {str(e)}")
-
-# -------- 静的ファイルと画像の配信 --------
-app.mount("/api/assets/gaiji", StaticFiles(directory="backend/data/gaiji"), name="gaiji")
 
 @app.get("/")
 def read_root():

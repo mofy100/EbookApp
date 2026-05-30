@@ -9,8 +9,8 @@ from urllib.parse import urljoin
 
 # 設定
 DB_FILE = 'backend/aozora.db'
-DATA_DIR = 'backend/data'
-GAIJI_DIR = 'backend/data/gaiji'
+DATA_DIR = 'backend/books_data'
+GAIJI_DIR = 'backend/books_data/gaiji'
 
 def decode_content(content_bytes):
     """
