@@ -647,7 +647,7 @@ def process_book(book_dir: Path, whitelist: dict, force: bool) -> dict:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("ids", nargs="*", help="処理するID（例: 10 11 12）省略時は全件")
-    parser.add_argument("--data-dir", default="backend/data", help="dataディレクトリのパス")
+    parser.add_argument("--data-dir", default="backend/books_data", help="dataディレクトリのパス")
     parser.add_argument("--force", action="store_true", help="既存のsummary_qwen.jsonを上書き")
     parser.add_argument(
         "--no-search",
